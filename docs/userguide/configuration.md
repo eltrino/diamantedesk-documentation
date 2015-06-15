@@ -49,7 +49,7 @@ Configure the **Email** section to set up support email and make sure that all c
 * **Password.** Provide the password from a support email account.
 
 ######Web
-![Web](img/web.jpg)
+![Web](img/Web.jpg)
 
 Configure whether a user shall complete the registration process before creating a new ticket.
 
