@@ -1,8 +1,14 @@
 #DiamanteDesk Backend Userguide
 
-DiamanteDesk is a comprehensive help desk, built using the OpenSource Software. This tool is a great way to improve customer experience by easily receiving, reassigning and taking care of any client requests presented in tickets.
+DiamanteDesk is a comprehensive help desk, built using the OpenSource software. This tool is a great way to improve customer experience by easily receiving, reassigning and taking care of any Client requests presented in **tickets**.
 
-Tickets are sorted according to the Branches where they are created. To see the list of all available branches, go to **Desk > Branches**. 
+##Branches
+
+Tickets are sorted according to the Branches where they are created. 
+
+_Note:_ When the ticket is automatically created from the email received at the the support email address, this ticket is created at the branch which is configured as a default one. Default branch cannot be deleted. 
+
+To see the list of all available branches, go to **Desk > Branches**. 
 
 ![Branches](img/branches.jpg)
 
@@ -22,13 +28,15 @@ To create a new branch:
 5. To select the **Assignee**, click **Unassigned**. A Search Panel opens. Nest, two options are available:
    * Start entering the name of the person to be assigned and the system will provide hints with matching results.
    * Click a list image to open a list of all available assignees. 
-_Note_ If you have selected a wrong assignee, click the X button next to the name of an assignee.
-6. Add an image that will serve as a branch logo to the **Image** field. To do that, click **Choose file** and select a corresponding image from your local machine.
+_Note:_ If you have selected a wrong assignee, click the X button next to the name of an assignee.
+6. Add an image that will serve as a branch logo to the **Image** field. To do that, click **Choose file** and select a required image from your local machine.
 7. Provide the description of the branch in the **Description** filed.
-8. EMAIL CONFIGURATION !!!!???
+8. Provide the domain name of the support email account (for example, mail.google.com, mail.outlook.com, etc.) in the **Support Address** field (for example, support@diamantedesk.com) and the specific user address (for example, support@diamantedesk.com) in the **Customer Domain** field.
+![Email configuration](img/email_config.jpg)
 9. Click **Save And Close** at the right top corner of the screen.
 
-***
+##All Tickets
+
 Tickets can be also viewed without branch sorting at **Desk > All Tickets**.
 ![All tickets](img/all_tickets.jpg)
 
@@ -42,8 +50,8 @@ All the tickets on this screen can be filtered according to the number of variou
   * **My tickets** displays all the tickets created by the account owner.
   * **My new tickets** displays all the tickets recently created by the account owner.
   * **My open tickets** displays all open tickets created by the account owner.
-  * **Reported tickets** !!!!!??????
-  * **New reported tickets** !!!!!??????
+  * **Reported tickets**
+  * **New reported tickets**
 
 2) Tickets in each category can be also filtered by the following parameters:
 ![Ticket categories](img/ticket_filters2.jpg)
@@ -70,15 +78,14 @@ To create a new ticket, complete the following steps:
 1. Click **Create Ticket** at the top right corner of the screen. **Create Ticket** screen opens.
 ![Create ticket](img/create_ticket.jpg)
 2. Select the branch form the drop-down list.
-3. Specify the subject of a ticket - !!!????
+3. Specify the short summary of a ticket in the **Subject** field.
 4. Select the status of a ticket.
 5. Select the priority of a ticket.
 6. Select the **Source** of the ticket. Every service user has 3 available options to contact the Help Desk team:
-
    * by creating a request through a **Web** form;
    * as an **Email** notification;
    * via a **Phone** call.
-7. Select the **Reporter** from the drop-down list. !!!????
+7. Select the **Reporter** from the drop-down list. Reporter is an administrator who can create a ticket for any customer.
 8. To select the **Assignee**, click **Unassigned**. A Search Panel opens. Start entering the name of the person to be assigned and the system will provide hints with the matching results.
 OR
 Click a list image to open a list of all available assignees. 

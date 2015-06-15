@@ -10,14 +10,14 @@ Every service user has 3 available options to contact the Help Desk team:
 
 When a customer attempts to leave a request or report an issue through a web service, the system redirects this user to a DiamanteDesk request module. To create a ticket a user should register or provide log in details.
  
-![Customer Login](img/customer_login.png)
+![Login Page](img/Login.jpg)
 
 If you are new to the system, complete the following steps for registration:
 
-1. Click **Registration** at the bottom of the log in screen.
-_Registration screen opens._
+1. Click **Registration** at the bottom of the log in screen. Registration screen opens. ![Registration](img/registration.jpg)
 2. Provide your first name, last name, email and password in the corresponding fields. _Note:_ Required fields are marked with asterisk (*).
-3. Click **Continue**. After all the provided credentials are successfully saved in a database, the system shows the following message: _SCREENSHOT_
+3. Click **Continue**. After all the provided credentials are successfully saved in a database, the system shows the following message:
+![Successful registration](img/reg.jpg)
 4. Check your email box and follow a link to confirm your registration. The system redirects you to a **Sign In** screen.
 
 If you are a registered user:
@@ -32,12 +32,12 @@ _Note:_ If you forgot your password, complete the following steps:
 2. Provide your email address in the **Email** field.
 3. Click **Reset Password**.
 The following message appears:
-_SCREENSHOT_
+![Reset Info](img/reset_info.jpg)
 4. Check your email box and follow a link to reset your password.
 5. Enter a new password.
-6. Click **Create New Password*.
-7. If passport was successfully changed, the system shows the following message.
-_SCREENSHOT_
+6. Click **Create New Password**.
+7. If passport was successfully changed, the system shows the following message:
+![Password reset](img/password_reset.jpg)
 
 ##User screen
 
@@ -47,14 +47,14 @@ After a user logs into the system, he gets to a **User Screen**. A newly registe
 * **Date** field displays the date when the request has been created.
 * **Subject** is a short summary of an issue occurred.
 * **Priority** field displays the selected priority of the created ticket (Low, Medium or High).
-* **Status** field indicates the stage of solution (New, Open, Pending, Closed).
+* **Status** field indicates the stage of solution (New, Open, Pending, In Progress, Closed, On Hold).
 
 ##Add New Ticket
 
 To create a new request, a user shall add a ticket by by completing the following steps:
 
-1. Click **Add New Ticket** at the right corner of the screen. 
-_SCREENSHOT_
+1. Click **Add New Ticket** at the right corner of the screen. **Add New Ticket** screen opens.
+![Add new ticket](img/add_new_ticket.jpg)
 2. Provide a short summary of a ticket in the **Subject** field.
 3. Type in the detailed description of a ticket in the **Description** field.
 4. Select the priority level of your ticket from the **Priority** drop-down list. The available options are:
@@ -65,9 +65,3 @@ _SCREENSHOT_
 
 5. In case there is a file that shall be attached to the ticket (image or document), click **Drop files here to attach** and select the required file from your local machine.
 6. Once you provided all the necessary information, click **Submit**.
-
-
-
-
-
-
