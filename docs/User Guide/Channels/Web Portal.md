@@ -1,14 +1,14 @@
-#DiamanteDesk Frontend Userguide
+#Web Portal
 
 DiamanteDesk is designed to organize all incoming customer requests from all sources in a single place to ensure quick reply and reasonable solution to a problem, if any.
 
 Every service user has 3 available options to contact the Help Desk team:
 
-* by creating a request through a web form;
-* as an email notification;
-* via a phone call.
+* by creating a request through a **web form**;
+* as an **email notification**;
+* via a **phone call**.
 
-When a customer attempts to leave a request or report an issue through a web service, the system redirects this user to a DiamanteDesk request module. To create a ticket a user should register or provide log in details.
+When a customer attempts to leave a request or report an issue through a web portal, the system redirects this user to a DiamanteDesk request module. A user should register or provide log in details in order to create a ticket.
  
 ![Login Page](img/Login.jpg)
 

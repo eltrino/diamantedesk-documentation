@@ -1,4 +1,4 @@
-# DiamanteDesk Configuration
+# Emails Processing
 
 Diamante desk is a system that can be easily configured according to the customers' needs.To change the DiamanteDesk configuration, go to **System > Configuration**.
 
