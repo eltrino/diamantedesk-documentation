@@ -1,2 +1,17 @@
 site_name: DiamanteDesk Documentation
 theme: readthedocs
+extra_css: ['css/extra.css']
+pages:
+- Home: 'index.md' 
+- User Guide:
+    - 'Branches': 'user-guide/branches.md'
+    - 'Tickets': 'user-guide/tickets.md'
+    - 'Channels': 'user-guide/channels/channels.md'
+    - 'Processing Emails': 'user-guide/channels/email-processing.md'
+    - 'Web Portal': 'user-guide/channels/web-portal.md'
+- Integration:
+    - 'Magento': 'integration/magento.md'
+    - 'WordPress': 'integration/wordpress.md'
+    - 'Prestashop': 'integration/prestashop.md'
+
+
