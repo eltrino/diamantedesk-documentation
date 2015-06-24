@@ -16,12 +16,12 @@ DiamanteDesk plugin allows adding support help desk to your blog or website. Any
 
 ###### Manual installation
 
-**Option 1 - via FTP:**
+**Option 1 - Installation via FTP:**
 
 1. Upload the addthis folder to the `/wp-content/plugins/` directory.
 1. Activate the plugin through the **Plugins** screen in your WordPress admin area.
 
-**Option 2 - via WordPress:**
+**Option 2 - Installation via archive:**
 
 1. Download DiamanteDesk plugin for WordPress from Github.
 2.  On the **Add Plugin** screen click **Upload Plugin**.

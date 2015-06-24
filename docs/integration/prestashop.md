@@ -20,6 +20,13 @@ DiamanteDesk PrestaShop module allows both administrator and any customer to cre
 
 ###### Manual installation
 
+**Option 1 - Installation via FTP:**
+
+1. Upload the addthis folder to the `modules/` directory.
+1. Head over to the PrestaShop admin area and [connect DiamanteDesk and PrestaShop](#connecting-prestashop).
+
+**Option 2 - Installation via archive:**
+
 1. Download DiamanteDesk module for PrestaShop from Github.
 2. On the top right corner of the **Modules** screen click **Add a new module**.
 2. Select the downloaded zip file from your computer.
@@ -33,7 +40,10 @@ DiamanteDesk PrestaShop module allows both administrator and any customer to cre
 8. Enter **DiamanteDesk** in the **Search Plugins** field and press Enter.
 1. Click **Install**.
 
-## Connecting DiamanteDesk to WordPress
+___
+_Note:_ Make sure that you clear the PrestaShop caches to complete the installation of an extension.
+
+## <a name="connecting-prestashop"></a>Connecting DiamanteDesk to PrstaShop
 
 After the module has been successfully installed, the DiamanteDesk module configuration page opens. The module shall be configured for the proper work of a help desk.
 
