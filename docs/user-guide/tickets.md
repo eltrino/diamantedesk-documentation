@@ -82,3 +82,16 @@ To use the default settings, select the **Use Default** check box in the **Email
 To edit the configurations, clear the the **Use Default** check box and set the **Enable Email Notifications** field to **Yes** or **No** option.
 
 To save the changes made, click **Save Settings** on the left top corner of the screen.
+
+## Watchers
+
+Each of the tickets can be assigned to a specific user to make sure that a given issue is solved quickly and efficiently. But in order to have more control over certain high priority issues, a new **Watchers** feature has been added.
+
+**Watcher** is a person who gets an email notification every time the status of a ticket changes. When the ticket is created, a **Reporter** (the person who created a ticket) and an **Assignee** automatically become **Watchers**. In case the ticket is created from the email through [email processing](email-processing.md), the email sender and all the users from CC (if any) become watchers and recieve email notifications each time the status of a ticket changes.
+
+Additionally, every ticket can be watched and controlled by other users in the system.
+
+###Adding Watchers to the Ticket
+
+To follow the changes made in a certain ticket in the system, open the required ticket either at _Desk > Branches > select a branch_ or at _Desk > All Tickets_.
+If you want to to be aware of the changes made to the ticket, click **Watch** on the option panel at the top of the screen. If you want to add another person to the Watchers list, click **Add Watcher** on the option panel and enter the name of a user or click a **List** button and select a user from the list.
