@@ -10,4 +10,4 @@ Every user of a service supported by the DiamanteDesk system will have 3 channel
 * by sending an **email notification**;
 * or via a **phone call**.
 
-Currently, first two options are available. Follow the links to learn more about submitting a request through a [**web portal**](Web Portal.md) or about [**email processing**](Email Processing.md) feature.
+Currently, first two options are available. Follow the links to learn more about submitting a request through a [**web portal**](web-portal.md) or about [**email processing**](email-processing.md) feature.

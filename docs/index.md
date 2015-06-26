@@ -1,9 +1,11 @@
 # Welcome to DiamanteDesk
 
-![Logo](img/logo.jpg)
+![Logo](img/logo.png)
 
-DiamanteDesk help desk integrates customer support system into the Client's CRM system.
+**Helps listening to your customers.**
 
-This software allows creating support tickets within the CRM and associate them with any customer from the system. 
+DiamanteDesk is an independent support ticket system which is designed to _listen_ to your customers and quickly _react_ to satisfy their needs. Currently, it can be easily integrated into the Oro platform but in the short run it will be available for other CRM systems.
 
-In DiamanteDesk tickets can be assigned to specific users and grouped into [Branches](User Guide/Branches.md). This option allows grouping tickets related to a certain customer.
+Our software enables big and small companies to support and guide their customers through emails, websites and phone calls. It is an easy and user-friendly tool designed to create tickets within the CRM and associate them with any customer from the system. 
+
+In DiamanteDesk tickets can be assigned to specific users and administrators and grouped into [Branches](user-guide/branches.md) in order to organize the workflow and focus on high-priority issues and requests.

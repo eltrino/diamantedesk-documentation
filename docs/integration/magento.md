@@ -1,5 +1,4 @@
 # Magento
-![Magento](img/magento_logo.png)
 
 Magento is a popular content management system that allows creating powerful e-commerce solutions. As a matter of fact, every e-commerce website should have a reliable support system that helps to quickly solve any issue, build strong customer relationships and improve overall user experience. Integrating DiamanteDesk with a website built with Magento may be the easiest solution for that.
 
@@ -11,7 +10,7 @@ DiamanteDesk Magento module allows both administrator and any customer to create
 After installing DiamanteDesk integration module, it shall be configured at the Magento admin panel.
 
 1. Log in the **Magento Admin Panel**.
-2. In the navigation panel select **Systems > Magento Connect > Magento Connect Manager**.
+2. In the navigation panel select _Systems > Magento Connect > Magento Connect Manager_.
 ![Magento Admin Panel](img/magento_connect_manager.png)
 3. Re-enter your Magento Administration credentials to verify your permissions.
 
@@ -67,15 +66,10 @@ After DiamantDesk module has been installed, we need to connect the actual help 
 
 In order to do that, complete the following steps:
 
-1. Log in to **OroCRM**.
-2. On the navigation pane select **System > User Management > Users**.
-![Users](img/users.png)
-3. **Users** screen opens. Select the required user from the list and double click his name to open his profile.
-![User](img/API_Oro.png)
-4. Remember the **Usename** and click **Generate Key** in the **API Key** field. Copy the generated API key.
+1. Acquire [API credentials](api-credentials.md) from your CRM.
 5. Get back to Magento Admin Panel.
-6. Go to **System > Configuration > DiamanteDesk**. **DiamanteDesk** configuration screen opens.
-7. Enter the **User Name** and **Api Key** from the **OroCRM User** screen.
+6. Go to _System > Configuration > DiamanteDesk_. **DiamanteDesk** configuration screen opens.
+7. Enter the **User Name** and **Api Key** from your CRM.
 ![DiamanteDesk configuration](img/DiamanteDesk_config.png)
 8. Provide the link to the server in the **Server Address** field.
 9. Click **Check Connection** to make sure that the connection with a server has been successfully made.

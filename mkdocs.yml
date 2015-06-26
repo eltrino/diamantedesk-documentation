@@ -13,5 +13,4 @@ pages:
     - 'Magento': 'integration/magento.md'
     - 'WordPress': 'integration/wordpress.md'
     - 'Prestashop': 'integration/prestashop.md'
-
-
+    - 'API Credentials': 'integration/api-credentials.md'

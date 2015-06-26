@@ -6,7 +6,7 @@ Branches allow grouping tickets related to a certain customer or user.
 
 _Note:_ When the ticket is automatically created from the email received at the the support email address, this ticket is created at the branch which is configured as a default one. Default branch cannot be deleted. 
 
-To see the list of all available branches, go to **Desk > Branches**. 
+To see the list of all available branches, go to _Desk > Branches_. 
 
 ![Branches](img/branches.png)
 
@@ -18,7 +18,7 @@ Branch key is automatically generated from the branch name when a new branch is 
 
 To create a new branch:
 
-1. Go to Desk > Branches.
+1. Go to _Desk > Branches_.
 2. Click **Create** at the right top corner of the screen. **Create Branches** screen opens.
 ![Create branch](img/create_branches.png)
 3. _Required field._ Enter the name of a new branch into the **Name** field.

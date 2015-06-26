@@ -1,11 +1,10 @@
 # WordPress
-![Wordpress](img/wordpress_logo.jpg)
 DiamanteDesk plugin allows adding support help desk to your blog or website. Any comments from the website may be converted into tickets and grouped into separate branches according to the topic or an account.
 
 ## Installing DiamanteDesk Plugin for WordPress
 
 1. Log in the WordPress Admin Panel.
-2. On the navigation panel head over to **Plugins > Add New**.
+2. On the navigation panel head over to _Plugins > Add New_.
 ![WP Admin panel](img/WP_admin.png)
 
 ###### Automatic installation
@@ -41,17 +40,12 @@ After the plugin has been successfully installed, the DiamanteDesk menu item sha
 
 In order to do that, complete the following steps:
 
-1. Log in to **OroCRM**.
-2. On the navigation pane select **System > User Management > Users**.
-![Users](img/users.png)
-3. **Users** screen opens. Select the required user from the list and double click his name to open his profile.
-![User](img/API_Oro.png)
-4. Remember the **Usename** and click **Generate Key** in the **API Key** field. Copy the generated API key.
+1. Acquire [API credentials](api-credentials.md) from your CRM.
 5. Get back to **WordPress** Admin Panel.
 6. Select **DiamanteDesk** menu item from the **WordPress** admin menu. DiamanteDesk plugin settings screen opens.
 ![WP plugin configuration](img/WP_plugin_config.png)
 7. Provide the link to the server in the **Server Address** field.
-8. Enter the **Username** and **Api Key** from the **OroCRM User** screen.
+8. Enter the **Username** and **Api Key** from your CRM.
 9. Select the number of tickets which is going to be displayed in the admin widget.
 10. Click **Test Connection** to make sure that the connection with a server has been successfully made. 
 11. If the credentials are correct and the connection between WordPress and DiamanteDesk has been successfully made, a new **Default Branch** field will be added to the DiamanteDesk configuration. 

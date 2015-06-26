@@ -4,8 +4,8 @@ DiamanteDesk is a comprehensive help desk, built using the OpenSource software. 
 
 Tickets can be viewed, added and edited at:
 
-* Desk > Branches (see [**Branches**](Branches.md) section)
-* Desk > All Tickets
+* _Desk > Branches_ (see [**Branches**](branches.md) section)
+* _Desk > All Tickets_
 
 ![All tickets](img/All_tickets.png)
 
@@ -68,7 +68,7 @@ To create a new ticket, complete the following steps:
 
 **Email Notifications** is a DiamantDesk feature that sends automatic messages to the ticket creator when the [status](#status) of a ticket changes. This way a customer is notified whether his request is being processed.
 
-This functionality can be configured according to the customers' needs at **System > Configuration**. On the left side side of the screen on the **System configuration** pane select **Notifications** tab in the **DiamanteDesk** menu.
+This functionality can be configured according to the customers' needs at _System > Configuration_. On the left side side of the screen on the **System configuration** pane select **Notifications** tab in the **DiamanteDesk** menu.
 
 ![System configuration](img/sys_config.jpg)
 

@@ -1,12 +1,12 @@
 # Email Processing
 
-DiamanteDesk supports 3 possible options of contacting a service Help Desk team in order to create a new ticket and make a request or report an issue. Any user can do it through a [Web Portal](Web Portal.md), over the phone call or by sending an email to the support address.
+DiamanteDesk supports 3 possible options of contacting a service Help Desk team in order to create a new ticket and make a request or report an issue. Any user can do it through a [Web Portal](web-portal.md), over the phone call or by sending an email to the support address.
 
-All the emails that get to the support email address are automatically retrieved by the DiamanteDesk system in order to create a  separate ticket out of each received letter. To make sure that all customer requests sent to the service support email are automatically converted into tickets by the system, the email processing feature shall be configured at  **System > Configuration**.
+All the emails that get to the support email address are automatically retrieved by the DiamanteDesk system in order to create a  separate ticket out of each received letter. To make sure that all customer requests sent to the service support email are automatically converted into tickets by the system, the email processing feature shall be configured at  _System > Configuration_.
 
 ## Configuaration
 
-To configure email processing functionality, go to **System > Configuration**. On the **System Configuaration** pane select the **DiamanteDesk** menu and **Channels** tab.
+To configure email processing functionality, go to _System > Configuration_. On the **System Configuaration** pane select the **DiamanteDesk** menu and **Channels** tab.
 
 ![System configuration](img/sys_config.jpg)
 

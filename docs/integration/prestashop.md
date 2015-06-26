@@ -1,5 +1,4 @@
 # PrestaShop
-![Prestashop](img/prestashop_logo.png)
 
 PrestaShop is a comprehensive e-commerce platform, allowing any business owner to quickly create an online shop for all sorts of products. But to ensure high quality service and build strong customer relationships, every e-commerce website should have a reliable support system. DiamanteDesk is a perfect solution for that.
 
@@ -8,7 +7,7 @@ DiamanteDesk PrestaShop module allows both administrator and any customer to cre
 ## Installing DiamanteDesk Module
 
 1. Log in the PrestaShop Admin Panel.
-2. On the navigation panel head over to the **Modules** menu for manual or to the **Modules > Modules and Themes Catalog** for automatic installation.
+2. On the navigation panel head over to _Modules > Modules and Themes Catalog_ for automatic installation.
 ![Prestashop Admin panel](img/prestashop_admin_panel.png)
 
 ###### Automatic installation
@@ -49,16 +48,11 @@ After the module has been successfully installed, the DiamanteDesk module config
 
 In order to do that, complete the following steps:
 
-1. Log in to **OroCRM**.
-2. On the navigation pane select **System > User Management > Users**.
-![Users](img/users.png)
-3. **Users** screen opens. Select the required user from the list and double click his name to open his profile.
-![User](img/API_Oro.png)
-4. Remember the **Usename** and click **Generate Key** in the **API Key** field. Copy the generated API key.
+1. Acquire [API credentials](api-credentials.md) from your CRM.
 5. Get back to DiamanteDesk module configuration page at **Prestashop**.
 ![Prestashop module configuration](img/prestashop_config.png)
 7. Provide the link to the server in the **Server Address** field.
-8. Enter the **Username** and **Api Key** from the **OroCRM User** screen.
+8. Enter the **Username** and **Api Key** from your CRM.
 9. Click **Save**.
 10. If the credentials are correct and the connection between PrestaShop and DiamanteDesk has been successfully made, a new **Default Branch** field will be added to the DiamanteDesk configuration. 
 ![Prestashop branches](img/prestashop_branches.png)
