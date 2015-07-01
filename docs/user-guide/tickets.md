@@ -47,7 +47,7 @@ _Note:_ You can't change this value when looking through the tickets in **My tic
 To create a new ticket, complete the following steps:
 
 1. Click **Create Ticket** at the top right corner of the screen. **Create Ticket** screen opens.
-![Create ticket](img/create_ticket.jpg)
+![Create ticket](img/create_ticket_1.1.png)
 2. Select the branch from the drop-down list.
 3. Specify the short summary of a ticket in the **Subject** field.
 4. Select the status of a ticket.
@@ -59,6 +59,7 @@ To create a new ticket, complete the following steps:
 7. Select the **Reporter** from the drop-down list. Reporter is an administrator who can create a ticket for any customer.
 8. To select the **Assignee**, click **Unassigned**. A Search Panel opens. Start entering the name of the person to be assigned and the system will provide hints with the matching results or click a list image to open a list of all available assignees. 
 9. In case there is a file that shall be attached to the ticket (image or document), click **Choose file** in the **File** filed and select the required file from your local machine.
+10. You can also tag your ticket. The process of ticket tagging is identical to branch tagging. Follow the link to learn more about [tagging](tagging.md) in DiamanteDesk.
 11. Provide the description of a ticket in the **Description** field.
 12. Click **Save** or **Save and Close** at the right top corner of the screen for a corresponding action.
 
