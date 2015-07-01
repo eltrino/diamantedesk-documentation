@@ -31,7 +31,7 @@ The extension marketplace opens.
 **Option 1 - Installation via FTP:**
 
 1. Upload the addthis folder to the root Magento directory.
-1. Head over to the Magento admin area and [connect DiamanteDesk and Magento](#connecting-magento).
+1. Head over to the Magento admin area and connect DiamanteDesk and Magento (see the **Connecting DiamanteDesk to Magento** section).
 
 **Option 2 - Installation via archive:**
 
@@ -61,7 +61,7 @@ _Note:_
 ![DiamanteDesk tab](img/diamantedesk_magento.png)
 
 
-## <a name="connecting-magento"></a>Connecting DiamanteDesk to Magento
+## Connecting DiamanteDesk to Magento
 After DiamantDesk module has been installed, we need to connect the actual help desk to Magento. 
 
 In order to do that, complete the following steps:

@@ -2,12 +2,15 @@
 
 DiamanteDesk is a comprehensive help desk, built using the OpenSource software. This tool is a great way to improve customer experience by easily receiving, reassigning and taking care of any Client requests presented in **tickets**.
 
-Tickets can be viewed, added and edited at:
+Tickets can be viewed and added at:
 
 * _Desk > Branches_ (see [**Branches**](branches.md) section)
 * _Desk > All Tickets_
 
+
 ![All tickets](img/All_tickets.png)
+
+##Ticket Filters
 
 All the tickets on this screen can be filtered according to the number of various parameters:
 
@@ -34,17 +37,12 @@ _Note:_ Each of the parameters is set to **All** values by default. To change th
 * **Assignee**. To filter the tickets assigned to a specific person, enter the name of that person into the **Assignee** field.
 _Note:_ You can't change this value when looking through the tickets in **My tickets** and **My new tickets** categories, the assignee in these categories is always an owner of the account.
 * **Priority.** Set the filter to **Low**, **Medium** or **High** priority.
-* <a name="status"></a>**Status.** Select one or several statuses for ticket filtering. The available statuses are:
-  * **New**
-  * **Open**
-  * **Pending**
-  * **In progress**
-  * **Closed**
-  * **On Hold**
+* <a name="status"></a>**Status.** Select one or several statuses for ticket filtering. The available statuses are: **New**, **Open**, **Pending**, **In progress**, **Closed** and **On Hold**.
+  
 * **Created** Select the date range when the tickets could could be updated either from a drop-down calendar or by selecting one of the available variables (Now, today, Start of the week, Start of the month, Start of the quarter, Start of the year).
 * **Updated.** Select the date range when the tickets could could be updated either from a drop-down calendar or by selecting one of the available variables (Now, today, Start of the week, Start of the month, Start of the quarter, Start of the year).
 
-## Create Ticket
+## Create a New Ticket
 
 To create a new ticket, complete the following steps:
 
@@ -61,8 +59,8 @@ To create a new ticket, complete the following steps:
 7. Select the **Reporter** from the drop-down list. Reporter is an administrator who can create a ticket for any customer.
 8. To select the **Assignee**, click **Unassigned**. A Search Panel opens. Start entering the name of the person to be assigned and the system will provide hints with the matching results or click a list image to open a list of all available assignees. 
 9. In case there is a file that shall be attached to the ticket (image or document), click **Choose file** in the **File** filed and select the required file from your local machine.
-10. Provide the description of a ticket in the **Description** field.
-11. Click **Save** or **Save and Close** at the right top corner of the screen for a corresponding action.
+11. Provide the description of a ticket in the **Description** field.
+12. Click **Save** or **Save and Close** at the right top corner of the screen for a corresponding action.
 
 ## Notifications
 

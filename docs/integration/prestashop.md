@@ -22,7 +22,7 @@ DiamanteDesk PrestaShop module allows both administrator and any customer to cre
 **Option 1 - Installation via FTP:**
 
 1. Upload the addthis folder to the `modules/` directory.
-1. Head over to the PrestaShop admin area and [connect DiamanteDesk and PrestaShop](#connecting-prestashop).
+1. Head over to the PrestaShop admin area and connect DiamanteDesk and PrestaShop (please see the **Connecting DiamanteDesk to PrstaShop** section).
 
 **Option 2 - Installation via archive:**
 
@@ -42,7 +42,7 @@ DiamanteDesk PrestaShop module allows both administrator and any customer to cre
 ___
 _Note:_ Make sure that you clear the PrestaShop caches to complete the installation of an extension.
 
-## <a name="connecting-prestashop"></a>Connecting DiamanteDesk to PrstaShop
+## Connecting DiamanteDesk to PrstaShop
 
 After the module has been successfully installed, the DiamanteDesk module configuration page opens. The module shall be configured for the proper work of a help desk.
 
