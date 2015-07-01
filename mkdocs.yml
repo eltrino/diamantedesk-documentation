@@ -6,6 +6,7 @@ pages:
 - User Guide:
     - 'Branches': 'user-guide/branches.md'
     - 'Tickets': 'user-guide/tickets.md'
+    - 'Tagging': 'user-guide/tagging.md'
     - 'Channels': 'user-guide/channels/channels.md'
     - 'Processing Emails': 'user-guide/channels/email-processing.md'
     - 'Web Portal': 'user-guide/channels/web-portal.md'
