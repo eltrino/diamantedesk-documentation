@@ -9,9 +9,12 @@ pages:
     - 'Tagging': 'user-guide/tagging.md'
     - 'Channels': 'user-guide/channels/channels.md'
     - 'Processing Emails': 'user-guide/channels/email-processing.md'
-    - 'Web Portal': 'user-guide/channels/web-portal.md'
+    - 'Web Portal': 'user-guide/channels/portal.md'
 - Integration:
     - 'API Credentials': 'integration/api-credentials.md'
     - 'Magento': 'integration/magento.md'
     - 'WordPress': 'integration/wordpress.md'
-    - 'Prestashop': 'integration/prestashop.md'
+    - 'Prestashop': 'integration/prestashop.md'    
+- Installation Guide:
+    - 'Installation': 'installation-guide/installation.md'
+    
