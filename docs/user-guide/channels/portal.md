@@ -1,6 +1,6 @@
-#Web Portal
+#Portal
 
-When a customer attempts to leave a request or report an issue through a web portal, the system redirects this user to a DiamanteDesk request module. A user should register or provide log in details in order to create a ticket.
+When a customer attempts to leave a request or report an issue through a web site supported by DiamanteDesk, the system redirects this user to a request module at example.com/web/app.php/portal/. A user should register or provide log in details in order to create a ticket.
  
 ![Login Page](img/Login.jpg)
 
@@ -59,7 +59,7 @@ To create a new request, a user shall add a ticket by completing the following s
 6. Once you provided all the necessary information, click **Submit**.
 
 
-## Web Portal Configuration
+## Portal Configuration
 
 Tickets can be also created without the required registration. To configure this option, go to _System > Configuration_. On the **System Configuaration** pane select the **DiamanteDesk** menu and **Channels** tab.
 

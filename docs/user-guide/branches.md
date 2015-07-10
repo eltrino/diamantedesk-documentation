@@ -18,7 +18,7 @@ Branch key is automatically generated from the branch name when a new branch is 
 
 **Branch name** and **Branch Key** filters are set to **All** values by default. To filter the branches according to a certain branch name or key, click the down arrow in the corresponding filed and enter the required name or key. To refresh the results, click **Refresh**. To clear all filters, click **Reset**.
 
-## Create a New Branch:
+## Create a New Branch
 
 1. Go to _Desk > Branches_.
 2. Click **Create** at the right top corner of the screen. **Create Branches** screen opens.
