@@ -14,11 +14,9 @@ You can also check whether your system meets all the requirements from the comma
 
 To install DiamanteDesk you also need to setup MySQL database server with an empty database that will be used later on.
 
-DiamanteDesk uses **Composer** to manage package dependencies. You can download it from https://getcomposer.org/download/ or via the following command in the terminal:
-
-    curl -s https://getcomposer.org/installer | php
+DiamanteDesk uses **Composer** to manage package dependencies. Use this [link](https://getcomposer.org/download/) to download it. All the following examples are be based on the assumption that the composer have been installed globally.
     
-##Web Server configuration
+###Web Server configuration
 
 DiamanteDesk application was developed on a basis of the Symfony standard application so you can learn more about web server configuration recommendations [here](http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html).
 
@@ -28,25 +26,27 @@ DiamanteDesk application was developed on a basis of the Symfony standard applic
 
 Download DiamanteDesk application from [GitHub](https://github.com/eltrino/diamantedesk-application/releases).
 
-Clone the [GitHub repository](https://github.com/eltrino/diamantedesk-application#usage) to get a source code and checkout the required version of an application. Use the following command:
+Clone the [GitHub repository](https://github.com/eltrino/diamantedesk-application#usage) to get a source code and checkout the latest developed version of an application. Use the following command:
 
     git clone https://github.com/eltrino/diamantedesk-application
 
-Checkout the latest version of the project:
+Checkout the latest stable version of the project:
 
      git clone -b 1.0 https://github.com/eltrino/diamantedesk-application
      
-Download the application with the composer package manager using the following command:
+Also, download the application with the composer package manager using the following command:
 
-    composer create-project diamante/desk-application
+    composer create-project diamante/desk-application:1.0
     
+### Installing required libraries
+
 Install the dependencies with the composer:
 
     composer install
 
-##Application Installation
+### Application Installation
 
-###Installation Using a Console
+######Installation Using a Console
 
 To run the installation of DiamanteDesk in a console mode, use the following command:
 
@@ -54,13 +54,13 @@ To run the installation of DiamanteDesk in a console mode, use the following com
      
 Additional commands may be required. The system will guide you through the process with questions and command options.
 
-If the system configuration does not meet the requirements, the _install_ command provides corresponding messages. In case there are any, fix them and run the command again.
+If the system configuration does not meet the requirements, the _install_ command provides corresponding messages. In case there are any issues, fix them and run the command again.
 
-###Installation Using Web Wizard
+######Installation Using Web Wizard
 
-To start installation through a web wizard, follow the link below:
+To install the application through a web wizard, follow the link below:
 
-    http://integration.eltrino.com:8090/diamantedesk-install/web/install.php
+    http://localhost/install.php
     
 When DiamanteDesk installation screen opens, click **Begin Installation**. 
 
@@ -71,22 +71,23 @@ In case there are any issues, fix them and refresh the page. After all system co
 ![System Requirements](img/web_sys_req.png)
 
 The next step of installation process is configuring the application. Provide the data for **MySQL database connection**, **Mailer settings**, **System sttings** and **Websocket connection** if the fields are not filled out automatically.
+_Note:_ If the application is installed for the first time, leave the **Drop Full Database** check box clear, if you reinstall the application, select this check box.
 
 ![Configuration](img/web_config.png)
 
 Click **Next** and the installer will initialize your database. The list of tasks and the progress on their performance will be shown.
 
-![Database](img/web_database.png)
+![Database](img/web_initialization.png)
 
-After you move on to the next step, you should provide such administrative information as company name, link to the application and administrative credentials. Make sure that **Load Sample Data** check box is empty.
+After you move on to the next step, you should provide such administrative information as company name, link to the application and administrative credentials.
 
 ![Administration](img/web_administration.png)
 
-After you click **Install**, the installer finishes setup. The list of tasks and the progress on their performance will be shown.
-
-![Installation](img/web_installation.png)
+Click **Install** to finish the setup process. 
  
-DiamanteDesk application is successfully installed after the status of all tasks turns to **Done**.
+After the DiamanteDesk application is successfully installed the following message is displayed.
+
+![Finish](img/web_finish.png)
 
 ##Bundles Installation
 
@@ -97,3 +98,5 @@ Development in progress.
 Development in progress.
 
 ##Docker Prebuilt Image 
+
+To learn more on how to use Docker image, please follow this [link](https://github.com/eltrino/diamantedesk-docker).

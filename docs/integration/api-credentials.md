@@ -7,9 +7,8 @@ DiamanteDesk API integration serves to create individual customer support system
 To connect a content management system and the Client's CRM, API credentials shall be provided.
 
 **Getting API Credentials**
-(let's take OroCRM as an example):
 
-1. Log in to **OroCRM**.
+1. Log in to **DiamanteDesk Admin Panel**.
 2. On the navigation pane select **System > User Management > Users**.
 ![Users](img/users.png)
 3. **Users** screen opens. Select the required user from the list and double click his name to open his profile.
