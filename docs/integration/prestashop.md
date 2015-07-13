@@ -40,7 +40,7 @@ DiamanteDesk PrestaShop module allows both administrator and any customer to cre
 1. Click **Install**.
 
 ___
-_Note:_ Make sure that you clear the PrestaShop caches to complete the installation of an extension.
+>_Note:_ Make sure that you clear the PrestaShop caches to complete the installation of an extension.
 
 ## Connecting DiamanteDesk to PrstaShop
 

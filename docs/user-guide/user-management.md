@@ -68,4 +68,4 @@ A user group is a collection of user accounts having the same core responsibilit
 5. Choose the members belonging to this group by selecting the check boxes in the corresponding lines.
 6. Click **Save** or **Save and Close** to proceed.
 
-_Note:_ Any user can belong to more than one group.
+>_Note:_ Any user can belong to more than one group.
