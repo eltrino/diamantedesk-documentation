@@ -20,7 +20,7 @@ DiamanteDesk uses **Composer** to manage package dependencies. Use this [link](h
 
 DiamanteDesk application was developed on a basis of the Symfony standard application so you can learn more about web server configuration recommendations [here](http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html).
 
-> _Note:_ DiamanteDesk application makes heavy use of HTTP methods in RESTful calls. In case the server cannot be configured to block some of them (for example, PUT, DELETE, etc.), this limitation should removed, otherwise, a certain part of application will not function properly.
+> _Note:_ DiamanteDesk application makes heavy use of HTTP methods in RESTful calls. The server can be configured to block some of them (for example, PUT, DELETE, etc.). However, this limitation should removed, otherwise, a certain part of application will not function properly.
 
 ## Installation of a Standalone Application
 
@@ -87,7 +87,7 @@ After you move on to the next step, you should provide such administrative infor
 
 Click **Install** to finish the setup process. 
  
-After the DiamanteDesk application is successfully installed the following message is displayed.
+After the DiamanteDesk application is successfully installed the following message is displayed:
 
 ![Finish](img/web_finish.png)
 
