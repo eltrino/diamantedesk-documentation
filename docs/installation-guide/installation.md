@@ -6,7 +6,16 @@ This section provides detailed instructions on various options of DiamanteDesk a
 
 ##Requirements
 
-To run DiamanteDesk, your server shall adhere to the following [list of requirements](!!!!!!!!!!!!!!!). 
+DiamanteDesk application was built using **Symfony** 2.3 framework and **Oro** Platform; therefore, all the prerequisites listed as [Symfony](http://symfony.com/doc/2.3/reference/requirements.html) and [Oro](http://www.orocrm.com/documentation/index/current/system-requirements) system requirements also refer to DiamanteDesk.
+
+In addition, here is a list of requirements related specifically to the DiamanteDesk application:
+
+* app/attachments folder needs to be writable;
+* NPM package manager needs to be installed;
+* Grunt needs to be installed (globally);
+* Bower needs to be installed (globally).
+
+_____
 
 You can also check whether your system meets all the requirements from the command line. In order to do that, after you get the application code, execute the following command:
 
