@@ -2,7 +2,7 @@
 
 DiamanteDesk REST APIs enable interaction between the application and other software products, such as websites, CRMs, content management systems and other applications. Using the DiamanteDesk REST APIs you can read, modify, add and delete the data directly in the helpdesk.
 
-API access is performed over HTTPS protocol.
+To ensure secure access it is recommended to use HTTPS protocol for API requests.
 
 ## API Endpoints
 
@@ -27,27 +27,38 @@ All the data in DiamanteDesk APIs is transmitted either in JSON or XML format wi
 The format can be specified either:
 
 * in the request header (Content-Type, Accept). _Note:_ The MIME type shall be specified in header (application/json, application/xml).
-* or at the end of a URL.
+* or specified in the URL.
 
 ## Pagination, Sorting, Filtering
 
 ### Pagination
 
-When a user performs a GET request, the array of the data requested is returned in the response body. Depending on the requested items, objects or products, the list of results can contain thousands of results that should be paged through. You can specify how many items you want each page to return using page parameters. Paginated queries start at page 1 by default. 
+When a user performs a request to get a collection of entities or a certain entity, the data requested is returned in the response body. Depending on the requested items, objects or products, the list of results can contain thousands of results that should be paged through. The number of items per each page can be specified using page parameters. Paginated queries start at page 1 by default. 
 
-For example, if you set the page limit to 10 items and you need to retrieve items from 21 to 30 your request should contain such parameters: limit=10 and page_no=3.
+For example, if you set the page limit to 10 items and you need to retrieve items from 21 to 30 your request should contain such parameters: limit=10 and page=3.
 
-GET API methods return the total number of objects in **X-Total** before pagination is applied:
+When a user requests a list of certain entities, the server returns the results along with additional metadata, such as:
+
+* the general amount of entities, shown at the X-Total HTTP header;
+* the links to the connected pages in the Link HTTP header. There are 4 types of such links:
+
+Name  | Description
+------------- | -------------
+next  | The URL to the following results page.
+last | The URL to the last results page.
+first | The URL to the first results page.
+prev | The URL to the previous results page.
+
+Take a look at the example, containing such headers:
 
     HTTP/1.1 200 OK
-    Link: <http://hostname/api/rest/latest/desk/branches?limit=25&page=1>; rel="last"
-    X-Total: 3
-    
-The user can specify whether he wants to get to the **next**, **previous**, **fist** or **last** (as shown in the example above) page in the header. 
+
+    Link: <http://hostname/api/rest/latest/desk/branches?limit=25&page=2>; rel="next", <http://hostname/api/rest/latest/desk/branches?limit=25&page=5>; rel="last"
+    X-Total: 110 
 
 ### Sorting
 
-The results can be sorted according to the **sort** and **order** parameters. The **sort** parameter performs the sorting according to the property name of an entity, **order** parameter may be set either to **asc** (ascending) or **desc** (descending).
+The results can be sorted according to the **sort** and **order** GET parameters, included in the URL. The **sort** parameter performs the sorting according to the property name of an entity, **order** parameter may be set either to **asc** (ascending) or **desc** (descending).
 
 ### Filtering
 
@@ -55,21 +66,26 @@ Filtering can be performed according to any parameter of the corresponding entit
  
 If the value is specified for string property, the search is performed for any occurrence, meaning the result will return PO, DPO, DPOD, etc. If the value is specified for numeric property the search is performed for equal value.
 
+To filter the results by the time when a certain entity or entities were created or updated, the following parameters should be used:
+
+* createdBefore
+* createdAfter
+* updatedBefore
+* updatedAfter
+
 ## Error Handling
 
 When the fault occurs within the application or on a server side, the server returns the corresponding status code followed by the message, indicating the root cause in the response body.
 
 Here are the status codes of the errors that may occur when working with DiamanteDesk application.
 
-**400** error indicates that validation failed and the request provided by client was incorrect or distorted and the server could not understand it.
-
-**401** error occurs when a user attempts to access a page or resource that requires authentication. To resolve this issue, correct log in details shall be provided.
-
-**403** error indicates authorization issue, meaning that a user has not been granted permission to access specific page or method.
-
-**404** error means that the server could not process client request with the reason for that described in the error message.
-
-**500** - Internal server error. This status code indicates that this is not a client-side issue, meaning that the problem occurred on the server side rather than in DiamanteDesk application. 
+Status Code | Description
+------------- | :-------------
+**400**  | Validation failed and the request provided by the client was incorrect or distorted and the server could not understand it.
+**401** | Such error occurs when a user attempts to access a page or resource that requires authentication. To resolve this issue, correct log in details shall be provided.
+**403** | Authorization issue, meaning that a user has not been granted permission to access specific page or method.
+**404** | This error means that the server could not process client request with the reason for that described in the error message.
+**500** | Internal server error. This status code indicates that this is not a client-side issue, meaning that the problem occurred on the server side rather than in DiamanteDesk application. 
 
 Take a look at the example of a 404 error below:
 
@@ -103,48 +119,6 @@ REST APIs are necessary when DiamanteDesk is integrated into another application
 |{_format} | xml, json |
 
 ### Branches
-
-###### POST: Create a new branch
-
-    POST /api/rest/{version}/desk/branches
-    
-**Parameters**
-
-| Name  | Type  | Description |
-|:------------- |:---------------|:-------------|
-| _name_     | ____ | **Required.** Specify the name of a new branch. |
-| _description_     | ____        | Enter the description of a new branch, if necessary. |
-| _tags_ | ____       | Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the **Tagging** section in the **User Guide** section. |
-| _key_ | ____ | Enter the key of a new branch. Note that the key should be unique accross the whole system. Branch key must contain only letters. Minimum length is 2 letters.
-
-_Request example:_ 
-
-    {
-      "name": "Test Branch",
-      "description": "Test Description",
-      "tags": [
-           "Test Tag"
-      ],
-      "key": "BRANCHTEST"
-    }
-    
-**Response**
-    
-**Status Code:** 201 (Created)
-
-_Response body:_ 
-
-    {
-      "created_at": "2015-07-17T11:25:36+0000",
-      "description": "Test Description",
-      "id": 11,
-      "key": "BRANCHTEST",
-      "name": "Test Branch",
-      "tags": [
-          "Test Tag"
-      ],
-      "updated_at": "2015-07-17T11:25:36+0000"
-    }
 
 ###### GET: Retrieve the list of all branches
 
@@ -181,8 +155,7 @@ _Response body:_
     {
        "error": "Branch loading failed. Branch not found."
     }
-
-
+    
 ######  GET: Retrieve a branch by ID
 
     GET /api/rest/{version}/desk/branches/{id}
@@ -200,6 +173,48 @@ _Response body:_
        "key": "BRANCHTEST",
        "name": "Test Branch",
        "updated_at": "2015-07-17T11:25:36+0000"
+    }
+
+###### POST: Create a new branch
+
+    POST /api/rest/{version}/desk/branches
+    
+**Parameters**
+
+| Name  | Type  |Description |Note|
+|:------------- |:---------------|:-------------|:----|
+| name    | _string_ | **Required.** Specify the name of a new branch. | Minimum length is 2 letters.
+| description    |   _string_       |Enter the description of a new branch, if necessary. |
+| tags | _arrey of strings_      | Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the **Tagging** section in the **User Guide** section. |
+| key | _string_ | Enter the key of a new branch. Note that the key should be unique accross the whole system. | The branch key must contain only letters. Minimum length is 2 letters.
+
+_Request example:_ 
+
+    {
+      "name": "Test Branch",
+      "description": "Test Description",
+      "tags": [
+           "Test Tag"
+      ],
+      "key": "BRANCHTEST"
+    }
+    
+**Response**
+    
+**Status Code:** 201 (Created)
+
+_Response body:_ 
+
+    {
+      "created_at": "2015-07-17T11:25:36+0000",
+      "description": "Test Description",
+      "id": 11,
+      "key": "BRANCHTEST",
+      "name": "Test Branch",
+      "tags": [
+          "Test Tag"
+      ],
+      "updated_at": "2015-07-17T11:25:36+0000"
     }
 
 ###### PUT, PATCH: Update properties of a certain branch
@@ -247,61 +262,7 @@ _Response body:_ null
 
 ### Tickets
 
-###### POST: Create a new ticket
-
-    POST /api/rest/{version}/desk/tickets
-    
-| Name  | Type  | Description |
-|:------------- |:---------------|:-------------|
-| branch     | ____ | **Required.** Specify a branch where the ticket should be created.
-| subject     | ____        | **Required.** | Enter the short description of a new ticket.
-| description | ____       | **Required.** Enter the description of a new ticket.
-| status | ____ |**Required.** The available statuses are: **New**, **Open**, **Pending**, **In progress**, **Closed** and **On Hold**.
-| priority | ____ |**Required.** Specify the priority of a new ticket. The available options are **Low**, **Medium** or **High**.
-| source | ____ |**Required.** Every service user has 4 available options to contact the Help Desk team: by creating a request through a **Web** form or through the embedded form on a website (optional), as an **Email** notification, via a **Phone** call. Specify the corresponding source of a ticket.
-| reporter| ____ |**Required.** The reporter is an administrator who can create a ticket for any customer.
-    
-_Request example:_
-
-    {
-       "branch": 1,
-       "subject": "Test Ticket",
-       "description": "Test Description",
-       "status": "open",
-       "priority": "medium",
-       "source": "phone",
-       "reporter": "diamante_10"
-    }
-**Response**
-    
-**Status Code:** 201 (Created)
-
-_Response body:_ 
-
-    {
-       "attachments": [
-
-       ],
-       "branch": 1,
-       "comments": [
-
-       ],
-       "created_at": "2015-07-17T11:25:29+0000",
-       "description": "Test Description",
-       "id": 11,
-       "key": "BRANCHB-2",
-       "priority": "medium",
-       "reporter": "diamante_10",
-       "source": "phone",
-       "status": "open",
-       "subject": "Test Ticket",
-       "unique_id": {
-           "id": "80297640927352a82f2b7c1a8c97d10b"
-       },
-       "updated_at": "2015-07-17T11:25:29+0000"
-    }
-
-###### GET: Retrieve list of all Tickets
+###### GET: Retrieve list of all tickets
 
     GET /api/rest/{version}/desk/tickets
 
@@ -345,8 +306,14 @@ _Response body:_
            "updated_at": "2015-07-17T11:25:21+0000"
        }
     ]
+    
+###### /api/rest/{version}/desk/tickets/search
 
-###### GET: Retrieve ticket by the given ticket ID
+|Method|        Description          
+|:------------- |:---------------| 
+| **GET**    | Retrieves list of Tickets found by the query. Ticket is searched by the subject and description. Performs filtering of tickets if provided with criteria as GET parameters. Time filtering parameters as well as paging/sorting configuration parameters can be found in \Diamante\DeskBundle\Api\Command\Filter\CommonFilterCommand class. Time filtering values should be converted to UTC.|
+
+###### GET: Retrieve the ticket by the given ticket ID
 
    GET /api/rest/{version}/desk/tickets/{id}
    
@@ -379,6 +346,63 @@ _Response body:_
        "updated_at": "2015-07-17T11:25:47+0000"
     }
 
+###### POST: Create a new ticket
+
+    POST /api/rest/{version}/desk/tickets
+    
+**Parameters**
+
+| Name  | Type  | Description | Note|
+|:------------- |:---------------|:-------------|:---|
+| branch     | _integer_ | **Required.** Specify a branch name where the ticket should be created.
+| subject     | _string_ | **Required.** Enter a short description of a new ticket.|
+| description | _string_ | **Required.** Enter the detailed description of a new ticket.
+| status | _string_ |**Required.** The available statuses are: **New**, **Open**, **Pending**, **In progress**, **Closed** and **On Hold**.
+| priority | _string_ |**Required.** Specify the priority of a new ticket. The available options are **Low**, **Medium** or **High**.
+| source | _string_ |**Required.** Every service user has 4 available options to contact the Help Desk team: by creating a request through a **Web** form or through the embedded form on a website (optional), as an **Email** notification, via a **Phone** call. Specify the corresponding source of a ticket.
+| reporter| _string_ |**Required.** The reporter is an administrator who can create a ticket for any customer. |The name of the reporter must contain only letters.
+    
+_Request example:_
+
+    {
+       "branch": 1,
+       "subject": "Test Ticket",
+       "description": "Test Description",
+       "status": "open",
+       "priority": "medium",
+       "source": "phone",
+       "reporter": "diamante_10"
+    }
+**Response**
+    
+**Status Code:** 201 (Created)
+
+_Response body:_ 
+
+    {
+       "attachments": [
+
+       ],
+       "branch": 1,
+       "comments": [
+
+       ],
+       "created_at": "2015-07-17T11:25:29+0000",
+       "description": "Test Description",
+       "id": 11,
+       "key": "BRANCHB-2",
+       "priority": "medium",
+       "reporter": "diamante_10",
+       "source": "phone",
+       "status": "open",
+       "subject": "Test Ticket",
+       "unique_id": {
+           "id": "80297640927352a82f2b7c1a8c97d10b"
+       },
+       "updated_at": "2015-07-17T11:25:29+0000"
+    }
+    
+    
 ###### PUT, PATCH: Update certain properties of the ticket by ID
 
     PUT, PATCH /api/rest/{version}/desk/tickets/{id}
@@ -470,7 +494,7 @@ _Response body:_
        "updated_at": "2015-07-17T11:25:47+0000"
     }
 
-###### PUT, PATCH: Updates certain properties of the ticket by the key
+###### PUT, PATCH: Update certain properties of a ticket by the ticket key
 
     PUT, PATCH /api/rest/{version}/desk/tickets/{key}
     
@@ -509,7 +533,7 @@ _Response body:_
        "updated_at": "2015-07-17T11:25:29+0000"
     }
     
-###### DELETE: Deletes the ticket by the key
+###### DELETE: Delete the ticket by the ticket key
 
     DELETE /api/rest/{version}/desk/tickets/{key} 
     
@@ -527,13 +551,7 @@ _Response body:_
     "error": "Ticket loading failed, ticket not found."
     }   
 
-###### /api/rest/{version}/desk/tickets/search
-
-|Method|        Description          
-|:------------- |:---------------| 
-| **GET**    | Retrieves list of Tickets found by the query. Ticket is searched by the subject and description. Performs filtering of tickets if provided with criteria as GET parameters. Time filtering parameters as well as paging/sorting configuration parameters can be found in \Diamante\DeskBundle\Api\Command\Filter\CommonFilterCommand class. Time filtering values should be converted to UTC.|
-
-###### GET: Retrieves the list of ticket attachments by ticket ID
+###### GET: Retrieve the list of ticket attachments by ticket ID
 
     GET /api/rest/{version}/desk/tickets/{id}/attachments
     
@@ -559,23 +577,31 @@ _Response body:_
        }
     ]
 
-###### GET: Retrieve personal data based on the provided ID
 
-    GET /api/rest/{version}/desk/ticket/{id}/assignee
+###### GET: Retrieve ticket attachments by attachment ID
 
+    GET /api/rest/{version}/desk/tickets/{ticketId}/attachments/{attachmentId}
+    
 **Response**
     
-**Status Code:** 201 (Created)
+**Status Code:** 200 (OK)
 
 _Response body:_ 
 
     {
-       "email": "pol.vova@gmail.com",
-       "name": "asdasd dasdasd",
-       "id": "oro_1"
+       "id": 15,
+       "created_at": "2015-07-17T11:25:53+0000",
+       "updated_at": "2015-07-17T11:25:53+0000",
+       "file": {
+           "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/450385ca08c7cfe5b507ad85f3a17428",
+           "filename": "test.jpg"
+        },
+       "thumbnails": {
+           "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/450385ca08c7cfe5b507ad85f3a17428",
+           "filename": "450385ca08c7cfe5b507ad85f3a17428.png"
+       }
     }
-
-
+    
 ###### POST: Add attachment to the ticket
 
     POST /api/rest/{version}/desk/tickets/{ticketId}/attachments
@@ -611,30 +637,6 @@ _Response body:_
            }
        }
     ]
-
-###### GET: Retrieve ticket attachment by attachment ID
-
-    GET /api/rest/{version}/desk/tickets/{ticketId}/attachments/{attachmentId}
-    
-**Response**
-    
-**Status Code:** 200 (OK)
-
-_Response body:_ 
-
-    {
-       "id": 15,
-       "created_at": "2015-07-17T11:25:53+0000",
-       "updated_at": "2015-07-17T11:25:53+0000",
-       "file": {
-           "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/450385ca08c7cfe5b507ad85f3a17428",
-           "filename": "test.jpg"
-        },
-       "thumbnails": {
-           "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/450385ca08c7cfe5b507ad85f3a17428",
-           "filename": "450385ca08c7cfe5b507ad85f3a17428.png"
-       }
-    }
     
 ###### DELETE: Remove Attachment from the ticket
 
@@ -654,30 +656,10 @@ _Response body:_
        "error": "Attachment loading failed. Ticket has no such attachment."
     }
 
-### Comments
+###### GET: Retrieve personal data based on the provided ticket ID
 
-###### POST: Posts a new comment to the ticket.
+    GET /api/rest/{version}/desk/ticket/{id}/assignee
 
-    POST /api/rest/{version}/desk/comments
-    
-    
-| Name  | Type  | Description |
-|:------------- |:---------------|:-------------|
-| content     | ____ | **Required.** Add your comment into this section. |
-| ticket     | ____        | _______ |
-| author | ____       | Specify the user who adds the comment to the ticket. |
-| ticketStatus | ____ | **Required.** The available statuses are: **New**, **Open**, **Pending**, **In progress**, **Closed** and **On Hold**.
-    
-_Request example:_
-
-    {
-       "content": "Test Comment",
-       "ticket": 1,
-       "author": "diamante_10",
-       "ticketStatus": "new"
-    }   
-
-    
 **Response**
     
 **Status Code:** 201 (Created)
@@ -685,18 +667,13 @@ _Request example:_
 _Response body:_ 
 
     {
-       "attachments": [
-
-       ],
-       "author": 10,
-       "author_type": "diamante",
-       "content": "Test Comment",
-       "created_at": "2015-07-17T11:25:22+0000",
-       "id": 101,
-       "private": false,
-       "ticket": 1,
-       "updated_at": "2015-07-17T11:25:22+0000"
+       "email": "pol.vova@gmail.com",
+       "name": "asdasd dasdasd",
+       "id": "oro_1"
     }
+
+
+### Comments
 
 ###### GET: Retrieve the list of all comments
 
@@ -761,7 +738,51 @@ _Response body:_
        "updated_at": "2015-07-17T11:25:22+0000"
     }
     
-###### PUT, PATCH: Update certain properties of the comment be the comment ID.
+    
+###### POST: Add a new comment to the ticket.
+
+    POST /api/rest/{version}/desk/comments
+ 
+ **Parameters**   
+    
+| Name  | Type  | Description | Note
+|:------------- |:---------------|:-------------|:---|
+| content     | _string_ | **Required.** Add your comment into this section. |
+| ticket     | _integer_       |**Required.** Provide the ID of a ticket where the comment is added. |
+| author | _string_       | **Required.** Specify the name of a user who adds the comment to the ticket. |The name of an author must contain only letters.|
+| ticketStatus | _string_ | **Required.** Specify the status of a ticket after the new comment is added to it. The available statuses are: **New**, **Open**, **Pending**, **In progress**, **Closed** and **On Hold**.
+    
+_Request example:_
+
+    {
+       "content": "Test Comment",
+       "ticket": 1,
+       "author": "diamante_10",
+       "ticketStatus": "new"
+    }   
+
+    
+**Response**
+    
+**Status Code:** 201 (Created)
+
+_Response body:_ 
+
+    {
+       "attachments": [
+
+       ],
+       "author": 10,
+       "author_type": "diamante",
+       "content": "Test Comment",
+       "created_at": "2015-07-17T11:25:22+0000",
+       "id": 101,
+       "private": false,
+       "ticket": 1,
+       "updated_at": "2015-07-17T11:25:22+0000"
+    }
+    
+###### PUT, PATCH: Update certain properties of the comment be the comment ID
 
     PUT|PATCH /api/rest/{version}/desk/comments/{id}
     
@@ -810,7 +831,7 @@ _Response body:_
     "error": "Comment loading failed, comment not found."
     }  
 
-###### GET: Retrieve comment author information based on the provided ID
+###### GET: Retrieve the information about the comment author based on the provided comment ID
 
     GET /api/rest/{version}/desk/comment/{id}/author
 
@@ -826,7 +847,7 @@ _Response body:_
        "id": "oro_1"
     }
 
-###### GET: Retrieves comment attachments
+###### GET: Retrieve all comment attachments
 
     GET /api/rest/{version}/desk/comments/{id}/attachments
 
@@ -852,8 +873,31 @@ _Response body:_
        }
     ]
 
+###### Retrieve comment attachments by the attachment ID
 
-###### POST: Add attachments to the comment
+    GET /api/rest/{version}/desk/comments/{commentId}/attachments/{attachmentId}
+    
+**Response**
+    
+**Status Code:** 200 (OK)
+
+_Response body:_
+
+    {
+       "id": 12,
+       "created_at": "2015-07-17T11:25:27+0000",
+       "updated_at": "2015-07-17T11:25:27+0000",
+       "file": {
+           "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/61fcb86ab5a53db412b2f3823f8a20ac",
+           "filename": "test.jpg"
+       },
+       "thumbnails": {
+           "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/61fcb86ab5a53db412b2f3823f8a20ac",
+           "filename": "61fcb86ab5a53db412b2f3823f8a20ac.png"
+       }
+    }
+
+###### POST: Add attachment to the comment
 
     POST /api/rest/{version}/desk/comments/{commentId}/attachments
 
@@ -889,31 +933,7 @@ _Response body:_
        }
     ] 
 
-###### Retrieve the comment attachment by the attachment ID
-
-    GET /api/rest/{version}/desk/comments/{commentId}/attachments/{attachmentId}
-    
-**Response**
-    
-**Status Code:** 200 (OK)
-
-_Response body:_
-
-    {
-       "id": 12,
-       "created_at": "2015-07-17T11:25:27+0000",
-       "updated_at": "2015-07-17T11:25:27+0000",
-       "file": {
-           "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/61fcb86ab5a53db412b2f3823f8a20ac",
-           "filename": "test.jpg"
-       },
-       "thumbnails": {
-           "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/61fcb86ab5a53db412b2f3823f8a20ac",
-           "filename": "61fcb86ab5a53db412b2f3823f8a20ac.png"
-       }
-    }
-
-######  Remove the attachment from the comment by the attachment ID
+######  DELETE: Remove the attachment from the comment by the attachment ID
 
     DELETE /api/rest/{version}/desk/comments/{commentId}/attachments/{attachmentId}
     
@@ -933,39 +953,7 @@ _Response body:_
 
 ### Users
 
-###### POST: Create a new user
-
-    GET /api/rest/{version}/desk/users
-    
-**Parameters**
-
-| Name  | Type  | Description |
-|:------------- |:---------------|:-------------|
-| firstName     | ____ | **Required.** Provide the first name of a new user. |
-| lastName     | ____        | **Required.** Provide the last name of a new user.|
-| email | ____       | **Required.** Add an email of e new user. This email is going to be used for email notifications and password recovery.|
-    
-_Request example:_
-
-    {
-       "email": "1437135532dummy-test-email-address@test-server.local",
-       "firstName": "John",
-       "lastName": "Dou"
-     }
-**Response**
-    
-**Status Code:** 201 (Created)
-
-_Response body:_
-
-    {
-       "id": 11,
-       "email": "1437135532dummy-test-email-address@test-server.local",
-       "first_name": "John",
-       "last_name": "Dou"
-    }
-    
-###### GET: Retrieve the list of all DiamanteDesk users
+###### GET: Retrieve the list of all users
 
     GET /api/rest/{version}/desk/users
     
@@ -989,9 +977,41 @@ _Response body:_
             "last_name": "Dou"
          }
     ]
+    
+###### POST: Create a new user
 
+    POST /api/rest/{version}/desk/users
+    
+**Parameters**
 
-###### GET: Retrieve DiamanteDesk user data
+| Name  | Type  | Description |
+|:------------- |:---------------|:-------------|
+| firstName     | _string_ | **Required.** Provide the first name of a new user. |
+| lastName     | _string_   | **Required.** Provide the last name of a new user.|
+| email | _string_ | **Required.** Add an email of a new user. This email is going to be used for email notifications and password recovery.|
+    
+_Request example:_
+
+    {
+       "email": "1437135532dummy-test-email-address@test-server.local",
+       "firstName": "John",
+       "lastName": "Dou"
+     }
+**Response**
+    
+**Status Code:** 201 (Created)
+
+_Response body:_
+
+    {
+       "id": 11,
+       "email": "1437135532dummy-test-email-address@test-server.local",
+       "first_name": "John",
+       "last_name": "Dou"
+    }
+    
+
+###### GET: Retrieve user data
 
     GET /api/rest/{version}/desk/users/{email}/
     
@@ -1006,12 +1026,4 @@ _Response body:_
        "email": "1437135532dummy-test-email-address@test-server.local",
        "first_name": "John",
        "last_name": "Dou"
-    }
-
-**Status Code:** 404 (Not Found)
-
-_Response body:_
-
-    {
-       "error": "User not found."
     }
