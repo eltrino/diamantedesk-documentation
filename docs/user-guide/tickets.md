@@ -105,7 +105,7 @@ If you want to to be aware of the changes made to the ticket, click **Watch** on
 
 ### Server Setup
 
-The mailer settings for emails and notifications are usually configured during [DiamanteDesk installation](installation-guide/installation.md).
+The mailer settings for emails and notifications are usually configured during DiamanteDesk installation. To learn more about the process of installation, navigate to the Installation Guide section of the documentation.
 
 ![Notifications](img/web_config.png)
 
