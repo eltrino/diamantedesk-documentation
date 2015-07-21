@@ -6,19 +6,32 @@ This section provides detailed instructions on various options of DiamanteDesk a
 
 ##Requirements
 
-To run DiamanteDesk, your server shall adhere to the following [list of requirements](!!!!!!!!!!!!!!!). 
+DiamanteDesk application was built using **Symfony** 2.3 framework and **Oro** Platform; therefore, all the prerequisites listed as [Symfony](http://symfony.com/doc/2.3/reference/requirements.html) and [Oro](http://www.orocrm.com/documentation/index/current/system-requirements) system requirements also refer to DiamanteDesk.
+
+In addition, here is a list of requirements related specifically to the DiamanteDesk application:
+
+* app/attachments folder needs to be writable;
+* NPM package manager needs to be installed;
+* Grunt needs to be installed (globally);
+* Bower needs to be installed (globally).
+
+_____
 
 You can also check whether your system meets all the requirements from the command line. In order to do that, after you get the application code, execute the following command:
 
     php app/check.php
 
 To install DiamanteDesk you also need to setup MySQL database server with an empty database that will be used later on.
-
-DiamanteDesk uses **Composer** to manage package dependencies. Use this [link](https://getcomposer.org/download/) to download it. All the following examples are be based on the assumption that the composer have been installed globally.
     
 ###Web Server configuration
 
 DiamanteDesk application was developed on a basis of the Symfony standard application so you can learn more about web server configuration recommendations [here](http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html).
+
+> _Note:_ DiamanteDesk application makes heavy use of HTTP methods in RESTful calls. The server can be configured to block some of them (for example, PUT, DELETE, etc.). However, this limitation should be removed, otherwise, a certain part of application will not function properly.
+
+### Composer
+
+DiamanteDesk uses **Composer** to manage package dependencies. Use this [link](https://getcomposer.org/download/) to download it. All the following examples are be based on the assumption that the composer have been installed globally.
 
 ## Installation of a Standalone Application
 
@@ -71,7 +84,7 @@ In case there are any issues, fix them and refresh the page. After all system co
 ![System Requirements](img/web_sys_req.png)
 
 The next step of installation process is configuring the application. Provide the data for **MySQL database connection**, **Mailer settings**, **System sttings** and **Websocket connection** if the fields are not filled out automatically.
-_Note:_ If the application is installed for the first time, leave the **Drop Full Database** check box clear, if you reinstall the application, select this check box.
+> _Note:_ If the application is installed for the first time, leave the **Drop Full Database** check box clear, if you reinstall the application, select this check box.
 
 ![Configuration](img/web_config.png)
 
@@ -85,7 +98,7 @@ After you move on to the next step, you should provide such administrative infor
 
 Click **Install** to finish the setup process. 
  
-After the DiamanteDesk application is successfully installed the following message is displayed.
+After the DiamanteDesk application is successfully installed the following message is displayed:
 
 ![Finish](img/web_finish.png)
 

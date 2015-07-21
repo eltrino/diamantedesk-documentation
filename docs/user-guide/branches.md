@@ -4,7 +4,7 @@ When a customer of any service supported by the DiamanteDesk needs to report an 
 
 Creating separate branches in DiamanteDesk enables our Clients to group tickets according to the requests of specific users, locations, issues, etc. This feature helps to organize tickets in a way to keep track of the tickets according to a certain category and quickly find them in a system. We remember that good customer service implies quick reaction and problem solving, so we do our best to provide our Clients with a user-friendly tool to make it happen.
 
-_Note:_ When the ticket is automatically created from the email received at the the support email address, this ticket is created at the branch which is configured as a default one. To learn more about it, please see the [Email Processing](channels/email-processing.md) section.
+>_Note:_ When the ticket is automatically created from the email received at the the support email address, this ticket is created at the branch which is configured as a default one. To learn more about it, please see the [Email Processing](channels/email-processing.md) section.
 
 To see the list of all available branches, go to _Desk > Branches_. 
 
@@ -25,10 +25,10 @@ Branch key is automatically generated from the branch name when a new branch is 
 ![Create branch](img/create_branches_details.png)
 3. _Required field._ Enter the name of a new branch into the **Name** field.
 4. Leave a **Key** field empty as it is automatically filled by the system. Branch Key is generated from the branch name and it should be unique across the system.
-5. To select the **Assignee**, click **Unassigned**. A Search Panel opens. Nest, two options are available:
+5. To select the **Assignee**, click **Unassigned**. A Search Panel opens. Next, two options are available:
    * Start entering the name of the person to be assigned and the system will provide hints with matching results.
-   * Click a list image to open a list of all available assignees. 
-_Note:_ If you have selected a wrong assignee, click the X button next to the name of an assignee.
+   * Click a list image to open a list of all available assignees.  
+   _Note:_ If you have selected a wrong assignee, click the X button next to the name of an assignee.
 6. Add an image that will serve as a branch logo to the **Image** field. To do that, click **Choose file** and select a required image from your local machine.
 7. You can also tag your branch. Follow the link to learn more about [branch tagging](tagging.md).
 8. Provide the description of the branch in the **Description** filed.
@@ -49,6 +49,6 @@ _Note:_ If you have selected a wrong assignee, click the X button next to the na
 * If you click **Delete**, the following confirmation message is displayed:
 ![Branch Delete](img/branches_delete.png)
 
-_Note:_ If a branch is configured as the default for [Email Processing](channels/email-processing.md), the following message is displayed at the top of the **Branch** screen. In this case it cannot be deleted. 
+>_Note:_ If a branch is configured as the default for [Email Processing](channels/email-processing.md), the following message is displayed at the top of the **Branch** screen. In this case it cannot be deleted. 
 
 ![Default Branch](img/branches_default.png)

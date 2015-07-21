@@ -11,6 +11,8 @@ To connect a content management system and the Client's CRM, API credentials sha
 1. Log in to **DiamanteDesk Admin Panel**.
 2. On the navigation pane select **System > User Management > Users**.
 ![Users](img/users.png)
-3. **Users** screen opens. Select the required user from the list and double click his name to open his profile.
+3. **Users** screen opens. Click the required user name from the list to open the user profile.
 ![User](img/API_Oro.png)
 4. Remember the **Username** and click **Generate Key** in the **API Key** field. Copy the generated API key.
+
+>NOTE: **API Key** can be generated for any user on the profile screen by the user with **Edit** permissions.
