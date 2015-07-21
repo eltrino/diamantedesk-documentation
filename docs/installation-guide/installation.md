@@ -22,14 +22,16 @@ You can also check whether your system meets all the requirements from the comma
     php app/check.php
 
 To install DiamanteDesk you also need to setup MySQL database server with an empty database that will be used later on.
-
-DiamanteDesk uses **Composer** to manage package dependencies. Use this [link](https://getcomposer.org/download/) to download it. All the following examples are be based on the assumption that the composer have been installed globally.
     
 ###Web Server configuration
 
 DiamanteDesk application was developed on a basis of the Symfony standard application so you can learn more about web server configuration recommendations [here](http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html).
 
-> _Note:_ DiamanteDesk application makes heavy use of HTTP methods in RESTful calls. The server can be configured to block some of them (for example, PUT, DELETE, etc.). However, this limitation should removed, otherwise, a certain part of application will not function properly.
+> _Note:_ DiamanteDesk application makes heavy use of HTTP methods in RESTful calls. The server can be configured to block some of them (for example, PUT, DELETE, etc.). However, this limitation should be removed, otherwise, a certain part of application will not function properly.
+
+### Composer
+
+DiamanteDesk uses **Composer** to manage package dependencies. Use this [link](https://getcomposer.org/download/) to download it. All the following examples are be based on the assumption that the composer have been installed globally.
 
 ## Installation of a Standalone Application
 

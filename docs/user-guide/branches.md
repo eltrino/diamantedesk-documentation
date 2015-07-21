@@ -25,7 +25,7 @@ Branch key is automatically generated from the branch name when a new branch is 
 ![Create branch](img/create_branches_details.png)
 3. _Required field._ Enter the name of a new branch into the **Name** field.
 4. Leave a **Key** field empty as it is automatically filled by the system. Branch Key is generated from the branch name and it should be unique across the system.
-5. To select the **Assignee**, click **Unassigned**. A Search Panel opens. Nest, two options are available:
+5. To select the **Assignee**, click **Unassigned**. A Search Panel opens. Next, two options are available:
    * Start entering the name of the person to be assigned and the system will provide hints with matching results.
    * Click a list image to open a list of all available assignees.  
    _Note:_ If you have selected a wrong assignee, click the X button next to the name of an assignee.
