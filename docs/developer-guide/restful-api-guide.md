@@ -185,7 +185,7 @@ _Response body:_
 |:------------- |:---------------|:-------------|:----|
 | name    | _string_ | **Required.** Specify the name of a new branch. | Minimum length is 2 letters.
 | description    |   _string_       |Enter the description of a new branch, if necessary. |
-| tags | _arrey of strings_      | Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the **Tagging** section in the **User Guide** section. |
+| tags | _array of strings_      | Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the **Tagging** section in the **User Guide** section. |
 | key | _string_ | Enter the key of a new branch. Note that the key should be unique accross the whole system. | The branch key must contain only letters. Minimum length is 2 letters.
 
 _Request example:_ 
@@ -361,18 +361,25 @@ _Response body:_
 | priority | _string_ |**Required.** Specify the priority of a new ticket. The available options are **Low**, **Medium** or **High**.
 | source | _string_ |**Required.** Every service user has 4 available options to contact the Help Desk team: by creating a request through a **Web** form or through the embedded form on a website (optional), as an **Email** notification, via a **Phone** call. Specify the corresponding source of a ticket.
 | reporter| _string_ |**Required.** The reporter is an administrator who can create a ticket for any customer. |The name of the reporter must contain only letters.
+| tags | _array of strings_ | Add existing or new tags appropriate to this ticket. To learn more about tagging in DiamanteDesk, please refer to the **Tagging** article in the **User Guide** section of documentation.|
     
 _Request example:_
 
     {
        "branch": 1,
-       "subject": "Test Ticket",
-       "description": "Test Description",
-       "status": "open",
+       "subject": "TestSubject",
+       "description": "TestDescription",
+       "status": "new",
        "priority": "medium",
-       "source": "phone",
-       "reporter": "diamante_10"
-    }
+       "source": "web",
+       "reporter": "oro_1",
+       "tags": [
+         "testTag1",
+         "testTag2",
+         "testTag3"
+       ]
+     }
+
 **Response**
     
 **Status Code:** 201 (Created)
@@ -380,26 +387,28 @@ _Request example:_
 _Response body:_ 
 
     {
-       "attachments": [
-
-       ],
+       "attachments": [],
        "branch": 1,
-       "comments": [
-
-       ],
-       "created_at": "2015-07-17T11:25:29+0000",
-       "description": "Test Description",
-       "id": 11,
+       "comments": [],
+       "created_at": "2015-07-21T15:07:31+0000",
+       "description": "TestDescription",
+       "id": 21,
        "key": "BRANCHB-2",
        "priority": "medium",
-       "reporter": "diamante_10",
-       "source": "phone",
-       "status": "open",
-       "subject": "Test Ticket",
+       "reporter": "oro_1",
+       "source": "web",
+       "status": "new",
+       "subject": "TestSubject",
+       "tags": [
+         "testTag1",
+         "testTag2",
+         "testTag3"
+      ],
        "unique_id": {
-           "id": "80297640927352a82f2b7c1a8c97d10b"
-       },
-       "updated_at": "2015-07-17T11:25:29+0000"
+        "id": "81fd6b970fab8c1762c2a6a50ac2d985"
+     },
+     "updated_at": "2015-07-21T15:07:31+0000",
+     "watcher_list": []
     }
     
     
