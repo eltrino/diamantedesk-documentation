@@ -17,6 +17,7 @@ pages:
 - Developer Guide:
     - 'Contributing': 'developer-guide/contributing.md'
     - 'RESTful API Guide': 'developer-guide/restful-api-guide.md'
+    - 'Testing': 'developer-guide/testing.md'
 - Integration:
     - 'API Credentials': 'integration/api-credentials.md'
     - 'Magento': 'integration/magento.md'

@@ -14,7 +14,7 @@ To create a new user profile in the DiamanteDesk system, head over to _System > 
 
 ![Create User](img/user_new_general.png)
 
-After you get to the **Create User** screen, fill out all the required fields in five sections, that is **General**, **Additional**, **Groups and Roles**, **Access Settings**, **Email synchronization settings**.
+After you get to the **Create User** screen, fill out all the required fields in five following sections, that is **General**, **Additional**, **Groups and Roles**, **Access Settings**, **Email synchronization settings**.
 
 * The **Owner** field is automatically filled with **Main** value by default.
 * Select the **Status** of an account - it can be either **Active** or **Inactive**.
