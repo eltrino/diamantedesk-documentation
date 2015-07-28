@@ -1,10 +1,12 @@
-#Tickets
+---
+title: Tickets
+---
 
 DiamanteDesk is a comprehensive help desk, built using the OpenSource software. This tool is a great way to improve customer experience by easily receiving, reassigning and taking care of any Client requests presented in **tickets**.
 
 Tickets can be viewed and added at:
 
-* the **Branches** tab (see [**Branches**](branches.md) section);
+* the **Branches** tab (see [**Branches**](branches.html) section);
 * the **All Tickets** tab.
 
 

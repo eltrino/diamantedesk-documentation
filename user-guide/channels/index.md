@@ -1,4 +1,6 @@
-#Channels
+---
+title: Channels
+---
 
 DiamanteDesk is a customer support system which functions either as a standalone application, extends CRM functionality or can be integrated with a number of content management systems.
 
@@ -11,4 +13,4 @@ Every user of a service supported by the DiamanteDesk system will have 4 availab
 * by sending an **email notification**;
 * or via a **phone call**.
 
-Currently, first three options are available. Follow the links to learn more about submitting a request through a [**web portal**](portal.md), [**embedded forms**](embedded-form.md) or about [**email processing**](email-processing.md) feature.
+Currently, first three options are available. Follow the links to learn more about submitting a request through a [**web portal**](portal.html), [**embedded forms**](embedded-form.html) or about [**email processing**](email-processing.html) feature.

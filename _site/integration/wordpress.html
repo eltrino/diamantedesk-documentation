@@ -1,0 +1,63 @@
+<p>DiamanteDesk plugin allows adding support help desk to your blog or website. Any comments from the website may be converted into tickets and grouped into separate branches according to the topic or an account.</p>
+
+<h2 id="installing-diamantedesk-plugin-for-wordpress">Installing DiamanteDesk Plugin for WordPress</h2>
+
+<ol>
+  <li>Log in the WordPress Admin Panel.</li>
+  <li>On the navigation panel head over to <em>Plugins &gt; Add New</em>.
+<img src="img/WP_admin.png" alt="WP Admin panel" /></li>
+</ol>
+
+<h6 id="automatic-installation">Automatic installation</h6>
+
+<ol>
+  <li>Go to <a href="https://wordpress.org/plugins/">WordPress Plugin Directory</a>.</li>
+  <li>Enter <strong>DiamanteDesk</strong> in the <strong>Search Plugins</strong> field and press Enter.</li>
+  <li>Click <strong>Install Now</strong> and activate the plugin.</li>
+</ol>
+
+<h6 id="manual-installation">Manual installation</h6>
+
+<p><strong>Option 1 - Installation via FTP:</strong></p>
+
+<ol>
+  <li>Upload the addthis folder to the <code>/wp-content/plugins/</code> directory.</li>
+  <li>Activate the plugin through the <strong>Plugins</strong> screen in your WordPress admin area.</li>
+</ol>
+
+<p><strong>Option 2 - Installation via archive:</strong></p>
+
+<ol>
+  <li>Download DiamanteDesk plugin for WordPress from Github.</li>
+  <li>On the <strong>Add Plugin</strong> screen click <strong>Upload Plugin</strong>.</li>
+  <li>Select the downloaded zip file from your computer.</li>
+  <li>Click <strong>Install Now</strong>.</li>
+  <li>To install the plugin, WordPress needs to access your web server. Enter your FTP credentials to proceed. 
+<em>Note:</em> If you do not remember your credentials, contact your web host.</li>
+</ol>
+
+<p><img src="img/FTP.png" alt="FTP" />
+5. Click <strong>Proceed</strong>. If the plugin has been successfully installed, you shall see the following message:
+<img src="img/plugin_success.png" alt="Plugin installed" />
+6. Click <strong>Activate Plugin</strong>.</p>
+
+<h2 id="connecting-diamantedesk-to-wordpress">Connecting DiamanteDesk to WordPress</h2>
+
+<p>After the plugin has been successfully installed, the DiamanteDesk menu item shall appear in the <strong>Wordpress</strong> admin menu. It shall be configured for the proper work of a help desk.</p>
+
+<p>In order to do that, complete the following steps:</p>
+
+<ol>
+  <li>Acquire <a href="api-credentials.md">API credentials</a> from your CRM.</li>
+  <li>Get back to <strong>WordPress</strong> Admin Panel.</li>
+  <li>Select <strong>DiamanteDesk</strong> menu item from the <strong>WordPress</strong> admin menu. DiamanteDesk plugin settings screen opens.
+<img src="img/WP_plugin_config.png" alt="WP plugin configuration" /></li>
+  <li>Provide the link to the server in the <strong>Server Address</strong> field.</li>
+  <li>Enter the <strong>Username</strong> and <strong>Api Key</strong> from your CRM.</li>
+  <li>Select the number of tickets which is going to be displayed in the admin widget.</li>
+  <li>Click <strong>Test Connection</strong> to make sure that the connection with a server has been successfully made.</li>
+  <li>If the credentials are correct and the connection between WordPress and DiamanteDesk has been successfully made, a new <strong>Default Branch</strong> field will be added to the DiamanteDesk configuration. 
+<img src="img/WP_plugin.png" alt="WP plugin configuration" /></li>
+  <li>Select a default branch from the drop-down list.</li>
+  <li>Click <strong>Save Changes</strong>.</li>
+</ol>

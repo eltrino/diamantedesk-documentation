@@ -1,4 +1,6 @@
-#RESTful API Guide
+---
+title: RESTful API Guide
+---
 
 DiamanteDesk REST APIs enable interaction between the application and other software products, such as websites, CRMs, content management systems and other applications. Using the DiamanteDesk REST APIs you can read, modify, add and delete the data directly in the helpdesk.
 

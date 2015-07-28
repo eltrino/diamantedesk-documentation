@@ -1,4 +1,6 @@
-#Portal
+---
+title: Portal
+---
 
 When a customer attempts to leave a request or report an issue through a web site supported by DiamanteDesk, the system redirects this user to a request module at example.com/web/app.php/portal/. A user should register or provide log in details in order to create a ticket.
  

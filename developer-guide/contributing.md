@@ -1,4 +1,6 @@
-#Contributing
+---
+title: Contributing
+---
 
 The DiamanteDesk development team accepts contributions to code and documentation from the community. If you have found a bug, don't hesitate to let us know about it! We do our best to make DiamanteDesk as easy-to-use and as helpful as possible, so we are thankful for any effort to enhance application's functionality.
 

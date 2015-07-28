@@ -1,4 +1,6 @@
-# PrestaShop
+---
+title: PrestaShop
+---
 
 PrestaShop is a comprehensive e-commerce platform, allowing any business owner to quickly create an online shop for all sorts of products. But to ensure high quality service and build strong customer relationships, every e-commerce website should have a reliable support system. DiamanteDesk is a perfect solution for that.
 

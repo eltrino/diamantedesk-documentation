@@ -1,8 +1,10 @@
-# Acquiring API Credentials
+---
+title: Acquiring API Credentials
+---
 
 Our team uses API method to integrate DiamanteDesk plugins or modules with different content management systems. API stands for Application programming interface, so it is a software-to-software interface that enables different programs to connect and share information between each other.
 
-DiamanteDesk API integration serves to create individual customer support systems to all sorts of web portals, on-line stores and blogs. Currently, DiamanteDesk is integrated with [Magento](magento.md), [WordPress](wordpress.md) and [PrestaShop](prestashop.md) content management systems.
+DiamanteDesk API integration serves to create individual customer support systems to all sorts of web portals, on-line stores and blogs. Currently, DiamanteDesk is integrated with [Magento](magento.html), [WordPress](wordpress.html) and [PrestaShop](prestashop.html) content management systems.
 
 To connect a content management system and the Client's CRM, API credentials shall be provided.
 

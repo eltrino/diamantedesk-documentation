@@ -1,8 +1,10 @@
-#Embedded Form
+---
+title: Embedded Form
+---
 
 DiamanteDesk is a help desk designed to improve user experience for each of your present and future customers. 
 
-In complex systems something may always go wrong and any user should always have various options to contact your support team and let them know what should be fixed or changed. DiamanteDesk system offers several options to do that: by sending an [email](email-processing.md), via a phone call or through a [web portal](portal.md). Some of our Clients also prefer to embed a support form into their website.
+In complex systems something may always go wrong and any user should always have various options to contact your support team and let them know what should be fixed or changed. DiamanteDesk system offers several options to do that: by sending an [email](email-processing.html), via a phone call or through a [web portal](portal.html). Some of our Clients also prefer to embed a support form into their website.
 
 DiamanteDesk provides functionality for creating embedded forms on the third-party websites. Take a look at the picture below to see the initial form. It can be modified according to the design of your website.
 

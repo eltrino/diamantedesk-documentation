@@ -1,4 +1,7 @@
-# WordPress
+---
+title: WordPress
+---
+
 DiamanteDesk plugin allows adding support help desk to your blog or website. Any comments from the website may be converted into tickets and grouped into separate branches according to the topic or an account.
 
 ## Installing DiamanteDesk Plugin for WordPress

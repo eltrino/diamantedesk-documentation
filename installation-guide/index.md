@@ -1,4 +1,6 @@
-#Installation Guide
+---
+title: Installation Guide
+---
 
 DiamanteDesk may serve as an independent end-user application or as an extension for OroCRM. In the nearest future it will also be available for other CRMs. 
 

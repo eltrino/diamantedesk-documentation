@@ -1,0 +1,89 @@
+<p>When a customer of any web service supported by the DiamanteDesk needs to report an issue or submit a request to the help desk team, a <em>ticket</em> is created. Each ticket in DiamanteDesk application has a unique identificator and is sorted according to the <em>branch</em> where it is created or is added to a default branch.</p>
+
+<p>Creating separate branches in DiamanteDesk enables our Clients to group tickets according to the requests of specific users, locations, issues or according to the <a href="channels/index.html">Channel</a> the ticket came from. This feature helps to organize tickets in a way to keep track of the tickets according to a certain category and quickly find them in a system. We remember that good customer service implies quick reaction and problem solving, so we do our best to provide our Clients with a user-friendly tool to make it work.</p>
+
+<blockquote>
+  <p><em>Note:</em> When the ticket is automatically created from the email received at the the support email address, this ticket is created at the branch which is configured as a default one. To learn more about it, please see the <a href="channels/email-processing.html">Email Processing</a> section.</p>
+</blockquote>
+
+<p>To see the list of all available branches, select the <strong>Branches</strong> tab at the navigation panel at the top of the home screen.</p>
+
+<p><img src="img/branches.png" alt="Branches" /></p>
+
+<h2 id="branch-filters">Branch Filters</h2>
+
+<p>All branches can be filtered according to the <strong>Branch Name</strong> or <strong>Branch Key</strong>.</p>
+
+<p>Branch key is automatically generated from the branch name when a new branch is created and it should be unique across the system. Branch key must contain only letters. Minimum length is 2 letters. If Branch name consists of more than one word, the system takes the first character of every word and converts them to upper case (for example, Green Daisy - GD, Diamante Desk - DD, etc.). If branch name consists of a single word, branch key is generated from the first 2-4 characters in the upper case (for example, Eltrino - ELTR, bbq - BBQ, etc.).</p>
+
+<p><strong>Branch name</strong> and <strong>Branch Key</strong> filters are set to <strong>All</strong> values by default. To filter the branches according to a certain branch name or key, click the down arrow in the corresponding filed and enter the required name or key. To refresh the results, click <strong>Refresh</strong>. To clear all filters, click <strong>Reset</strong>.</p>
+
+<h2 id="create-a-new-branch">Create a New Branch</h2>
+
+<p>Click <strong>Create</strong> at the right top corner of the <strong>Branches</strong> screen. <strong>Create Branches</strong> screen opens.
+<img src="img/create_branches_details.png" alt="Create branch" /></p>
+
+<p>Provide the required information into each field. Not all the fields are required, but the more data you provide, the easier it is to distribute the tickets into the corresponding fields and finding them when they are needed:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Field</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Name</td>
+      <td><em>Required.</em> Provide the name of a new branch in this field.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Key</td>
+      <td>Leave a <strong>Key</strong> field empty as it is automatically filled by the system. Branch Key is generated from the branch name and it should be unique across the system.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Default Assignee</td>
+      <td>To select the <strong>Assignee</strong>, click <strong>Unassigned</strong>. A Search Panel opens. Next, the following two options are available: you can either start entering the name of the person to be assigned and the system will provide hints with matching results or you can click a list image to open a list of all available assignees. <em>Note:</em> If you have selected a wrong assignee, click the X button next to the name of an assignee.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Image</td>
+      <td>Add an image that will serve as a branch logo to the <strong>Image</strong> field. To do that, click <strong>Choose file</strong> and select a required image from your local machine.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Tags</td>
+      <td>You can also tag your branch. Follow the link to learn more about <a href="tagging.html">branch tagging</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Provide the description of the branch in the <strong>Description</strong> filed.</p>
+
+<p><img src="img/create_branches_description.png" alt="Create branch" /></p>
+
+<p>Provide the domain name of the support email account (for example, mail.google.com, mail.outlook.com, etc.) in the <strong>Support Address</strong> field (for example, support@diamantedesk.com) and the specific user address (for example, support@diamantedesk.com) in the <strong>Customer Domain</strong> field.
+<img src="img/email_config.png" alt="Email configuration" /></p>
+
+<p>Click <strong>Save And Close</strong> at the right top corner of the screen.</p>
+
+<h2 id="edit--delete-a-branch">Edit / Delete a Branch</h2>
+
+<ol>
+  <li>Navigate to the <strong>Branches</strong> screen.</li>
+  <li>Select the branch that shall be edited/deleted from the list of available banches. <em>Note:</em> You can also filter the available branches according to the <strong>Branch Name</strong> and <strong>Branch Key</strong> to find a required branch quicker.</li>
+  <li>Click the branch that shall be edited / deleted. The <strong>Branch</strong> screen opens.</li>
+  <li>Select the corresponding action at the right top of the screen:</li>
+</ol>
+
+<p><img src="img/branches_edit_delete.png" alt="Branch Edit Delete" /></p>
+
+<ul>
+  <li>If you click <strong>Edit</strong>, perform the necessary changes and click <strong>Save</strong> or <strong>Save and Close</strong>.</li>
+  <li>If you click <strong>Delete</strong>, the following confirmation message is displayed:
+<img src="img/branches_delete.png" alt="Branch Delete" /></li>
+</ul>
+
+<blockquote>
+  <p><em>Note:</em> If a branch is configured as the default for <a href="channels/email-processing.html">Email Processing</a>, the following message is displayed at the top of the <strong>Branch</strong> screen. In this case it cannot be deleted.</p>
+</blockquote>
+
+<p><img src="img/branches_default.png" alt="Default Branch" /></p>

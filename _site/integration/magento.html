@@ -1,0 +1,100 @@
+<p>Magento is a popular content management system that allows creating powerful e-commerce solutions. As a matter of fact, every e-commerce website should have a reliable support system that helps to quickly solve any issue, build strong customer relationships and improve overall user experience. Integrating DiamanteDesk with a website built with Magento may be the easiest solution for that.</p>
+
+<p>DiamanteDesk Magento module allows both administrator and any customer to create, edit and view tickets directly on a Magento e-commerce website.</p>
+
+<h2 id="installing-diamentedesk-extension-for-magento">Installing DiamenteDesk extension for Magento</h2>
+
+<p>After installing DiamanteDesk integration module, it shall be configured at the Magento admin panel.</p>
+
+<ol>
+  <li>Log in the <strong>Magento Admin Panel</strong>.</li>
+  <li>In the navigation panel select <em>Systems &gt; Magento Connect &gt; Magento Connect Manager</em>.
+<img src="img/magento_connect_manager.png" alt="Magento Admin Panel" /></li>
+  <li>Re-enter your Magento Administration credentials to verify your permissions.</li>
+</ol>
+
+<p>Select automatic or manual installation and complete the following steps:</p>
+
+<h6 id="automatic-installation">Automatic Installation</h6>
+
+<ol>
+  <li>On the <strong>Magento Connect Manager</strong> screen follow the <a href="https://www.magentocommerce.com/magento-connect/">Magento Connect</a> link in the <strong>Install New Extensions</strong> section.
+<img src="img/magento_automatic.png" alt="Automatic installation" />
+The extension marketplace opens.</li>
+  <li>Enter <strong>DiamanteDesk</strong> in the <strong>Search for Extensions</strong> field and press Enter.
+<img src="img/magento_connect.png" alt="Magento_marketplace" /></li>
+  <li>Select the corresponding extension module from the search results.</li>
+  <li>Click <strong>Get Extension</strong>.</li>
+</ol>
+
+<h6 id="manual-installation">Manual Installation</h6>
+
+<p><strong>Option 1 - Installation via FTP:</strong></p>
+
+<ol>
+  <li>Upload the addthis folder to the root Magento directory.</li>
+  <li>Head over to the Magento admin area and connect DiamanteDesk and Magento (see the <strong>Connecting DiamanteDesk to Magento</strong> section).</li>
+</ol>
+
+<p><strong>Option 2 - Installation via archive:</strong></p>
+
+<ol>
+  <li>Download DiamanteDesk Module archive from Github.</li>
+  <li>On the <strong>Magento Connect Manager</strong> screen, <strong>Extensions</strong> tab head over to the <strong>Direct package file upload</strong> section.
+<img src="img/magento_manual.png" alt="Manual installation" /></li>
+  <li>Select the downloaded DiamanteDesk .zip file from the local machine.</li>
+  <li>Click <strong>Upload</strong>.</li>
+  <li>Provide your Magento Administration Credentials in the <strong>Manage Existing Extensions</strong> section below.</li>
+  <li>After all the packages have been uploaded, move to <strong>Settings</strong> tab, and click <strong>Save Settings</strong>.</li>
+</ol>
+
+<p><strong>Option 3 - Installation via Composer:</strong></p>
+
+<ol>
+  <li>Add <a href="http://packages.firegento.com/">Firegento</a> repository to your ` composer.json `.</li>
+  <li>
+    <p>Add as dependency to your project using composer:</p>
+
+    <pre><code> composer require eltrino/diamantedesk
+</code></pre>
+  </li>
+</ol>
+
+<hr />
+<blockquote>
+  <p><em>Note:</em></p>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>Make sure that you clear the Magento caches to complete the installation of an extension. To learn more about cache management, follow this <a href="http://www.magentocommerce.com/knowledge-base/entry/cache-storage-management/%09200">link</a>.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>If the module has been successfully installed, a <strong>DiamanteDesk</strong> tab will appear next to the <strong>System</strong> tab in the Magento navigation pane (see the picture below).</li>
+  </ul>
+</blockquote>
+
+<p><img src="img/diamantedesk_magento.png" alt="DiamanteDesk tab" /></p>
+
+<h2 id="connecting-diamantedesk-to-magento">Connecting DiamanteDesk to Magento</h2>
+<p>After DiamantDesk module has been installed, we need to connect the actual help desk to Magento.</p>
+
+<p>In order to do that, complete the following steps:</p>
+
+<ol>
+  <li>Acquire <a href="api-credentials.md">API credentials</a> from your CRM.</li>
+  <li>Get back to Magento Admin Panel.</li>
+  <li>Go to <em>System &gt; Configuration &gt; DiamanteDesk</em>. <strong>DiamanteDesk</strong> configuration screen opens.</li>
+  <li>Enter the <strong>User Name</strong> and <strong>Api Key</strong> from your CRM.
+<img src="img/DiamanteDesk_config.png" alt="DiamanteDesk configuration" /></li>
+  <li>Provide the link to the server in the <strong>Server Address</strong> field.</li>
+  <li>Click <strong>Check Connection</strong> to make sure that the connection with a server has been successfully made.</li>
+  <li>If the <strong>Api Credentials</strong> are correct, a new <strong>Branch Configuration</strong> field will be added to the DiamanteDesk configuration. Select a default branch from the <strong>Branch</strong> drop-down list. To learn more about branches in DiamanteDesk, see the <strong>Branches</strong> section in User Guide.
+<img src="img/magento_branches.png" alt="" /></li>
+  <li>Point out whether the footer link to customer support shall be displayed. Select <strong>Yes</strong> or <strong>No</strong> option in the <strong>Display footer link</strong> field.</li>
+  <li>If the footer link shall be displayed, spcify the footer link URL in the field below.</li>
+  <li>Click <strong>Save Config</strong> on the right top corner of the screen.</li>
+</ol>

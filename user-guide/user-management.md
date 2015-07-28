@@ -1,4 +1,6 @@
-#User Management
+---
+title: User Management
+---
 
 **User Management** serves to create new users in DiamanteDesk or to review/edit information about the existing ones. Each user has a certain role, access settings and belongs to one of the existing groups, defining his default permissions in the system.
 
@@ -27,7 +29,7 @@ After you get to the **Create User** screen, fill out all the required fields in
 * Enter the user's **Primary Email** in the corresponding field. This email is going to be used for email notifications and password recovery. Click **Add Another Email** in the **Emails** field to add additional email in case the primary one is not available for any reason.
 * **Email Signature**
 * **Phone**
-* **Tags.** Tagging functionality is identical throughout the system. To learn more about tagging, follow this [link](tagging.md).
+* **Tags.** Tagging functionality is identical throughout the system. To learn more about tagging, follow this [link](tagging.html).
 
 Provide the **Title** (position) of a newly created user in the section for **Additional** information.
 

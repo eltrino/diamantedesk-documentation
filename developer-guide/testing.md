@@ -1,4 +1,6 @@
-#Testing
+---
+title: Testing
+---
 
 Software testing is an essential part of the development process. Deliberate and thorough testing ensures that software will work properly and our Clients will not face unforeseen consequences when using it. 
 
@@ -38,7 +40,7 @@ The output of the command execution is similar to the unit testing output.
 ### How to Setup Testing Environment
 
 1. Set up your test environment parameters by creating an ```app/config/parameters_test.yml``` file. The  structure of this file is similar to your *prod* environment one.
-2. Reinstall DiamanteDesk, using **--env=test** flag if required (depends on your setup). Please refer to the [Installation Manual]() for more details. 
+2. Reinstall DiamanteDesk, using **--env=test** flag if required (depends on your setup). Please refer to the [Installation Manual](../installation-guide/index.html) for more details. 
 
 ### Running the Suite of Functional Tests
 
@@ -49,7 +51,7 @@ When the command described above is issued, the following happens:
 3. Next, the new set of automatically generated data shall be loaded.
 4. Eventually, the test suite launches the first test and continues the process as specified in the **phpunit.xml.dist** file.
 
-###Adding your own tests and test data
+###Adding New Tests and Test Data
 
 DiamanteDesk application is open for contributing, so if you want to add a new functionality to the system, we strongly recommend writing unit/functional tests for your bundle and testing it against the existing code to ensure the app integrity.  All the newly added functionality that cannot make it through the test suite can't get checked into DiamanteDesk.
 
@@ -60,6 +62,6 @@ Here are a few rules we follow when testing DiamanteDesk application:
 3. Each set of tests has it's own config. 
 4. Functional test suite is required to have a **bootstrap** script for correct autoloading.
 5. Fixtures are added via placing your data generator class into the **DataFixtures/Test** folder.
-6. Each test has to end with **Test.php**.
+6. Each file name, which contains tests, has to end with **Test.php**.
 
 These simple recommendations enable seamless integration of new tests into the existing test suites.
