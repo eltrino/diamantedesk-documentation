@@ -1,0 +1,20 @@
+- index.md
+- installation-guide/index.md
+- user-guide/index.md:
+  - user-guide/branches.md
+  - user-guide/tickets.md
+  - user-guide/user-management.md
+  - user-guide/tagging.md
+  - user-guide/channels/index.md:
+    - user-guide/channels/email-processing.md
+    - user-guide/channels/portal.md
+    - user-guide/channels/embedded-form.md
+- developer-guide/index.md:
+  - developer-guide/contributing.md
+  - developer-guide/testing.md
+  - developer-guide/restful-api-guide.md
+- integration/index.md:
+  - integration/api-credentials.md
+  - integration/magento.md
+  - integration/wordpress.md
+  - integration/prestashop.md
