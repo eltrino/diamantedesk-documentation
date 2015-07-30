@@ -17,13 +17,14 @@ In addition, here is a list of requirements related specifically to the Diamante
 * Grunt needs to be installed (globally);
 * Bower needs to be installed (globally).
 
+To install DiamanteDesk you also need to setup MySQL database server with an empty database that will be used later on.
 _____
 
-You can also check whether your system meets all the requirements from the command line. In order to do that, after you get the application code, execute the following command:
+You can also check whether your system meets all the requirements from the command line. In order to do that, you should start with getting the [application code](#get-code) from Github and installing required [libraries](#libraries). Then you can run the following command:
 
-    php app/check.php
-
-To install DiamanteDesk you also need to setup MySQL database server with an empty database that will be used later on.
+{% highlight php %}
+php app/check.php
+{% endhighlight %}
     
 ###Web Server configuration
 
@@ -37,27 +38,35 @@ DiamanteDesk uses **Composer** to manage package dependencies. Use this [link](h
 
 ## Installation of a Standalone Application
 
-###Getting the Application
+### <a name="get-code"></a> Getting the Application
 
 Download DiamanteDesk application from [GitHub](https://github.com/eltrino/diamantedesk-application/releases).
 
 Clone the [GitHub repository](https://github.com/eltrino/diamantedesk-application#usage) to get a source code and checkout the latest developed version of an application. Use the following command:
 
-    git clone https://github.com/eltrino/diamantedesk-application
+{% highlight sh %}
+git clone https://github.com/eltrino/diamantedesk-application
+{% endhighlight %}
 
 Checkout the latest stable version of the project:
 
-     git clone -b 1.0 https://github.com/eltrino/diamantedesk-application
+{% highlight sh %}
+git clone -b 1.0 https://github.com/eltrino/diamantedesk-application
+{% endhighlight %}
      
 Also, download the application with the composer package manager using the following command:
 
-    composer create-project diamante/desk-application:1.0
+{% highlight sh %}
+create-project diamante/desk-application:1.0.*
+{% endhighlight %}
     
-### Installing required libraries
+### <a name="libraries"></a> Installing required libraries
 
 Install the dependencies with the composer:
 
-    composer install
+{% highlight sh %}
+composer install
+{% endhighlight %}
 
 ### Application Installation
 
@@ -65,7 +74,9 @@ Install the dependencies with the composer:
 
 To run the installation of DiamanteDesk in a console mode, use the following command:
 
-     php diamante:install
+{% highlight php %}
+php diamante:install
+{% endhighlight %}
      
 Additional commands may be required. The system will guide you through the process with questions and command options.
 
@@ -75,7 +86,9 @@ If the system configuration does not meet the requirements, the _install_ comman
 
 To install the application through a web wizard, follow the link below:
 
-    http://localhost/install.php
+{% highlight http %}
+http://localhost/install.php
+{% endhighlight %}
     
 When DiamanteDesk installation screen opens, click **Begin Installation**. 
 

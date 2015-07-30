@@ -10,7 +10,11 @@ To ensure secure access it is recommended to use HTTPS protocol for API requests
 
 API endpoints define the connection point to your service, giving the external application access to DiamanteDesk data. API endpoints are prefixed with your domain name:
 
-     http(s)://domainname/rest/api/{version}/desk/
+{% highlight http %}
+
+http(s)://domainname/rest/api/{version}/desk/
+
+{% endhighlight %}
 
 ## Authentication
 
@@ -53,10 +57,14 @@ prev | The URL to the previous results page.
 
 Take a look at the example, containing such headers:
 
-    HTTP/1.1 200 OK
+{% highlight http %}
 
-    Link: <http://hostname/api/rest/latest/desk/branches?limit=25&page=2>; rel="next", <http://hostname/api/rest/latest/desk/branches?limit=25&page=5>; rel="last"
-    X-Total: 110 
+HTTP/1.1 200 OK
+
+Link: <http://hostname/api/rest/latest/desk/branches?limit=25&page=2>; rel="next", <http://hostname/api/rest/latest/desk/branches?limit=25&page=5>; rel="last"
+X-Total: 110 
+
+{% endhighlight %}
 
 ### Sorting
 
@@ -91,9 +99,11 @@ Status Code | Description
 
 Take a look at the example of a 404 error below:
 
-    POST /diamantedesk-1.0/web/api/rest/latest/desk/branches HTTP/1.1
+{% highlight yaml %}
 
-    {
+POST /diamantedesk-1.0/web/api/rest/latest/desk/branches HTTP/1.1
+
+{
     "name": "Test Branch",
     "description": "Test Description",
     "tags": [
@@ -101,13 +111,15 @@ Take a look at the example of a 404 error below:
         "TB1"
     ],
     "key": "BRANCHTEST"
-    }
+}
 
-    HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
 
-    {
+{
     "error": "Branch key already exists. Please, provide another one."
-    }
+}
+
+{% endhighlight %}
 
 ## Resources
 
@@ -124,7 +136,9 @@ REST APIs are necessary when DiamanteDesk is integrated into another application
 
 ###### GET: Retrieve the list of all branches
 
-    GET /api/rest/{version}/desk/branches
+{% highlight sh %}
+GET /api/rest/{version}/desk/branches
+{% endhighlight %}
     
 **Response**
     
@@ -132,35 +146,32 @@ REST APIs are necessary when DiamanteDesk is integrated into another application
 
 _Response body:_ 
 
-    [
-       {
-           "created_at": "2015-07-17T11:25:21+0000",
-           "description": "branchDescription1",
-           "id": 1,
-           "key": "BRANCHB",
-           "name": "branchName1",
-           "updated_at": "2015-07-17T11:25:21+0000"
-       },
-       {
-           "created_at": "2015-07-17T11:25:21+0000",
-           "description": "branchDescription2",
-           "id": 2,
-           "key": "BRANCHC",
-           "name": "branchName2",
-           "updated_at": "2015-07-17T11:25:21+0000"
-       }
-    ]
- **Status Code:** 404 (Not Found)
-
-_Response body:_ 
-
+{% highlight yaml %}
+[
     {
-       "error": "Branch loading failed. Branch not found."
+        "created_at": "2015-07-17T11:25:21+0000",
+        "description": "branchDescription1",
+        "id": 1,
+        "key": "BRANCHB",
+        "name": "branchName1",
+        "updated_at": "2015-07-17T11:25:21+0000"
+    },
+    {
+        "created_at": "2015-07-17T11:25:21+0000",
+        "description": "branchDescription2",
+        "id": 2,
+        "key": "BRANCHC",
+        "name": "branchName2",
+        "updated_at": "2015-07-17T11:25:21+0000"
     }
+]
+{% endhighlight %}
     
 ######  GET: Retrieve a branch by ID
 
-    GET /api/rest/{version}/desk/branches/{id}
+{% highlight sh %}
+GET /api/rest/{version}/desk/branches/{id}
+{% endhighlight %}
     
 **Response**
     
@@ -168,18 +179,32 @@ _Response body:_
 
 _Response body:_ 
 
-    {
-       "created_at": "2015-07-17T11:25:36+0000",
-       "description": "Test Description",
-       "id": 11,
-       "key": "BRANCHTEST",
-       "name": "Test Branch",
-       "updated_at": "2015-07-17T11:25:36+0000"
-    }
+{% highlight yaml %}
+{
+    "created_at": "2015-07-17T11:25:36+0000",
+    "description": "Test Description",
+    "id": 11,
+    "key": "BRANCHTEST",
+    "name": "Test Branch",
+    "updated_at": "2015-07-17T11:25:36+0000"
+}
+{% endhighlight %}
+
+**Status Code:** 404 (Not Found)
+
+_Response body:_ 
+
+{% highlight yaml %}
+{
+    "error": "Branch loading failed. Branch not found."
+}
+{% endhighlight %}
 
 ###### POST: Create a new branch
 
-    POST /api/rest/{version}/desk/branches
+{% highlight sh %}
+POST /api/rest/{version}/desk/branches
+{% endhighlight %}
     
 **Parameters**
 
@@ -192,14 +217,16 @@ _Response body:_
 
 _Request example:_ 
 
-    {
-      "name": "Test Branch",
-      "description": "Test Description",
-      "tags": [
-           "Test Tag"
-      ],
-      "key": "BRANCHTEST"
-    }
+{% highlight yaml %}
+{
+    "name": "Test Branch",
+    "description": "Test Description",
+    "tags": [
+        "Test Tag"
+    ],
+    "key": "BRANCHTEST"
+}
+{% endhighlight %}
     
 **Response**
     
@@ -207,31 +234,37 @@ _Request example:_
 
 _Response body:_ 
 
-    {
-      "created_at": "2015-07-17T11:25:36+0000",
-      "description": "Test Description",
-      "id": 11,
-      "key": "BRANCHTEST",
-      "name": "Test Branch",
-      "tags": [
-          "Test Tag"
-      ],
-      "updated_at": "2015-07-17T11:25:36+0000"
-    }
+{% highlight yaml %}
+{
+    "created_at": "2015-07-17T11:25:36+0000",
+    "description": "Test Description",
+    "id": 11,
+    "key": "BRANCHTEST",
+    "name": "Test Branch",
+    "tags": [
+        "Test Tag"
+    ],
+    "updated_at": "2015-07-17T11:25:36+0000"
+}
+{% endhighlight %}
 
-###### PUT, PATCH: Update properties of a certain branch
+###### PUT, PATCH: Update properties of a certain branch by its ID
 
-    PUT|PATCH /api/rest/{version}/desk/branches/{id}
+{% highlight sh %}
+PUT|PATCH /api/rest/{version}/desk/branches/{id}
+{% endhighlight %}
     
 _Request example:_ 
 
-    {
-       "name": "Test Branch PUT",
-       "description": "Test Description",
-       "tags": [
-           "Test Tag"
-       ]
-    }
+{% highlight yaml %}
+{
+    "name": "Test Branch PUT",
+    "description": "Test Description",
+    "tags": [
+        "Test Tag"
+    ]
+}
+{% endhighlight %}
     
 **Response**
     
@@ -239,22 +272,25 @@ _Request example:_
 
 _Response body:_ 
 
-    {
-       "created_at": "2015-07-17T11:25:36+0000",
-       "description": "Test Description",
-       "id": 11,
-       "key": "BRANCHTEST",
-       "name": "Test Branch PUT",
-       "tags": [
-           "Test Tag"
-       ],
-       "updated_at": "2015-07-17T11:25:36+0000"
-    }
-
+{% highlight yaml %}
+{
+    "created_at": "2015-07-17T11:25:36+0000",
+    "description": "Test Description",
+    "id": 11,
+    "key": "BRANCHTEST",
+    "name": "Test Branch PUT",
+    "tags": [
+        "Test Tag"
+    ],
+    "updated_at": "2015-07-17T11:25:36+0000"
+}
+{% endhighlight %}
 
 ###### DELETE: Delete a branch by ID
 
-    DELETE /api/rest/{version}/desk/branches/{id}
+{% highlight sh %}
+DELETE /api/rest/{version}/desk/branches/{id}
+{% endhighlight %}
     
 **Response**
     
@@ -266,7 +302,9 @@ _Response body:_ null
 
 ###### GET: Retrieve list of all tickets
 
-    GET /api/rest/{version}/desk/tickets
+{% highlight sh %}
+GET /api/rest/{version}/desk/tickets
+{% endhighlight %}
 
 **Response**
     
@@ -274,50 +312,48 @@ _Response body:_ null
 
 _Response body:_ 
 
-    [
-       {
-           "assignee": 1,
-           "branch": 1,
-           "created_at": "2015-07-17T11:25:21+0000",
-           "id": 1,
-           "key": "BRANCHB-1",
-           "priority": "medium",
-           "reporter": "oro_1",
-           "source": "phone",
-           "status": "new",
-           "subject": "ticketSubject1",
-           "unique_id": {
-               "id": "8d5fb1d682fecd97b0f4b6f050e2a8b9"
-           },
-           "updated_at": "2015-07-17T11:25:21+0000"
-       },
-       {
-           "assignee": 1,
-           "branch": 2,
-           "created_at": "2015-07-17T11:25:21+0000",
-           "id": 2,
-           "key": "BRANCHC-1",
-           "priority": "medium",
-           "reporter": "oro_1",
-           "source": "phone",
-           "status": "open",
-           "subject": "ticketSubject2",
-           "unique_id": {
-               "id": "9beddad8ecd692841ea8c8f8910b538b"
-           },
-           "updated_at": "2015-07-17T11:25:21+0000"
-       }
-    ]
-    
-###### /api/rest/{version}/desk/tickets/search
-
-|Method|        Description          
-|:------------- |:---------------| 
-| **GET**    | Retrieves list of Tickets found by the query. Ticket is searched by the subject and description. Performs filtering of tickets if provided with criteria as GET parameters. Time filtering parameters as well as paging/sorting configuration parameters can be found in \Diamante\DeskBundle\Api\Command\Filter\CommonFilterCommand class. Time filtering values should be converted to UTC.|
+{% highlight yaml %}
+[
+    {
+        "assignee": 1,
+        "branch": 1,
+        "created_at": "2015-07-17T11:25:21+0000",
+        "id": 1,
+        "key": "BRANCHB-1",
+        "priority": "medium",
+        "reporter": "oro_1",
+        "source": "phone",
+        "status": "new",
+        "subject": "ticketSubject1",
+        "unique_id": {
+            "id": "8d5fb1d682fecd97b0f4b6f050e2a8b9"
+        },
+        "updated_at": "2015-07-17T11:25:21+0000"
+    },
+    {
+        "assignee": 1,
+        "branch": 2,
+        "created_at": "2015-07-17T11:25:21+0000",
+        "id": 2,
+        "key": "BRANCHC-1",
+        "priority": "medium",
+        "reporter": "oro_1",
+        "source": "phone",
+        "status": "open",
+        "subject": "ticketSubject2",
+        "unique_id": {
+            "id": "9beddad8ecd692841ea8c8f8910b538b"
+        },
+        "updated_at": "2015-07-17T11:25:21+0000"
+    }
+]
+{% endhighlight %}
 
 ###### GET: Retrieve the ticket by the given ticket ID
 
-   GET /api/rest/{version}/desk/tickets/{id}
+{% highlight sh %}
+GET /api/rest/{version}/desk/tickets/{id}
+{% endhighlight %}
    
 **Response**
     
@@ -325,32 +361,46 @@ _Response body:_
 
 _Response body:_ 
 
-    {
-       "attachments": [
+{% highlight yaml %}
+{
+    "attachments": [
 
-       ],
-       "branch": 1,
-       "comments": [
+    ],
+    "branch": 1,
+    "comments": [
 
-       ],
-       "created_at": "2015-07-17T11:25:47+0000",
-       "description": "Test Description",
-       "id": 12,
-       "key": "BRANCHB-3",
-       "priority": "medium",
-       "reporter": "oro_1",
-       "source": "phone",
-       "status": "open",
-       "subject": "Test Ticket",
-       "unique_id": {
-           "id": "4b1573586e00d7760babf2aa0bdb9cdc"
-       },
-       "updated_at": "2015-07-17T11:25:47+0000"
-    }
+    ],
+    "created_at": "2015-07-17T11:25:47+0000",
+    "description": "Test Description",
+    "id": 12,
+    "key": "BRANCHB-3",
+    "priority": "medium",
+    "reporter": "oro_1",
+    "source": "phone",
+    "status": "open",
+    "subject": "Test Ticket",
+    "unique_id": {
+        "id": "4b1573586e00d7760babf2aa0bdb9cdc"
+    },
+    "updated_at": "2015-07-17T11:25:47+0000"
+}
+{% endhighlight %}
+
+**Status Code:** 404 (OK)
+
+_Response body:_   
+
+{% highlight yaml %}
+{
+    "error": "Ticket loading failed, ticket not found."
+}  
+{% endhighlight %}
 
 ###### POST: Create a new ticket
 
-    POST /api/rest/{version}/desk/tickets
+{% highlight sh %}
+POST /api/rest/{version}/desk/tickets
+{% endhighlight %}
     
 **Parameters**
 
@@ -366,54 +416,63 @@ _Response body:_
     
 _Request example:_
 
-    {
-       "branch": 1,
-       "subject": "Test Ticket",
-       "description": "Test Description",
-       "status": "open",
-       "priority": "medium",
-       "source": "phone",
-       "reporter": "diamante_10"
-    }
+{% highlight yaml %}
+{
+    "branch": 1,
+    "subject": "Test Ticket",
+    "description": "Test Description",
+    "status": "open",
+    "priority": "medium",
+    "source": "phone",
+    "reporter": "oro_1"
+}
+{% endhighlight %}
+
 **Response**
     
 **Status Code:** 201 (Created)
 
 _Response body:_ 
 
-    {
-       "attachments": [
+{% highlight yaml %}
+{
+    "attachments": [
 
-       ],
-       "branch": 1,
-       "comments": [
+    ],
+    "branch": 1,
+    "comments": [
 
-       ],
-       "created_at": "2015-07-17T11:25:29+0000",
-       "description": "Test Description",
-       "id": 11,
-       "key": "BRANCHB-2",
-       "priority": "medium",
-       "reporter": "diamante_10",
-       "source": "phone",
-       "status": "open",
-       "subject": "Test Ticket",
-       "unique_id": {
-           "id": "80297640927352a82f2b7c1a8c97d10b"
-       },
-       "updated_at": "2015-07-17T11:25:29+0000"
-    }
+    ],
+    "created_at": "2015-07-17T11:25:47+0000",
+    "description": "Test Description",
+    "id": 12,
+    "key": "BRANCHB-3",
+    "priority": "medium",
+    "reporter": "oro_1",
+    "source": "phone",
+    "status": "open",
+    "subject": "Test Ticket",
+    "unique_id": {
+        "id": "4b1573586e00d7760babf2aa0bdb9cdc"
+    },
+    "updated_at": "2015-07-17T11:25:47+0000"
+}
+{% endhighlight %}
     
     
 ###### PUT, PATCH: Update certain properties of the ticket by ID
 
-    PUT, PATCH /api/rest/{version}/desk/tickets/{id}
+{% highlight sh %}
+PUT, PATCH /api/rest/{version}/desk/tickets/{id}
+{% endhighlight %}
     
 _Request example:_
 
-    {
-       "subject": "Test Ticket Updated PUT"
-    }
+{% highlight yaml %}
+{
+    "subject": "Test Ticket Updated PUT"
+}
+{% endhighlight %}
     
 **Response**
     
@@ -421,32 +480,36 @@ _Request example:_
 
 _Response body:_ 
 
-    {
-       "attachments": [
+{% highlight yaml %}
+{
+    "attachments": [
 
-       ],
-       "branch": 1,
-       "comments": [
+    ],
+    "branch": 1,
+    "comments": [
 
-       ],
-       "created_at": "2015-07-17T11:25:29+0000",
-       "description": "Test Description",
-       "id": 11,
-       "key": "BRANCHB-2",
-       "priority": "medium",
-       "reporter": "oro_1",
-       "source": "phone",
-       "status": "open",
-       "subject": "Test Ticket Updated PUT",
-       "unique_id": {
-           "id": "4b1573586e00d7760babf2aa0bdb9cdc"
-       },
-       "updated_at": "2015-07-17T11:25:47+0000"
-    }
+    ],
+    "created_at": "2015-07-17T11:25:47+0000",
+    "description": "Test Description",
+    "id": 12,
+    "key": "BRANCHB-3",
+    "priority": "medium",
+    "reporter": "oro_1",
+    "source": "phone",
+    "status": "open",
+    "subject": "Test Ticket Updated PUT",
+    "unique_id": {
+        "id": "4b1573586e00d7760babf2aa0bdb9cdc"
+    },
+    "updated_at": "2015-07-17T11:25:47+0000"
+}
+{% endhighlight %}
     
 ###### DELETE: Delete the ticket by ID
 
-    DELETE /api/rest/{version}/desk/tickets/{id}   
+{% highlight sh %}
+DELETE /api/rest/{version}/desk/tickets/{id}  
+{% endhighlight %} 
     
 **Response**
 
@@ -454,18 +517,12 @@ _Response body:_
 
 _Response body:_ null
     
-**Status Code:** 404 (OK)
-
-_Response body:_   
-
-    {
-    "error": "Ticket loading failed, ticket not found."
-    }   
     
-    
-###### GET: Retrieve ticket by the given ticket key
+###### GET: Retrieve a ticket by the given ticket key
 
-   GET /api/rest/{version}/desk/tickets/{key}
+{% highlight sh %}
+GET /api/rest/{version}/desk/tickets/{key}
+{% endhighlight %}
    
 **Response**
     
@@ -473,116 +530,133 @@ _Response body:_
 
 _Response body:_ 
 
-    {
-       "attachments": [
+{% highlight yaml %}
+{
+    "attachments": [
 
-       ],
-       "branch": 1,
-       "comments": [
+    ],
+    "branch": 1,
+    "comments": [
 
-       ],
-       "created_at": "2015-07-17T11:25:29+0000",
-       "description": "Test Description",
-       "id": 11,
-       "key": "BRANCHB-2",
-       "priority": "medium",
-       "reporter": "oro_1",
-       "source": "phone",
-       "status": "open",
-       "subject": "Test Ticket",
-       "unique_id": {
-           "id": "4b1573586e00d7760babf2aa0bdb9cdc"
-       },
-       "updated_at": "2015-07-17T11:25:47+0000"
-    }
+    ],
+    "created_at": "2015-07-17T11:25:47+0000",
+    "description": "Test Description",
+    "id": 12,
+    "key": "BRANCHB-3",
+    "priority": "medium",
+    "reporter": "oro_1",
+    "source": "phone",
+    "status": "open",
+    "subject": "Test Ticket",
+    "unique_id": {
+        "id": "4b1573586e00d7760babf2aa0bdb9cdc"
+    },
+    "updated_at": "2015-07-17T11:25:47+0000"
+}
+{% endhighlight %}
+    
+**Status Code:** 404 (Not Found)
+
+_Response body:_ 
+
+{% highlight yaml %}
+}
+    "error": "Ticket loading failed, ticket not found."
+}
+{% endhighlight %}
 
 ###### PUT, PATCH: Update certain properties of a ticket by the ticket key
 
-    PUT, PATCH /api/rest/{version}/desk/tickets/{key}
+{% highlight sh %}
+PUT, PATCH /api/rest/{version}/desk/tickets/{key}
+{% endhighlight %}
     
 _Request example:_
 
-    {
-       "subject": "Test Ticket Updated PUT by key"
-    }
-    
+{% highlight yaml %}
+{
+    "subject": "Test Ticket Updated PUT by key"
+}
+{% endhighlight %}
+   
 **Response**
     
 **Status Code:** 200 (OK)
 
 _Response body:_ 
 
-    {
-       "attachments": [
+{% highlight yaml %}
+{
+    "attachments": [
 
-       ],
-       "branch": 1,
-       "comments": [
+    ],
+    "branch": 1,
+    "comments": [
 
-       ],
-       "created_at": "2015-07-17T11:25:29+0000",
-       "description": "Test Description",
-       "id": 11,
-       "key": "BRANCHB-2",
-       "priority": "medium",
-       "reporter": "diamante_10",
-       "source": "phone",
-       "status": "open",
-       "subject": "Test Ticket Updated PUT by key",
-       "unique_id": {
-           "id": "80297640927352a82f2b7c1a8c97d10b"
-       },
-       "updated_at": "2015-07-17T11:25:29+0000"
-    }
+    ],
+    "created_at": "2015-07-17T11:25:47+0000",
+    "description": "Test Description",
+    "id": 12,
+    "key": "BRANCHB-3",
+    "priority": "medium",
+    "reporter": "oro_1",
+    "source": "phone",
+    "status": "open",
+    "subject": "Test Ticket Updated PUT by key",
+    "unique_id": {
+        "id": "4b1573586e00d7760babf2aa0bdb9cdc"
+    },
+    "updated_at": "2015-07-17T11:25:47+0000"
+}
+{% endhighlight %}
     
 ###### DELETE: Delete the ticket by the ticket key
 
-    DELETE /api/rest/{version}/desk/tickets/{key} 
+{% highlight sh %}
+DELETE /api/rest/{version}/desk/tickets/{key} 
+{% endhighlight %}
     
 **Response**
 
 **Status Code:** 204 (No Content)
 
-_Response body:_ null
-    
-**Status Code:** 404 (OK)
-
-_Response body:_   
-
-    {
-    "error": "Ticket loading failed, ticket not found."
-    }   
+_Response body:_ null 
 
 ###### GET: Retrieve the list of ticket attachments by ticket ID
 
-    GET /api/rest/{version}/desk/tickets/{id}/attachments
+{% highlight sh %}
+GET /api/rest/{version}/desk/tickets/{id}/attachments
+{% endhighlight %}
     
 **Response**
     
 **Status Code:** 200 (OK)
 
 _Response body:_ 
-    
-    [
-       {
-           "id": 15,
-           "created_at": "2015-07-17T11:25:53+0000",
-           "updated_at": "2015-07-17T11:25:53+0000",
-           "file": {
-               "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/450385ca08c7cfe5b507ad85f3a17428",
-               "filename": "test.jpg"
-           },
-           "thumbnails": {
-               "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/450385ca08c7cfe5b507ad85f3a17428",
-               "filename": "450385ca08c7cfe5b507ad85f3a17428.png"
-           }
-       }
-    ]
 
+{% highlight yaml %}  
+[
+    {
+        "id": 15,
+        "created_at": "2015-07-17T11:25:53+0000",
+        "updated_at": "2015-07-17T11:25:53+0000",
+        "file": {
+            "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/450385ca08c7cfe5b507ad85f3a17428",
+            "filename": "test.jpg"
+        },
+        "thumbnails": {
+            "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/450385ca08c7cfe5b507ad85f3a17428",
+            "filename": "450385ca08c7cfe5b507ad85f3a17428.png"
+        }
+    }
+]
+{% endhighlight %}
 
 ###### GET: Retrieve ticket attachments by attachment ID
 
-    GET /api/rest/{version}/desk/tickets/{ticketId}/attachments/{attachmentId}
+{% highlight sh %}
+GET /api/rest/{version}/desk/tickets/{ticketId}/attachments/{attachmentId}
+{% endhighlight %}
     
 **Response**
     
@@ -590,96 +664,115 @@ _Response body:_
 
 _Response body:_ 
 
-    {
-       "id": 15,
-       "created_at": "2015-07-17T11:25:53+0000",
-       "updated_at": "2015-07-17T11:25:53+0000",
-       "file": {
-           "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/450385ca08c7cfe5b507ad85f3a17428",
-           "filename": "test.jpg"
-        },
-       "thumbnails": {
-           "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/450385ca08c7cfe5b507ad85f3a17428",
-           "filename": "450385ca08c7cfe5b507ad85f3a17428.png"
-       }
+{% highlight yaml %} 
+{
+    "id": 15,
+    "created_at": "2015-07-17T11:25:53+0000",
+    "updated_at": "2015-07-17T11:25:53+0000",
+    "file": {
+        "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/450385ca08c7cfe5b507ad85f3a17428",
+        "filename": "test.jpg"
+    },
+    "thumbnails": {
+        "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/450385ca08c7cfe5b507ad85f3a17428",
+        "filename": "450385ca08c7cfe5b507ad85f3a17428.png"
     }
+}
+{% endhighlight %}
     
-###### POST: Add attachment to the ticket
-
-    POST /api/rest/{version}/desk/tickets/{ticketId}/attachments
-
-_Request example:_
-
-    {
-       "attachmentsInput": [
-           { 
-       BASE_64 encoded file
-           }
-       ]
-    }
-    
-**Response**
-    
-**Status Code:** 201 (Created)
-
-_Response body:_ 
-
-    [
-       {
-           "id": 15,
-           "created_at": "2015-07-17T11:25:53+0000",
-           "updated_at": "2015-07-17T11:25:53+0000",
-           "file": {
-               "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/450385ca08c7cfe5b507ad85f3a17428",
-               "filename": "test.jpg"
-           },
-           "thumbnails": {
-               "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/450385ca08c7cfe5b507ad85f3a17428",
-               "filename": "450385ca08c7cfe5b507ad85f3a17428.png"
-           }
-       }
-    ]
-    
-###### DELETE: Remove Attachment from the ticket
-
-    DELETE /api/rest/{version}/desk/tickets/{ticketId}/attachments/{attachmentId}
-    
-**Response**
-    
-**Status Code:** 204 (No Content)
-
-_Response body:_ null
-
 **Status Code:** 404 (Not Found)
 
 _Response body:_
 
-    {
-       "error": "Attachment loading failed. Ticket has no such attachment."
-    }
+{% highlight yaml %} 
+{
+    "error": "Attachment loading failed. Ticket has no such attachment."
+}
+{% endhighlight %}   
+    
+###### POST: Add attachment to the ticket
 
-###### GET: Retrieve personal data based on the provided ticket ID
+{% highlight sh %}
+POST /api/rest/{version}/desk/tickets/{ticketId}/attachments
+{% endhighlight %}
 
-    GET /api/rest/{version}/desk/ticket/{id}/assignee
+_Request example:_
 
+{% highlight yaml %} 
+{
+    "attachmentsInput": [
+        {
+            "filename": "test.jpg",
+            "content": "R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+        }
+    ]
+}
+{% endhighlight %}
+    
 **Response**
     
 **Status Code:** 201 (Created)
 
 _Response body:_ 
 
+{% highlight yaml %}
+[
     {
-       "email": "pol.vova@gmail.com",
-       "name": "asdasd dasdasd",
-       "id": "oro_1"
+        "id": 15,
+        "created_at": "2015-07-17T11:25:53+0000",
+        "updated_at": "2015-07-17T11:25:53+0000",
+        "file": {
+            "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/450385ca08c7cfe5b507ad85f3a17428",
+            "filename": "test.jpg"
+        },
+        "thumbnails": {
+            "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/450385ca08c7cfe5b507ad85f3a17428",
+            "filename": "450385ca08c7cfe5b507ad85f3a17428.png"
+        }
     }
+]
+{% endhighlight %}
+    
+###### DELETE: Remove Attachment from the ticket
 
+{% highlight sh %}
+DELETE /api/rest/{version}/desk/tickets/{ticketId}/attachments/{attachmentId}
+{% endhighlight %}
+    
+**Response**
+    
+**Status Code:** 204 (No Content)
+
+_Response body:_ null
+
+
+###### GET: Retrieve personal data based on the provided ticket ID
+
+{% highlight sh %}
+GET /api/rest/{version}/desk/ticket/{id}/assignee
+{% endhighlight %}
+
+**Response**
+    
+**Status Code:** 200 (OK)
+
+_Response body:_ 
+
+{% highlight yaml %}
+{
+  "email": "pol.vova@gmail.com",
+  "name": "asdasd dasdasd",
+  "id": "oro_1"
+}
+{% endhighlight %}
 
 ### Comments
 
 ###### GET: Retrieve the list of all comments
 
-    GET /api/rest/{version}/desk/comments
+{% highlight sh %}
+GET /api/rest/{version}/desk/comments
+{% endhighlight %}
     
 **Response**
     
@@ -687,38 +780,42 @@ _Response body:_
 
 _Response body:_ 
 
-    [
-       {
-           "attachments": [
+{% highlight yaml %}
+[
+    {
+        "attachments": [
 
-           ],
-           "author": 1,
-           "author_type": "oro",
-           "content": "commentContent1-1",
-           "created_at": "2015-07-17T11:25:22+0000",
-           "id": 1,
-           "private": false,
-           "ticket": 1,
-           "updated_at": "2015-07-17T11:25:22+0000"
-       },
-       {
-           "attachments": [
+        ],
+        "author": 1,
+        "author_type": "oro",
+        "content": "commentContent1-1",
+        "created_at": "2015-07-17T11:25:22+0000",
+        "id": 1,
+        "private": false,
+        "ticket": 1,
+        "updated_at": "2015-07-17T11:25:22+0000"
+    },
+    {
+        "attachments": [
 
-           ],
-           "author": 1,
-           "author_type": "oro",
-           "content": "commentContent1-2",
-           "created_at": "2015-07-17T11:25:22+0000",
-           "id": 2,
-           "private": false,
-           "ticket": 1,
-           "updated_at": "2015-07-17T11:25:22+0000"
-        }
-    ]
+        ],
+        "author": 1,
+        "author_type": "oro",
+        "content": "commentContent1-2",
+        "created_at": "2015-07-17T11:25:22+0000",
+        "id": 2,
+        "private": false,
+        "ticket": 1,
+        "updated_at": "2015-07-17T11:25:22+0000"
+    }
+]
+{% endhighlight %}
 
 ###### GET: Retrieve the comment by the given comment ID
 
-    GET /api/rest/{version}/desk/comments/{id}
+{% highlight sh %}
+GET /api/rest/{version}/desk/comments/{id}
+{% endhighlight %}
         
 **Response**
     
@@ -726,24 +823,37 @@ _Response body:_
 
 _Response body:_ 
 
-    {
-       "attachments": [
+{% highlight yaml %}
+{
+    "attachments": [
 
-       ],
-       "author": 10,
-       "author_type": "diamante",
-       "content": "Test Comment",
-       "created_at": "2015-07-17T11:25:22+0000",
-       "id": 101,
-       "private": false,
-       "ticket": 1,
-       "updated_at": "2015-07-17T11:25:22+0000"
-    }
+    ],
+    "author": 10,
+    "author_type": "diamante",
+    "content": "Test Comment",
+    "created_at": "2015-07-17T11:25:22+0000",
+    "id": 101,
+    "private": false,
+    "ticket": 1,
+    "updated_at": "2015-07-17T11:25:22+0000"
+}
+{% endhighlight %}    
     
+**Status Code:** 404 (OK)
+
+_Response body:_   
+
+{% highlight yaml %}
+{
+    "error": "Comment loading failed, comment not found."
+} 
+{% endhighlight %}   
     
 ###### POST: Add a new comment to the ticket.
 
-    POST /api/rest/{version}/desk/comments
+{% highlight sh %}
+POST /api/rest/{version}/desk/comments
+{% endhighlight %}
  
  **Parameters**   
     
@@ -756,13 +866,14 @@ _Response body:_
     
 _Request example:_
 
-    {
-       "content": "Test Comment",
-       "ticket": 1,
-       "author": "diamante_10",
-       "ticketStatus": "new"
-    }   
-
+{% highlight yaml %}
+{
+    "content": "Test Comment",
+    "ticket": 1,
+    "author": "oro_1",
+    "ticketStatus": "new"
+}  
+{% endhighlight %}  
     
 **Response**
     
@@ -770,23 +881,28 @@ _Request example:_
 
 _Response body:_ 
 
-    {
-       "attachments": [
+{% highlight yaml %}
+{
+    "attachments": [
 
-       ],
-       "author": 10,
-       "author_type": "diamante",
-       "content": "Test Comment",
-       "created_at": "2015-07-17T11:25:22+0000",
-       "id": 101,
-       "private": false,
-       "ticket": 1,
-       "updated_at": "2015-07-17T11:25:22+0000"
-    }
+    ],
+    "author": 1,
+    "author_type": "oro",
+    "content": "Test Comment",
+    "created_at": "2015-07-17T11:25:42+0000",
+    "id": 104,
+    "private": false,
+    "ticket": 1,
+    "updated_at": "2015-07-17T11:25:42+0000"
+}
+
+{% endhighlight %}
     
 ###### PUT, PATCH: Update certain properties of the comment be the comment ID
 
-    PUT|PATCH /api/rest/{version}/desk/comments/{id}
+{% highlight sh %}
+PUT|PATCH /api/rest/{version}/desk/comments/{id}
+{% endhighlight %}
     
 **Response**
     
@@ -794,124 +910,149 @@ _Response body:_
 
 _Request example:_
 
-    {
-       "content": "Test Comment Updated PUT",
-       "ticketStatus": "closed"
-    }
+{% highlight yaml %}
+{
+    "content": "Test Comment Updated PUT",
+    "ticketStatus": "closed"
+}
+{% endhighlight %}
 
 _Response body:_ 
 
-    {
-       "attachments": [
+{% highlight yaml %}
+{
+    "attachments": [
 
-       ],
-       "author": 10,
-       "author_type": "diamante",
-       "content": "Test Comment Updated PUT",
-       "created_at": "2015-07-17T11:25:22+0000",
-       "id": 101,
-       "private": false,
-       "ticket": 1,
-       "updated_at": "2015-07-17T11:25:22+0000"
-    }
+    ],
+    "author": 10,
+    "author_type": "diamante",
+    "content": "Test Comment Updated PUT",
+    "created_at": "2015-07-17T11:25:22+0000",
+    "id": 101,
+    "private": false,
+    "ticket": 1,
+    "updated_at": "2015-07-17T11:25:22+0000"
+}
+{% endhighlight %}
 
 ###### DELETE: Delete a ticket comment by the comment ID
 
-    DELETE /api/rest/{version}/desk/comments/{id}
+{% highlight sh %}
+DELETE /api/rest/{version}/desk/comments/{id}
+{% endhighlight %}
     
 **Response**
 
 **Status Code:** 204 (No Content)
 
-_Response body:_ null
+_Response body:_ null 
+
+###### GET: Retrieve the information about the comment author based on the provided comment ID
+
+{% highlight sh %}
+GET /api/rest/{version}/desk/comment/{id}/author
+{% endhighlight %}
+
+**Response**
     
+**Status Code:** 200 (OK)
+
+_Response body:_
+
+{% highlight yaml %}
+{
+  "email": "pol.vova@gmail.com",
+  "name": "asdasd dasdasd",
+  "id": "oro_1"
+}
+{% endhighlight %}
+
+###### GET: Retrieve all comment attachments
+
+{% highlight sh %}
+GET /api/rest/{version}/desk/comments/{id}/attachments
+{% endhighlight %}
+
+**Response**
+    
+**Status Code:** 200 (OK)
+
+_Response body:_
+
+{% highlight yaml %}
+[
+    {
+        "id": 12,
+        "created_at": "2015-07-17T11:25:27+0000",
+        "updated_at": "2015-07-17T11:25:27+0000",
+        "file": {
+            "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/61fcb86ab5a53db412b2f3823f8a20ac",
+            "filename": "test.jpg"
+        },
+        "thumbnails": {
+            "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/61fcb86ab5a53db412b2f3823f8a20ac",
+            "filename": "61fcb86ab5a53db412b2f3823f8a20ac.png"
+        }
+    }
+]
+{% endhighlight %}
+
+###### Retrieve comment attachments by the attachment ID
+
+{% highlight sh %}
+GET /api/rest/{version}/desk/comments/{commentId}/attachments/{attachmentId}
+{% endhighlight %}
+    
+**Response**
+    
+**Status Code:** 200 (OK)
+
+_Response body:_
+
+{% highlight yaml %}
+{
+    "id": 12,
+    "created_at": "2015-07-17T11:25:27+0000",
+    "updated_at": "2015-07-17T11:25:27+0000",
+    "file": {
+        "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/61fcb86ab5a53db412b2f3823f8a20ac",
+        "filename": "test.jpg"
+    },
+    "thumbnails": {
+        "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/61fcb86ab5a53db412b2f3823f8a20ac",
+        "filename": "61fcb86ab5a53db412b2f3823f8a20ac.png"
+    }
+}
+{% endhighlight %}
+
 **Status Code:** 404 (OK)
 
 _Response body:_   
 
-    {
-    "error": "Comment loading failed, comment not found."
-    }  
-
-###### GET: Retrieve the information about the comment author based on the provided comment ID
-
-    GET /api/rest/{version}/desk/comment/{id}/author
-
-**Response**
-    
-**Status Code:** 200 (OK)
-
-_Response body:_
-
-    {
-       "email": "pol.vova@gmail.com",
-       "name": "asdasd dasdasd",
-       "id": "oro_1"
-    }
-
-###### GET: Retrieve all comment attachments
-
-    GET /api/rest/{version}/desk/comments/{id}/attachments
-
-**Response**
-    
-**Status Code:** 200 (OK)
-
-_Response body:_
-
-    [
-       {
-           "id": 12,
-           "created_at": "2015-07-17T11:25:27+0000",
-           "updated_at": "2015-07-17T11:25:27+0000",
-           "file": {
-               "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/61fcb86ab5a53db412b2f3823f8a20ac",
-               "filename": "test.jpg"
-           },
-           "thumbnails": {
-               "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/61fcb86ab5a53db412b2f3823f8a20ac",
-               "filename": "61fcb86ab5a53db412b2f3823f8a20ac.png"
-           }
-       }
-    ]
-
-###### Retrieve comment attachments by the attachment ID
-
-    GET /api/rest/{version}/desk/comments/{commentId}/attachments/{attachmentId}
-    
-**Response**
-    
-**Status Code:** 200 (OK)
-
-_Response body:_
-
-    {
-       "id": 12,
-       "created_at": "2015-07-17T11:25:27+0000",
-       "updated_at": "2015-07-17T11:25:27+0000",
-       "file": {
-           "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/61fcb86ab5a53db412b2f3823f8a20ac",
-           "filename": "test.jpg"
-       },
-       "thumbnails": {
-           "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/61fcb86ab5a53db412b2f3823f8a20ac",
-           "filename": "61fcb86ab5a53db412b2f3823f8a20ac.png"
-       }
-    }
+{% highlight yaml %}
+{
+    "error": "Attachment loading failed. Comment has no such attachment."
+}
+{% endhighlight %}
 
 ###### POST: Add attachment to the comment
 
-    POST /api/rest/{version}/desk/comments/{commentId}/attachments
+{% highlight sh %}
+POST /api/rest/{version}/desk/comments/{commentId}/attachments
+{% endhighlight %}
 
 _Request example:_
 
-    {
-       "attachmentsInput": [
-           { 
-       BASE_64 encoded file
-           }
-       ]
-    }
+{% highlight yaml %} 
+{
+    "attachmentsInput": [
+        {
+            "filename": "test.jpg",
+            "content": "R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+        }
+    ]
+}
+{% endhighlight %}
     
 **Response**
     
@@ -919,45 +1060,43 @@ _Request example:_
 
 _Response body:_
 
-    [
-       {
-           "id": 12,
-           "created_at": "2015-07-17T11:25:27+0000",
-           "updated_at": "2015-07-17T11:25:27+0000",
-           "file": {
-               "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/61fcb86ab5a53db412b2f3823f8a20ac",
-               "filename": "test.jpg"
+{% highlight yaml %}
+[
+    {
+        "id": 13,
+        "created_at": "2015-07-17T11:25:34+0000",
+        "updated_at": "2015-07-17T11:25:34+0000",
+        "file": {
+            "url": "http:\/\/localhost\/desk\/attachments\/download\/file\/338477dbcd9c4faae7584cda781be854",
+            "filename": "test.jpg"
         },
-           "thumbnails": {
-               "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/61fcb86ab5a53db412b2f3823f8a20ac",
-               "filename": "61fcb86ab5a53db412b2f3823f8a20ac.png"
-           }
-       }
-    ] 
+        "thumbnails": {
+            "url": "http:\/\/localhost\/desk\/attachments\/download\/thumbnail\/338477dbcd9c4faae7584cda781be854",
+            "filename": "338477dbcd9c4faae7584cda781be854.png"
+        }
+    }
+]
+{% endhighlight %}
 
 ######  DELETE: Remove the attachment from the comment by the attachment ID
 
-    DELETE /api/rest/{version}/desk/comments/{commentId}/attachments/{attachmentId}
+{% highlight sh %}
+DELETE /api/rest/{version}/desk/comments/{commentId}/attachments/{attachmentId}
+{% endhighlight %}
     
 **Response**
 
 **Status Code:** 204 (No Content)
 
 _Response body:_ null
-    
-**Status Code:** 404 (OK)
-
-_Response body:_   
-
-    {
-    "error": "Attachment loading failed. Comment has no such attachment."
-    } 
 
 ### Users
 
 ###### GET: Retrieve the list of all users
 
-    GET /api/rest/{version}/desk/users
+{% highlight sh %}
+GET /api/rest/{version}/desk/users
+{% endhighlight %}
     
 **Response**
     
@@ -965,24 +1104,27 @@ _Response body:_
 
 _Response body:_
 
-     [
-         {
-            "id": 10,
-            "email": "test1@test.com",
-            "first_name": "Test",
-            "last_name": "test"
-         },
-         {
-            "id": 11,
-            "email": "1437135532dummy-test-email-address@test-server.local",
-            "first_name": "John",
-            "last_name": "Dou"
-         }
-    ]
+{% highlight yaml %}
+[
+    {
+        "id": 1,
+        "email": "sdasdasd@asfasf.com",
+        "first_name": "das",
+        "last_name": "dasda"
+    },
+    {
+        "id": 2,
+        "email": "vladimir.polischuk@eltrino.com",
+        "first_name": "\u0444\u0456\u0432\u0444\u0456\u0432",
+        "last_name": "\u0432\u0444\u0456\u0432"
+    }
+{% endhighlight %}
     
 ###### POST: Create a new user
 
-    POST /api/rest/{version}/desk/users
+{% highlight sh %}
+POST /api/rest/{version}/desk/users
+{% endhighlight %}
     
 **Parameters**
 
@@ -994,28 +1136,34 @@ _Response body:_
     
 _Request example:_
 
-    {
-       "email": "1437135532dummy-test-email-address@test-server.local",
-       "firstName": "John",
-       "lastName": "Dou"
-     }
+{% highlight yaml %}
+{
+    "email": "1437135532dummy-test-email-address@test-server.local",
+    "firstName": "John",
+    "lastName": "Dou"
+}
+{% endhighlight %}
+
 **Response**
     
 **Status Code:** 201 (Created)
 
 _Response body:_
 
-    {
-       "id": 11,
-       "email": "1437135532dummy-test-email-address@test-server.local",
-       "first_name": "John",
-       "last_name": "Dou"
-    }
+{% highlight yaml %}
+{
+    "id": 11,
+    "email": "1437135532dummy-test-email-address@test-server.local",
+    "first_name": "John",
+    "last_name": "Dou"
+}
+{% endhighlight %}
     
-
 ###### GET: Retrieve user data
 
-    GET /api/rest/{version}/desk/users/{email}/
+{% highlight sh %}
+GET /api/rest/{version}/desk/users/{email}/
+{% endhighlight %}
     
 **Response**
     
@@ -1023,9 +1171,20 @@ _Response body:_
 
 _Response body:_
 
-    {
-       "id": 11,
-       "email": "1437135532dummy-test-email-address@test-server.local",
-       "first_name": "John",
-       "last_name": "Dou"
-    }
+{% highlight yaml %}
+{
+    "id": 11,
+    "email": "1437135532dummy-test-email-address@test-server.local",
+    "first_name": "John",
+    "last_name": "Dou"
+}
+{% endhighlight %}
+    
+**Status Code:** 404 (Not Found)
+_Response body:_
+
+{% highlight yaml %}
+{
+    "error": "User not found."
+}
+{% endhighlight %}

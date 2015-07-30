@@ -17,7 +17,9 @@ The way of calling the PHPUnit binary may vary on your setup. The following exam
 
 To run the test suite, issue the following command:
 
-```bash phpunit -c vendor/diamante/{BundleName}/phpunit.xml.dist vendor/diamante/{BundleName}/Tests```
+{% highlight sh %}
+bash phpunit -c vendor/diamante/{BundleName}/phpunit.xml.dist vendor/diamante/{BundleName}/Tests
+{% endhighlight %}
 
 > Note: {BundleName} is a placeholder for a name of the bundle you want to test, e.g. DeskBundle, ApiBundle, FrontBundle, etc.
 
@@ -31,7 +33,9 @@ The best practice for functional testing is using the test database filled with 
 
 DiamanteDesk Unit Testing Suite is available by issuing the following command:
 
-```bash phpunit -c vendor/diamante/{BundleName}/Tests/Functional/phpunit/xml.dist vendor/diamante/{BundleName}/Tests/Functional```
+{% highlight sh %}
+bash phpunit -c vendor/diamante/{BundleName}/Tests/Functional/phpunit/xml.dist vendor/diamante/{BundleName}/Tests/Functional
+{% endhighlight %}
 
 The output of the command execution is similar to the unit testing output. 
 
@@ -39,8 +43,15 @@ The output of the command execution is similar to the unit testing output.
 
 ### How to Setup Testing Environment
 
-1. Set up your test environment parameters by creating an ```app/config/parameters_test.yml``` file. The  structure of this file is similar to your *prod* environment one.
-2. Reinstall DiamanteDesk, using **--env=test** flag if required (depends on your setup). Please refer to the [Installation Manual](../installation-guide/index.html) for more details. 
+* Set up your test environment parameters by creating the following file:
+
+{% highlight sh %}
+app/config/parameters_test.yml
+{% endhighlight %}
+
+The  structure of this file is similar to your *prod* environment one.
+
+* Reinstall DiamanteDesk, using **--env=test** flag if required (depends on your setup). Please refer to the [Installation Manual](../installation-guide/index.html) for more details. 
 
 ### Running the Suite of Functional Tests
 

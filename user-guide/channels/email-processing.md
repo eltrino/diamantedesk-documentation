@@ -47,12 +47,16 @@ You can also run and configure email processing from the console. Two commands a
 
 * using IMAP protocol for email retrieval from a remote email server.
 
-        php app/console oro:cron:diamante:emailprocessing:general
+{% highlight php %}
+php app/console oro:cron:diamante:emailprocessing:general
+{% endhighlight %}
 
 This command may be configured through a crontab, allowing to send polls periodically on a given schedule it's perfect for retrieving emails from the remote server.
 
 * or using the email piping method:
 
-         php app/console diamante:emailprocessing:pipe <  /path/to/emails/stream
+{% highlight php %}
+php app/console diamante:emailprocessing:pipe <  /path/to/emails/stream
+{% endhighlight %}
 
 This command is only applicable when DiamanteDesk and email server are installed on the same server machine. It includes piping method which has a remarkable advantage over a IMAP, as,  when using piping, all the emails get to the system and are converted into tickets or comments **immediately**, unlike when using IMAP which sends polls to the remote server within scheduled time (at least 1 minute). This advantage allows to quicky react on customer requests or solve any issues on a real-time basis.

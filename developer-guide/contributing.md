@@ -10,7 +10,7 @@ When creating DiamanteDesk application and for other projects we work on, we pre
 
 Any contribution can be made as an **Issue** or **Pull Request** in the corresponding section of the [repository on GitHub](https://github.com/eltrino).
 
-DiamanteDesk functionality is separated into separate **bundles**, such as ApiBindle, FrontBundle, EmbeddedFormBundle, EmailProcessingBundle, etc. When contributing to code or reporting an issue, please select the bundle responsible for specific functionality.
+DiamanteDesk functionality is separated into the **bundles**, such as ApiBindle, FrontBundle, EmbeddedFormBundle, EmailProcessingBundle, etc. When contributing to code or reporting an issue, please select the bundle responsible for specific functionality.
 
 ### Report a Bug
 
@@ -35,7 +35,7 @@ To change application code or submit a patch, fork the project on GitHub, perfor
 
 ## Contributing Documentation
 
-DiamanteDesk documentation uses [Markdown](https://guides.github.com/features/mastering-markdown/) syntax and [MkDocs](http://www.mkdocs.org/) for generating the documentation in the HTML format.
+DiamanteDesk documentation uses [Markdown](https://guides.github.com/features/mastering-markdown/) syntax and [Jekyll](http://jekyllrb.com/) for generating the documentation in the HTML format.
 
 The application documentation, as well as its code, is hosted on [Github](https://github.com/eltrino/diamantedesk-documentation). You need a GitHub user account to contribute to the documentation.
 
