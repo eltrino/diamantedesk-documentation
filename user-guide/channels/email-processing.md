@@ -6,7 +6,7 @@ DiamanteDesk supports 4 possible options of contacting a service Help Desk team 
 
 All the emails that get to the support email address are automatically retrieved by the DiamanteDesk system in order to create a  separate ticket out of each received letter. To make sure that all customer requests sent to the service support email are automatically converted into tickets by the system, the email processing feature shall be configured at  _System > Configuration_.
 
-## Configuaration
+## Configuration
 
 To configure email processing functionality, go to _System > Configuration_. On the **System Configuaration** pane select the **DiamanteDesk** menu and **Channels** tab.
 

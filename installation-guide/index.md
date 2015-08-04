@@ -28,7 +28,7 @@ php app/check.php
     
 ###Web Server configuration
 
-DiamanteDesk application was developed on a basis of the Symfony standard application so you can learn more about web server configuration recommendations [here](http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html).
+DiamanteDesk application was developed on the basis of the Symfony standard application so you can learn more about web server configuration recommendations [here](http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html).
 
 > _Note:_ DiamanteDesk application makes heavy use of HTTP methods in RESTful calls. The server can be configured to block some of them (for example, PUT, DELETE, etc.). However, this limitation should be removed, otherwise, a certain part of application will not function properly.
 
@@ -48,16 +48,22 @@ Clone the [GitHub repository](https://github.com/eltrino/diamantedesk-applicatio
 git clone https://github.com/eltrino/diamantedesk-application
 {% endhighlight %}
 
-Checkout the latest stable version of the project:
+Previous command was used to get the latest development code stored in the master branch. To obtain the latest stable code, switch to the branch 1.0 and issue the following command:
 
 {% highlight sh %}
 git clone -b 1.0 https://github.com/eltrino/diamantedesk-application
 {% endhighlight %}
      
-Also, download the application with the composer package manager using the following command:
+Also, to obtain the latest stable version, download the application with the composer package manager using the following command:
 
 {% highlight sh %}
-create-project diamante/desk-application:1.0.*
+composer create-project diamante/desk-application
+{% endhighlight %}
+
+To install the latest development version using the composer, issue the following command:
+
+{% highlight sh %}
+composer create-project diamante/desk-application:dev-master
 {% endhighlight %}
     
 ### <a name="libraries"></a> Installing required libraries
@@ -98,7 +104,7 @@ In case there are any issues, fix them and refresh the page. After all system co
 
 ![System Requirements](img/web_sys_req.png)
 
-The next step of installation process is configuring the application. Provide the data for **MySQL database connection**, **Mailer settings**, **System sttings** and **Websocket connection** if the fields are not filled out automatically.
+The next step of installation process is configuring the application. Provide the data for **MySQL database connection**, **Mailer settings**, **System settings** and **Websocket connection** if the fields are not filled out automatically.
 > _Note:_ If the application is installed for the first time, leave the **Drop Full Database** check box clear, if you reinstall the application, select this check box.
 
 ![Configuration](img/web_config.png)

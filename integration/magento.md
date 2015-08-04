@@ -7,7 +7,7 @@ Magento is a popular content management system that allows creating powerful e-c
 DiamanteDesk Magento module allows both administrator and any customer to create, edit and view tickets directly on a Magento e-commerce website. 
 
 
-##Installing DiamenteDesk extension for Magento
+##Installing DiamenteDesk Extension
 
 After installing DiamanteDesk integration module, it shall be configured at the Magento admin panel.
 
