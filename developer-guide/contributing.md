@@ -17,7 +17,7 @@ DiamanteDesk functionality is separated into the **bundles**, such as ApiBindle,
 ###### If you found a bug:
 
 * Look through the corresponding section of DiamanteDesk documentation to make sure that a certain feature works incorrectly.
-* Find the relevant bundle on [GitHub](https://github.com/eltrino) and check whether the same issue hasn't been already opened.
+* Find the relevant bundle on [GitHub](https://github.com/eltrino) and check whether the same issue has not been already opened.
 
 ###### To report a bug:
 

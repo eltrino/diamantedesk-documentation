@@ -25,7 +25,7 @@ WSSE authentication is based on:
 * a username;
 * a nonce (created to avoid replay attacks);
 * a timestamp;
-* the password digest (In DidamanteDesk the password digest is represented as API Key. To learn how to generate API key, please check the **API Credentials** article in the **Integration** section of DiamanteDesk documentation).
+* the password digest (In DiamanteDesk the password digest is represented as API Key. To learn how to generate API key, please check the **API Credentials** article in the **Integration** section of DiamanteDesk documentation).
 
 ## Format
 

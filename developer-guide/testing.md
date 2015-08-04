@@ -6,7 +6,7 @@ Software testing is an essential part of the development process. Deliberate and
 
 DiamanteDesk team pays proper attention to testing, both **unit** and **functional**, and we rely heavily on PHPUnit, a software suite designed for testing, which is commonly accepted as an industrial standard for quality assurance. 
 
-DiamanteDesk aplication offers all the required tests bundled with the most reliable version of PHPUnit. 
+DiamanteDesk application offers all the required tests bundled with the most reliable version of PHPUnit. 
 
 ##Unit Testing
 

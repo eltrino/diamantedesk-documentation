@@ -41,7 +41,7 @@ Select the **Groups** and **Roles** the newly created user will belong to. More 
 
 ### Edit User Account
 
-To edit user account in the DiamnateDesk system:
+To edit user account in the DiamanteDesk system:
 
 1. Go to the list of all users in the system at _System > User Management > Users_.
 2. Select the user account that shall be changed.

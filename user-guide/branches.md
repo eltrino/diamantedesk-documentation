@@ -47,7 +47,7 @@ Click **Save And Close** at the right top corner of the screen.
 ## Edit / Delete a Branch
 
 1. Navigate to the **Branches** screen.
-2. Select the branch that shall be edited/deleted from the list of available banches. _Note:_ You can also filter the available branches according to the **Branch Name** and **Branch Key** to find a required branch quicker.
+2. Select the branch that shall be edited/deleted from the list of available branches. _Note:_ You can also filter the available branches according to the **Branch Name** and **Branch Key** to find a required branch quicker.
 3. Click the branch that shall be edited / deleted. The **Branch** screen opens.
 4. Select the corresponding action at the right top of the screen:
 

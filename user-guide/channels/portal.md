@@ -63,7 +63,7 @@ To create a new request, a user shall add a ticket by completing the following s
 
 ## Portal Configuration
 
-Tickets can be also created without the required registration. To configure this option, go to _System > Configuration_. On the **System Configuaration** pane select the **DiamanteDesk** menu and **Channels** tab.
+Tickets can be also created without the required registration. To configure this option, go to _System > Configuration_. On the **System Configuration** pane select the **DiamanteDesk** menu and **Channels** tab.
 
 ![System configuration](img/sys_config.jpg)
 
