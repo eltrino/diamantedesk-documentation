@@ -112,5 +112,3 @@ The mailer settings for emails and notifications are usually configured during D
 ![Notifications](img/web_config.png)
 
 To make sure that server parameters are configured correctly or you need to change them, define required configuration details in the **app/config/parameters.yml** file. If you need more information on how to perform configurations in the **app/config/parameters.yml** file, follow this [link](https://symfony.com/doc/current/best_practices/configuration.html).
-
->>>>>>> master

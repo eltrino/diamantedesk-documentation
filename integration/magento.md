@@ -12,7 +12,7 @@ DiamanteDesk Magento module allows both administrator and any customer to create
 After installing DiamanteDesk integration module, it shall be configured at the Magento admin panel.
 
 1. Log in the **Magento Admin Panel**.
-2. In the navigation panel select _Systems > Magento Connect > Magento Connect Manager_.
+2. In the navigation panel select _System > Magento Connect > Magento Connect Manager_.
 ![Magento Admin Panel](img/magento_connect_manager.png)
 3. Re-enter your Magento Administration credentials to verify your permissions.
 
