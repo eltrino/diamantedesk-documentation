@@ -48,7 +48,7 @@ Clone the [GitHub repository](https://github.com/eltrino/diamantedesk-applicatio
 git clone https://github.com/eltrino/diamantedesk-application
 {% endhighlight %}
 
-Previous command was used to get the latest development code stored in the master branch. To obtain the latest stable code, switch to the branch 1.0 and issue the following command:
+Previous command was used to get the latest development code stored in the master branch. To obtain the latest stable code and switch to the branch 1.0, issue the following command:
 
 {% highlight sh %}
 git clone -b 1.0 https://github.com/eltrino/diamantedesk-application
