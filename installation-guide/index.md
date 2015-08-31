@@ -81,7 +81,7 @@ composer install
 To run the installation of DiamanteDesk in a console mode, use the following command:
 
 {% highlight php %}
-php diamante:install
+php app/console diamante:install
 {% endhighlight %}
      
 Additional commands may be required. The system will guide you through the process with questions and command options.

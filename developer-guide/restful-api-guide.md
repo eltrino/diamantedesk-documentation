@@ -422,18 +422,20 @@ POST /api/rest/{version}/desk/tickets
 | priority | _string_ |**Required.** Specify the priority of a new ticket. The available options are **Low**, **Medium** or **High**.
 | source | _string_ |**Required.** Every service user has 4 available options to contact the Help Desk team: by creating a request through a **Web** form or through the embedded form on a website (optional), as an **Email** notification, via a **Phone** call. Specify the corresponding source of a ticket.
 | reporter| _string_ |**Required.** The reporter is an administrator who can create a ticket for any customer. |The name of the reporter must contain only letters.
+|tags | _array of strings_ | Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the **Tagging** section in the **User Guide** section. |
     
 _Request example:_
 
 {% highlight yaml %}
 {
     "branch": 1,
-    "subject": "Test Ticket",
+    "subject": "Test Ticket from API",
     "description": "Test Description",
     "status": "open",
     "priority": "medium",
     "source": "phone",
-    "reporter": "oro_1"
+    "reporter": "oro_1",
+    "tags" : ["test1","test2","test3","test4"]
 }
 {% endhighlight %}
 
@@ -445,26 +447,29 @@ _Response body:_
 
 {% highlight yaml %}
 {
-    "attachments": [
-
-    ],
-    "branch": 1,
-    "comments": [
-
-    ],
-    "created_at": "2015-07-17T11:25:47+0000",
-    "description": "Test Description",
-    "id": 12,
-    "key": "BRANCHB-3",
-    "priority": "medium",
-    "reporter": "oro_1",
-    "source": "phone",
-    "status": "open",
-    "subject": "Test Ticket",
-    "unique_id": {
-        "id": "4b1573586e00d7760babf2aa0bdb9cdc"
-    },
-    "updated_at": "2015-07-17T11:25:47+0000"
+  "attachments": [],
+  "branch": 1,
+  "comments": [],
+  "created_at": "2015-07-31T11:26:51+0000",
+  "description": "Test Description",
+  "id": 95,
+  "key": "BRANCHB-10",
+  "priority": "medium",
+  "reporter": "oro_1",
+  "source": "phone",
+  "status": "open",
+  "subject": "Test Ticket from API",
+  "tags": [
+    "test1",
+    "test2",
+    "test3",
+    "test4"
+  ],
+  "unique_id": {
+    "id": "acee0fb73b9c1188472787b20a2760ae"
+  },
+  "updated_at": "2015-07-31T11:26:51+0000",
+  "watcher_list": []
 }
 {% endhighlight %}
     
@@ -479,7 +484,8 @@ _Request example:_
 
 {% highlight yaml %}
 {
-    "subject": "Test Ticket Updated PUT"
+   "subject": "New test subject",
+   "tags": ["new test tag1", "new test tag2"]
 }
 {% endhighlight %}
     
@@ -491,26 +497,32 @@ _Response body:_
 
 {% highlight yaml %}
 {
-    "attachments": [
-
-    ],
-    "branch": 1,
-    "comments": [
-
-    ],
-    "created_at": "2015-07-17T11:25:47+0000",
-    "description": "Test Description",
-    "id": 12,
-    "key": "BRANCHB-3",
-    "priority": "medium",
-    "reporter": "oro_1",
-    "source": "phone",
-    "status": "open",
-    "subject": "Test Ticket Updated PUT",
-    "unique_id": {
-        "id": "4b1573586e00d7760babf2aa0bdb9cdc"
-    },
-    "updated_at": "2015-07-17T11:25:47+0000"
+  "attachments": [],
+  "branch": 1,
+  "comments": [],
+  "created_at": "2015-07-31T11:26:51+0000",
+  "description": "Test Description",
+  "id": 95,
+  "key": "BRANCHB-10",
+  "priority": "medium",
+  "reporter": "oro_1",
+  "source": "phone",
+  "status": "open",
+  "subject": "New test subject",
+  "tags": [
+    "new test tag1",
+    "new test tag2"
+  ],
+  "unique_id": {
+    "id": "acee0fb73b9c1188472787b20a2760ae"
+  },
+  "updated_at": "2015-07-31T11:26:51+0000",
+  "watcher_list": [
+    {
+      "id": 23,
+      "user_type": "oro_1"
+    }
+  ]
 }
 {% endhighlight %}
     
@@ -596,7 +608,8 @@ _Request example:_
 
 {% highlight yaml %}
 {
-    "subject": "Test Ticket Updated PUT by key"
+   "subject": "New test subject",
+   "tags": ["new test tag5", "new test tag6"]
 }
 {% endhighlight %}
    
@@ -608,26 +621,32 @@ _Response body:_
 
 {% highlight yaml %}
 {
-    "attachments": [
-
-    ],
-    "branch": 1,
-    "comments": [
-
-    ],
-    "created_at": "2015-07-17T11:25:47+0000",
-    "description": "Test Description",
-    "id": 12,
-    "key": "BRANCHB-3",
-    "priority": "medium",
-    "reporter": "oro_1",
-    "source": "phone",
-    "status": "open",
-    "subject": "Test Ticket Updated PUT by key",
-    "unique_id": {
-        "id": "4b1573586e00d7760babf2aa0bdb9cdc"
-    },
-    "updated_at": "2015-07-17T11:25:47+0000"
+  "attachments": [],
+  "branch": 1,
+  "comments": [],
+  "created_at": "2015-07-31T11:26:51+0000",
+  "description": "Test Description",
+  "id": 95,
+  "key": "BRANCHB-10",
+  "priority": "medium",
+  "reporter": "oro_1",
+  "source": "phone",
+  "status": "open",
+  "subject": "New test subject",
+  "tags": [
+    "new test tag5",
+    "new test tag6"
+  ],
+  "unique_id": {
+    "id": "acee0fb73b9c1188472787b20a2760ae"
+  },
+  "updated_at": "2015-07-31T11:26:51+0000",
+  "watcher_list": [
+    {
+      "id": 23,
+      "user_type": "oro_1"
+    }
+  ]
 }
 {% endhighlight %}
     

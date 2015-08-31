@@ -49,7 +49,7 @@ Updated | Select the date range when the tickets could could be updated either f
 To create a new ticket, complete the following steps:
 
 1. Click **Create Ticket** at the top right corner of the screen. **Create Ticket** screen opens.
-![Create ticket](img/create_ticket.jpg)
+![Create ticket](img/create_ticket_1.1.png)
 2. Select the branch from the drop-down list.
 3. Specify the short summary of a ticket in the **Subject** field.
 4. Select the status of a ticket.
@@ -58,6 +58,7 @@ To create a new ticket, complete the following steps:
 7. Select the **Reporter** from the drop-down list. Reporter is an administrator who can create a ticket for any customer.
 8. To select the **Assignee**, click **Unassigned**. A Search Panel opens. Start entering the name of the person to be assigned and the system will provide hints with the matching results or click a list image to open a list of all available assignees. 
 9. In case there is a file that shall be attached to the ticket (image or document), click **Choose file** in the **File** filed and select the required file from your local machine.
+10. You can also tag your ticket. The process of ticket tagging is identical to branch tagging. Follow the link to learn more about [tagging](tagging.md) in DiamanteDesk.
 11. Provide the description of a ticket in the **Description** field.
 12. Click **Save** or **Save and Close** at the right top corner of the screen for a corresponding action.
 
@@ -89,6 +90,21 @@ To edit the configurations, clear the the **Use Default** check box and set the 
 
 To save the changes made, click **Save Settings** on the left top corner of the screen.
 
+<<<<<<< HEAD
+## Watchers
+
+Each of the tickets can be assigned to a specific user to make sure that a given issue is solved quickly and efficiently. But in order to have more control over certain high priority issues, a new **Watchers** feature has been added.
+
+**Watcher** is a person who gets an email notification every time the status of a ticket changes. When the ticket is created, a **Reporter** (the person who created a ticket) and an **Assignee** automatically become **Watchers**. In case the ticket is created from the email through [email processing](email-processing.md), the email sender and all the users from CC (if any) become watchers and recieve email notifications each time the status of a ticket changes.
+
+Additionally, every ticket can be watched and controlled by other users in the system.
+
+###Adding Watchers to the Ticket
+
+To follow the changes made in a certain ticket in the system, open the required ticket either at _Desk > Branches > select a branch_ or at _Desk > All Tickets_.
+
+If you want to to be aware of the changes made to the ticket, click **Watch** on the option panel at the top of the screen. If you want to add another person to the Watchers list, click **Add Watcher** on the option panel and enter the name of a user or click a **List** button and select a user from the list.
+
 ### Server Setup
 
 The mailer settings for emails and notifications are usually configured during DiamanteDesk installation. To learn more about the process of installation, navigate to the Installation Guide section of the documentation.
@@ -96,4 +112,3 @@ The mailer settings for emails and notifications are usually configured during D
 ![Notifications](img/web_config.png)
 
 To make sure that server parameters are configured correctly or you need to change them, define required configuration details in the **app/config/parameters.yml** file. If you need more information on how to perform configurations in the **app/config/parameters.yml** file, follow this [link](https://symfony.com/doc/current/best_practices/configuration.html).
-
