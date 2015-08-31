@@ -313,40 +313,37 @@ GET /api/rest/{version}/desk/tickets
 _Response body:_ 
 
 {% highlight yaml %}
-[
-    {
-        "assignee": 1,
-        "branch": 1,
-        "created_at": "2015-07-17T11:25:21+0000",
+ {
+    "branch": 1,
+    "created_at": "2015-08-20T17:05:07+0000",
+    "id": 13,
+    "key": "BRANCH-13",
+    "priority": "low",
+    "reporter": "oro_1",
+    "source": "web",
+    "status": "new",
+    "subject": "test subject",
+    "tags": [
+      {
         "id": 1,
-        "key": "BRANCHB-1",
-        "priority": "medium",
-        "reporter": "oro_1",
-        "source": "phone",
-        "status": "new",
-        "subject": "ticketSubject1",
-        "unique_id": {
-            "id": "8d5fb1d682fecd97b0f4b6f050e2a8b9"
-        },
-        "updated_at": "2015-07-17T11:25:21+0000"
-    },
-    {
-        "assignee": 1,
-        "branch": 2,
-        "created_at": "2015-07-17T11:25:21+0000",
+        "name": "test-tag"
+      },
+      {
         "id": 2,
-        "key": "BRANCHC-1",
-        "priority": "medium",
-        "reporter": "oro_1",
-        "source": "phone",
-        "status": "open",
-        "subject": "ticketSubject2",
-        "unique_id": {
-            "id": "9beddad8ecd692841ea8c8f8910b538b"
-        },
-        "updated_at": "2015-07-17T11:25:21+0000"
-    }
-]
+        "name": "test-tag2"
+      }
+    ],
+    "unique_id": {
+      "id": "52429dbc757cbe09a73f8e841b7d5af5"
+    },
+    "updated_at": "2015-08-20T19:42:04+0000",
+    "watcher_list": [
+      {
+        "id": 4,
+        "user_type": "oro_1"
+      }
+    ]
+  }
 {% endhighlight %}
 
 ###### GET: Retrieve the ticket by the given ticket ID
@@ -363,26 +360,38 @@ _Response body:_
 
 {% highlight yaml %}
 {
-    "attachments": [
-
-    ],
-    "branch": 1,
-    "comments": [
-
-    ],
-    "created_at": "2015-07-17T11:25:47+0000",
-    "description": "Test Description",
-    "id": 12,
-    "key": "BRANCHB-3",
-    "priority": "medium",
-    "reporter": "oro_1",
-    "source": "phone",
-    "status": "open",
-    "subject": "Test Ticket",
-    "unique_id": {
-        "id": "4b1573586e00d7760babf2aa0bdb9cdc"
+  "attachments": [],
+  "branch": 1,
+  "comments": [],
+  "created_at": "2015-08-20T17:05:07+0000",
+  "description": "<p>description</p>",
+  "id": 13,
+  "key": "BRANCH-13",
+  "priority": "low",
+  "reporter": "oro_1",
+  "source": "web",
+  "status": "new",
+  "subject": "test subject",
+  "tags": [
+    {
+      "id": 1,
+      "name": "test-tag"
     },
-    "updated_at": "2015-07-17T11:25:47+0000"
+    {
+      "id": 2,
+      "name": "test-tag2"
+    }
+  ],
+  "unique_id": {
+    "id": "52429dbc757cbe09a73f8e841b7d5af5"
+  },
+  "updated_at": "2015-08-20T19:42:04+0000",
+  "watcher_list": [
+    {
+      "id": 4,
+      "user_type": "oro_1"
+    }
+  ]
 }
 {% endhighlight %}
 
@@ -532,26 +541,38 @@ _Response body:_
 
 {% highlight yaml %}
 {
-    "attachments": [
-
-    ],
-    "branch": 1,
-    "comments": [
-
-    ],
-    "created_at": "2015-07-17T11:25:47+0000",
-    "description": "Test Description",
-    "id": 12,
-    "key": "BRANCHB-3",
-    "priority": "medium",
-    "reporter": "oro_1",
-    "source": "phone",
-    "status": "open",
-    "subject": "Test Ticket",
-    "unique_id": {
-        "id": "4b1573586e00d7760babf2aa0bdb9cdc"
+  "attachments": [],
+  "branch": 1,
+  "comments": [],
+  "created_at": "2015-08-20T17:05:07+0000",
+  "description": "<p>test description</p>",
+  "id": 13,
+  "key": "BRANCH-13",
+  "priority": "low",
+  "reporter": "oro_1",
+  "source": "web",
+  "status": "new",
+  "subject": "test subject",
+  "tags": [
+    {
+      "id": 1,
+      "name": "test-tag1"
     },
-    "updated_at": "2015-07-17T11:25:47+0000"
+    {
+      "id": 2,
+      "name": "test-tag2"
+    }
+  ],
+  "unique_id": {
+    "id": "52429dbc757cbe09a73f8e841b7d5af5"
+  },
+  "updated_at": "2015-08-20T19:42:04+0000",
+  "watcher_list": [
+    {
+      "id": 4,
+      "user_type": "oro_1"
+    }
+  ]
 }
 {% endhighlight %}
     
