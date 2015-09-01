@@ -90,7 +90,14 @@ To edit the configurations, clear the the **Use Default** check box and set the 
 
 To save the changes made, click **Save Settings** on the left top corner of the screen.
 
-<<<<<<< HEAD
+### Server Setup
+
+The mailer settings for emails and notifications are usually configured during DiamanteDesk installation. To learn more about the process of installation, navigate to the Installation Guide section of the documentation.
+
+![Notifications](img/web_config.png)
+
+To make sure that server parameters are configured correctly or you need to change them, define required configuration details in the **app/config/parameters.yml** file. If you need more information on how to perform configurations in the **app/config/parameters.yml** file, follow this [link](https://symfony.com/doc/current/best_practices/configuration.html).
+
 ## Watchers
 
 Each of the tickets can be assigned to a specific user to make sure that a given issue is solved quickly and efficiently. But in order to have more control over certain high priority issues, a new **Watchers** feature has been added.
@@ -104,11 +111,3 @@ Additionally, every ticket can be watched and controlled by other users in the s
 To follow the changes made in a certain ticket in the system, open the required ticket either at _Desk > Branches > select a branch_ or at _Desk > All Tickets_.
 
 If you want to to be aware of the changes made to the ticket, click **Watch** on the option panel at the top of the screen. If you want to add another person to the Watchers list, click **Add Watcher** on the option panel and enter the name of a user or click a **List** button and select a user from the list.
-
-### Server Setup
-
-The mailer settings for emails and notifications are usually configured during DiamanteDesk installation. To learn more about the process of installation, navigate to the Installation Guide section of the documentation.
-
-![Notifications](img/web_config.png)
-
-To make sure that server parameters are configured correctly or you need to change them, define required configuration details in the **app/config/parameters.yml** file. If you need more information on how to perform configurations in the **app/config/parameters.yml** file, follow this [link](https://symfony.com/doc/current/best_practices/configuration.html).
