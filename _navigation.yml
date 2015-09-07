@@ -5,6 +5,7 @@
   - user-guide/tickets.md
   - user-guide/user-management.md
   - user-guide/tagging.md
+  - user-guide/data-audit.md
   - user-guide/channels/index.md:
     - user-guide/channels/email-processing.md
     - user-guide/channels/portal.md
