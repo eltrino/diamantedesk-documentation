@@ -4,9 +4,9 @@ title: Branches
 
 When a customer of any web service supported by the DiamanteDesk needs to report an issue or submit a request to the help desk team, a _ticket_ is created. Each ticket in DiamanteDesk application has a unique identificator and is sorted according to the _branch_ where it is created or is added to a default branch.
 
-Creating separate branches in DiamanteDesk enables our Clients to group tickets according to the requests of specific users, locations, issues or according to the [Channel](channels/index.html) the ticket came from. This feature helps to organize tickets in a way to keep track of the tickets according to a certain category and quickly find them in a system. We remember that good customer service implies quick reaction and problem solving, so we do our best to provide our Clients with a user-friendly tool to make it work.
+Creating separate branches in DiamanteDesk enables our Clients to group tickets according to the requests of specific users, locations, issues or according to the [Channel](channels/index.md) the ticket came from. This feature helps to organize tickets in a way to keep track of the tickets according to a certain category and quickly find them in a system. We remember that good customer service implies quick reaction and problem solving, so we do our best to provide our Clients with a user-friendly tool to make it work.
 
->_Note:_ When the ticket is automatically created from the email received at the the support email address, this ticket is created at the branch which is configured as a default one. To learn more about it, please see the [Email Processing](channels/email-processing.html) section.
+>_Note:_ When the ticket is automatically created from the email received at the the support email address, this ticket is created at the branch which is configured as a default one. To learn more about it, please see the [Email Processing](channels/email-processing.md) section.
 
 To see the list of all available branches, select the **Branches** tab at the navigation panel at the top of the home screen. 
 
@@ -57,6 +57,6 @@ Click **Save And Close** at the right top corner of the screen.
 * If you click **Delete**, the following confirmation message is displayed:
 ![Branch Delete](img/branches_delete.png)
 
->_Note:_ If a branch is configured as the default for [Email Processing](channels/email-processing.html), the following message is displayed at the top of the **Branch** screen. In this case it cannot be deleted. 
+>_Note:_ If a branch is configured as the default for [Email Processing](channels/email-processing.md), the following message is displayed at the top of the **Branch** screen. In this case it cannot be deleted. 
 
 ![Default Branch](img/branches_default.png)

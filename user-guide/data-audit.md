@@ -2,7 +2,7 @@
 title: Data Audit
 ---
 
-Every time a DiamanteDesk user performs any action in the system, this action is added to the read-only event-action history log. Actions are entity properties that are created, updated or removed. Entities are users, branches, tickets, comments, attachments. Examples of actions stored in the action history log:
+Every time a customer or administrator performs any action in the system, this action is added to the read-only event-action history log. Actions are entity properties that are created, updated or removed. Entities are users, branches, tickets, comments, attachments. Examples of actions stored in the action history log:
 
 * A new user was created in the system
 * A new comment was added
@@ -24,7 +24,7 @@ Author | The name of a person who performed current changes in the system is ind
 Organization | This field indicates an organization specified during DiamanteDesk or OroCRM installation.
 Logged at | The date and time when the action is performed is shown in this field.
 
-> Note: You can filter the data audit information according to the following criteria at the top :
+> Note: You can filter the data audit information according to the following criteria:
 
 >* Action
 * Entity Type
