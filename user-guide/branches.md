@@ -43,7 +43,7 @@ Provide the support email address relevant to this branch in the **Support Addre
 
 ![Email configuration](img/email_config.png)
 
-Click [here](channels/email-processing.md) if you want to learn more about email processing in DiamanteDesk.
+Click [here](channels/email-processing.html) if you want to learn more about email processing in DiamanteDesk.
 
 Click **Save And Close** at the right top corner of the screen.
 

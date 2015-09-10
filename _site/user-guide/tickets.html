@@ -1,0 +1,148 @@
+<p>DiamanteDesk is a comprehensive help desk, built using the OpenSource software. This tool is a great way to improve customer experience by easily receiving, reassigning and taking care of any Client requests presented in <strong>tickets</strong>.</p>
+
+<p>Tickets can be viewed and added at:</p>
+
+<ul>
+  <li>the <strong>Branches</strong> tab (see <a href="branches.html"><strong>Branches</strong></a> section);</li>
+  <li>the <strong>All Tickets</strong> tab.</li>
+</ul>
+
+<p><img src="img/All_tickets.png" alt="All tickets" /></p>
+
+<h2 id="ticket-filters">Ticket Filters</h2>
+
+<p>All the tickets on this screen can be filtered according to the number of various parameters:</p>
+
+<p>1) A user can view tickets according to the categories they belong to.</p>
+
+<p><img src="img/ticket_filter1.png" alt="Ticket categories" /></p>
+
+<ul>
+  <li><strong>All tickets</strong> category allows viewing all tickets created in the system.</li>
+  <li><strong>My tickets</strong> category filters all the tickets created by the account owner.</li>
+  <li><strong>My new tickets</strong> category filters all the tickets recently created by the account owner.</li>
+  <li><strong>My open tickets</strong> category allows viewing all open tickets created by the account owner.</li>
+  <li><strong>Reported tickets</strong></li>
+  <li><strong>New reported tickets</strong></li>
+</ul>
+
+<p>2) Tickets in each category can be also filtered by the following parameters:</p>
+
+<p><img src="img/ticket_filters2.jpg" alt="Ticket categories" /></p>
+
+<blockquote>
+  <p><em>Note:</em> Each of the parameters is set to <strong>All</strong> values by default. To change this value, click the down arrow next to to the specific filter that shall be changed.</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>Filter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Key</td>
+      <td>Enter the required branch key and click <strong>Update</strong>. Ticket Key consists of the branch key and ticket sequence number and has next format {<em>branchKey</em>}-{<em>ticketSequenceNumber</em>}.</td>
+    </tr>
+    <tr>
+      <td>Subject</td>
+      <td>Provide the summary of a ticket in this field.</td>
+    </tr>
+    <tr>
+      <td>Branch</td>
+      <td>Select the required branch from the drop-down list and click <strong>Update</strong>.</td>
+    </tr>
+    <tr>
+      <td>Assignee</td>
+      <td>To filter the tickets assigned to a specific person, enter the name of that person into the <strong>Assignee</strong> field. <em>Note:</em> You can’t change this value when looking through the tickets in <strong>My tickets</strong> and <strong>My new tickets</strong> categories, the assignee in these categories is always an owner of the account.</td>
+    </tr>
+    <tr>
+      <td>Priority</td>
+      <td>Set the filter to <strong>Low</strong>, <strong>Medium</strong> or <strong>High</strong> priority.</td>
+    </tr>
+    <tr>
+      <td><a name="status"></a>Status</td>
+      <td>Select one or several statuses for ticket filtering. The available statuses are: <strong>New</strong>, <strong>Open</strong>, <strong>Pending</strong>, <strong>In progress</strong>, <strong>Closed</strong> and <strong>On Hold</strong>.</td>
+    </tr>
+    <tr>
+      <td>Created</td>
+      <td>Select the date range when the tickets could could be updated either from a drop-down calendar or by selecting one of the available variables (Now, today, Start of the week, Start of the month, Start of the quarter, Start of the year).</td>
+    </tr>
+    <tr>
+      <td>Updated</td>
+      <td>Select the date range when the tickets could could be updated either from a drop-down calendar or by selecting one of the available variables (Now, today, Start of the week, Start of the month, Start of the quarter, Start of the year).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="create-a-new-ticket">Create a New Ticket</h2>
+
+<p>To create a new ticket, complete the following steps:</p>
+
+<ol>
+  <li>Click <strong>Create Ticket</strong> at the top right corner of the screen. <strong>Create Ticket</strong> screen opens.
+<img src="img/create_ticket_1.1.png" alt="Create ticket" /></li>
+  <li>Select the branch from the drop-down list.</li>
+  <li>Specify the short summary of a ticket in the <strong>Subject</strong> field.</li>
+  <li>Select the status of a ticket.</li>
+  <li>Select the priority of a ticket.</li>
+  <li>Select the <strong>Source</strong> of the ticket. Every service user has 4 available options to contact the Help Desk team: by creating a request through a <strong>Web</strong> form or through the embedded form on a website (optional), as an <strong>Email</strong> notification, via a <strong>Phone</strong> call.</li>
+  <li>Select the <strong>Reporter</strong> from the drop-down list. Reporter is an administrator who can create a ticket for any customer.</li>
+  <li>To select the <strong>Assignee</strong>, click <strong>Unassigned</strong>. A Search Panel opens. Start entering the name of the person to be assigned and the system will provide hints with the matching results or click a list image to open a list of all available assignees.</li>
+  <li>In case there is a file that shall be attached to the ticket (image or document), click <strong>Choose file</strong> in the <strong>File</strong> filed and select the required file from your local machine.</li>
+  <li>You can also tag your ticket. The process of ticket tagging is identical to branch tagging. Follow the link to learn more about <a href="tagging.md">tagging</a> in DiamanteDesk.</li>
+  <li>Provide the description of a ticket in the <strong>Description</strong> field.</li>
+  <li>Click <strong>Save</strong> or <strong>Save and Close</strong> at the right top corner of the screen for a corresponding action.</li>
+</ol>
+
+<h2 id="notifications">Notifications</h2>
+
+<p><strong>Email Notifications</strong> is a DiamantDesk feature that sends automatic emails to the ticket creator and assignee when the ticket is created or its <a href="#status">status</a> changes. This way a customer is notified whether his request is being processed.</p>
+
+<p>When the ticket is created, a reporter and assignee get the following emails, informing them about ticket branch, subject, priority, status and source:</p>
+
+<p><img src="img/status_email.png" alt="Notifications" /></p>
+
+<p>When the status of a ticket changes, the reporter and assignee get the following email, informing them about changes performed and the person responsible for them:</p>
+
+<p><img src="img/status_email_2.png" alt="Notifications" /></p>
+
+<h3 id="configuring-notifications">Configuring Notifications</h3>
+
+<p>This functionality can be configured according to the customers’ needs at <em>System &gt; Configuration</em>. On the left side side of the screen on the <strong>System configuration</strong> pane select <strong>Notifications</strong> tab in the <strong>DiamanteDesk</strong> menu.</p>
+
+<p><img src="img/sys_config.jpg" alt="System configuration" /></p>
+
+<p><strong>Notifications</strong> tab opens.</p>
+
+<p><img src="img/notifications.png" alt="Notifications" /></p>
+
+<p>To use the default settings, select the <strong>Use Default</strong> check box in the <strong>Email Notifications</strong> field.</p>
+
+<p>To edit the configurations, clear the the <strong>Use Default</strong> check box and set the <strong>Enable Email Notifications</strong> field to <strong>Yes</strong> or <strong>No</strong> option.</p>
+
+<p>To save the changes made, click <strong>Save Settings</strong> on the left top corner of the screen.</p>
+
+<h3 id="server-setup">Server Setup</h3>
+
+<p>The mailer settings for emails and notifications are usually configured during DiamanteDesk installation. To learn more about the process of installation, navigate to the Installation Guide section of the documentation.</p>
+
+<p><img src="img/web_config.png" alt="Notifications" /></p>
+
+<p>To make sure that server parameters are configured correctly or you need to change them, define required configuration details in the <strong>app/config/parameters.yml</strong> file. If you need more information on how to perform configurations in the <strong>app/config/parameters.yml</strong> file, follow this <a href="https://symfony.com/doc/current/best_practices/configuration.html">link</a>.</p>
+
+<h2 id="watchers">Watchers</h2>
+
+<p>Each of the tickets can be assigned to a specific user to make sure that a given issue is solved quickly and efficiently. But in order to have more control over certain high priority issues, a new <strong>Watchers</strong> feature has been added.</p>
+
+<p><strong>Watcher</strong> is a person who gets an email notification every time the status of a ticket changes. When the ticket is created, a <strong>Reporter</strong> (the person who created a ticket) and an <strong>Assignee</strong> automatically become <strong>Watchers</strong>. In case the ticket is created from the email through <a href="email-processing.md">email processing</a>, the email sender and all the users from CC (if any) become watchers and recieve email notifications each time the status of a ticket changes.</p>
+
+<p>Additionally, every ticket can be watched and controlled by other users in the system.</p>
+
+<h3 id="adding-watchers-to-the-ticket">Adding Watchers to the Ticket</h3>
+
+<p>To follow the changes made in a certain ticket in the system, open the required ticket either at <em>Desk &gt; Branches &gt; select a branch</em> or at <em>Desk &gt; All Tickets</em>.</p>
+
+<p>If you want to to be aware of the changes made to the ticket, click <strong>Watch</strong> on the option panel at the top of the screen. If you want to add another person to the Watchers list, click <strong>Add Watcher</strong> on the option panel and enter the name of a user or click a <strong>List</strong> button and select a user from the list.</p>
