@@ -4,7 +4,7 @@ title: Branches
 
 When a customer of any web service supported by the DiamanteDesk needs to report an issue or submit a request to the help desk team, a _ticket_ is created. Each ticket in DiamanteDesk application has a unique identificator and is sorted according to the _branch_ where it is created or is added to a default branch.
 
-Creating separate branches in DiamanteDesk enables our Clients to group tickets according to the requests of specific users, locations, issues or according to the [Channel](channels/index.md) the ticket came from. This feature helps to organize tickets in a way to keep track of the tickets according to a certain category and quickly find them in a system. We remember that good customer service implies quick reaction and problem solving, so we do our best to provide our Clients with a user-friendly tool to make it work.
+Creating separate branches in DiamanteDesk enables our Clients to group tickets according to the requests of specific users, locations, issues or according to the [Channel](channels/index.md) the ticket came from. Branch logic helps to organize tickets in a way to keep track of the tickets according to a certain category and quickly find them in a system. We remember that good customer service implies quick reaction and problem solving, so we do our best to provide our Clients with a user-friendly tool to make it work.
 
 >_Note:_ When the ticket is automatically created from the email received at the the support email address, this ticket is created at the branch which is configured as a default one. To learn more about it, please see the [Email Processing](channels/email-processing.md) section.
 
@@ -39,8 +39,11 @@ Provide the description of the branch in the **Description** filed.
 
 ![Create branch](img/create_branches_description.png)
 
-Provide the domain name of the support email account (for example, mail.google.com, mail.outlook.com, etc.) in the **Support Address** field (for example, support@diamantedesk.com) and the specific user address (for example, support@diamantedesk.com) in the **Customer Domain** field.
+Provide the support email address relevant to this branch in the **Support Address** field (for example, it is a good idea to add all the tickets sent to sales@companyname.com to the "Sales" branch) and the customer domain name (for example, eltrino.com) to add all the emails sent from the email address with such customer domain to a specific branch.
+
 ![Email configuration](img/email_config.png)
+
+Click [here](channels/email-processing.md) if you want to learn more about email processing in DiamanteDesk.
 
 Click **Save And Close** at the right top corner of the screen.
 
