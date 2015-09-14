@@ -1,4 +1,6 @@
-<p>DiamanteDesk is an independent help desk system that currently can be easily integrated into the open-source OroCRM and is going to be available for other CRMs in the near future.  Therefore, DiamanteDesk can be installed as a standalone application or as a help desk extension to the OroCRM.</p>
+<p>DiamanteDesk is an independent help desk system that can be easily integrated into the open-source OroCRM and in the near future it is going to be available for other CRMs.  Therefore, DiamanteDesk can be installed as a standalone application or as a help desk extension to the OroCRM. To learn how to install DiamanteDesk, please refer to the <a href="../installation-guide/index.md">Installation Guide</a>.</p>
+
+<p>The following guide is based on the assumption that DiamanteDesk is installed on the basis of OroCRM and describes the functionality related to the DiamanteDesk integration with this system.</p>
 
 <p>When installed on the basis of the OroCRM, DiamanteDesk functionality is available at the <strong>Desk</strong> top menu.</p>
 
@@ -11,6 +13,18 @@
   <li><a href="../user-guide/tickets.md">Tickets</a></li>
   <li>Reports</li>
 </ul>
+
+<h2 id="diamanetedesk-contacts-in-orocrm">DiamaneteDesk Contacts in OroCRM</h2>
+
+<p>In the Oro platform all the contacts related to any business activities are saved at <em>Customers &gt; Contacts</em>. Please refer to the Oro <a href="http://www.orocrm.com/documentation/index/current/user-guide/contacts">documentation</a> to learn more about contacts in OroCRM. Due to the DiamanteDesk integration with Oro, when a customer registers on the support <a href="http://orocrmqa.eltrino.com:8090/diamante_1.1/web/app_dev.php/portal/#login">portal</a> to make a request or report an issue regarding the supported entity (online store, blog, etc.), the provided credentials are  added both to the DaiamnteDesk and to the OroCRM contacts.</p>
+
+<p>When a user registeres on the portal, the system automatically scans the contact database by the existing emails. If none of the emails match the provided credentials, a new contact is created based on the data provided by the user. If an account with the same email has  been previously registered in the system, the following warning message is displayed:</p>
+
+<p><img src="img/message.png" alt="Message" /></p>
+
+<p>The identical procedure occurs when OroCRM administartor creates a new DiamanteDesk user from the admin panel at <em>Customers &gt; Contacts &gt; Create Customer</em>.</p>
+
+<p>This feature can be disabled at <em>System &gt; Configuration &gt; DiamanteDesk</em>.</p>
 
 <h2 id="tickets-in-orocrm">Tickets in OroCRM</h2>
 
