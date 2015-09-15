@@ -1,5 +1,5 @@
 ---
-title: Upgrade Your Help Desk
+title: Upgrade Guide
 ---
 
 DiamanteDesk offers our customers a simple and reliable  set of tools designed to take care of their clients, quickly solve any emerging issues and increase the overall customer satisfaction.
