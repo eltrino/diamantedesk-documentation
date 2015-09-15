@@ -1,3 +1,2 @@
-site/
-.*
-!/.gitignore
+_site
+.DS_Store
