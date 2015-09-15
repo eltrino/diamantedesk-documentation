@@ -1,6 +1,6 @@
 - index.md
-- installation-guide/index.md:
-  - installation-guide/upgrade.md
+- installation-guide/index.md
+- upgrade-guide/index.md
 - user-guide/index.md:
   - user-guide/branches.md
   - user-guide/tickets.md
