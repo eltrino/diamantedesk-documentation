@@ -134,7 +134,7 @@ Development in progress.
 
 To learn more on how to use Docker image, please follow this [link](https://github.com/eltrino/diamantedesk-docker).
 
-#<a name="getting-the-latest-development-version-of-application"></a> Getting the Latest Development Version of Application
+##<a name="getting-the-latest-development-version-of-application"></a> Getting the Latest Development Version of Application
 
 The latest development version of DiamanteDesk application is also available for download.
 
