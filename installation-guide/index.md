@@ -36,27 +36,25 @@ _**Note:** DiamanteDesk makes heavy use of HTTP methods in RESTful calls. The se
 
 ## Installation of a Standalone Application
 
-Step 1: Get the Stable Version of the Application | 
-------------- | -------------
+### Step 1: Get the Stable Version of the Application 
 
 Two options to get the latest stable version are available:
 
-**Option 1: Using Git**:
+**Option 1:** Using Git
 
 {% highlight sh %}
 git clone -b 1.0 https://github.com/eltrino/diamantedesk-application
 {% endhighlight %}
      
-**Option 2: With the composer package manager**:
+**Option 2:** With the composer package manager
 
 {% highlight sh %}
 php composer.phar create-project diamante/desk-application
 {% endhighlight %}
 
-_**Note:** Learn how to get the latest **development** version of the application [here](#development version)._
+_**Note:** Learn how to get the latest **development** version of the application [here](#getting-the-latest-development-version-of-application)._
     
-Step 2: <a name="libraries"></a> Install the Required Libraries | 
-------------- | -------------
+### Step 2: <a name="libraries"></a> Install the Required Libraries
 
 Install the dependencies with the composer:
 
@@ -64,8 +62,7 @@ Install the dependencies with the composer:
 php composer.phar install
 {% endhighlight %}
 
-Step 3: Create a Database | 
-------------- | -------------
+### Step 3: Create a Database
 
 To install DiamanteDesk you also need to setup MySQL database server with an empty database that will be used later on. Use the following command:
 
@@ -73,12 +70,11 @@ To install DiamanteDesk you also need to setup MySQL database server with an emp
 php app/console doctrine:database:create
 {% endhighlight %}
 
-Step 4: Install the Application| 
-------------- | -------------
+### Step 4: Install the Application
 
 The application can be installed either using a console or via a web wizard. Select the most suitable version:
 
-**Option 1: Installation Using a Console**
+**Option 1:** Installation Using a Console
 
 To run the installation of DiamanteDesk in a console mode, use the following command:
 
@@ -90,7 +86,7 @@ Additional commands may be required. The system will guide you through the proce
 
 If the system configuration does not meet the requirements, the _install_ command provides corresponding messages. In case there are any issues, fix them and run the command again.
 
-**Option 2: Installation Using Web Wizard**
+**Option 2:** Installation Using Web Wizard
 
 To install the application through a web wizard, follow the link below:
 
@@ -138,21 +134,11 @@ Development in progress.
 
 To learn more on how to use Docker image, please follow this [link](https://github.com/eltrino/diamantedesk-docker).
 
-## <a name="development version"></a> Getting the Latest Development Version of Application
+#<a name="getting-the-latest-development-version-of-application"></a> Getting the Latest Development Version of Application
 
 The latest development version of DiamanteDesk application is also available for download.
 
 _**Disclaimer:** Please keep in mind that this version is unstable and it may cause damage to your website or web store. We disclaim all responsibilitiy for data loss or any sorts of damage to your website or system caused by installation of the development version of application._
-
-Select one of the following options to get this version:
-
-**Option 1: Clone the [GitHub repository](https://github.com/eltrino/diamantedesk-application#usage) to get the source code**:
-
-{% highlight sh %}
-git clone https://github.com/eltrino/diamantedesk-application
-{% endhighlight %}
-
-**Option 2: Download using the composer**:
 
 To start the procedure, issue the following command:
 
@@ -165,6 +151,16 @@ To get the latest version of the dependencies, use this command:
 {% highlight sh %}
 php composer.phar update
 {% endhighlight %}
+
+Select one of the following options to get the development version of application:
+
+**Option 1**: Clone the [GitHub repository](https://github.com/eltrino/diamantedesk-application#usage) to get the source code
+
+{% highlight sh %}
+git clone https://github.com/eltrino/diamantedesk-application
+{% endhighlight %}
+
+**Option 2**: Download using the composer
 
 And finally, get the development version of the application using:
 
