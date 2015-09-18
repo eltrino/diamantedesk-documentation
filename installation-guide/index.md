@@ -41,7 +41,7 @@ Step 1: Get the Application |
 
 You can get the latest stable or latest developed version of application using one of the following options. Option 1 is deemed preferable to Option 2.
 
-######<a name="get-code"></a>Option 1: Getting the Latest Stable Version
+**<a name="get-code"></a>Option 1: Getting the Latest Stable Version**
 
 
 Two options to get the latest stable version of the application are available. Select the one you find the most suitable:
@@ -61,7 +61,7 @@ php composer.par create-project diamante/desk-application
 {% endhighlight %}
 
 
-#####Option 2: Getting the Latest Development Version
+**Option 2: Getting the Latest Development Version**
 
 Select one of the following options to get the latest **development** version:
 
@@ -102,7 +102,7 @@ Step 4: Install the Application|
 
 The application can be installed either using a console or via a web wizard. Select the most suitable version:
 
-######Installation Using a Console
+**Installation Using a Console**
 
 To run the installation of DiamanteDesk in a console mode, use the following command:
 
@@ -114,7 +114,7 @@ Additional commands may be required. The system will guide you through the proce
 
 If the system configuration does not meet the requirements, the _install_ command provides corresponding messages. In case there are any issues, fix them and run the command again.
 
-######Installation Using Web Wizard
+**Installation Using Web Wizard**
 
 To install the application through a web wizard, follow the link below:
 
