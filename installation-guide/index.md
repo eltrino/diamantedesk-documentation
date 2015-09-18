@@ -140,18 +140,6 @@ The latest development version of DiamanteDesk application is also available for
 
 _**Disclaimer:** Please keep in mind that this version is unstable and it may cause damage to your website or web store. We disclaim all responsibilitiy for data loss or any sorts of damage to your website or system caused by installation of the development version of application._
 
-To start the procedure, issue the following command:
-
-{% highlight sh %}
-php composer.phar install
-{% endhighlight %}
-
-To get the latest version of the dependencies, use this command:
-
-{% highlight sh %}
-php composer.phar update
-{% endhighlight %}
-
 Select one of the following options to get the development version of application:
 
 **Option 1**: Clone the [GitHub repository](https://github.com/eltrino/diamantedesk-application#usage) to get the source code
@@ -162,8 +150,19 @@ git clone https://github.com/eltrino/diamantedesk-application
 
 **Option 2**: Download using the composer
 
-And finally, get the development version of the application using:
-
 {% highlight sh %}
 php composer.phar create-project diamante/desk-application:dev-master
+{% endhighlight %}
+___
+
+Regradless of the option you've chosen, next you need to install the required libraries to proceed with the installation:
+
+{% highlight sh %}
+php composer.phar install
+{% endhighlight %}
+
+To get the latest version of the dependencies, execute the following command:
+
+{% highlight sh %}
+php composer.phar update
 {% endhighlight %}
