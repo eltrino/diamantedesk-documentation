@@ -8,21 +8,21 @@ This section provides detailed instructions on various options of DiamanteDesk a
 
 ##Requirements
 
-DiamanteDesk application was built using **Symfony** 2.3 framework and **Oro** Platform; therefore, all the prerequisites listed as [Symfony](http://symfony.com/doc/2.3/reference/requirements.html) and [Oro](http://www.orocrm.com/documentation/index/current/system-requirements) system requirements also refer to DiamanteDesk.
+DiamanteDesk application was built using **Symfony** 2.3 framework and **Oro Platform**; therefore, all the prerequisites listed as [Symfony](http://symfony.com/doc/2.3/reference/requirements.html) and [Oro](http://www.orocrm.com/documentation/index/current/system-requirements) system requirements also refer to DiamanteDesk.
 
-As for the additional requirements specific for DiamanteDesk, the **app/attachments** folder needs to be writable for the proper operation of the application.
+DiamanteDesk Requirements:
 
-To install DiamanteDesk you also need to setup MySQL database server with an empty database that will be used later on.
+* **app/attachments** folder needs to be writable;
+* DiamanteDesk uses **Composer** to manage package dependencies. To learn more about the composer and download it from the official website, follow this [link](https://getcomposer.org/);
+* MySQL database server with an empty database.
 
-Optionally, in case you need to customize your portal, your system shall comply with additional requirements:
+Optionally, providing that your portal shall be customized, your system shall comply with additional requirements:
 
 * NPM package manager needs to be installed;
 * Grunt needs to be installed (globally);
 * Bower needs to be installed (globally).
 
-_____
-
-You can also check whether your system meets all the requirements from the command line. In order to do that, you should start with getting the [application code](#get-code) from Github and required [libraries](#libraries). Then you can run the following command:
+You can also check whether your system meets all the requirements from the command line. In order to do that, you should start with getting the [application code](#get-code) from Github and install required [libraries](#libraries). Next, run the following command:
 
 {% highlight php %}
 php app/check.php
@@ -32,53 +32,77 @@ php app/check.php
 
 DiamanteDesk application was developed on the basis of the Symfony standard application so you can learn more about web server configuration recommendations [here](http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html).
 
-> _Note:_ DiamanteDesk application makes heavy use of HTTP methods in RESTful calls. The server can be configured to block some of them (for example, PUT, DELETE, etc.). However, this limitation should be removed, otherwise, a certain part of application will not function properly.
-
-### Composer
-
-DiamanteDesk uses **Composer** to manage package dependencies. Use this [link](https://getcomposer.org/download/) to download it. All the following examples are be based on the assumption that the composer have been installed globally.
+_**Note:** DiamanteDesk makes heavy use of HTTP methods in RESTful calls. The server can be configured to block some of them (for example, PUT, DELETE, etc.). However, this limitation should be removed, otherwise, a certain part of application will not function properly._
 
 ## Installation of a Standalone Application
 
-### <a name="get-code"></a> Getting the Application
+Step 1: Get the Application | 
+------------- | -------------
 
-Download DiamanteDesk application from [GitHub](https://github.com/eltrino/diamantedesk-application/releases).
+You can get the latest stable or latest developed version of application using one of the following options. Option 1 is deemed preferable to Option 2.
 
-Clone the [GitHub repository](https://github.com/eltrino/diamantedesk-application#usage) to get a source code and checkout the latest developed version of an application. Use the following command:
+####<a name="get-code"></a>Option 1: Getting the Latest Stable Version
 
-{% highlight sh %}
-git clone https://github.com/eltrino/diamantedesk-application
-{% endhighlight %}
 
-Previous command was used to get the latest development code stored in the master branch. To obtain the latest stable code and switch to the branch 1.0, issue the following command:
+Two options to get the latest stable version of the application are available. Select the one you find the most suitable:
+
+* Downlaod the latest stable version using **Git**:
 
 {% highlight sh %}
 git clone -b 1.0 https://github.com/eltrino/diamantedesk-application
 {% endhighlight %}
      
-Also, to obtain the latest stable version, download the application with the composer package manager using the following command:
+**OR**
+
+* Download the application with the **composer package manager**:
 
 {% highlight sh %}
-composer create-project diamante/desk-application
+php composer.par create-project diamante/desk-application
 {% endhighlight %}
 
-To install the latest development version using the composer, issue the following command:
+
+####Option 2: Getting the Latest Development Version
+
+Select one of the following options to get the latest **development** version:
+
+* Clone the [GitHub repository](https://github.com/eltrino/diamantedesk-application#usage) to get the source code:
 
 {% highlight sh %}
-composer create-project diamante/desk-application:dev-master
+git clone https://github.com/eltrino/diamantedesk-application
+{% endhighlight %}
+
+**OR**
+
+* Download using the composer:
+
+{% highlight sh %}
+php composer.par create-project diamante/desk-application:dev-master
 {% endhighlight %}
     
-### <a name="libraries"></a> Installing required libraries
+Step 2: <a name="libraries"></a> Install the Required Libraries | 
+------------- | -------------
 
 Install the dependencies with the composer:
 
 {% highlight sh %}
-composer install
+php composer.par install
 {% endhighlight %}
 
-### Application Installation
+Step 3: Create a Database | 
+------------- | -------------
 
-######Installation Using a Console
+To install DiamanteDesk you also need to setup MySQL database server with an empty database that will be used later on. Use the following command:
+
+{% highlight sh %}
+php app/console doctrine:database:create
+{% endhighlight %}
+
+Step 4: Install the Application| 
+------------- | -------------
+
+The application can be installed either using a console or via a web wizard. Select the most suitable version:
+
+####Installation Using a Console
 
 To run the installation of DiamanteDesk in a console mode, use the following command:
 
@@ -90,7 +114,7 @@ Additional commands may be required. The system will guide you through the proce
 
 If the system configuration does not meet the requirements, the _install_ command provides corresponding messages. In case there are any issues, fix them and run the command again.
 
-######Installation Using Web Wizard
+####Installation Using Web Wizard
 
 To install the application through a web wizard, follow the link below:
 
@@ -124,6 +148,7 @@ Click **Install** to finish the setup process.
 After the DiamanteDesk application is successfully installed the following message is displayed:
 
 ![Finish](img/web_finish.png)
+
 
 ##Bundles Installation
 

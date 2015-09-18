@@ -2,6 +2,7 @@
 - installation-guide/index.md
 - upgrade-guide/index.md
 - user-guide/index.md:
+  - user-guide/customers.md
   - user-guide/branches.md
   - user-guide/tickets.md
   - user-guide/user-management.md

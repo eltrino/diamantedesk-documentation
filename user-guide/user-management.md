@@ -2,7 +2,7 @@
 title: User Management
 ---
 
-**User Management** serves to create new users in DiamanteDesk or to review/edit information about the existing ones. Each user has a certain role, access settings and belongs to one of the existing groups, defining his default permissions in the system.
+**User Management** serves to create new admin users in DiamanteDesk or to review/edit information about the existing ones. Each user has a certain role, access settings and belongs to one of the existing groups, defining his default permissions in the system.
 
 ![User Management](img/user_management.png)
 
