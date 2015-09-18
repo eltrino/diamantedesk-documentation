@@ -102,7 +102,7 @@ Step 4: Install the Application|
 
 The application can be installed either using a console or via a web wizard. Select the most suitable version:
 
-**Installation Using a Console**
+**Option 1: Installation Using a Console**
 
 To run the installation of DiamanteDesk in a console mode, use the following command:
 
@@ -114,7 +114,7 @@ Additional commands may be required. The system will guide you through the proce
 
 If the system configuration does not meet the requirements, the _install_ command provides corresponding messages. In case there are any issues, fix them and run the command again.
 
-**Installation Using Web Wizard**
+**Option 2: Installation Using Web Wizard**
 
 To install the application through a web wizard, follow the link below:
 
