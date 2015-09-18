@@ -15,7 +15,7 @@ The following instructions are based on the assumption that the application code
 
 **First and foremost**, before performing any steps aimed at help desk upgrading, make sure you have the latest complete backup of all databases and files of your current version, otherwise, you may end up losing the necessary data while upgrading the application.
 
-To start the application update pull the changes from the DiamanteDesk repository using the following command:
+**Step 1:** Pull the changes from the DiamanteDesk repository using the following command:
 
 {% highlight http %}
 
@@ -23,7 +23,7 @@ git pull
 
 {% endhighlight %}
 
-Checkout the latest stable or any of the previous versions of the application:
+**Step 2:** Checkout the latest stable or any of the previous versions of the application:
 
 {% highlight http %}
 
@@ -31,15 +31,15 @@ git checkout <VERSION TO UPGRADE>
 
 {% endhighlight %}
 
-Next, execute the following command to upgrade composer dependency:
+**Step 3:** Execute the following command to upgrade the composer dependency:
 
 {% highlight http %}
 
-composer install --prefer-dist
+php composer.phar update --prefer-dist
 
 {% endhighlight %}
 
-Remove old caches and assets:
+**Step 4:** Remove old caches and assets:
 
 {% highlight http %}
 
@@ -49,7 +49,7 @@ rm -rf web/css/*
 
 {% endhighlight %}
 
-And finally, upgrade the application using this command:
+**Step 5:** Upgrade the application using this command:
 
 {% highlight http %}
 
