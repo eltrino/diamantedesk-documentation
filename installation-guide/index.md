@@ -36,48 +36,24 @@ _**Note:** DiamanteDesk makes heavy use of HTTP methods in RESTful calls. The se
 
 ## Installation of a Standalone Application
 
-Step 1: Get the Application | 
+Step 1: Get the Stable Version of the Application | 
 ------------- | -------------
 
-You can get the latest stable or latest developed version of application using one of the following options. Option 1 is deemed preferable to Option 2.
+Two options to get the latest stable version are available:
 
-**<a name="get-code"></a>Option 1: Getting the Latest Stable Version**
-
-
-Two options to get the latest stable version of the application are available. Select the one you find the most suitable:
-
-* Downlaod the latest stable version using **Git**:
+**Option 1: Using Git**:
 
 {% highlight sh %}
 git clone -b 1.0 https://github.com/eltrino/diamantedesk-application
 {% endhighlight %}
      
-**OR**
-
-* Download the application with the **composer package manager**:
+**Option 2: With the composer package manager**:
 
 {% highlight sh %}
-php composer.par create-project diamante/desk-application
+php composer.phar create-project diamante/desk-application
 {% endhighlight %}
 
-
-**Option 2: Getting the Latest Development Version**
-
-Select one of the following options to get the latest **development** version:
-
-* Clone the [GitHub repository](https://github.com/eltrino/diamantedesk-application#usage) to get the source code:
-
-{% highlight sh %}
-git clone https://github.com/eltrino/diamantedesk-application
-{% endhighlight %}
-
-**OR**
-
-* Download using the composer:
-
-{% highlight sh %}
-php composer.par create-project diamante/desk-application:dev-master
-{% endhighlight %}
+_**Note:** Learn how to get the latest **development** version of the application [here](#development version)._
     
 Step 2: <a name="libraries"></a> Install the Required Libraries | 
 ------------- | -------------
@@ -85,7 +61,7 @@ Step 2: <a name="libraries"></a> Install the Required Libraries |
 Install the dependencies with the composer:
 
 {% highlight sh %}
-php composer.par install
+php composer.phar install
 {% endhighlight %}
 
 Step 3: Create a Database | 
@@ -161,3 +137,37 @@ Development in progress.
 ##Docker Prebuilt Image 
 
 To learn more on how to use Docker image, please follow this [link](https://github.com/eltrino/diamantedesk-docker).
+
+## <a name="development version"></a> Getting the Latest Development Version of Application
+
+The latest development version of DiamanteDesk application is also available for download.
+
+_**Disclaimer:** Please keep in mind that this version is unstable and it may cause damage to your website or web store. We disclaim all responsibilitiy for data loss or any sorts of damage to your website or system caused by installation of the development version of application._
+
+Select one of the following options to get this version:
+
+**Option 1: Clone the [GitHub repository](https://github.com/eltrino/diamantedesk-application#usage) to get the source code**:
+
+{% highlight sh %}
+git clone https://github.com/eltrino/diamantedesk-application
+{% endhighlight %}
+
+**Option 2: Download using the composer**:
+
+To start the procedure, issue the following command:
+
+{% highlight sh %}
+php composer.phar install
+{% endhighlight %}
+
+To get the latest version of the dependencies, use this command:
+
+{% highlight sh %}
+php composer.phar update
+{% endhighlight %}
+
+And finally, get the development version of the application using:
+
+{% highlight sh %}
+php composer.phar create-project diamante/desk-application:dev-master
+{% endhighlight %}
