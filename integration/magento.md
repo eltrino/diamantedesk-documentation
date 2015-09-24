@@ -53,12 +53,11 @@ The extension marketplace opens.
         composer require eltrino/diamantedesk
         
            
-___
->_Note:_ 
+_**Note:**_ 
 
->* Make sure that you clear the Magento caches to complete the installation of an extension. To learn more about cache management, follow this [link](http://www.magentocommerce.com/knowledge-base/entry/cache-storage-management/%09200).
+_* Make sure that you clear the Magento caches to complete the installation of an extension. To learn more about cache management, follow this [link](http://www.magentocommerce.com/knowledge-base/entry/cache-storage-management/%09200)._
 
->* If the module has been successfully installed, a **DiamanteDesk** tab will appear next to the **System** tab in the Magento navigation pane (see the picture below).
+_* If the module has been successfully installed, a **DiamanteDesk** tab will appear next to the **System** tab in the Magento navigation pane (see the picture below)._
 
 ![DiamanteDesk tab](img/diamantedesk_magento.png)
 

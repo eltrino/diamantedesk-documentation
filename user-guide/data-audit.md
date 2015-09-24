@@ -24,10 +24,10 @@ Author | The name of a person who performed current changes in the system is ind
 Organization | This field indicates an organization specified during DiamanteDesk or OroCRM installation.
 Logged at | The date and time when the action is performed is shown in this field.
 
-> Note: You can filter the data audit information according to the following criteria:
+_**Note:** You can filter the data audit information according to the following criteria:_
 
->* Action
-* Entity Type
-* Entity Name
-* Entity ID
-* Author
+* _Action_
+* _Entity Type_
+* _Entity Name_
+* _Entity ID_
+* _Author_

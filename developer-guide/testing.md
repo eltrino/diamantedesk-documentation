@@ -21,7 +21,7 @@ To run the test suite, issue the following command:
 bash phpunit -c vendor/diamante/{BundleName}/phpunit.xml.dist vendor/diamante/{BundleName}/Tests
 {% endhighlight %}
 
-> Note: {BundleName} is a placeholder for a name of the bundle you want to test, e.g. DeskBundle, ApiBundle, FrontBundle, etc.
+_**Note:** {BundleName} is a placeholder for a name of the bundle you want to test, e.g. DeskBundle, ApiBundle, FrontBundle, etc._
 
 The output consists of the test results, including the general number of tests run, assertions made and the number of failed and skipped tests or tests containing errors.
 
@@ -39,7 +39,7 @@ bash phpunit -c vendor/diamante/{BundleName}/Tests/Functional/phpunit/xml.dist v
 
 The output of the command execution is similar to the unit testing output. 
 
-> Note: We highly recommend setting up a separate database for the proper software testing.
+_**Note:** We highly recommend setting up a separate database for the proper software testing._
 
 ### How to Setup Testing Environment
 

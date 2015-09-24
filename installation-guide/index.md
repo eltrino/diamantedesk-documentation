@@ -94,7 +94,7 @@ To install the application through a web wizard, follow the link below:
 http://localhost/install.php
 {% endhighlight %}
     
-When DiamanteDesk installation screen opens, click **Begin Installation**. 
+After the DiamanteDesk installation screen opens, click **Begin Installation**. 
 
 Firstly, installation wizard automatically checks system requirements.
 
@@ -103,11 +103,12 @@ In case there are any issues, fix them and refresh the page. After all system co
 ![System Requirements](img/web_sys_req.png)
 
 The next step of installation process is configuring the application. Provide the data for **MySQL database connection**, **Mailer settings**, **System settings** and **Websocket connection** if the fields are not filled out automatically.
-> _Note:_ If the application is installed for the first time, leave the **Drop Full Database** check box clear, if you reinstall the application, select this check box.
+
+_**Note:** If the application is installed for the first time, leave the **Drop Full Database** check box clear, if you reinstall the application, select this check box._
 
 ![Configuration](img/web_config.png)
 
-Click **Next** and the installer will initialize your database. The list of tasks and the progress on their performance will be shown.
+Click **Next** and the installer will initialize your database. The list of tasks and the progress on their performance will be shown. If some of the operations are failed or skipped, check out the **app/logs/oro_install.log** file for errors.
 
 ![Database](img/web_initialization.png)
 
@@ -135,7 +136,7 @@ Development in progress.
 To learn more on how to use Docker image, please follow this [link](https://github.com/eltrino/diamantedesk-docker).
 
 <a name="getting-the-latest-development-version-of-application"></a> 
-##Getting the Latest Development Version of Application
+##Latest Development Version
 
 The latest development version of DiamanteDesk application is also available for download.
 

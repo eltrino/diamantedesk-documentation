@@ -17,4 +17,4 @@ To connect a content management system and the Client's CRM, API credentials sha
 ![User](img/API_Oro.png)
 4. Remember the **Username** and click **Generate Key** in the **API Key** field. Copy the generated API key.
 
->NOTE: **API Key** can be generated for any user on the profile screen by the user with **Edit** permissions.
+_**Note:** **API Key** can be generated for any user on the profile screen by the user with **Edit** permissions._

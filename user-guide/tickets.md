@@ -31,14 +31,14 @@ All the tickets on this screen can be filtered according to the number of variou
 
 ![Ticket categories](img/ticket_filters2.jpg)
 
->_Note:_ Each of the parameters is set to **All** values by default. To change this value, click the down arrow next to to the specific filter that shall be changed.
+_**Note:** Each of the parameters is set to **All** values by default. To change this value, click the down arrow next to to the specific filter that shall be changed._
 
 Filter   | Description
 ------------- | -------------
 Key  | Enter the required branch key and click **Update**. Ticket Key consists of the branch key and ticket sequence number and has next format {_branchKey_}-{_ticketSequenceNumber_}. 
 Subject | Provide the summary of a ticket in this field.
 Branch | Select the required branch from the drop-down list and click **Update**.
-Assignee | To filter the tickets assigned to a specific person, enter the name of that person into the **Assignee** field. _Note:_ You can't change this value when looking through the tickets in **My tickets** and **My new tickets** categories, the assignee in these categories is always an owner of the account.
+Assignee | To filter the tickets assigned to a specific person, enter the name of that person into the **Assignee** field. _**Note:** You can't change this value when looking through the tickets in **My tickets** and **My new tickets** categories, the assignee in these categories is always an owner of the account._
 Priority | Set the filter to **Low**, **Medium** or **High** priority.
 <a name="status"></a>Status | Select one or several statuses for ticket filtering. The available statuses are: **New**, **Open**, **Pending**, **In progress**, **Closed** and **On Hold**.
 Created | Select the date range when the tickets could could be updated either from a drop-down calendar or by selecting one of the available variables (Now, today, Start of the week, Start of the month, Start of the quarter, Start of the year).

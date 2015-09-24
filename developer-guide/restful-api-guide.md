@@ -32,7 +32,7 @@ WSSE authentication is based on:
 All the data in DiamanteDesk APIs is transmitted either in JSON or XML format with JSON being a default format.
 The format can be specified either:
 
-* in the request header (Content-Type, Accept). _Note:_ The MIME type shall be specified in header (application/json, application/xml).
+* in the request header (Content-Type, Accept). _**Note:** The MIME type shall be specified in header (application/json, application/xml)._
 * or specified in the URL.
 
 ## Pagination, Sorting, Filtering
@@ -125,12 +125,12 @@ HTTP/1.1 404 Not Found
 
 REST APIs are necessary when DiamanteDesk is integrated into another application and when interactions with the DiamanteDesk server shall be scripted.
 
->NOTE: Here are the values of the variables API methods:
->
->|Variable|       Requirements          
+_**Note:** Here are the values of the variables API methods:_
+
+| _Variable_|       _Requirements_          
 |:------------- |:---------------| 
-|   {version}   | latest, v1 |
-|{_format} | xml, json |
+|   _{version}_   | _latest, v1_ |
+| _{_format}_ | _xml, json_ |
 
 ### Branches
 

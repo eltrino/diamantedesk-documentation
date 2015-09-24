@@ -31,7 +31,7 @@ DiamanteDesk functionality is separated into the **bundles**, such as ApiBindle,
 
 To change application code or submit a patch, fork the project on GitHub, perform the required changes, and log a pull request to get the changes pulled back into DiamanteDesk repository. To learn more about pull requests on GitHub, follow this [link](https://help.github.com/articles/using-pull-requests/).
 
->_Note:_ When committing changes in the code, add detailed messages on what exactly has been changed.
+_**Note:** When committing changes in the code, add detailed messages on what exactly has been changed._
 
 ## Contributing Documentation
 
