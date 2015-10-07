@@ -11,8 +11,7 @@ Tickets in DiamanteDesk can be created through one of the following channels:
 * via [**processing email requests**](email-processing.md) sent to the support email address;
 * by the admin users via the admin panel.
 
-Tickets in the admin panel can be viewe
-d and created at:
+Tickets in the admin panel can be viewed and created at:
 
 * the **Branches** top menu (see [**Branches**](branches.html) section);
 * the **All Tickets** top menu.
