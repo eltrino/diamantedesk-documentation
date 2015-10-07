@@ -17,7 +17,7 @@ d and created at:
 * the **Branches** top menu (see [**Branches**](branches.html) section);
 * the **All Tickets** top menu.
 
-![All tickets](img/all_tickets.png)
+![All tickets](img/All_tickets.png)
 
 <a name="create-a-new-ticket"></a>
 ## Create a New Ticket
