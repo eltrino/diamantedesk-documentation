@@ -39,7 +39,7 @@ Provide the description of the branch in the **Description** filed.
 
 ![Create branch](img/create_branches_description.png)
 
-Provide the support email address relevant to this branch in the **Support Address** field (for example, it is a good idea to add all the tickets sent to sales@companyname.com to the "Sales" branch) and the customer domain name (for example, eltrino.com) to add all the emails sent from the email address with such customer domain to a specific branch.
+Provide the support email address matching this branch in the **Support Address** field (for example, it is a good idea to add all the tickets sent to sales@companyname.com to the "Sales" branch) and the customer domain name (for example, eltrino.com) to add all the emails sent from the email addresses with such customer domain to a specific branch.
 
 ![Email configuration](img/email_config.png)
 

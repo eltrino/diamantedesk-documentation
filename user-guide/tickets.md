@@ -2,65 +2,75 @@
 title: Tickets
 ---
 
-DiamanteDesk is a comprehensive help desk, built using the OpenSource software. This tool is a great way to improve customer experience by easily receiving, reassigning and taking care of any Client requests presented in **tickets**.
+DiamanteDesk is a great way to improve customer experience by easily receiving, reassigning and taking care of any Client requests presented as **tickets**.
 
-Tickets can be viewed and added at:
+Tickets in DiamanteDesk can be created through one of the following channels:
 
-* the **Branches** tab (see [**Branches**](branches.html) section);
-* the **All Tickets** tab.
+* through the [**web portal**](channels/portal.md);
+* via [**embedded forms**](embedded-form.md) on websites, online stores, blogs, etc.;
+* via [**processing email requests**](email-processing.md) sent to the support email address;
+* by the admin users via the admin panel.
 
+Tickets in the admin panel can be viewed and created at:
 
-![All tickets](img/All_tickets.png)
+* the **Branches** top menu (see [**Branches**](branches.html) section);
+* the **All Tickets** top menu.
 
-##Ticket Filters
+![All tickets](img/all_tickets.png)
 
-All the tickets on this screen can be filtered according to the number of various parameters:
-
-1) A user can view tickets according to the categories they belong to.
-
-![Ticket categories](img/ticket_filter1.png)
-
-  * **All tickets** category allows viewing all tickets created in the system.
-  * **My tickets** category filters all the tickets created by the account owner.
-  * **My new tickets** category filters all the tickets recently created by the account owner.
-  * **My open tickets** category allows viewing all open tickets created by the account owner.
-  * **Reported tickets**
-  * **New reported tickets**
-
-2) Tickets in each category can be also filtered by the following parameters:
-
-![Ticket categories](img/ticket_filters2.jpg)
-
-_**Note:** Each of the parameters is set to **All** values by default. To change this value, click the down arrow next to to the specific filter that shall be changed._
-
-Filter   | Description
-------------- | -------------
-Key  | Enter the required branch key and click **Update**. Ticket Key consists of the branch key and ticket sequence number and has next format {_branchKey_}-{_ticketSequenceNumber_}. 
-Subject | Provide the summary of a ticket in this field.
-Branch | Select the required branch from the drop-down list and click **Update**.
-Assignee | To filter the tickets assigned to a specific person, enter the name of that person into the **Assignee** field. _**Note:** You can't change this value when looking through the tickets in **My tickets** and **My new tickets** categories, the assignee in these categories is always an owner of the account._
-Priority | Set the filter to **Low**, **Medium** or **High** priority.
-<a name="status"></a>Status | Select one or several statuses for ticket filtering. The available statuses are: **New**, **Open**, **Pending**, **In progress**, **Closed** and **On Hold**.
-Created | Select the date range when the tickets could could be updated either from a drop-down calendar or by selecting one of the available variables (Now, today, Start of the week, Start of the month, Start of the quarter, Start of the year).
-Updated | Select the date range when the tickets could could be updated either from a drop-down calendar or by selecting one of the available variables (Now, today, Start of the week, Start of the month, Start of the quarter, Start of the year).
-
+<a name="create-a-new-ticket"></a>
 ## Create a New Ticket
 
 To create a new ticket, complete the following steps:
 
-1. Click **Create Ticket** at the top right corner of the screen. **Create Ticket** screen opens.
+Click **Create Ticket** at the top right corner of the screen. The **Create Ticket** screen opens.
+
 ![Create ticket](img/create_ticket_1.1.png)
-2. Select the branch from the drop-down list.
-3. Specify the short summary of a ticket in the **Subject** field.
-4. Select the status of a ticket.
-5. Select the priority of a ticket.
-6. Select the **Source** of the ticket. Every service user has 4 available options to contact the Help Desk team: by creating a request through a **Web** form or through the embedded form on a website (optional), as an **Email** notification, via a **Phone** call.
-7. Select the **Reporter** from the drop-down list. Reporter is an administrator who can create a ticket for any customer.
-8. To select the **Assignee**, click **Unassigned**. A Search Panel opens. Start entering the name of the person to be assigned and the system will provide hints with the matching results or click a list image to open a list of all available assignees. 
-9. In case there is a file that shall be attached to the ticket (image or document), click **Choose file** in the **File** filed and select the required file from your local machine.
-10. You can also tag your ticket. The process of ticket tagging is identical to branch tagging. Follow the link to learn more about [tagging](tagging.md) in DiamanteDesk.
-11. Provide the description of a ticket in the **Description** field.
-12. Click **Save** or **Save and Close** at the right top corner of the screen for a corresponding action.
+
+Provide all the relevant information necessary to create a new ticket:
+
+Field  | Description
+------------- | -------------
+Branch  | Click the down arrow to choose a branch where this ticket is going to be created.
+Subject | Briefly describe the substance of the issue in this field.
+Status | Select the status of a ticket. The available statuses are **New**, **Open**, **Pending**, **In Progress**, **Closed** and **On Hold**. When the ticket is just created, its status is normally set to **New** or **Open**.
+Priority | Set the priority of the ticket according to urgency and severity of the issue occurred. The available priority options are **Low**, **Medium** or **High**.
+Source | Specify the channel used to submit this ticket. The available options are: through **Web**, **Phone** or **Email**. To learn more about channels of ticket submitting, follow this [link](channels/index.md).
+Reporter | Reporter is a user who created a ticket or who is in charge if it. This user receives notifications whenever the ticket status or priority changes. By default, the reporter is an owner of the account where the user is currently logged in. To change the reporter, click the list button and select the corresponding user.
+Assignee | Assignee is a person responsible for the ticket workflow. To change the reporter, click the list button and select the corresponding user.
+File | In case there is a file that shall be attached to the ticket (screenshot or document), click **Choose file** and select the required file from your local machine.
+Tags | Add tags for the further quick ticket search and classification. Follow the link to learn more about [tagging](tagging.md) in DiamanteDesk.
+
+Provide the detailed description of a ticket in the **Description** field. If relevant, describe the steps to reproduce the bug/error.
+
+![Create ticket](img/description_field.png)
+
+Click **Save** or **Save and Close** at the right top corner of the screen for a corresponding action.
+
+## Ticket Comments
+
+Once the ticket is created and successfully saved in the system, customers can comment them from the portal and admin users can add comments to them from the admin panel either publically or privately.
+
+**Comments on the Portal**
+
+Whenever DiamanteDesk customer needs to add more information about the issue or make a request about the previously created ticket, the comment to this ticket can be added on the portal. 
+
+![Comments](img/comments_portal.png)
+
+This comment automatically becomes available at the admin panel, updating admin users with new information/requests/issues occurred.
+
+**Comments on the Admin Panel**
+
+To add a comment to some ticket at the DiamanteDesk admin panel, open the required ticked and click the **Comment** button at the **Comments** section. The **Add Comment** screen opens.
+
+![Comments](img/comments_backend.png)
+
+Field  | Description
+------------- | -------------
+Content  | This field contains the comment body.
+Ticket Status  | Specify whether the ticket status has changed. Once comment with the changed ticket status is added, the status of the ticket automatically changes as well.
+Attachments  | Attach screenshots clarifying or confirming information provided in the content field.
+Private  | If this checkbox is selected, this comment is going to be available only to the admin users on the DiamanteDesk admin panel. If the checkbox is clear, it s going to be available both for admin users on the admin panel and for the customer on the portal.
 
 ## Notifications
 
@@ -76,7 +86,7 @@ When the status of a ticket changes, the reporter and assignee get the following
 
 ### Configuring Notifications
 
-This functionality can be configured according to the customers' needs at _System > Configuration_. On the left side side of the screen on the **System configuration** pane select **Notifications** tab in the **DiamanteDesk** menu.
+This functionality can be configured according to the customer needs at _System > Configuration_. On the left side side of the screen on the **System configuration** pane select **Notifications** tab in the **DiamanteDesk** menu.
 
 ![System configuration](img/sys_config.jpg)
 
@@ -102,12 +112,34 @@ To make sure that server parameters are configured correctly or you need to chan
 
 Each of the tickets can be assigned to a specific user to make sure that a given issue is solved quickly and efficiently. But in order to have more control over certain high priority issues, a new **Watchers** feature has been added.
 
-**Watcher** is a person who gets an email notification every time the status of a ticket changes. When the ticket is created, a **Reporter** (the person who created a ticket) and an **Assignee** automatically become **Watchers**. In case the ticket is created from the email through [email processing](email-processing.md), the email sender and all the users from CC (if any) become watchers and recieve email notifications each time the status of a ticket changes.
-
-Additionally, every ticket can be watched and controlled by other users in the system.
+A **Watcher** is a person who gets an email notification every time a status, priority or other valuable ticket information changes. When the ticket is created, a **Reporter** (the person who created a ticket) and an **Assignee** (a person to whom the ticket is assigned) automatically become **Watchers**. If the ticket is created by the admin user, he automatically becomes a ticket watcher as well.
 
 ###Adding Watchers to the Ticket
 
-To follow the changes made in a certain ticket in the system, open the required ticket either at _Desk > Branches > select a branch_ or at _Desk > All Tickets_.
+Watchers can be added to the ticket in one of the following ways:
 
-If you want to to be aware of the changes made to the ticket, click **Watch** on the option panel at the top of the screen. If you want to add another person to the Watchers list, click **Add Watcher** on the option panel and enter the name of a user or click a **List** button and select a user from the list.
+* **By the Customer via Email**
+
+In case the ticket is created from the email through [email processing](email-processing.md), the email sender and all the users from CC (if any) become watchers and receive email notifications each time the ticket content, status or priority changes.
+
+* **By the Customer via the Portal**
+
+To add watchers to the ticket via the portal, complete the following steps:
+
+1. Log into the Portal.
+2. Create a new ticket. To get the detailed instructions on how to create ticket via the portal, please refer to [this section](#create-a-new-ticket).
+3. Once the ticket is submitted, the screen with ticket description and editing options is opened. At the right side of this screen in the **Watchers** section click **Add Watcher** to add a person or several people who will be able to control the ticket workflow.
+![Create ticket](img/ticket_submitted.png)
+4. The **Add Watcher** screen opens. Specify the email of a person you would like to make a watcher for this ticket and click **Add**. If this email has been previously registered in DiamanteDesk, the system will automatically define this user and will add the person's first an last name to the list of watchers. If no matching account has been found a new DiamanteDesk customer is created.
+![Create ticket](img/add_watcher_portal.png)
+5. An email confirmation is sent to a person whose email was provided at the **Add Watcher** screen, notifying him on the new role granted.
+
+* **By the Admin User via Admin Panel**
+
+Admin user can add or remove certain users from the list of ticket watchers if this administrator has the corresponding edit permissions. To follow the changes made in a certain ticket or add other customers/administrators to the list of watchers, admin user should perform the following steps:
+
+1. Log into the DiamanteDesk admin panel.
+2. Open the required ticket either at _Desk > Branches > select a branch_ or at _Desk > All Tickets_.
+3. To to be aware of the changes made to the ticket, click **Watch** on the option panel at the top of the screen. 
+![Create ticket](img/add_watcher_admin.png)
+To add another person to the **Watchers** list, click **Add Watcher** on the option panel. The **Add Watcher** screen opens. Enter the name of a required user or click a list button and select a user from the list of available users.

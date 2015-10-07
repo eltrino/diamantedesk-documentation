@@ -4,10 +4,6 @@ title: Tagging
 
 DiamanteDesk administartors can tag [Branches](branches.md) or [Tickets](tickets.md) in order to label them in a certain way. The process of ticket tagging is identical to branch tagging. The main purpose of tags in DiamanteDesk is to give administrators the ability to easily view similar branches.  When two or more branches are given the same tag, administrators can view all branches grouped together. When administrator clicks a certain tag, he can also view every single branch with the same tag.
 
-DiamanteDesk administrators can tag [Branches](branches.md) or [Tickets](tickets.md) in order to label them in a certain way. The process of ticket tagging is identical to branch tagging. The main purpose of tags in DiamanteDesk is to give administrators the ability to easily view similar branches.  When two or more branches are given the same tag, administrators can view all branches grouped together. When administrator clicks a certain tag, he can also view every single branch with the same tag.
-
-DiamanteDesk administrators can tag [Branches](branches.html) or [Tickets](tickets.html) in order to label them in a certain way. The process of ticket tagging is identical to branch tagging. The main purpose of tags in DiamanteDesk is to give administrators the ability to easily view similar branches.  When two or more branches are given the same tag, administrators can view all branches grouped together. When administrator clicks a certain tag, he can also view every single branch with the same tag.
-
 _**Note:** Tags are only visible for system administrators, regular users can not see them._
 
 ##Adding Tags
