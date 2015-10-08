@@ -6,9 +6,9 @@ DiamanteDesk is a great way to improve customer experience by easily receiving, 
 
 Tickets in DiamanteDesk can be created through one of the following channels:
 
-* through the [**web portal**](channels/portal.md);
-* via [**embedded forms**](embedded-form.md) on websites, online stores, blogs, etc.;
-* via [**processing email requests**](email-processing.md) sent to the support email address;
+* through the [**web portal**](channels/portal.html);
+* via [**embedded forms**](embedded-form.html) on websites, online stores, blogs, etc.;
+* via [**processing email requests**](email-processing.html) sent to the support email address;
 * by the admin users via the admin panel.
 
 Tickets in the admin panel can be viewed and created at:
@@ -35,11 +35,11 @@ Branch  | Click the down arrow to choose a branch where this ticket is going to 
 Subject | Briefly describe the substance of the issue in this field.
 Status | Select the status of a ticket. The available statuses are **New**, **Open**, **Pending**, **In Progress**, **Closed** and **On Hold**. When the ticket is just created, its status is normally set to **New** or **Open**.
 Priority | Set the priority of the ticket according to urgency and severity of the issue occurred. The available priority options are **Low**, **Medium** or **High**.
-Source | Specify the channel used to submit this ticket. The available options are: through **Web**, **Phone** or **Email**. To learn more about channels of ticket submitting, follow this [link](channels/index.md).
+Source | Specify the channel used to submit this ticket. The available options are: through **Web**, **Phone** or **Email**. To learn more about channels of ticket submitting, follow this [link](channels/index.html).
 Reporter | Reporter is a user who created a ticket or who is in charge if it. This user receives notifications whenever the ticket status or priority changes. By default, the reporter is an owner of the account where the user is currently logged in. To change the reporter, click the list button and select the corresponding user.
 Assignee | Assignee is a person responsible for the ticket workflow. To change the reporter, click the list button and select the corresponding user.
 File | In case there is a file that shall be attached to the ticket (screenshot or document), click **Choose file** and select the required file from your local machine.
-Tags | Add tags for the further quick ticket search and classification. Follow the link to learn more about [tagging](tagging.md) in DiamanteDesk.
+Tags | Add tags for the further quick ticket search and classification. Follow the link to learn more about [tagging](tagging.html) in DiamanteDesk.
 
 Provide the detailed description of a ticket in the **Description** field. If relevant, describe the steps to reproduce the bug/error.
 
@@ -120,7 +120,7 @@ Watchers can be added to the ticket in one of the following ways:
 
 * **By the Customer via Email**
 
-In case the ticket is created from the email through [email processing](email-processing.md), the email sender and all the users from CC (if any) become watchers and receive email notifications each time the ticket content, status or priority changes.
+In case the ticket is created from the email through [email processing](email-processing.html), the email sender and all the users from CC (if any) become watchers and receive email notifications each time the ticket content, status or priority changes.
 
 * **By the Customer via the Portal**
 

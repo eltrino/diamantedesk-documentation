@@ -64,7 +64,7 @@ The report is presented as a line chart with each line displaying a set of data 
 The second chart is aimed at scaling the area for the chart above. Highlight the area which shall be shown on the chart above to see a more detailed picture for a specific day or time period.
 
 
-## Reports at the Support Dashboard
+## Reports at the Dashboard Widgets
 
 All the reports available in the DiamanteDesk can be added to the dashboard as widgets.
 
