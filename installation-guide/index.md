@@ -38,7 +38,7 @@ _**Note:** DiamanteDesk makes heavy use of HTTP methods in RESTful calls. The se
 
 ### Step 1: Get the Stable Version of the Application 
 
-Two options to get the latest stable version are available:
+Three options to get the latest stable version are available:
 
 **Option 1:** Using Git
 
@@ -52,9 +52,9 @@ git clone -b 1.0 https://github.com/eltrino/diamantedesk-application
 php composer.phar create-project diamante/desk-application
 {% endhighlight %}
 
-**Option 3:** Download a release archive
+**Option 3:** Via a release archive
 
-The release archive is built for every stable release and it comes with "batteries included" - all the requirements are already installed and all the resources built. You'll need to download the package, unzip it to the web-accessible directory on your server and follow the installation steps described in [following section](#installation).
+The release archive is built for every stable release and it comes with the so-called "batteries included" as all the requirements are already installed and all the resources are built. Simply download the package, unzip it to the web-accessible directory on your server and follow the installation steps described in the [following section](#installation).
 
 {% highlight sh%}
 curl -O https://github.com/eltrino/diamantedesk-application/releases/download/1.1/diamantedesk-application-full-1.1.zip
@@ -62,9 +62,9 @@ curl -O https://github.com/eltrino/diamantedesk-application/releases/download/1.
 	
 {% highlight sh%}
 unzip diamantedesk-application.zip 
-{% endhighlight %}_**Note:** We generally discourage the use of the latter option and consider it to be a fallback option if you only have FTP access to your server._
+{% endhighlight %}_**Note:** Generally, we do not recommend using the last option and consider it to be a fallback option in case you have only FTP access to your server._
 
-_**Note:** Learn how to get the latest **development** version of the application [here](#getting-the-latest-development-version-of-application)._
+Learn how to get the latest **development** version of the application [here](#getting-the-latest-development-version-of-application).
     
 ### Step 2: <a name="libraries"></a> Install the Required Libraries
 
