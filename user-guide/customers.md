@@ -2,7 +2,7 @@
 title: Customers
 ---
 
-Every customer who creates a ticket at the DiamanteDesk [portal](channels/portal.md) or sends an email to the [support address](channels/email-processing.md) is automatically added to the help desk customer database. This helps keeping track of all the tickets created by a specific user and monitor general customer activity.
+Every customer who creates a ticket at the DiamanteDesk [portal](channels/portal.html) or sends an email to the [support address](channels/email-processing.html) is automatically added to the help desk customer database. This helps keeping track of all the tickets created by a specific user and monitor general customer activity.
 
 To see the list of existing DiamanteDesk customers, open the **Customers** top menu.
 

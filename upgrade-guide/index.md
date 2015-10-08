@@ -6,7 +6,7 @@ DiamanteDesk offers our customers a simple and reliable  set of tools designed t
 
 DiamanteDesk system can be installed and used in one of the following ways:
 
-* **as a standalone application**. Check out [installation guide](index.md) for detailed instructions on how to install DiamanteDesk as a standalone application that can be used with a web store or website of any kind using [RESTful API](../developer-guide/restful-api-guide.md). 
+* **as a standalone application**. Check out [installation guide](index.html) for detailed instructions on how to install DiamanteDesk as a standalone application that can be used with a web store or website of any kind using [RESTful API](../developer-guide/restful-api-guide.html). 
 * **as an extension to OroCRM**. Current version of DiamanteDesk is available only for OroCRM,however in the following versions it will also be available for other CRMs.
 
 ## Standalone Application Upgrade
