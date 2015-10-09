@@ -63,23 +63,4 @@ The report is presented as a line chart with each line displaying a set of data 
 
 The second chart is aimed at scaling the area for the chart above. Highlight the area which shall be shown on the chart above to see a more detailed picture for a specific day or time period.
 
-
-## Reports at the Dashboard Widgets
-
-All the reports available in the DiamanteDesk can be added to the dashboard as widgets.
-
-When DiamanteDesk is installed on the basis of OroCRM, a **Support Dashboard** is added to the **Dashboards** menu at the top left corner of the screen.
-
-![Reports](img/dashboard_menu.png)
-
-To add a certain report to the dashboard as a widget, click **+ Add Widget** at the top right corner of the **Support Dashboard** screen or **add a new widget** at the corresponding drag and drop section of the dashboard.
-
-The **Dashboard Widgets** screen opens.
-
-![Reports](img/dashboard_widgets.png) -----CHANGE!!!!
-
-Select the required widget from the list and click **Add** to add it to the dashboard. To add more widgets, repeat the procedure.
-
-You can move, edit and delete each of the added widgets by using the corresponding icons at the top of the widget section.
-
-![Reports](img/move_edit_delete.png)
+_Note: All the reports available in the DiamanteDesk can be added to the dashboard as widgets. To learn more about widgets in DiamanteDesk, refer to [this](dashboards.html) section._
