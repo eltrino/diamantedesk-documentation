@@ -35,6 +35,7 @@ To add a new widget:
 ![Reports](img/widgets_add.png)
 
 3. The **Dashboard Widgets** screen opens.
+
 ![Reports](img/dashboard_widgets.png)
 
 4. Select the required widget from the list and click **Add** to add it to the dashboard. To add more widgets, repeat the procedure.
