@@ -21,6 +21,17 @@ After the user account has been created through the admin panel, via email proce
 
 ![Customers](img/customer_email.png)
 
+## Customer Filters
+
+All the customers in the system can be filtered according to each of their parameters described in the table below. To learn more about filtering in DiamanteDesk, follow this [link](filtering.html).
+
+Filter   | Description
+------------- | -------------
+Email | Provide the email of a required user to filter his account out of the general list.
+First Name | Provide the first name of a required user.
+Last Name | Provide the last name of a required user.
+[Is Active](#is-active) | Select **Yes** or **No** option to filter active or inactive accounts respectively. 
+
 ## Customer Account
 
 The customer (user) account screen contains general information about the customer, such as name and email and his activity in DiamanteDesk.
@@ -32,10 +43,9 @@ To open the customer account in the system, navigate to the top **Customers** me
 Field | Description
 ------------- | -------------
 Email, First Name, Last name | These fields display  general information about the account owner. This information is obtained either from an email during email processing, from the provided credentials when the user registers in a portal or if admin user creates customer account in a system.
-Is Active | When this field is marked as active, he can successfully log into DiamanteDesk and may create new tickets or resolve any existing ones. If the user is inactive, he should confirm or change his password to be able to log into the system.
+<a name="is-active"></a>Is Active | When this field is marked as active, he can successfully log into DiamanteDesk and may create new tickets or resolve any existing ones. If the user is inactive, he should confirm or change his password to be able to log into the system.
 
 The **User Activity** section of the customer account screen displays the general information about all the tickets created by the user in a system.
-
 
 ## Mass Actions
 

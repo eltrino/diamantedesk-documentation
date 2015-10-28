@@ -1,8 +1,8 @@
----
+ ---
 title: Installation Guide
 ---
 
-DiamanteDesk may serve as an independent end-user application or as an extension for OroCRM. In the nearest future it will also be available for other CRMs. 
+DiamanteDesk may serve as an independent end-user application or as an extension for OroCRM. It will also be available for other CRMs in the nearest future. 
 
 This section provides detailed instructions on various options of DiamanteDesk application installation.
 
@@ -10,13 +10,13 @@ This section provides detailed instructions on various options of DiamanteDesk a
 
 DiamanteDesk application was built using **Symfony** 2.3 framework and **Oro Platform**; therefore, all the prerequisites listed as [Symfony](http://symfony.com/doc/2.3/reference/requirements.html) and [Oro](http://www.orocrm.com/documentation/index/current/system-requirements) system requirements also refer to DiamanteDesk.
 
-DiamanteDesk Requirements:
+**DiamanteDesk Requirements:**
 
 * **app/attachments** folder needs to be writable;
 * DiamanteDesk uses **Composer** to manage package dependencies. To learn more about the composer and download it from the official website, follow this [link](https://getcomposer.org/);
 * MySQL database server with an empty database.
 
-Optionally, providing that your portal shall be customized, your system shall comply with additional requirements:
+Optionally, providing that your portal should be customized, your system shall comply with additional requirements:
 
 * NPM package manager needs to be installed;
 * Grunt needs to be installed (globally);
@@ -33,6 +33,15 @@ php app/check.php
 DiamanteDesk application was developed on the basis of the Symfony standard application so you can learn more about web server configuration recommendations [here](http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html).
 
 _**Note:** DiamanteDesk makes heavy use of HTTP methods in RESTful calls. The server can be configured to block some of them (for example, PUT, DELETE, etc.). However, this limitation should be removed, otherwise, a certain part of application will not function properly._
+
+###Email Notification Configuration
+
+DiamanteDesk provides email notification functionality to automatically confirm user accounts, inform customers when new tickets are created or about any changes made to existing ones. This way a customer is notified whether his request is being processed.
+
+To make sure this functionality works properly, pay attention to email notification configuration:
+
+* When installing DiamanteDesk via the web wizard, fill out the **Mailer Settings** section of the **Configuration** step.
+* If DiamanteDesk was installed through the console, provide the required configuration data at the ```app/config/parameters.yml``` directory. 
 
 ## Installation of a Standalone Application
 
@@ -62,7 +71,9 @@ curl -O https://github.com/eltrino/diamantedesk-application/releases/download/1.
 	
 {% highlight sh%}
 unzip diamantedesk-application.zip 
-{% endhighlight %}_**Note:** Generally, we do not recommend using the last option and consider it to be a fallback option in case you have only FTP access to your server._
+{% endhighlight %}
+
+_**Note:** Generally, we do not recommend using the last option and consider it to be a fallback option in case you have only FTP access to your server._
 
 Learn how to get the latest **development** version of the application [here](#getting-the-latest-development-version-of-application).
     
@@ -141,8 +152,8 @@ Development in progress.
 
 ##Oro Marketplace
 
-Development in progress.
-
+To learn about installation of DiamanteDesk on the basis of OroCRM, please follow this [link](../integration/oro.html).
+    
 ##Docker Prebuilt Image 
 
 To learn more on how to use Docker image, please follow this [link](https://github.com/eltrino/diamantedesk-docker).
@@ -169,7 +180,7 @@ php composer.phar create-project diamante/desk-application:dev-master
 {% endhighlight %}
 ___
 
-Regradless of the option you've chosen, next you need to install the required libraries to proceed with the installation:
+Regradless of the option you've chosen, next you need to install the required libraries to proceed with installation process:
 
 {% highlight sh %}
 php composer.phar install

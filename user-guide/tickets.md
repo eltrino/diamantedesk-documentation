@@ -7,16 +7,31 @@ DiamanteDesk is a great way to improve customer experience by easily receiving, 
 Tickets in DiamanteDesk can be created through one of the following channels:
 
 * through the [**web portal**](channels/portal.html);
-* via [**embedded forms**](embedded-form.html) on websites, online stores, blogs, etc.;
-* via [**processing email requests**](email-processing.html) sent to the support email address;
+* via [**embedded forms**](channels/embedded-form.html) on websites, online stores, blogs, etc.;
+* via [**processing email requests**](channels/email-processing.html) sent to the support email address;
 * by the admin users via the admin panel.
 
 Tickets in the admin panel can be viewed and created at:
 
 * the **Branches** top menu (see [**Branches**](branches.html) section);
-* the **All Tickets** top menu.
+* the **Tickets** top menu.
 
-![All tickets](img/All_tickets.png)
+![Tickets](img/All_tickets.png)
+
+## Ticket Filters
+
+All the tickets in the system can be filtered according to each of the parameters described in the table below. To learn more about filtering in DiamanteDesk, follow this [link](filtering.html).
+
+Filter   | Description
+------------- | -------------
+Key  | Enter the required branch key and click **Update**. Ticket Key consists of the branch key and ticket sequence number and has next format {_branchKey_}-{_ticketSequenceNumber_}. 
+Subject | Provide the summary of a ticket in this field.
+Branch | Select the required branch from the drop-down list and click **Update**.
+Assignee | To filter the tickets assigned to a specific person, enter the name of that person into the **Assignee** field. _**Note:** You can't change this value when looking through the tickets in **My tickets** and **My new tickets** categories, the assignee in these categories is always an owner of the account._
+Priority | Set the filter to **Low**, **Medium** or **High** priority to seed out the tickets of the unnecessary priority.
+<a name="status"></a>Status | To filter the tickets according to their prioroties, click the down arrow and select one or several statuses. The available statuses are: **New**, **Open**, **Pending**, **In progress**, **Closed** and **On Hold**.
+Created | Select the date range when the tickets could could be updated either from a drop-down calendar or by selecting one of the available variables (Now, today, Start of the week, Start of the month, Start of the quarter, Start of the year).
+Updated | Select the date range when the tickets could could be updated either from a drop-down calendar or by selecting one of the available variables (Now, today, Start of the week, Start of the month, Start of the quarter, Start of the year).
 
 <a name="create-a-new-ticket"></a>
 ## Create a New Ticket
@@ -139,7 +154,7 @@ To add watchers to the ticket via the portal, complete the following steps:
 Admin user can add or remove certain users from the list of ticket watchers if this administrator has the corresponding edit permissions. To follow the changes made in a certain ticket or add other customers/administrators to the list of watchers, admin user should perform the following steps:
 
 1. Log into the DiamanteDesk admin panel.
-2. Open the required ticket either at _Desk > Branches > select a branch_ or at _Desk > All Tickets_.
+2. Open the required ticket either at _Desk > Branches > select a branch_ or at _Desk > Tickets_.
 3. To to be aware of the changes made to the ticket, click **Watch** on the option panel at the top of the screen. 
 ![Create ticket](img/add_watcher_admin.png)
 To add another person to the **Watchers** list, click **Add Watcher** on the option panel. The **Add Watcher** screen opens. Enter the name of a required user or click a list button and select a user from the list of available users.

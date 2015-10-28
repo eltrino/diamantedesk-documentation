@@ -2,19 +2,60 @@
 title: OroCRM
 ---
 
-DiamanteDesk is an independent help desk system that can be easily integrated into the open-source OroCRM and in the near future it is going to be available for other CRMs.  Therefore, DiamanteDesk can be installed as a standalone application or as a help desk extension to the OroCRM. To learn how to install DiamanteDesk, please refer to the [Installation Guide](../installation-guide/index.html).
-
-The following guide is based on the assumption that DiamanteDesk is installed on the basis of OroCRM and describes the functionality related to the DiamanteDesk integration with this system.
+DiamanteDesk offers seamless integration with the open-source OroCRM, providing efficient and simple ticket management tool.  Therefore, DiamanteDesk can be installed as a help desk extension to OroCRM. The following guide describes various options of DiamanteDesk installation as an extension to OroCRM and all the functionality related to this integration.
 
 When installed on the basis of the OroCRM, DiamanteDesk functionality is available at the **Desk** top menu.
 
 ![Oro](img/Oro.png)
 
-This menu provides fast and easy access to the general functionality and data of the DiamanteDesk application, specifically:
+This menu provides fast and easy access to the general functionality and data of the DiamanteDesk application, specifically to:
 
 * [Branches](../user-guide/branches.html)
 * [Tickets](../user-guide/tickets.html)
-* Reports
+* [Reports](../user-guide/reports.html)
+
+##Installation
+
+Prior to installing DiamanteDesk as an extension to OroCRM make sure that you have properly installed OroCRM.
+
+###Installation via Oro Marketplace
+
+Navigate to `System > Package Manager` to install it from OroCRM Marketplace.
+
+###Installation via Composer
+
+Execute this command to start installing DiamanteDesk:
+
+{% highlight php %}
+php composer.phar require diamante/orocrm-integration-bundle
+{% endhighlight %}
+
+To proceed with installation, you should install the required DiamanteDesk bundles using the following commands:
+
+{% highlight php %}
+php app/console diamante:desk:install
+{% endhighlight %}
+
+{% highlight php %}
+php app/console diamante:user:schema
+{% endhighlight %}
+
+{% highlight php %}
+php app/console diamante:embeddedform:schema
+{% endhighlight %}
+
+{% highlight php %}
+php app/console assets:install
+{% endhighlight %}
+
+{% highlight php %}
+php app/console assetic:dump
+{% endhighlight %}
+
+Further installation steps:
+
+1. Set up mailer parameters in `parameters.yml` and at _System > Configuration > DiamanteDesk > Channels_.
+2. Enable notifications at _System > Configuration > DiamanteDesk > Notifications_. 
 
 ## DiamaneteDesk Contacts in OroCRM
 

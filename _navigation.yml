@@ -10,6 +10,7 @@
   - user-guide/users.md
   - user-guide/tagging.md
   - user-guide/data-audit.md
+  - user-guide/filters.md
   - user-guide/rules.md
   - user-guide/channels/index.md:
     - user-guide/channels/email-processing.md

@@ -20,6 +20,8 @@ Branch key is automatically generated from the branch name when a new branch is 
 
 **Branch name** and **Branch Key** filters are set to **All** values by default. To filter the branches according to a certain branch name or key, click the down arrow in the corresponding filed and enter the required name or key. To refresh the results, click **Refresh**. To clear all filters, click **Reset**.
 
+To learn more about filtering in DiamanteDesk, follow this [link](filtering.html).
+
 ## Create a New Branch
 
 Click **Create** at the right top corner of the **Branches** screen. **Create Branches** screen opens.

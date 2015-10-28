@@ -26,6 +26,9 @@ After you get to the **Create User** screen, fill out all the required fields in
 * Enter a user **Name Suffix**, if any (for example, Jr., Sr., PMP, etc.)
 * Select the **Birthday** from the drop-down calendar in the corresponding field.
 * Click the **Avatar** to select a profile picture from your local machine.
+
+![Create User](img/user_new_general1.png)
+
 * Enter the user's **Primary Email** in the corresponding field. This email is going to be used for email notifications and password recovery. Click **Add Another Email** in the **Emails** field to add additional email in case the primary one is not available for any reason.
 * **Email Signature**
 * **Phone**
