@@ -49,19 +49,50 @@ Click [here](channels/email-processing.html) if you want to learn more about ema
 
 Click **Save And Close** at the right top corner of the screen.
 
-## Edit / Delete a Branch
+## Edit a Branch
 
 1. Navigate to the **Branches** screen.
-2. Select the branch that shall be edited/deleted from the list of available branches. _**Note:** You can also filter the available branches according to the **Branch Name** and **Branch Key** to find a required branch quicker._
-3. Click the branch that shall be edited / deleted. The **Branch** screen opens.
-4. Select the corresponding action at the right top of the screen:
+2. Select the branch that shall be edited from the list of available branches. The selected **Branch** screen opens.
+3. Click **Edit** at the right top corner of the screen:
+![Branch Edit Delete](img/branches_edit.png)
+4. Perform the necassary changes/updates.
+5. Click **Save** or **Save and Close** for the corresponding action.
 
-![Branch Edit Delete](img/branches_edit_delete.png)
+## Delete a Branch
 
-* If you click **Edit**, perform the necessary changes and click **Save** or **Save and Close**.
-* If you click **Delete**, the following confirmation message is displayed:
-![Branch Delete](img/branches_delete.png)
+Three options of branch deleting are available in DiamanteDesk.
 
-_**Note:** If a branch is configured as the default for [Email Processing](channels/email-processing.html), the following message is displayed at the top of the **Branch** screen. In this case it cannot be deleted._
+### Deleting a Single Branch
 
+When attempting to delete a single branch in DiamanteDesk, keep in mind that ALL its tickets are going to be deleted as well.
+
+1. Navigate to the **Branches** screen.
+2. Select the branch that shall be deleted from the list of available branches. The selected **Branch** screen opens.
+3. Click **Delete** at the right top corner of the screen:
+![Branch Delete](img/branches_delete1.png)
+_**Note:** When attempting to delete a single branch in DiamanteDesk, keep in mind that ALL its tickets are going to be deleted as well._
+4. The following confirmation message appears:
+SCREEN
+5. To delete a branch but keep all the tickets in the system, select a corresponding checkbox in the warning message and choose a new branch where all the tickets shall be moved from the drop-down as shown on the picture below:
+SCREEN
+
+_**Note:** If a branch is configured as default for [Email Processing](channels/email-processing.html), it cannot be deleted and the following message is displayed at the top of the **Branch** screen:_
 ![Default Branch](img/branches_default.png)
+
+### Branch Deleting Mass Action 
+
+Multiple branches can be deleted via mass action functionality in DiamanteDesk. Perform the folllowing steps in order to delete several branches at once:
+
+1. Navigate to the **Branches** screen.
+2. Select several branches that shall be deleted from the list of available branches. 
+3. Click the **Mass Actions** button and select the **Delete Branches** option as shown on the picture below.
+![Branches](img/branches_mass_action.png)
+4. The **Delete Confirmation** message opens.
+![Branches](img/delete_confirmation.png)
+5. Click **Yes, Delete** to proceed woth deleting and **Cancel** to retern to the **Branches** screen. _Please note that a branch cannot be deleted via mass action if it has any tickets. Only the branches without any tickets can be deleted during branch deleting mass action._
+
+### Deleting Branches through API
+
+Branches can also be deleted via the corresponding APIs. The DiamanteDesk RESTful API guide is available [here](../developer-guide/restful-api-guide.md).
+
+_Please note that a branch cannot be deleted via API request if it has any tickets. Only the branches without any tickets can be deleted via API request._
