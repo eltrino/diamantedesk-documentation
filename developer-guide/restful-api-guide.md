@@ -826,8 +826,11 @@ _Response body:_
         "attachments": [
 
         ],
-        "author": 1,
-        "author_type": "oro",
+        "author": {
+            "email": "emailaddress@server.com",
+            "name": "Author Name",
+            "id": "diamante_1"
+        },
         "content": "commentContent1-1",
         "created_at": "2015-07-17T11:25:22+0000",
         "id": 1,
@@ -839,8 +842,11 @@ _Response body:_
         "attachments": [
 
         ],
-        "author": 1,
-        "author_type": "oro",
+        "author": {
+            "email": "emailaddress@server.com",
+            "name": "Author Name",
+            "id": "diamante_1"
+        },
         "content": "commentContent1-2",
         "created_at": "2015-07-17T11:25:22+0000",
         "id": 2,
@@ -868,8 +874,11 @@ _Response body:_
     "attachments": [
 
     ],
-    "author": 10,
-    "author_type": "diamante",
+    "author": {
+        "email": "emailaddress@server.com",
+        "name": "Author Name",
+        "id": "diamante_1"
+    },
     "content": "Test Comment",
     "created_at": "2015-07-17T11:25:22+0000",
     "id": 101,
@@ -926,8 +935,11 @@ _Response body:_
     "attachments": [
 
     ],
-    "author": 1,
-    "author_type": "oro",
+    "author": {
+        "email": "emailaddress@server.com",
+        "name": "Author Name",
+        "id": "oro_1"
+    },
     "content": "Test Comment",
     "created_at": "2015-07-17T11:25:42+0000",
     "id": 104,
@@ -964,8 +976,11 @@ _Response body:_
     "attachments": [
 
     ],
-    "author": 10,
-    "author_type": "diamante",
+    "author": {
+        "email": "emailaddress@server.com",
+        "name": "Author Name",
+        "id": "diamante_1"
+    },
     "content": "Test Comment Updated PUT",
     "created_at": "2015-07-17T11:25:22+0000",
     "id": 101,
