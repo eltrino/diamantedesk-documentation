@@ -76,8 +76,8 @@ In order to do that, complete the following steps:
 9. Click **Check Connection** to make sure that the connection with a server has been successfully made.
 10. If the **Api Credentials** are correct, a new **Branch Configuration** field will be added to the DiamanteDesk configuration. Select a default branch from the **Branch** drop-down list. To learn more about branches in DiamanteDesk, see the **Branches** section in User Guide.
 ![](img/magento_branches.png)
-10. Point out whether the footer link to customer support shall be displayed. Select **Yes** or **No** option in the **Display footer link** field.
-11. If the footer link shall be displayed, spcify the footer link URL in the field below.
+10. Point out whether the customer support footer link to shall be displayed. Select **Yes** or **No** option in the **Display footer link** field.
+11. If the footer link is to be displayed, spcify the corresponding link to the customer support page in the field below.
 11. Click **Save Config** on the right top corner of the screen.
 
 ## DiamateDesk in Action
@@ -96,7 +96,7 @@ To create a new ticket in Magento store, follow these steps:
 ![In_Action](img/create_ticket_magento.png)
 4. Provide general idea of an issue/request in the **Subject** field.
 5. Select a branch related to the subject of your issue/request.
-5. **Order ID** is an optional field and it is displayed only if the registered user has already made at least one purchase, that is made an order. Order ID may be selected from the drop-down list in case a user attempts to create a ticket related to a specific order.
+5. **Order ID** is an optional field and it is invisible if the user hasn't made any orders yet. Order ID may be selected from the drop-down list in case a user attempts to create a ticket related to a specific order.
 5. Provide the ticket subject and precise description of the ticket in the corresponding fields. Providing as many details as possible guarantees that the support team will handle your ticket properly.
 6. In case of some issues related to user interface, providing screenshots might be helpful as well. In order to add a screenshot or other files that may help to resolve issues or add some improvements, click **Choose File** below the **Description** field. Select the corresponding file(s) from your local machine and click **Open**. Once the file is attached, its name is shown near the **Choose File** button. 
 7. Click **Send Ticket** to submit the newly created ticket to the support team. To cancel the process of ticket creation click **Back**.
@@ -104,6 +104,16 @@ To create a new ticket in Magento store, follow these steps:
 A customer can see all his tickets in **My Tickets** menu and check their status and priority to follow up on the ticket resolution progress.
 
 ![In_Action](img/all_my_tickets.png)
+
+###Adding Comments to a Ticket
+
+Once the comment is created, a customer and administrators can add comments to it. 
+
+To add a comment to the ticket, a registere customer should navigate to **My Tickets** menu, select the required ticket and click **View** to open it, type in a comment into the **Comment** field and click **Add Comment**.
+
+![In_Action](img/ticket_comments.png)
+
+Administrators respond to customer comments or tickets at the DiamanteDesk admin panel as described in [this article](http://docs.diamantedesk.com/en/latest/user-guide/tickets.html).
 
 ### DiamanteDesk in Magento Admin Panel
 
@@ -126,7 +136,7 @@ Field  | Description
 Key | Ticket Key consists of the selected branch key and ticket sequence number and has next format {_branchKey_}-{_ticketSequenceNumber_}. 
 Subject | Contains a short summary of a ticket provided by the ticket author.
 Email | Displays email of a user who created this ticket.
-Prioroty | Displays current priority of a ticket.
+Prioroty | Displays current priority of a ticket. All the tickets created from the Magento powered store have a **Medium** priority by default.
 Status | Displays current status of a ticket.
 Date | Displays the date when the ticket was created.
 Order ID | This field is populated with the corresponding order ID number in case a user created a ticket related to some specific order. 
