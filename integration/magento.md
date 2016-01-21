@@ -50,7 +50,7 @@ The extension marketplace opens.
 1. Add [Firegento](http://packages.firegento.com/) repository to your ` composer.json `.
 2. Add as dependency to your project using composer:
 
-        composer require eltrino/diamantedesk
+        php composer.phar require eltrino/diamantedesk-magento-extension
         
            
 _**Note:**_ 
