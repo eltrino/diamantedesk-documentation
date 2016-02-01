@@ -212,8 +212,8 @@ POST /api/rest/{version}/desk/branches
 |:------------- |:---------------|:-------------|:----|
 | name    | _string_ | **Required.** Specify the name of a new branch. | Minimum length is 2 letters.
 | description    |   _string_       |Enter the description of a new branch, if necessary. |
-| tags | _arrey of strings_      | Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the **Tagging** section in the **User Guide** section. |
-| key | _string_ | Enter the key of a new branch. Note that the key should be unique accross the whole system. | The branch key must contain only letters. Minimum length is 2 letters.
+| tags | _arrey of strings_      | **Optional** Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the **Tagging** section in the **User Guide** section. |
+| key | _string_ | Enter the key of a new branch. This key should be unique accross the whole system. | The branch key must contain only letters. Minimum length is 2 letters.
 
 _Request example:_ 
 
@@ -421,8 +421,9 @@ POST /api/rest/{version}/desk/tickets
 | status | _string_ |**Required.** The available statuses are: **New**, **Open**, **Pending**, **In progress**, **Closed** and **On Hold**.
 | priority | _string_ |**Required.** Specify the priority of a new ticket. The available options are **Low**, **Medium** or **High**.
 | source | _string_ |**Required.** Every service user has 4 available options to contact the Help Desk team: by creating a request through a **Web** form or through the embedded form on a website (optional), as an **Email** notification, via a **Phone** call. Specify the corresponding source of a ticket.
-| reporter| _string_ |**Required.** The reporter is an administrator who can create a ticket for any customer. |The name of the reporter must contain only letters.
-|tags | _array of strings_ | Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the **Tagging** section in the **User Guide** section. |
+| reporter| _string_ |**Required.** The reporter is an administrator who can create a ticket for any customer. |The name of a reporter must contain only letters.
+| assignee | _integer_ | **Optional.** Select a person responsible for ticket handling.| Only OroCRM user can be selected.|
+|tags | _array of strings_ | **Optional.** Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the **Tagging** section in the **User Guide** section. |
     
 _Request example:_
 
@@ -435,6 +436,7 @@ _Request example:_
     "priority": "medium",
     "source": "phone",
     "reporter": "oro_1",
+    "assignee": 1,
     "tags" : ["test1","test2","test3","test4"]
 }
 {% endhighlight %}
@@ -456,6 +458,7 @@ _Response body:_
   "key": "BRANCHB-10",
   "priority": "medium",
   "reporter": "oro_1",
+  "asignee": 1,
   "source": "phone",
   "status": "open",
   "subject": "Test Ticket from API",

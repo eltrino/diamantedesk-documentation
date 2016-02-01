@@ -4,7 +4,7 @@ title: Magento
 
 Magento is a popular content management system that allows creating powerful e-commerce solutions. As a matter of fact, every e-commerce website should have a reliable support system that helps to quickly solve any issue, build strong customer relationships and improve overall user experience. Integrating DiamanteDesk with a website built with Magento may be the easiest solution for that.
 
-DiamanteDesk Magento module allows both administrator and any customer to create, edit and view tickets directly on a Magento e-commerce website. 
+DiamanteDesk Magento module allows both administrator and any customer to create, edit and view tickets directly from a Magento powered e-commerce website. 
 
 
 ##Installing DiamenteDesk Extension
@@ -18,7 +18,7 @@ After installing DiamanteDesk integration module, it shall be configured at the 
 
 Select automatic or manual installation and complete the following steps:
 
-###### Automatic Installation
+**Automatic Installation**
 
 1. On the **Magento Connect Manager** screen follow the [Magento Connect](https://www.magentocommerce.com/magento-connect/) link in the **Install New Extensions** section.
 ![Automatic installation](img/magento_automatic.png)
@@ -28,7 +28,7 @@ The extension marketplace opens.
 3. Select the corresponding extension module from the search results.
 4. Click **Get Extension**.
 
-###### Manual Installation
+**Manual Installation**
 
 **Option 1 - Installation via FTP:**
 

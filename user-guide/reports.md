@@ -3,7 +3,7 @@ title: Reports
 ---
 DiamanteDesk provides its customers with the extensive set of reports allowing managers to monitor daily ticket activity, measure performance of the support department according to the average resolution time and detect emerging or existing issues in the system. Successful leaders know that revealing emerging trends far on advance is beneficial for overall customer satisfaction. 
 
-Each report serves a specific purpose and allows analyzing your support team efficiency according to different criteria and company goals. To see the list of reports available in DiamanteDesk, log into the system and check out the **Reports** top menu. Currently, DiamanteDesk offers 5 reports providing the essential data necessary to analyze the performance of a support team:
+Each report serves a specific purpose and allows analyzing your support team efficiency according to different criteria and company goals. To see the list of reports available in DiamanteDesk, log into the system and select the **Reports** top menu. Currently, DiamanteDesk offers 5 reports providing the essential data necessary to analyze the performance of a support team:
 
 * Tickets by Priority
 * Time of Responce

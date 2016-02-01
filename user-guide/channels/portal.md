@@ -4,11 +4,11 @@ title: Portal
 
 When a customer attempts to leave a request or report an issue through a web site supported by DiamanteDesk, the system redirects this user to a request module at example.com/web/app.php/portal/. A user should register or provide log in details in order to create a ticket.
  
-![Login Page](img/Login.jpg)
+![Login Page](img/login.png)
 
 If you are new to the system, complete the following steps for registration:
 
-1. Click **Registration** at the bottom of the log in screen. Registration screen opens. ![Registration](img/registration.jpg)
+1. Click **Registration** at the bottom of the log in screen. Registration screen opens. ![Registration](img/registration.png)
 2. Provide your first name, last name, email and password in the corresponding fields. _Note:_ Required fields are marked with asterisk (*).
 3. Click **Continue**. After all the provided credentials are successfully saved in a database, the system shows the following message:
 ![Successful registration](img/reg.jpg)
@@ -48,15 +48,13 @@ After a user logs into the system, he gets to a **User Screen**. A newly registe
 To create a new request, a user shall add a ticket by completing the following steps:
 
 1. Click **Add New Ticket** at the right corner of the screen. **Add New Ticket** screen opens.
-![Add new ticket](img/add_new_ticket.jpg)
+![Add new ticket](img/add_new_ticket.png)
 2. Provide a short summary of a ticket in the **Subject** field.
 3. Type in the detailed description of a ticket in the **Description** field.
 4. Select the priority level of your ticket from the **Priority** drop-down list. The available options are:
-
    * **Low** for a non-urgent request or issue that does not have critical effect on a production process.
    * **Medium** for an important non-urgent request.
    * **High** for a critical issue or an urgent request.
-
 5. In case there is a file that shall be attached to the ticket (image or document), click **Drop files here to attach** and select the required file from your local machine.
 6. Once you provided all the necessary information, click **Submit**.
 
