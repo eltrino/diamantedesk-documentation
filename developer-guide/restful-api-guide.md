@@ -39,7 +39,7 @@ The format can be specified either:
 
 ### Pagination
 
-When a user performs a request to get a collection of entities or a certain entity, the data requested is returned in the response body. Depending on the requested items, objects or products, the list of results can contain thousands of results that should be paged through. The number of items per each page can be specified using page parameters. Paginated queries start at page 1 by default. 
+When a user performs a request to get a collection of entities or a certain entity, the data requested is returned in the response body. Depending on the requested items, objects or products, the list of results can contain thousands of results that should be paged through. The number of items per each page can be specified using page parameters. Paginated queries start at page 1 by default.
 
 For example, if you set the page limit to 10 items and you need to retrieve items from 21 to 30 your request should contain such parameters: limit=10 and page=3.
 
@@ -62,7 +62,7 @@ Take a look at the example, containing such headers:
 HTTP/1.1 200 OK
 
 Link: <http://hostname/api/rest/latest/desk/branches?limit=25&page=2>; rel="next", <http://hostname/api/rest/latest/desk/branches?limit=25&page=5>; rel="last"
-X-Total: 110 
+X-Total: 110
 
 {% endhighlight %}
 
@@ -73,7 +73,7 @@ The results can be sorted according to the **sort** and **order** GET parameters
 ### Filtering
 
 Filtering can be performed according to any parameter of the corresponding entity. For example, to filter the branch by its key, add "key=PO" parameter to the URL.
- 
+
 If the value is specified for string property, the search is performed for any occurrence, meaning the result will return PO, DPO, DPOD, etc. If the value is specified for numeric property the search is performed for equal value.
 
 To filter the results by the time when a certain entity or entities were created or updated, the following parameters should be used:
@@ -95,7 +95,7 @@ Status Code | Description
 **401** | Such error occurs when a user attempts to access a page or resource that requires authentication. To resolve this issue, correct log in details shall be provided.
 **403** | Authorization issue, meaning that a user has not been granted permission to access specific page or method.
 **404** | This error means that the server could not process client request with the reason for that described in the error message.
-**500** | Internal server error. This status code indicates that this is not a client-side issue, meaning that the problem occurred on the server side rather than in DiamanteDesk application. 
+**500** | Internal server error. This status code indicates that this is not a client-side issue, meaning that the problem occurred on the server side rather than in DiamanteDesk application.
 
 Take a look at the example of a 404 error below:
 
@@ -128,7 +128,7 @@ REST APIs are necessary when DiamanteDesk is integrated into another application
 _**Note:** Here are the values of the variables API methods:_
 
 | _Variable_|       _Requirements_          
-|:------------- |:---------------| 
+|:------------- |:---------------|
 |   _{version}_   | _latest, v1_ |
 | _{_format}_ | _xml, json_ |
 
@@ -139,12 +139,12 @@ _**Note:** Here are the values of the variables API methods:_
 {% highlight sh %}
 GET /api/rest/{version}/desk/branches
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 [
@@ -166,18 +166,18 @@ _Response body:_
     }
 ]
 {% endhighlight %}
-    
+
 ######  GET: Retrieve a branch by ID
 
 {% highlight sh %}
 GET /api/rest/{version}/desk/branches/{id}
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -192,7 +192,7 @@ _Response body:_
 
 **Status Code:** 404 (Not Found)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -205,7 +205,7 @@ _Response body:_
 {% highlight sh %}
 POST /api/rest/{version}/desk/branches
 {% endhighlight %}
-    
+
 **Parameters**
 
 | Name  | Type  |Description |Note|
@@ -215,7 +215,7 @@ POST /api/rest/{version}/desk/branches
 | tags | _arrey of strings_      | **Optional** Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the **Tagging** section in the **User Guide** section. |
 | key | _string_ | Enter the key of a new branch. This key should be unique accross the whole system. | The branch key must contain only letters. Minimum length is 2 letters.
 
-_Request example:_ 
+_Request example:_
 
 {% highlight yaml %}
 {
@@ -227,12 +227,12 @@ _Request example:_
     "key": "BRANCHTEST"
 }
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 201 (Created)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -253,8 +253,8 @@ _Response body:_
 {% highlight sh %}
 PUT|PATCH /api/rest/{version}/desk/branches/{id}
 {% endhighlight %}
-    
-_Request example:_ 
+
+_Request example:_
 
 {% highlight yaml %}
 {
@@ -265,12 +265,12 @@ _Request example:_
     ]
 }
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -291,9 +291,9 @@ _Response body:_
 {% highlight sh %}
 DELETE /api/rest/{version}/desk/branches/{id}
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 204 (No Content)
 
 _Response body:_ null
@@ -307,10 +307,10 @@ GET /api/rest/{version}/desk/tickets
 {% endhighlight %}
 
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
  {
@@ -351,12 +351,12 @@ _Response body:_
 {% highlight sh %}
 GET /api/rest/{version}/desk/tickets/{id}
 {% endhighlight %}
-   
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -410,7 +410,7 @@ _Response body:_
 {% highlight sh %}
 POST /api/rest/{version}/desk/tickets
 {% endhighlight %}
-    
+
 **Parameters**
 
 | Name  | Type  | Description | Note|
@@ -424,7 +424,7 @@ POST /api/rest/{version}/desk/tickets
 | reporter| _string_ |**Required.** The reporter is an administrator who can create a ticket for any customer. |The name of a reporter must contain only letters.
 | assignee | _integer_ | **Optional.** Select a person responsible for ticket handling.| Only OroCRM user can be selected.|
 |tags | _array of strings_ | **Optional.** Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the **Tagging** section in the **User Guide** section. |
-    
+
 _Request example:_
 
 {% highlight yaml %}
@@ -442,10 +442,10 @@ _Request example:_
 {% endhighlight %}
 
 **Response**
-    
+
 **Status Code:** 201 (Created)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -475,14 +475,14 @@ _Response body:_
   "watcher_list": []
 }
 {% endhighlight %}
-    
-    
+
+
 ###### PUT, PATCH: Update certain properties of the ticket by ID
 
 {% highlight sh %}
 PUT, PATCH /api/rest/{version}/desk/tickets/{id}
 {% endhighlight %}
-    
+
 _Request example:_
 
 {% highlight yaml %}
@@ -491,12 +491,12 @@ _Request example:_
    "tags": ["new test tag1", "new test tag2"]
 }
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -528,31 +528,31 @@ _Response body:_
   ]
 }
 {% endhighlight %}
-    
+
 ###### DELETE: Delete the ticket by ID
 
 {% highlight sh %}
 DELETE /api/rest/{version}/desk/tickets/{id}  
-{% endhighlight %} 
-    
+{% endhighlight %}
+
 **Response**
 
 **Status Code:** 204 (No Content)
 
 _Response body:_ null
-    
-    
+
+
 ###### GET: Retrieve a ticket by the given ticket key
 
 {% highlight sh %}
 GET /api/rest/{version}/desk/tickets/{key}
 {% endhighlight %}
-   
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -590,10 +590,10 @@ _Response body:_
   ]
 }
 {% endhighlight %}
-    
+
 **Status Code:** 404 (Not Found)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 }
@@ -606,7 +606,7 @@ _Response body:_
 {% highlight sh %}
 PUT, PATCH /api/rest/{version}/desk/tickets/{key}
 {% endhighlight %}
-    
+
 _Request example:_
 
 {% highlight yaml %}
@@ -615,12 +615,12 @@ _Request example:_
    "tags": ["new test tag5", "new test tag6"]
 }
 {% endhighlight %}
-   
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -652,30 +652,30 @@ _Response body:_
   ]
 }
 {% endhighlight %}
-    
+
 ###### DELETE: Delete the ticket by the ticket key
 
 {% highlight sh %}
-DELETE /api/rest/{version}/desk/tickets/{key} 
+DELETE /api/rest/{version}/desk/tickets/{key}
 {% endhighlight %}
-    
+
 **Response**
 
 **Status Code:** 204 (No Content)
 
-_Response body:_ null 
+_Response body:_ null
 
 ###### GET: Retrieve the list of ticket attachments by ticket ID
 
 {% highlight sh %}
 GET /api/rest/{version}/desk/tickets/{id}/attachments
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}  
 [
@@ -700,14 +700,14 @@ _Response body:_
 {% highlight sh %}
 GET /api/rest/{version}/desk/tickets/{ticketId}/attachments/{attachmentId}
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
-{% highlight yaml %} 
+{% highlight yaml %}
 {
     "id": 15,
     "created_at": "2015-07-17T11:25:53+0000",
@@ -722,17 +722,17 @@ _Response body:_
     }
 }
 {% endhighlight %}
-    
+
 **Status Code:** 404 (Not Found)
 
 _Response body:_
 
-{% highlight yaml %} 
+{% highlight yaml %}
 {
     "error": "Attachment loading failed. Ticket has no such attachment."
 }
 {% endhighlight %}   
-    
+
 ###### POST: Add attachment to the ticket
 
 {% highlight sh %}
@@ -741,7 +741,7 @@ POST /api/rest/{version}/desk/tickets/{ticketId}/attachments
 
 _Request example:_
 
-{% highlight yaml %} 
+{% highlight yaml %}
 {
     "attachmentsInput": [
         {
@@ -751,12 +751,12 @@ _Request example:_
     ]
 }
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 201 (Created)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 [
@@ -775,15 +775,15 @@ _Response body:_
     }
 ]
 {% endhighlight %}
-    
+
 ###### DELETE: Remove Attachment from the ticket
 
 {% highlight sh %}
 DELETE /api/rest/{version}/desk/tickets/{ticketId}/attachments/{attachmentId}
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 204 (No Content)
 
 _Response body:_ null
@@ -796,10 +796,10 @@ GET /api/rest/{version}/desk/ticket/{id}/assignee
 {% endhighlight %}
 
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -816,12 +816,12 @@ _Response body:_
 {% highlight sh %}
 GET /api/rest/{version}/desk/comments
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 [
@@ -865,12 +865,12 @@ _Response body:_
 {% highlight sh %}
 GET /api/rest/{version}/desk/comments/{id}
 {% endhighlight %}
-        
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -890,7 +890,7 @@ _Response body:_
     "updated_at": "2015-07-17T11:25:22+0000"
 }
 {% endhighlight %}    
-    
+
 **Status Code:** 404 (OK)
 
 _Response body:_   
@@ -898,24 +898,24 @@ _Response body:_
 {% highlight yaml %}
 {
     "error": "Comment loading failed, comment not found."
-} 
+}
 {% endhighlight %}   
-    
+
 ###### POST: Add a new comment to the ticket.
 
 {% highlight sh %}
 POST /api/rest/{version}/desk/comments
 {% endhighlight %}
- 
+
  **Parameters**   
-    
+
 | Name  | Type  | Description | Note
 |:------------- |:---------------|:-------------|:---|
 | content     | _string_ | **Required.** Add your comment into this section. |
 | ticket     | _integer_       |**Required.** Provide the ID of a ticket where the comment is added. |
 | author | _string_       | **Required.** Specify the name of a user who adds the comment to the ticket. |The name of an author must contain only letters.|
 | ticketStatus | _string_ | **Required.** Specify the status of a ticket after the new comment is added to it. The available statuses are: **New**, **Open**, **Pending**, **In progress**, **Closed** and **On Hold**.
-    
+
 _Request example:_
 
 {% highlight yaml %}
@@ -926,12 +926,12 @@ _Request example:_
     "ticketStatus": "new"
 }  
 {% endhighlight %}  
-    
+
 **Response**
-    
+
 **Status Code:** 201 (Created)
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -952,15 +952,15 @@ _Response body:_
 }
 
 {% endhighlight %}
-    
+
 ###### PUT, PATCH: Update certain properties of the comment be the comment ID
 
 {% highlight sh %}
 PUT|PATCH /api/rest/{version}/desk/comments/{id}
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
 _Request example:_
@@ -972,7 +972,7 @@ _Request example:_
 }
 {% endhighlight %}
 
-_Response body:_ 
+_Response body:_
 
 {% highlight yaml %}
 {
@@ -998,12 +998,12 @@ _Response body:_
 {% highlight sh %}
 DELETE /api/rest/{version}/desk/comments/{id}
 {% endhighlight %}
-    
+
 **Response**
 
 **Status Code:** 204 (No Content)
 
-_Response body:_ null 
+_Response body:_ null
 
 ###### GET: Retrieve the information about the comment author based on the provided comment ID
 
@@ -1012,7 +1012,7 @@ GET /api/rest/{version}/desk/comment/{id}/author
 {% endhighlight %}
 
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
 _Response body:_
@@ -1032,7 +1032,7 @@ GET /api/rest/{version}/desk/comments/{id}/attachments
 {% endhighlight %}
 
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
 _Response body:_
@@ -1060,9 +1060,9 @@ _Response body:_
 {% highlight sh %}
 GET /api/rest/{version}/desk/comments/{commentId}/attachments/{attachmentId}
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
 _Response body:_
@@ -1101,7 +1101,7 @@ POST /api/rest/{version}/desk/comments/{commentId}/attachments
 
 _Request example:_
 
-{% highlight yaml %} 
+{% highlight yaml %}
 {
     "attachmentsInput": [
         {
@@ -1111,9 +1111,9 @@ _Request example:_
     ]
 }
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 201 (Created)
 
 _Response body:_
@@ -1141,7 +1141,7 @@ _Response body:_
 {% highlight sh %}
 DELETE /api/rest/{version}/desk/comments/{commentId}/attachments/{attachmentId}
 {% endhighlight %}
-    
+
 **Response**
 
 **Status Code:** 204 (No Content)
@@ -1155,9 +1155,9 @@ _Response body:_ null
 {% highlight sh %}
 GET /api/rest/{version}/desk/users
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
 _Response body:_
@@ -1177,13 +1177,13 @@ _Response body:_
         "last_name": "\u0432\u0444\u0456\u0432"
     }
 {% endhighlight %}
-    
+
 ###### POST: Create a new user
 
 {% highlight sh %}
 POST /api/rest/{version}/desk/users
 {% endhighlight %}
-    
+
 **Parameters**
 
 | Name  | Type  | Description |
@@ -1191,7 +1191,7 @@ POST /api/rest/{version}/desk/users
 | firstName     | _string_ | **Required.** Provide the first name of a new user. |
 | lastName     | _string_   | **Required.** Provide the last name of a new user.|
 | email | _string_ | **Required.** Add an email of a new user. This email is going to be used for email notifications and password recovery.|
-    
+
 _Request example:_
 
 {% highlight yaml %}
@@ -1203,7 +1203,7 @@ _Request example:_
 {% endhighlight %}
 
 **Response**
-    
+
 **Status Code:** 201 (Created)
 
 _Response body:_
@@ -1216,15 +1216,15 @@ _Response body:_
     "last_name": "Dou"
 }
 {% endhighlight %}
-    
+
 ###### GET: Retrieve user data
 
 {% highlight sh %}
 GET /api/rest/{version}/desk/users/{email}/
 {% endhighlight %}
-    
+
 **Response**
-    
+
 **Status Code:** 200 (OK)
 
 _Response body:_
@@ -1237,7 +1237,7 @@ _Response body:_
     "last_name": "Dou"
 }
 {% endhighlight %}
-    
+
 **Status Code:** 404 (Not Found)
 _Response body:_
 
@@ -1246,3 +1246,46 @@ _Response body:_
     "error": "User not found."
 }
 {% endhighlight %}
+
+###### PUT, PATCH: Update properties of a certain user by its ID
+
+{% highlight sh %}
+PUT|PATCH /api/rest/{version}/desk/users/{id}
+{% endhighlight %}
+
+_Request example:_
+
+{% highlight yaml %}
+{
+    "email": "1437135532dummy-test-email-address@test-server.local",
+    "first_name": "John",
+    "last_name": "Second"
+}
+{% endhighlight %}
+
+**Response**
+
+**Status Code:** 200 (OK)
+
+_Response body:_
+
+{% highlight yaml %}
+{
+    "id": 11,
+    "email": "1437135532dummy-test-email-address@test-server.local",
+    "first_name": "John",
+    "last_name": "Second"
+}
+{% endhighlight %}
+
+###### DELETE: Delete the user by id
+
+{% highlight sh %}
+DELETE /api/rest/{version}/desk/users/{id}
+{% endhighlight %}
+
+**Response**
+
+**Status Code:** 204 (No Content)
+
+_Response body:_ null
