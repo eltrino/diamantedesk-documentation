@@ -34,7 +34,7 @@ DiamanteDesk application was developed on the basis of the Symfony standard appl
 
 ### Composer
 
-DiamanteDesk uses **Composer** to manage package dependencies. Use this [link](https://getcomposer.org/download/) to download it. All the following examples are be based on the assumption that the composer have been installed globally.
+DiamanteDesk uses **Composer** to manage package dependencies. Use this [link](https://getcomposer.org/download/) to download it. **You should use maximum version 1.0.3.** All the following examples are be based on the assumption that the composer have been installed globally.
 
 ## Installation of a Standalone Application
 
