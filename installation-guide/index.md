@@ -66,7 +66,7 @@ php composer.phar create-project diamante/desk-application
 The release archive is built for every stable release and it comes with the so-called "batteries included" as all the requirements are already installed and all the resources are built. Simply download the package, unzip it to the web-accessible directory on your server and follow the installation steps described in the [following section](#installation).
 
 {% highlight sh%}
-curl -O https://github.com/eltrino/diamantedesk-application/releases/download/1.1/diamantedesk-application-full-1.1.zip
+curl -O https://github.com/eltrino/diamantedesk-application/releases/download/2.0.0/diamantedesk-application-full-2.0.0.zip
 {% endhighlight %}
 	
 {% highlight sh%}

@@ -24,11 +24,11 @@ Navigate to `System > Package Manager` to install it from the OroCRM Marketplace
 
 ###Installation via Composer
 
-As of 1.1 release we do not support composer installation. OroCRM integration package should only be installed via Oro Marketplace. 
+As of 2.0.0 release we do not support composer installation. OroCRM integration package should only be installed via Oro Marketplace. 
 
 ## DiamaneteDesk Contacts in OroCRM
 
-In the Oro platform all the contacts related to any business activities are saved at _Customers > Contacts_. Please refer to the Oro [documentation](http://www.orocrm.com/documentation/index/current/user-guide/contacts) to learn more about contacts in OroCRM. Due to the DiamanteDesk integration with Oro, when a customer registers on the support [portal](http://orocrmqa.eltrino.com:8090/diamante_1.1/web/app_dev.php/portal/#login) to make a request or report an issue regarding the supported entity (online store, blog, etc.), the provided credentials are  added both to the DaiamnteDesk and to the OroCRM contacts. To learn how to configure this option, refer to the [**Configuration**](#configuration) section of this article.
+In the Oro platform all the contacts related to any business activities are saved at _Customers > Contacts_. Please refer to the Oro [documentation](http://www.orocrm.com/documentation/index/current/user-guide/contacts) to learn more about contacts in OroCRM. Due to the DiamanteDesk integration with Oro, when a customer registers on the support [portal](http://yourserver/portal/#login) to make a request or report an issue regarding the supported entity (online store, blog, etc.), the provided credentials are  added both to the DaiamnteDesk and to the OroCRM contacts. To learn how to configure this option, refer to the [**Configuration**](#configuration) section of this article.
 
 When a user registeres on the portal, the system automatically scans the contact database by the existing emails. If none of the emails match the provided credentials, a new contact is created based on the data provided by the user. If an account with the same email has  been previously registered in the system, the following warning message is displayed:
 

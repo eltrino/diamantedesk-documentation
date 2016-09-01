@@ -40,7 +40,7 @@ To create a new ticket, complete the following steps:
 
 Click **Create Ticket** at the top right corner of the screen. The **Create Ticket** screen opens.
 
-![Create ticket](img/create_ticket_1.1.png)
+![Create ticket](img/create_ticket_2.0.0.png)
 
 Provide all the relevant information necessary to create a new ticket:
 
