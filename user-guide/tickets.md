@@ -40,7 +40,7 @@ To create a new ticket, complete the following steps:
 
 Click **Create Ticket** at the top right corner of the screen. The **Create Ticket** screen opens.
 
-![Create ticket](img/create_ticket_2.0.0.png)
+![Create ticket](img/create_ticket.png)
 
 Provide all the relevant information necessary to create a new ticket:
 
@@ -64,7 +64,7 @@ Click **Save** or **Save and Close** at the right top corner of the screen for a
 
 ## Ticket Comments
 
-Once the ticket is created and successfully saved in the system, customers can comment them from the portal and admin users can add comments to them from the admin panel either publically or privately.
+Once the ticket is created and successfully saved in the system, customers can comment them from the portal and Admin users can reply from the Admin panel either publically or privately.
 
 **Comments on the Portal**
 
@@ -72,48 +72,44 @@ Whenever DiamanteDesk customer needs to add more information about the issue or 
 
 ![Comments](img/comments_portal.png)
 
-This comment automatically becomes available at the admin panel, updating admin users with new information/requests/issues occurred.
+This comment automatically becomes available at the admin panel, updating admin users with new information/requests/issues occurred. Admins can comment tickets directly from the Portal as described below.
 
 **Comments on the Admin Panel**
 
-To add a comment to some ticket at the DiamanteDesk admin panel, open the required ticked and click the **Comment** button at the **Comments** section. The **Add Comment** screen opens.
+To add a comment to some ticket from the Admin panel, open the required ticked, scroll down to the very bottom of the page and click **Comment**. The **Add Comment** screen opens.
 
 ![Comments](img/comments_backend.png)
 
 Field  | Description
 ------------- | -------------
 Content  | This field contains the comment body.
-Ticket Status  | Specify whether the ticket status has changed. Once comment with the changed ticket status is added, the status of the ticket automatically changes as well.
+Ticket Status  | Specify whether the ticket status should be changed. 
 Attachments  | Attach screenshots clarifying or confirming information provided in the content field.
-Private  | If this checkbox is selected, this comment is going to be available only to the admin users on the DiamanteDesk admin panel. If the checkbox is cleared, it is going to be available both for admin users on the admin panel and for the customer on the portal.
+Private  | If this checkbox is selected, this comment is going to be available only on the Admin panel. If the checkbox is cleared, it is going to be available at the Admin panel as well as on the Portal.
 
 ## Notifications
 
-**Email Notifications** is a DiamantDesk feature that sends automatic emails to the ticket creator and assignee when the ticket is created or its [status](#status) changes. This way a customer is notified whether his request is being processed.
+**Email Notifications** is a DiamantDesk feature that sends automatic emails to the ticket creator and Assignee when the ticket is created or its [status](#status) changes. This way, a customer is notified whether his request is being processed.
 
-When the ticket is created, a reporter and assignee get the following emails, informing them about ticket branch, subject, priority, status and source:
+When the ticket is created, a Reporter and Assignee get the following emails, informing them on ticket details (such as Branch, Subject, Priority, Status and Source):
 
 ![Notifications](img/status_email.png)
 
-When the status of a ticket changes, the reporter and assignee get the following email, informing them about changes performed and the person responsible for them:
-
-![Notifications](img/status_email_2.png)
+When the status of a ticket changes, the reporter and assignee get the respective email as well.
 
 ### Configuring Notifications
 
-This functionality can be configured according to the customer needs at _System > Configuration_. On the left side side of the screen on the **System configuration** pane select **Notifications** tab in the **DiamanteDesk** menu.
+This functionality can be configured according to the customer needs at _System > Configuration_:
 
-![System configuration](img/sys_config.jpg)
+![System configuration](img/sys_config.png)
 
-**Notifications** tab opens.
-
+1. On the **System Configuration** pane click **DiamanteDesk** to expose the available options and choose **Notifications**.
 ![Notifications](img/notifications.png)
 
-To use the default settings, select the **Use Default** check box in the **Email Notifications** field. 
+2. To use the default settings, select the **Use Default** check box in the **Email Notifications** field. 
+To edit configurations, clear the the **Use Default** check box and set the **Enable Email Notifications** field to **Yes** or **No** option.
 
-To edit the configurations, clear the the **Use Default** check box and set the **Enable Email Notifications** field to **Yes** or **No** option.
-
-To save the changes made, click **Save Settings** on the left top corner of the screen.
+To save the changes made, click **Save Settings** at the top right corner of the screen.
 
 ### Server Setup
 
@@ -127,17 +123,17 @@ To make sure that server parameters are configured correctly or you need to chan
 
 Each of the tickets can be assigned to a specific user to make sure that a given issue is solved quickly and efficiently. But in order to have more control over certain high priority issues, a new **Watchers** feature has been added.
 
-A **Watcher** is a person who gets an email notification every time a status, priority or other valuable ticket information changes. When the ticket is created, a **Reporter** (the person who created a ticket) and an **Assignee** (a person to whom the ticket is assigned) automatically become **Watchers**. If the ticket is created by the admin user, he automatically becomes a ticket watcher as well.
+A **Watcher** is a person who gets an email notification every time a status, priority or other ticket information changes. When the ticket is created, a **Reporter** (the person who created a ticket) and an **Assignee** (a person to whom the ticket is assigned) automatically become **Watchers**. If the ticket is created by the admin user, he automatically becomes a ticket watcher as well.
 
 ###Adding Watchers to the Ticket
 
 Watchers can be added to the ticket in one of the following ways:
 
-* **By the Customer via Email**
+* **By Customers via Email**
 
-In case the ticket is created from the email through [email processing](email-processing.html), the email sender and all the users from CC (if any) become watchers and receive email notifications each time the ticket content, status or priority changes.
+In case the ticket is created from the email through [email processing](email-processing.html), the email sender and all the users from CC (if any) become watchers and receive email notifications each time the ticket content, status or priority is changed.
 
-* **By the Customer via the Portal**
+* **By Customers via Portal**
 
 To add watchers to the ticket via the portal, complete the following steps:
 
@@ -145,16 +141,16 @@ To add watchers to the ticket via the portal, complete the following steps:
 2. Create a new ticket. To get the detailed instructions on how to create ticket via the portal, please refer to [this section](#create-a-new-ticket).
 3. Once the ticket is submitted, the screen with ticket description and editing options is opened. At the right side of this screen in the **Watchers** section click **Add Watcher** to add a person or several people who will be able to control the ticket workflow.
 ![Create ticket](img/ticket_submitted.png)
-4. The **Add Watcher** screen opens. Specify the email of a person you would like to make a watcher for this ticket and click **Add**. If this email has been previously registered in DiamanteDesk, the system will automatically define this user and will add the person's first an last name to the list of watchers. If no matching account has been found a new DiamanteDesk customer is created.
+4. The **Add Watcher** pop-up opens. Specify the email of a person you would like to make a watcher for this ticket and click **Add**. If this email has been previously registered in DiamanteDesk, the system will recognize this user and add person's first an last name to the list of watchers. If no matching account has been found, a new [customer](customers.html) is created.
 ![Create ticket](img/add_watcher_portal.png)
 5. An email confirmation is sent to a person whose email was provided at the **Add Watcher** screen, notifying him on the new role granted.
 
-* **By the Admin User via Admin Panel**
+* **By Admins via Admin Panel**
 
-Admin user can add or remove certain users from the list of ticket watchers if this administrator has the corresponding edit permissions. To follow the changes made in a certain ticket or add other customers/administrators to the list of watchers, admin user should perform the following steps:
+Admin user can add or remove certain users from the list of ticket watchers if he has respective edit permissions. To follow the changes made in a certain ticket or add other customers/administrators to the list of Watchers, Admin should perform the following steps:
 
-1. Log into the DiamanteDesk admin panel.
-2. Open the required ticket either at _Desk > Branches > select a branch_ or at _Desk > Tickets_.
+1. Log into the DiamanteDesk Admin panel.
+2. Open the required ticket.
 3. To to be aware of the changes made to the ticket, click **Watch** on the option panel at the top of the screen. 
 ![Create ticket](img/add_watcher_admin.png)
-To add another person to the **Watchers** list, click **Add Watcher** on the option panel. The **Add Watcher** screen opens. Enter the name of a required user or click a list button and select a user from the list of available users.
+4. To add another person to the **Watchers** list, click **Add Watcher** on the option panel. The **Add Watcher** screen opens. Enter the name of a required user or click a list button and select a user from the list of available users.

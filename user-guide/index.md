@@ -6,7 +6,14 @@ This documentation section contains the essential information covering all the a
 
 To learn more about each feature, follow the corresponding link from the list:
 
+* [Dashboards](dashboards.html)
 * [Branches](branches.html)
 * [Tickets](tickets.html)
+* [Reports](reports.html)
+* [Customers](customers.html)
+* [Users](users.html)
 * [Tagging](tagging.html)
-* [User Management](user-management.html)
+* [Data Audit](data-audit.html)
+* [Filters](filters.html)
+* [Rules](rules.html)
+* [Channels](channels.html)

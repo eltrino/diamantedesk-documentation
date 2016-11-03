@@ -1,54 +1,64 @@
 ---
-title: Users
+title: Users / Roles / Groups
 ---
 
 **User Management** serves to create new admin users in DiamanteDesk or to review/edit information about the existing ones. Each user has a certain role, access settings and belongs to one of the existing groups, defining his default permissions in the system.
 
-![User Management](img/user_management.png)
-
 To review the list of all users in the system head over to _System > User Management > Users_:
 
-![User Management](img/all_users.png)
+![User Management](img/user_management.png)
 
 ## Create a New User
 
 To create a new user profile in the DiamanteDesk system, head over to _System > User Management > Users_ and click the **Create User** button at the right top corner of the screen or go directly to _System > User Management > Create User_.
+![User Management](img/all_users.png)
+
+After you get to the **Create User** screen, provide the general user information.
 
 ![Create User](img/user_new_general.png)
 
-After you get to the **Create User** screen, fill out all the required fields in five following sections, that is **General**, **Additional**, **Groups and Roles**, **Access Settings**, **Email synchronization settings**.
-
-* The **Owner** field is automatically filled with **Main** value by default.
-* Select the **Status** of an account - it can be either **Active** or **Inactive**.
-* Create a **Username** and **Password** that will be used by a newly created user to log in. **Re-Enter** the password in the following filed to make sure you typed it in correctly.
-* Enter a user **Name Prefix**, if required (Mr, Ms, etc.)
-* **First Name, Middle Name, Last Name**
-* Enter a user **Name Suffix**, if any (for example, Jr., Sr., PMP, etc.)
-* Select the **Birthday** from the drop-down calendar in the corresponding field.
-* Click the **Avatar** to select a profile picture from your local machine.
+Field                       | Description
+-------------               | -------------
+**Owner**                   | Define a business unit a User belong to.
+**Status**                  | Account can be either **Active** or **Inactive**. 
+**Username**, **Password** | Create a **Username** and **Password** that will be used by a newly created user to log in. **Re-Enter** the password in the following filed to make sure you typed it in correctly.
+**Name Prefix**             | _Optional._ Mr, Ms, etc.
+**Name Suffix**             | _Optional._ Jr., Sr., PMP, etc.
+**Birthday**                | Select the **Birthday** from the drop-down calendar in the corresponding field
+**Avatar**                  | Add a profile picture from your local machine.
+**Send an Email Invitation**| Choose whether you want a user to receive an welcoming email after you save his/her profile.
 
 ![Create User](img/user_new_general1.png)
 
-* Enter the user's **Primary Email** in the corresponding field. This email is going to be used for email notifications and password recovery. Click **Add Another Email** in the **Emails** field to add additional email in case the primary one is not available for any reason.
-* **Email Signature**
-* **Phone**
-* **Tags.** Tagging functionality is identical throughout the system. To learn more about tagging, follow this [link](tagging.html).
-
-Provide the **Title** (position) of a newly created user in the section for **Additional** information.
+Field                       | Description
+-------------               | -------------
+**Primary Email**           | Enter the user's email here. This email is going to be used for email notifications and password recovery. Click **Add Another Email** in the **Emails** field to add additional email in case the primary one is not available for any reason.
+**Tags**                    | Tagging functionality is identical throughout the system. To learn more about tagging, follow this [link](tagging.html)
 
 ![Create User](img/user_new_title.png)
 
-Select the **Groups** and **Roles** the newly created user will belong to. More than one group or role may be selected for one user.
+Field                       | Description
+-------------               | -------------
+**Title**                   | Provide the Position of a newly created user in the section for **Additional** information.  
+[**Groups**](#user_groups) and [**Roles**](#user_roles)| Select the **Groups** and **Roles** the newly created user will belong to. This selection will define user access rights and permissions. You can create/edit/delete Roles and Groups at _System > User Management > Roles / Groups_ respectively. More than one group or role may be selected for one user.
 
-![Create User](img/user_new_groups_roles.png)
+![Create User](img/user_synch.png)
+
+Field                       | Description
+-------------               | -------------
+**Enable IMAP**             | 
+**Enable SMTP**             |
+**User**                    |
+**Password**                |
 
 ### Edit User Account
 
-To edit user account in the DiamanteDesk system:
+To edit user account in the DiamanteDesk:
 
 1. Go to the list of all users in the system at _System > User Management > Users_.
-2. Select the user account that shall be changed.
-3. Perform the required changes.
+2. Select the user account that shall be changed and open it.
+3. At the top right corner of the screen click **Edit**. Perform the required changes.
+![Users](img/user_edit.png)
 4. Click **Save and Close** or **Save** at the right top corner of the screen.
 
 ## My Account
@@ -57,19 +67,17 @@ To review your account information, click _your username > My User_ at the right
 
 ![My User](img/my_user.png)
 
-My account screen opens.
+My account details screen opens.
 
 ![My User](img/my_account.png)
 
 To edit your account information, click **Edit** at the right top corner of the screen, perform the necessary changes and click **Save**.
 
-## User Roles
+## <a name="user_roles"></a>User Roles
 
 When a new user is created within DiamanteDesk, he is assigned with a certain _role_ that determines a set of his permissions and access rights, defining actions a user is allowed to perform. Each user may have one or several roles.
 
-![Role](img/several_roles.png)
-
-To look through the list of available user roles head over to _System > User Management > Roles_.
+To look through the list of available user roles head over to _System > User Management > Roles_. You can also create new roles from this screen. Open some role to see permissions assigned to it.
 
 ![Role](img/all_roles.png)
 
@@ -113,13 +121,12 @@ System | Allows all the users with the same role to perform the corresponding ac
 6. Choose the existing users that will be granted this role by selecting the check boxes in the corresponding lines.
 7. Click **Save** or **Save and Close** to proceed.
 
-## User Groups
+## <a name="user_groups"></a>User Groups
 
 A user group is a collection of user accounts having the same core responsibilities (for example, Administrators, Marketing, Sales). Each user may belong to one or several groups.
 
-![Create Group](img/checked_groups.png) 
-
 To look through the list of available User Groups head over to _System > User Management > Groups_.
+![Groups](img/all_groups.png)
 
 ### Create a New User Group
 

@@ -10,33 +10,21 @@ To see the list of existing DiamanteDesk customers, open the **Customers** top m
 
 ## Create a New Customer
 
-To create a new customer, navigate to the **Customers** top menu. The **Customers** screen opens. Click **Create User** at the top right corner of the screen. **Create Customer** screen opens.
+To create a new customer:
 
+1. Navigate to the **Customers** top menu. The **Customers** screen opens. 
+2. Click **Create User** at the top right corner of the screen. **Create Customer** screen opens.
 ![Customers](img/new_customer.png)
+3. Provide the same information that would be required to register at the portal or that would have been automatically populated from the email during the email processing: user **Email**, **First Name** and **Last Name**.
+4. After all the necessary information has been provided, click **Save** or **Save and Close** to add new user to the system.
 
-To create a new customer, provide the same information that would be required to register at the portal or that would have been automatically populated from the email during the email processing: user **Email**, **First Name** and **Last Name**.
-After all the necessary information has been provided, click **Save** or **Save and Close** to add new user to the system.
-
-After the user account has been created through the admin panel, via email processing functionality or at the portal, email owner receives the following email:
+After the user account has been created through the admin panel or via the portal, email owner receives the following email:
 
 ![Customers](img/customer_email.png)
 
-## Customer Filters
-
-All the customers in the system can be filtered according to each of their parameters described in the table below. To learn more about filtering in DiamanteDesk, follow this [link](filtering.html).
-
-Filter   | Description
-------------- | -------------
-Email | Provide the email of a required user to filter his account out of the general list.
-First Name | Provide the first name of a required user.
-Last Name | Provide the last name of a required user.
-[Is Active](#is-active) | Select **Yes** or **No** option to filter active or inactive accounts respectively. 
-
 ## Customer Account
 
-The customer (user) account screen contains general information about the customer, such as name and email and his activity in DiamanteDesk.
-
-To open the customer account in the system, navigate to the top **Customers** menu and click it once to open the list of existing customers. Select the row of a specific user and click it once to open a customer account screen.
+The customer (user) account screen contains general information about the customer, such as name, email and his activity in DiamanteDesk.
 
 ![Customers](img/customer_account.png)
 
@@ -51,7 +39,9 @@ The **User Activity** section of the customer account screen displays the genera
 
 Mass action allows performing mass operations on the selected rows of the grid. DiamanteDesk offers the following mass actions that can be applied to the customer profiles selected from the grid:
 
+1. Choose the profiles to which mass actions should be applied.
 ![Customers](img/customers_mass_action.png)
+2. The following mass actions are available for customer profiles:
 
 * **Delete Selected Users.** Use this action to delete several customer profiles at a time. Keep in mind that in DiamanteDesk, if the customer profile is deleted, the user information is not entirely removed from the system. It is usually marked as deleted and the profile of a deleted customer is removed from the list of existing customers, although the system displays strikethrough customer first and last name at the tickets where he was assigned as a reporter or if he authored any comments as shown on the example below.
 
