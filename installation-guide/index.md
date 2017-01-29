@@ -145,6 +145,18 @@ After the DiamanteDesk application is successfully installed the following messa
 
 ![Finish](img/web_finish.png)
 
+##Background Job Configuration
+
+DiamanteDesk requires that certain task should be executed in background. For this you will need to add several commands to your system job scheduler.  
+
+{% highlight php %}
+*/1 * * * * php app/console diamante:cron > dev/null
+{% endhighlight %}
+
+This will execute required command every minute. If you need you can change execution period to 5 minutes. This will decrease system reaction time to certain events (for example processing rules).
+
+Also if you would like to use Email channel its required to add one of the commands described in this [section](../user-guide/channels/email-processing.html) to your system job scheduler.
+
 
 ##Bundles Installation
 

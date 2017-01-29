@@ -10,6 +10,8 @@ This helpful feature offers the ability to configure system behavior quickly and
 
 Rules can be created / configured from the respective top menu item, shown in the picture below. 
 
+This feature relays on system time-based job scheduler. Its required to add certain command to your system job scheduler, for example cron on UNIX-like systems. So please do not forget to configure this like described in installation chapter. 
+
 ![Rules menu](img/Rules_menu.png)
 
 Working principles of Rules are related to:
@@ -105,3 +107,4 @@ Target        | Ticket or comment.
 5) Define the **Actions** which should follow if conditions are met.
 
 6) At the top right corner of the screen click **Save and Close**.
+
