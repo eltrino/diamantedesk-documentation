@@ -18,8 +18,6 @@ Go to _System > Configuration_.
 
 On the **System Configuration** pane select the **DiamanteDesk** menu and **Channels** tab.
 
-![System configuration](img/sys_config.jpg)
-
 The **Channels** screen opens.
 
 ![Channels](img/channels.png)

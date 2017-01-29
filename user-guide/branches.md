@@ -4,7 +4,14 @@ title: Branches
 
 When a customer of any web service supported by DiamanteDesk needs to report an issue or submit a request to the help desk team, a _ticket_ is created. Each ticket is assigned with a unique ID and is sorted according to the _branch_ where it is created or is added to.
 
-Creating separate branches in DiamanteDesk allows our Clients to group tickets according to the requests of specific users, locations, issues or according to the [Channel](channels/index.html) of the ticket. Branch logic helps organizing tickets according to a certain category and helps finding them quickly. Reliable customer service implies quick problem solving, so we provide our Clients with a user-friendly tool making it run like clockwork.
+
+Creating separate branches in DiamanteDesk allows grouping tickets according to the requests of specific users, locations, issues or according to the [Channel](channels/index.html) of the ticket. Branch logic helps organizing tickets according to a certain category and helps finding them quickly. Reliable customer service implies quick problem solving, so we provide our Clients with a user-friendly tool making it run like clockwork.
+
+This article answers the following questions:
+
+* [How to create a Branch](#create-branch)
+* [How to edit a Branch](#edit-branch)
+* [How to delete a Branch](#delete-branch)
 
 _**Note:** When the ticket is automatically created from the email received at the the support email address, it is created at the branch which is configured as a default one. To learn more about it, please see the [Email Processing](channels/email-processing.html) section._
 
@@ -21,7 +28,7 @@ All branches can be filtered according to the **Branch Name** or **Branch Key**.
 
 To learn more about filtering in DiamanteDesk, [follow this link](filters.html).
 
-## Create a New Branch
+## <a name="create-branch"></a> Create a New Branch
 
 Click **Create Branch** at the right top corner of the **Branches** screen. 
 ![Create branch](img/create_branch1.png)
@@ -43,15 +50,7 @@ Provide the description of the branch in the **Description** field.
 
 ![Create branch](img/create_branches_description.png)
 
-Provide the support email address matching this branch in the **Support Address** field (for example, it is a good idea to add all tickets sent to sales@companyname.com to the "Sales" branch) and the customer domain name (for example, eltrino.com) to add all the emails sent from the email addresses with such customer domain to a specific branch.
-
-![Email configuration](img/email_config.png)
-
-Click [here](channels/email-processing.html) if you want to learn more about email processing in DiamanteDesk.
-
-To save your changes, click **Save And Close** at the right top corner of the screen.
-
-## Edit a Branch
+## <a name="edit-branch"></a> Edit a Branch
 
 1. Navigate to the **Branches** screen.
 2. Select the branch that shall be edited from the list of available branches. The selected **Branch** screen opens.
@@ -60,11 +59,15 @@ To save your changes, click **Save And Close** at the right top corner of the sc
 4. Perform the necassary changes/updates.
 5. Click **Save** or **Save and Close** for the corresponding action.
 
-## Delete a Branch
+## <a name="delete-branch"></a> Delete a Branch
 
-Three options of branch deleting are available in DiamanteDesk.
+Three options of branch deleting are available in DiamanteDesk:
 
-### Deleting a Single Branch
+* [deleting a single branch](#single-delete)
+* [mass deleting](#mass-delete)
+* [deleting branches via API](#API-delete)
+
+### <a name="single-delete"></a> Deleting a Single Branch
 
 When attempting to delete a single branch in DiamanteDesk, keep in mind that ALL its tickets are going to be deleted as well.
 
@@ -80,7 +83,7 @@ SCREEN
 _**Note:** If a branch is configured as default for [Email Processing](channels/email-processing.html), it cannot be deleted and the following message is displayed at the top of the **Branch** screen:_
 ![Default Branch](img/branches_default.png)
 
-### Branch Deleting Mass Action 
+### <a name="mass-delete"></a> Branch Deleting Mass Action 
 
 Multiple branches can be deleted via mass action functionality in DiamanteDesk. Perform the folllowing steps in order to delete several branches at once:
 
@@ -92,7 +95,7 @@ Multiple branches can be deleted via mass action functionality in DiamanteDesk. 
 ![Branches](img/delete_confirmation.png)
 5. Click **Delete** to proceed or **Cancel** to return to the **Branches** screen. _Branch cannot be deleted via mass action if it has any tickets. Only the branches without any tickets can be deleted during branch deleting mass action._
 
-### Deleting Branches through API
+### <a name="API-delete"></a> Deleting Branches through API
 
 Branches can also be deleted via the API call. The DiamanteDesk [RESTful API guide is available here](../developer-guide/restful-api-guide.html).
 

@@ -2,7 +2,7 @@
 title: Tickets
 ---
 
-DiamanteDesk is a great way to improve customer experience by easily receiving, reassigning and taking care of any Client requests presented as **tickets**.
+DiamanteDesk offers a great way to improve customer experience by easily receiving, reassigning and taking care of any Client requests presented as **tickets**.
 
 Tickets in DiamanteDesk can be created through one of the following channels:
 
@@ -11,10 +11,10 @@ Tickets in DiamanteDesk can be created through one of the following channels:
 * via [**processing email requests**](channels/email-processing.html) sent to the support email address;
 * by the admin users via the admin panel.
 
-Tickets in the admin panel can be viewed and created at:
+Tickets in the Admin panel can be viewed and created from:
 
-* the **Branches** top menu (see [**Branches**](branches.html) section);
-* the **Tickets** top menu.
+* the **Branches** page (see [**Branches**](branches.html) section);
+* the **Tickets** page.
 
 ![Tickets](img/All_tickets.png)
 
@@ -74,7 +74,7 @@ Whenever DiamanteDesk customer needs to add more information about the issue or 
 
 This comment automatically becomes available at the admin panel, updating admin users with new information/requests/issues occurred. Admins can comment tickets directly from the Portal as described below.
 
-**Comments on the Admin Panel**
+**Private Comments on the Admin Panel**
 
 To add a comment to some ticket from the Admin panel, open the required ticked, scroll down to the very bottom of the page and click **Comment**. The **Add Comment** screen opens.
 
@@ -123,7 +123,7 @@ To make sure that server parameters are configured correctly or you need to chan
 
 Each of the tickets can be assigned to a specific user to make sure that a given issue is solved quickly and efficiently. But in order to have more control over certain high priority issues, a new **Watchers** feature has been added.
 
-A **Watcher** is a person who gets an email notification every time a status, priority or other ticket information changes. When the ticket is created, a **Reporter** (the person who created a ticket) and an **Assignee** (a person to whom the ticket is assigned) automatically become **Watchers**. If the ticket is created by the admin user, he automatically becomes a ticket watcher as well.
+A **Watcher** is a person who gets an email notification every time a status, priority or other ticket information changes. When the ticket is created, a **Reporter** (the person who created a ticket) and an **Assignee** (the person to whom the ticket is assigned) automatically become **Watchers**. If the ticket is created by the admin user, he automatically becomes a ticket watcher as well.
 
 ###Adding Watchers to the Ticket
 

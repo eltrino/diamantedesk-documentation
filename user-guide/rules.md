@@ -14,8 +14,8 @@ Rules can be created / configured from the respective top menu item, shown in th
 
 Working principles of Rules are related to:
 
-* **time triggered**, 
-* **event triggered** system behavior.
+* [**time triggered**](#time-triggered), 
+* [**event triggered**](#event_triggered) system behavior.
 
 Both types of these rules should have predefined **Conditions** and **Dependent Actions**, but the major difference between them is that in case of "event triggered rules", the resulting action is performed right after one or several conditions are met, and with the "time triggered rules" conditions might be met,  but the defined action is only going to be performed after the system "scans" after specified period of time.
 
@@ -44,7 +44,7 @@ Group 1        | OR       | Group 2   |
 By specifying multiple conditions or groups of conditions, system behaviour may become remarkably automated and save time of your consultants.
 
 
-## Creating a Time Triggered Rule
+## <a name="time-triggered"></a> Creating a Time Triggered Rule
 
 _Time triggered rules can be applied to tickets only._ 
 
@@ -75,7 +75,7 @@ Target        | _Ticket only._
 
 6) At the top right corner of the screen click **Save and Close**.
 
-## Creating an Event Triggered Rule
+## <a name="event_triggered"></a> Creating an Event Triggered Rule
 
 _Event triggered rules can be applied to **tickets** and **comments**._
 

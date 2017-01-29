@@ -44,13 +44,6 @@ Field                       | Description
 
 ![Create User](img/user_synch.png)
 
-Field                       | Description
--------------               | -------------
-**Enable IMAP**             | 
-**Enable SMTP**             |
-**User**                    |
-**Password**                |
-
 ### Edit User Account
 
 To edit user account in the DiamanteDesk:
@@ -73,7 +66,7 @@ My account details screen opens.
 
 To edit your account information, click **Edit** at the right top corner of the screen, perform the necessary changes and click **Save**.
 
-## <a name="user_roles"></a>User Roles
+## <a name="user_roles"></a> User Roles
 
 When a new user is created within DiamanteDesk, he is assigned with a certain _role_ that determines a set of his permissions and access rights, defining actions a user is allowed to perform. Each user may have one or several roles.
 
@@ -118,10 +111,10 @@ System | Allows all the users with the same role to perform the corresponding ac
 4. Grant certain permissions by selecting the corresponding options for each action in all entities.
 5. The **Capabilities** tab consists of all sorts of functions that may be available for the users. Define what functionalities are available for a user with this role. Users with different roles will see system functionality differently and can perform different actions, accordingly.
 ![Role](img/role_capabilities.png)
-6. Choose the existing users that will be granted this role by selecting the check boxes in the corresponding lines.
+6. Choose the existing users that will be granted this role by selecting the check boxes in the corresponding rows.
 7. Click **Save** or **Save and Close** to proceed.
 
-## <a name="user_groups"></a>User Groups
+## <a name="user_groups"></a> User Groups
 
 A user group is a collection of user accounts having the same core responsibilities (for example, Administrators, Marketing, Sales). Each user may belong to one or several groups.
 
@@ -135,5 +128,5 @@ To look through the list of available User Groups head over to _System > User Ma
 ![Create Group](img/create_group.png)
 3. The **Owner** field is automatically filled with **Main** value by default.
 4. Provide the general name of the group in the **Name** field.
-5. Choose the members belonging to this group by selecting the check boxes in the corresponding lines.
+5. Choose the members belonging to this group by selecting the check boxes in the corresponding rows.
 6. Click **Save** or **Save and Close** to proceed.
