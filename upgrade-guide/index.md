@@ -54,6 +54,5 @@ rm -rf web/css/*
 {% highlight http %}
 
 php app/console oro:platform:update --env=prod --force
-php app/console diamante:update
 
 {% endhighlight %}
