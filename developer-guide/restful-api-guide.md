@@ -803,7 +803,7 @@ _Response body:_
 
 {% highlight yaml %}
 {
-  "email": "pol.vova@gmail.com",
+  "email": "example@example.com",
   "name": "asdasd dasdasd",
   "id": "oro_1"
 }
@@ -1019,7 +1019,7 @@ _Response body:_
 
 {% highlight yaml %}
 {
-  "email": "pol.vova@gmail.com",
+  "email": "example@example.com",
   "name": "asdasd dasdasd",
   "id": "oro_1"
 }
@@ -1172,7 +1172,7 @@ _Response body:_
     },
     {
         "id": 2,
-        "email": "vladimir.polischuk@eltrino.com",
+        "email": "example@example.com",
         "first_name": "\u0444\u0456\u0432\u0444\u0456\u0432",
         "last_name": "\u0432\u0444\u0456\u0432"
     }
