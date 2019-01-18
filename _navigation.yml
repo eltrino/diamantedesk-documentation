@@ -20,6 +20,7 @@
   - developer-guide/contributing.md
   - developer-guide/testing.md
   - developer-guide/restful-api-guide.md
+  - developer-guide/localizations.md
 - integration/index.md:
   - integration/api-credentials.md
   - integration/magento.md
