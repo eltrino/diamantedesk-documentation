@@ -7,3 +7,4 @@ DiamanteDesk application is built using the Open Source software. We greatly app
 * [Contributing](contributing.html)
 * [Testing](testing.html)
 * [RESTful API guide](restful-api-guide.html)
+* [Localizations](localizations.html)
