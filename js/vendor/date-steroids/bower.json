@@ -1,0 +1,27 @@
+{
+  "name": "date-steroids",
+  "version": "1.0.0",
+  "homepage": "https://github.com/rvanbaalen/date-steroids",
+  "authors": [
+    "Robin van Baalen <robin@neverwoods.com>"
+  ],
+  "description": "Javascript's native Date object on steroids by adding .format() as an output method",
+  "main": "dist/date.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "date",
+    "datejs",
+    "format",
+    "javascript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

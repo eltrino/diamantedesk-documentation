@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Rules</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/2.0/user-guide/rules.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/2.0/user-guide/rules.html">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/user-guide/rules.html">1.0</a></li>
+              
+                <li><a href="/en/latest/user-guide/rules.html">latest</a></li>
+              
+                <li><a href="/en/2.0/user-guide/rules.html">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/2.0/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/2.0/user-guide/rules.html">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/user-guide/rules.html">1.0</a></li>
+                        
+                        <li><a href="/en/latest/user-guide/rules.html">latest</a></li>
+                        
+                        <li><a href="/en/2.0/user-guide/rules.html">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/2.0/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/2.0/">Welcome to DiamanteDesk</a></li><li><a href="/en/2.0/installation-guide/">Installation Guide</a></li><li><a href="/en/2.0/upgrade-guide/">Upgrade Guide</a></li><li><a href="/en/2.0/user-guide/">User Guide</a><ul><li><a href="/en/2.0/user-guide/dashboards.html">Dashboards</a></li><li><a href="/en/2.0/user-guide/branches.html">Branches</a></li><li><a href="/en/2.0/user-guide/tickets.html">Tickets</a></li><li><a href="/en/2.0/user-guide/reports.html">Reports</a></li><li><a href="/en/2.0/user-guide/customers.html">Customers</a></li><li><a href="/en/2.0/user-guide/users.html">Users / Roles / Groups</a></li><li><a href="/en/2.0/user-guide/tagging.html">Tagging</a></li><li><a href="/en/2.0/user-guide/data-audit.html">Data Audit</a></li><li><a href="/en/2.0/user-guide/filters.html">Filters</a></li><li><a href="/en/2.0/user-guide/rules.html">Rules</a><ul>
+<li>
+<a href="#rules-logic-examples">Rules Logic (Examples)</a>
+</li>
+<li>
+<a href="#creating-a-time-triggered-rule"><a name="time-triggered"></a> Creating a Time Triggered Rule</a>
+</li>
+<li>
+<a href="#creating-an-event-triggered-rule"><a name="event_triggered"></a> Creating an Event Triggered Rule</a>
+</li>
+</ul>
+</li><li><a href="/en/2.0/user-guide/channels/">Channels</a><ul><li><a href="/en/2.0/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/2.0/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/2.0/user-guide/channels/embedded-form.html">Embedded Form</a></li></ul></li></ul></li><li><a href="/en/2.0/developer-guide/">Developer Guide</a><ul><li><a href="/en/2.0/developer-guide/contributing.html">Contributing</a></li><li><a href="/en/2.0/developer-guide/testing.html">Testing</a></li><li><a href="/en/2.0/developer-guide/restful-api-guide.html">RESTful API Guide</a></li></ul></li><li><a href="/en/2.0/integration/">Integration</a><ul><li><a href="/en/2.0/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/2.0/integration/magento.html">Magento</a></li><li><a href="/en/2.0/integration/wordpress.html">WordPress</a></li><li><a href="/en/2.0/integration/prestashop.html">PrestaShop</a></li><li><a href="/en/2.0/integration/oro.html">OroCRM</a></li></ul></li><li><a href="/en/2.0/faq/">FAQ</a></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Rules</h1>
+  </header>
+
+  <article class="post-content">
+    <p><strong>Rules</strong> determine automated system behaviour governed either by other events or based upon the predefined frequency. </p>
+
+<p><em>Example:</em> When a new ticket is created and the <strong>Subject</strong> field contains &ldquo;ASAP&rdquo; acronym or other keywords or phrases implying urgency, the priority of a ticket should be automatically set to <strong>High</strong> to make sure it will be taken care at the earliest opportunity.</p>
+
+<p>This helpful feature offers the ability to configure system behavior quickly and easily, without involving developers.</p>
+
+<p>Rules can be created / configured from the respective top menu item, shown in the picture below. </p>
+
+<p>This feature relays on system time-based job scheduler. Its required to add certain command to your system job scheduler, for example cron on UNIX-like systems. So please do not forget to configure this like described in installation chapter. </p>
+
+<p><img src="img/Rules_menu.png" alt="Rules menu"></p>
+
+<p>Working principles of Rules are related to:</p>
+
+<ul>
+<li><a href="#time-triggered"><strong>time triggered</strong></a>, </li>
+<li><a href="#event_triggered"><strong>event triggered</strong></a> system behavior.</li>
+</ul>
+
+<p>Both types of these rules should have predefined <strong>Conditions</strong> and <strong>Dependent Actions</strong>, but the major difference between them is that in case of &ldquo;event triggered rules&rdquo;, the resulting action is performed right after one or several conditions are met, and with the &ldquo;time triggered rules&rdquo; conditions might be met,  but the defined action is only going to be performed after the system &ldquo;scans&rdquo; after specified period of time.</p>
+
+<h2 id="rules-logic-examples">Rules Logic (Examples)</h2>
+
+<p>Each rule consists of <strong>Conditions</strong> and <strong>Dependent Actions</strong>. You are not limited to setting a rule with a single condition or single action. Instead, you are free to define complex conditions or group(s) of conditions and as many dependent actions as required.</p>
+
+<p>Let&rsquo;s review the following <strong>example</strong>:</p>
+
+<p>If there are tickets with status &ldquo;in progress&rdquo; for more than 48 hours, we want them to get a higher priority and be assigned to a specific Administrator. In this case, we can create a Time triggered rule and define how often do we want to scan the system to find such tickets. This is how such rule is going to look:</p>
+
+<p><img src="img/Rule_example.png" alt="Rule"></p>
+
+<h3 id="nested-conditions-or-groups-of-conditions">Nested Conditions or Groups of Conditions</h3>
+
+<p>DiamanteDesk is capable of performing actions triggered by multiple conditions or even complex groups of conditions. Let&rsquo;s take a look at the example below:</p>
+
+<p><img src="img/Rule_groups.png" alt="Rule"></p>
+
+<p>In this case we have 2 groups of conditions and if <strong>ANY</strong> of them are true, the action is going to be performed:</p>
+
+<table><thead>
+<tr>
+<th>Group 1</th>
+<th>OR</th>
+<th>Group 2</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Ticket is updated <strong>AND</strong> its property is &ldquo;High&rdquo;</td>
+<td></td>
+<td>Ticket was created from the &ldquo;Phone&rdquo; request <strong>AND</strong> has been added to the &ldquo;Purchase Orders&rdquo; branch</td>
+</tr>
+</tbody></table>
+
+<p>By specifying multiple conditions or groups of conditions, system behaviour may become remarkably automated and save time of your consultants.</p>
+
+<h2 id="creating-a-time-triggered-rule"><a name="time-triggered"></a> Creating a Time Triggered Rule</h2>
+
+<p><em>Time triggered rules can be applied to tickets only.</em> </p>
+
+<p>To create a new rule, triggered within ceratain time intervals, follow these steps:</p>
+
+<p>1) Go to <em>Rules &gt; Time Triggered</em>. A list of <strong>All Time Triggered Rules</strong> previously created in the system opens.</p>
+
+<p>2) At the top right corner click <strong>Create Time Triggered Rule</strong>. 
+The <strong>Create Rule</strong> page opens.</p>
+
+<p>3) Provide the following general information:</p>
+
+<p><img src="img/time_triggered_rule.png" alt="Rule"></p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Name</td>
+<td>Define a meaningful name of the condition. We recommend mentioning conditions and actions in the name to avoid confusion.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Define whether this rule should come into full force right after being saved. This setting is usually set to &ldquo;Active&rdquo; by default, but if you want to enable it later, choose &ldquo;Inactive&rdquo; from the drop-down list.</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Choose how often the system should be checked to find the tickets matching the specified conditions.</td>
+</tr>
+<tr>
+<td>Target</td>
+<td><em>Ticket only.</em></td>
+</tr>
+</tbody></table>
+
+<p>4) Define the <strong>Conditions</strong>.  The condition part is a logical test that, if satisfied or evaluates to true, causes the action to be carried out. Here are the things you want to keep in mind when adding conditions:</p>
+
+<ul>
+<li>You may add several conditions or groups of conditions by clicking <strong>Add Conditions</strong> or <strong>Add Group</strong>, respectively.</li>
+<li>If more than one condition or more than one group of condition is added, you should define whether <strong>All of these are true</strong> or <strong>Any of these are true</strong></li>
+</ul>
+
+<p>5) Define the <strong>Actions</strong> which should follow if conditions are met.</p>
+
+<p>6) At the top right corner of the screen click <strong>Save and Close</strong>.</p>
+
+<h2 id="creating-an-event-triggered-rule"><a name="event_triggered"></a> Creating an Event Triggered Rule</h2>
+
+<p><em>Event triggered rules can be applied to <strong>tickets</strong> and <strong>comments</strong>.</em></p>
+
+<p>To define a dependent action, triggered by some other event in the system:</p>
+
+<p>1) Go to <em>Rules &gt; Event Triggered</em>. A list of <strong>All Time Event Rules</strong> previously created in the system opens.</p>
+
+<p>2) At the top right corner click <strong>Create Event Triggered Rule</strong>. 
+The <strong>Create Rule</strong> page opens.</p>
+
+<p>3) Provide the following <strong>General Information</strong>:</p>
+
+<p><img src="img/event_triggered_rule.png" alt="Rule"></p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Name</td>
+<td>Define a meaningful name of the condition. We recommend mentioning conditions and actions in the name to avoid confusion.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Define whether this rule should come into full force right after being saved. This setting is usually set to &ldquo;Active&rdquo; by default, but if you want to enable it later, choose &ldquo;Inactive&rdquo; from the drop-down list.</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>Ticket or comment.</td>
+</tr>
+</tbody></table>
+
+<p>4) Define the <strong>Conditions</strong>. The condition part is a logical test that, if satisfied or evaluates to true, causes the action to be carried out. Here are the things you want to keep in mind when adding conditions:</p>
+
+<ul>
+<li><p>You may add several conditions or groups of conditions by clicking <strong>Add Conditions</strong> or <strong>Add Group</strong>, respectively.</p></li>
+<li><p>If more than one condition or more than one group of condition is added, you should define whether <strong>All of these are true</strong> or <strong>Any of these are true</strong>.</p></li>
+</ul>
+
+<p>5) Define the <strong>Actions</strong> which should follow if conditions are met.</p>
+
+<p>6) At the top right corner of the screen click <strong>Save and Close</strong>.</p>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

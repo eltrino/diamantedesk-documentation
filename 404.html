@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DiamanteDesk Documentation</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/404.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <span class="navbar-brand">DiamanteDesk Documentation</span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <style type="text/css">
+    .error-template {padding: 40px 15px;text-align: center;}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>whoops.</h1>
+            <p class="lead">
+                The page you were looking for doesn't exist
+            </p>
+            <form action="/en/latest/search.html" method="get" id="search-form">
+              <div class="form-group">
+                <input type="text" id="search-query" name="q" placeholder="Try to find what you were looking for" class="form-control" autocomplete="off" />
+              </div>
+            </form>
+
+            <p>Still no luck? Probably its better to report an <a href="http://github.com/eltrino/diamantedesk-documentation/issues/new">issue</a>.</p>
+
+            <script type="text/javascript">
+                var match = window.location.href.match(/.*?\/([a-z]{2})\/(.*?)\/.*/);
+                if (match) {
+                    $('#search-form').attr("action", '/' + match[1] + '/' + match[2] + '/search.html');
+                }
+            </script>
+        </div>
+    </div>
+</div>
+
+
+          
+
+
+  <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Installation Guide</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/2.0/installation-guide/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/2.0/installation-guide/">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/installation-guide/">1.0</a></li>
+              
+                <li><a href="/en/latest/installation-guide/">latest</a></li>
+              
+                <li><a href="/en/2.0/installation-guide/">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/2.0/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/2.0/installation-guide/">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/installation-guide/">1.0</a></li>
+                        
+                        <li><a href="/en/latest/installation-guide/">latest</a></li>
+                        
+                        <li><a href="/en/2.0/installation-guide/">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/2.0/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/2.0/">Welcome to DiamanteDesk</a></li><li><a href="/en/2.0/installation-guide/">Installation Guide</a><ul>
+<li>
+<a href="#requirements">Requirements</a>
+</li>
+<li>
+<a href="#installation-of-a-standalone-application">Installation of a Standalone Application</a>
+</li>
+<li>
+<a href="#background-job-configuration">Background Job Configuration</a>
+</li>
+<li>
+<a href="#bundles-installation">Bundles Installation</a>
+</li>
+<li>
+<a href="#oro-marketplace">Oro Marketplace</a>
+</li>
+<li>
+<a href="#docker-prebuilt-image">Docker Prebuilt Image</a>
+</li>
+<li>
+<a href="#latest-development-version">Latest Development Version</a>
+</li>
+</ul>
+</li><li><a href="/en/2.0/upgrade-guide/">Upgrade Guide</a></li><li><a href="/en/2.0/user-guide/">User Guide</a><ul><li><a href="/en/2.0/user-guide/dashboards.html">Dashboards</a></li><li><a href="/en/2.0/user-guide/branches.html">Branches</a></li><li><a href="/en/2.0/user-guide/tickets.html">Tickets</a></li><li><a href="/en/2.0/user-guide/reports.html">Reports</a></li><li><a href="/en/2.0/user-guide/customers.html">Customers</a></li><li><a href="/en/2.0/user-guide/users.html">Users / Roles / Groups</a></li><li><a href="/en/2.0/user-guide/tagging.html">Tagging</a></li><li><a href="/en/2.0/user-guide/data-audit.html">Data Audit</a></li><li><a href="/en/2.0/user-guide/filters.html">Filters</a></li><li><a href="/en/2.0/user-guide/rules.html">Rules</a></li><li><a href="/en/2.0/user-guide/channels/">Channels</a><ul><li><a href="/en/2.0/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/2.0/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/2.0/user-guide/channels/embedded-form.html">Embedded Form</a></li></ul></li></ul></li><li><a href="/en/2.0/developer-guide/">Developer Guide</a><ul><li><a href="/en/2.0/developer-guide/contributing.html">Contributing</a></li><li><a href="/en/2.0/developer-guide/testing.html">Testing</a></li><li><a href="/en/2.0/developer-guide/restful-api-guide.html">RESTful API Guide</a></li></ul></li><li><a href="/en/2.0/integration/">Integration</a><ul><li><a href="/en/2.0/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/2.0/integration/magento.html">Magento</a></li><li><a href="/en/2.0/integration/wordpress.html">WordPress</a></li><li><a href="/en/2.0/integration/prestashop.html">PrestaShop</a></li><li><a href="/en/2.0/integration/oro.html">OroCRM</a></li></ul></li><li><a href="/en/2.0/faq/">FAQ</a></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Installation Guide</h1>
+  </header>
+
+  <article class="post-content">
+    <p>DiamanteDesk may serve as an independent end-user application or as an extension for OroCRM. It will also be available for other CRMs in the nearest future. </p>
+
+<p>This section provides detailed instructions on various options of DiamanteDesk application installation.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>DiamanteDesk application was built using <strong>Symfony</strong> 2.3 framework and <strong>Oro Platform</strong>; therefore, all the prerequisites listed as <a href="http://symfony.com/doc/2.3/reference/requirements.html">Symfony</a> and <a href="http://www.orocrm.com/documentation/index/current/system-requirements">Oro</a> system requirements also refer to DiamanteDesk.</p>
+
+<p><strong>DiamanteDesk Requirements:</strong></p>
+
+<ul>
+<li><strong>app/attachments</strong> folder needs to be writable;</li>
+<li>DiamanteDesk uses <strong>Composer</strong> to manage package dependencies. To learn more about the composer and download it from the official website, follow this <a href="https://getcomposer.org/">link</a>;</li>
+<li>MySQL database server with an empty database.</li>
+</ul>
+
+<p>Optionally, providing that your portal should be customized, your system shall comply with additional requirements:</p>
+
+<ul>
+<li>NPM package manager needs to be installed;</li>
+<li>Grunt needs to be installed (globally);</li>
+<li>Bower needs to be installed (globally).</li>
+</ul>
+
+<p>You can also check whether your system meets all the requirements from the command line. In order to do that, you should start with getting the <a href="#get-code">application code</a> from Github and install required <a href="#libraries">libraries</a>. Next, run the following command:</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php">php app/check.php</code></pre></div>
+
+<h3 id="web-server-configuration">Web Server configuration</h3>
+
+<p>DiamanteDesk application was developed on the basis of the Symfony standard application so you can learn more about web server configuration recommendations <a href="http://symfony.com/doc/2.3/cookbook/configuration/web_server_configuration.html">here</a>.</p>
+
+<p><em><strong>Note:</strong> DiamanteDesk makes heavy use of HTTP methods in RESTful calls. The server can be configured to block some of them (for example, PUT, DELETE, etc.). However, this limitation should be removed, otherwise, a certain part of application will not function properly.</em></p>
+
+<h3 id="email-notification-configuration">Email Notification Configuration</h3>
+
+<p>DiamanteDesk provides email notification functionality to automatically confirm user accounts, inform customers when new tickets are created or about any changes made to existing ones. This way a customer is notified whether his request is being processed.</p>
+
+<p>To make sure this functionality works properly, pay attention to email notification configuration:</p>
+
+<ul>
+<li>When installing DiamanteDesk via the web wizard, fill out the <strong>Mailer Settings</strong> section of the <strong>Configuration</strong> step.</li>
+<li>If DiamanteDesk was installed through the console, provide the required configuration data at the <code>app/config/parameters.yml</code> directory. </li>
+</ul>
+
+<h2 id="installation-of-a-standalone-application">Installation of a Standalone Application</h2>
+
+<h3 id="step-1-get-the-stable-version-of-the-application">Step 1: Get the Stable Version of the Application</h3>
+
+<p>Three options to get the latest stable version are available:</p>
+
+<p><strong>Option 1:</strong> Using Git</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">git clone -b 1.0 https://github.com/eltrino/diamantedesk-application</code></pre></div>
+
+<p><strong>Option 2:</strong> With the composer package manager</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar create-project diamante/desk-application</code></pre></div>
+
+<p><strong>Option 3:</strong> Via a release archive</p>
+
+<p>The release archive is built for every stable release and it comes with the so-called &ldquo;batteries included&rdquo; as all the requirements are already installed and all the resources are built. Simply download the package, unzip it to the web-accessible directory on your server and follow the installation steps described in the <a href="#installation">following section</a>.</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">curl -O https://github.com/eltrino/diamantedesk-application/releases/download/2.0.0/diamantedesk-application-full-2.0.0.zip</code></pre></div>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">unzip diamantedesk-application.zip</code></pre></div>
+
+<p><em><strong>Note:</strong> Generally, we do not recommend using the last option and consider it to be a fallback option in case you have only FTP access to your server.</em></p>
+
+<p>Learn how to get the latest <strong>development</strong> version of the application <a href="#getting-the-latest-development-version-of-application">here</a>.</p>
+
+<h3 id="step-2-install-the-required-libraries">Step 2: <a name="libraries"></a> Install the Required Libraries</h3>
+
+<p>Install the dependencies with the composer:</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar install</code></pre></div>
+
+<h3 id="step-3-create-a-database">Step 3: Create a Database</h3>
+
+<p>To install DiamanteDesk you also need to setup MySQL database server with an empty database that will be used later on. Use the following command:</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">php app/console doctrine:database:create</code></pre></div>
+
+<h3 id="step-4-install-the-application">Step 4: <a name="installation"></a> Install the Application</h3>
+
+<p>The application can be installed either using a console or via a web wizard. Select the most suitable version:</p>
+
+<p><strong>Option 1:</strong> Installation Using a Console</p>
+
+<p>To run the installation of DiamanteDesk in a console mode, use the following command:</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php">php app/console diamante:install</code></pre></div>
+
+<p>Additional commands may be required. The system will guide you through the process with questions and command options.</p>
+
+<p>If the system configuration does not meet the requirements, the <em>install</em> command provides corresponding messages. In case there are any issues, fix them and run the command again.</p>
+
+<p><strong>Option 2:</strong> Installation Using Web Wizard</p>
+
+<p>To install the application through a web wizard, follow the link below:</p>
+
+<div class="highlight"><pre><code class="language-http" data-lang="http"><span class="err">http://localhost/install.php</span></code></pre></div>
+
+<p>After the DiamanteDesk installation screen opens, click <strong>Begin Installation</strong>. </p>
+
+<p>Firstly, installation wizard automatically checks system requirements.</p>
+
+<p>In case there are any issues, fix them and refresh the page. After all system configurations meet installation requirements, click <strong>Next</strong>.</p>
+
+<p><img src="img/web_sys_req.png" alt="System Requirements"></p>
+
+<p>The next step of installation process is configuring the application. Provide the data for <strong>MySQL database connection</strong>, <strong>Mailer settings</strong>, <strong>System settings</strong> and <strong>Websocket connection</strong> if the fields are not filled out automatically.</p>
+
+<p><em><strong>Note:</strong> If the application is installed for the first time, leave the <strong>Drop Full Database</strong> check box clear, if you reinstall the application, select this check box.</em></p>
+
+<p><img src="img/web_config.png" alt="Configuration"></p>
+
+<p>Click <strong>Next</strong> and the installer will initialize your database. The list of tasks and the progress on their performance will be shown. If some of the operations are failed or skipped, check out the <strong>app/logs/oro_install.log</strong> file for errors.</p>
+
+<p><img src="img/web_initialization.png" alt="Database"></p>
+
+<p>After you move on to the next step, you should provide such administrative information as company name, link to the application and administrative credentials.</p>
+
+<p><img src="img/web_administration.png" alt="Administration"></p>
+
+<p>Click <strong>Install</strong> to finish the setup process. </p>
+
+<p>After the DiamanteDesk application is successfully installed the following message is displayed:</p>
+
+<p><img src="img/web_finish.png" alt="Finish"></p>
+
+<h2 id="background-job-configuration">Background Job Configuration</h2>
+
+<p>DiamanteDesk requires that certain task should be executed in background. For this you will need to add several commands to your system job scheduler.  </p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php">*/1 * * * * php app/console diamante:cron &gt; dev/null</code></pre></div>
+
+<p>This will execute required command every minute. If you need you can change execution period to 5 minutes. This will decrease system reaction time to certain events (for example processing rules).</p>
+
+<p>Also if you would like to use Email channel its required to add one of the commands described in this <a href="../user-guide/channels/email-processing.html#run-email-processing">section</a> to your system job scheduler.</p>
+
+<h2 id="bundles-installation">Bundles Installation</h2>
+
+<p>Development in progress.</p>
+
+<h2 id="oro-marketplace">Oro Marketplace</h2>
+
+<p>To learn about installation of DiamanteDesk on the basis of OroCRM, please follow this <a href="../integration/oro.html">link</a>.</p>
+
+<h2 id="docker-prebuilt-image">Docker Prebuilt Image</h2>
+
+<p>To learn more on how to use Docker image, please follow this <a href="https://github.com/eltrino/diamantedesk-docker">link</a>.</p>
+
+<p><a name="getting-the-latest-development-version-of-application"></a> </p>
+
+<h2 id="latest-development-version">Latest Development Version</h2>
+
+<p>The latest development version of DiamanteDesk application is also available for download.</p>
+
+<p><em><strong>Disclaimer:</strong> Please keep in mind that this version is unstable and it may cause damage to your website or web store. We disclaim all responsibilitiy for data loss or any sorts of damage to your website or system caused by installation of the development version of application.</em></p>
+
+<p>Select one of the following options to get the development version of application:</p>
+
+<p><strong>Option 1</strong>: Clone the <a href="https://github.com/eltrino/diamantedesk-application#usage">GitHub repository</a> to get the source code</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">git clone https://github.com/eltrino/diamantedesk-application</code></pre></div>
+
+<p><strong>Option 2</strong>: Download using the composer</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar create-project diamante/desk-application:dev-master</code></pre></div>
+
+<hr>
+
+<p>Regradless of the option you&rsquo;ve chosen, next you need to install the required libraries to proceed with installation process:</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar install</code></pre></div>
+
+<p>To get the latest version of the dependencies, execute the following command:</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar update</code></pre></div>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

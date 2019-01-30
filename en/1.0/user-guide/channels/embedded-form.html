@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Embedded Form</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/1.0/user-guide/channels/embedded-form.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/user-guide/channels/embedded-form.html">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">1.0 version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/user-guide/channels/embedded-form.html">1.0</a></li>
+              
+                <li><a href="/en/latest/user-guide/channels/embedded-form.html">latest</a></li>
+              
+                <li><a href="/en/2.0/user-guide/channels/embedded-form.html">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/1.0/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/user-guide/channels/embedded-form.html">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">1.0 version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/user-guide/channels/embedded-form.html">1.0</a></li>
+                        
+                        <li><a href="/en/latest/user-guide/channels/embedded-form.html">latest</a></li>
+                        
+                        <li><a href="/en/2.0/user-guide/channels/embedded-form.html">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/1.0/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/1.0/">Welcome to DiamanteDesk</a></li><li><a href="/en/1.0/installation-guide/">Installation Guide</a></li><li><a href="/en/1.0/user-guide/">User Guide</a><ul><li><a href="/en/1.0/user-guide/branches.html">Branches</a></li><li><a href="/en/1.0/user-guide/tickets.html">Tickets</a></li><li><a href="/en/1.0/user-guide/user-management.html">User Management</a></li><li><a href="/en/1.0/user-guide/tagging.html">Tagging</a></li><li><a href="/en/1.0/user-guide/channels/">Channels</a><ul><li><a href="/en/1.0/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/1.0/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/1.0/user-guide/channels/embedded-form.html">Embedded Form</a><ul>
+<li>
+<a href="#create-embedded-form">Create Embedded Form</a>
+</li>
+<li>
+<a href="#edit-delete-embedded-form">Edit / Delete Embedded Form</a>
+</li>
+<li>
+<a href="#adding-embedded-form-to-the-website">Adding Embedded Form to the Website</a>
+</li>
+</ul>
+</li></ul></li></ul></li><li><a href="/en/1.0/developer-guide/">Developer Guide</a><ul><li><a href="/en/1.0/developer-guide/contributing.html">Contributing</a></li><li><a href="/en/1.0/developer-guide/testing.html">Testing</a></li><li><a href="/en/1.0/developer-guide/restful-api-guide.html">RESTful API Guide</a></li></ul></li><li><a href="/en/1.0/integration/">Integration</a><ul><li><a href="/en/1.0/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/1.0/integration/magento.html">Magento</a></li><li><a href="/en/1.0/integration/wordpress.html">WordPress</a></li><li><a href="/en/1.0/integration/prestashop.html">PrestaShop</a></li></ul></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Embedded Form</h1>
+  </header>
+
+  <article class="post-content">
+    <p>DiamanteDesk is a help desk designed to improve user experience for each of your present and future customers. </p>
+
+<p>In complex systems something may always go wrong and any user should always have various options to contact your support team and let them know what should be fixed or changed. DiamanteDesk system offers several options to do that: by sending an <a href="email-processing.html">email</a>, via a phone call or through a <a href="portal.html">web portal</a>. Some of our Clients also prefer to embed a support form into their website.</p>
+
+<p>DiamanteDesk provides functionality for creating embedded forms on the third-party websites. Take a look at the picture below to see the initial form. It can be modified according to the design of your website.</p>
+
+<p><img src="img/embedded_form_preview.png" alt="Embedded Form"></p>
+
+<p>This form includes the fields for acquisition of user <strong>First Name</strong> and <strong>Last Name</strong>, <strong>Email</strong>  that is going to be used to inform a user on the status of a ticket creation and processing, the <strong>Subject</strong> field for a short precise description of a request or an issue, the <strong>Description</strong> field to specify a reason to contact the support team in details and attachment field allowing to add screenshots in case there are any UI issues.</p>
+
+<p>After a user clicks the <strong>Submit</strong> button, the message from the embedded form is automatically converted into a ticket in a specific branch.</p>
+
+<h2 id="create-embedded-form">Create Embedded Form</h2>
+
+<p>To create a new embedded form, head over to <em>System &gt; Integrations &gt; Embedded Forms</em>  and click <strong>Create Embedded Form</strong> at the right top corner of the screen.</p>
+
+<p><img src="img/embedded_form.png" alt="Embedded Form"></p>
+
+<p><strong>Create Embedded Form</strong> screen opens. Fill out the fields to add a new embedded form to your website. </p>
+
+<blockquote>
+<p><em>Note:</em> Required fields are marked with asterisk (*). </p>
+</blockquote>
+
+<p><img src="img/embedded_form_new.png" alt="Embedded Form"></p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Field</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">Branch</td>
+<td style="text-align: left">Select the branch where all the tickets converted from the embedded form shall be created. This may be a separate branch created specifically for such tickets or a certain website, etc. To learn more about <strong>Branches</strong> take a look at the corresponding section in DiamanteDesk User Guide.</td>
+</tr>
+<tr>
+<td style="text-align: left">Title</td>
+<td style="text-align: left">Specify the title that is going to be used to refer to current embedded form on the Client website or system.</td>
+</tr>
+<tr>
+<td style="text-align: left">Form Type</td>
+<td style="text-align: left">Currently only one form type is available in the DiamanteDesk application, hence select the <strong>Diamante Ticket</strong> option from the drop-down list.</td>
+</tr>
+<tr>
+<td style="text-align: left">CSS</td>
+<td style="text-align: left">This field contains default CSS, which corresponds to the initial form design. It can be edited according to the design of your website by changing border width, color, fonts settings, etc.</td>
+</tr>
+<tr>
+<td style="text-align: left">Success Message</td>
+<td style="text-align: left">This message is to be displayed on the website after the successful form submission. It has the following default message: <em>Ticket has been placed successfully.</em></td>
+</tr>
+</tbody></table>
+
+<p>After all the required fields are filled with all the necessary information, click <strong>Save and Close</strong> or <strong>Save</strong> at the right top corner of the screen.</p>
+
+<p>After the form is saved, it appears in the Embedded Forms grid.</p>
+
+<h2 id="edit-delete-embedded-form">Edit / Delete Embedded Form</h2>
+
+<ol>
+<li>Go to  <em>System &gt; Integrations &gt; Embedded Forms</em>.</li>
+<li>Select the form that shall be edited/deleted from the list of available embedded forms. </li>
+<li>Click the form that shall be edited / deleted. The <strong>Embedded Form</strong> screen opens.
+<img src="img/embedded_form_view.png" alt="Embedded Form"></li>
+<li>Select the corresponding action at the right top of the screen:
+<img src="img/embedded_form_edit_delete.png" alt="Embedded Form"></li>
+</ol>
+
+<ul>
+<li>If you click <strong>Edit</strong>, perform the necessary changes and click <strong>Save</strong> or <strong>Save and Close</strong>.</li>
+<li>If you click <strong>Delete</strong>, the following confirmation message is displayed:</li>
+</ul>
+
+<p><img src="img/embedded_form_delete.png" alt="Embedded Form"></p>
+
+<h2 id="adding-embedded-form-to-the-website">Adding Embedded Form to the Website</h2>
+
+<ol>
+<li>Go to  <em>System &gt; Integrations &gt; Embedded Forms</em>.</li>
+<li>Open the form that shall be added to the website.</li>
+<li>Select the <strong>Get Code</strong> tab to view the source code.
+<img src="img/embedded_form_code.png" alt="Embedded Form"></li>
+<li>Copy the code an add it to your website.</li>
+</ol>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Customers</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/latest/user-guide/customers.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/latest/user-guide/customers.html">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">latest version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/user-guide/customers.html">1.0</a></li>
+              
+                <li><a href="/en/latest/user-guide/customers.html">latest</a></li>
+              
+                <li><a href="/en/2.0/user-guide/customers.html">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/latest/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/latest/user-guide/customers.html">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">latest version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/user-guide/customers.html">1.0</a></li>
+                        
+                        <li><a href="/en/latest/user-guide/customers.html">latest</a></li>
+                        
+                        <li><a href="/en/2.0/user-guide/customers.html">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/latest/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/latest/">Welcome to DiamanteDesk</a></li><li><a href="/en/latest/installation-guide/">Installation Guide</a></li><li><a href="/en/latest/upgrade-guide/">Upgrade Guide</a></li><li><a href="/en/latest/user-guide/">User Guide</a><ul><li><a href="/en/latest/user-guide/dashboards.html">Dashboards</a></li><li><a href="/en/latest/user-guide/branches.html">Branches</a></li><li><a href="/en/latest/user-guide/tickets.html">Tickets</a></li><li><a href="/en/latest/user-guide/reports.html">Reports</a></li><li><a href="/en/latest/user-guide/customers.html">Customers</a><ul>
+<li>
+<a href="#create-a-new-customer">Create a New Customer</a>
+</li>
+<li>
+<a href="#customer-account">Customer Account</a>
+</li>
+<li>
+<a href="#mass-actions">Mass Actions</a>
+</li>
+</ul>
+</li><li><a href="/en/latest/user-guide/users.html">Users / Roles / Groups</a></li><li><a href="/en/latest/user-guide/tagging.html">Tagging</a></li><li><a href="/en/latest/user-guide/data-audit.html">Data Audit</a></li><li><a href="/en/latest/user-guide/filters.html">Filters</a></li><li><a href="/en/latest/user-guide/rules.html">Rules</a></li><li><a href="/en/latest/user-guide/channels/">Channels</a><ul><li><a href="/en/latest/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/latest/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/latest/user-guide/channels/embedded-form.html">Embedded Form</a></li></ul></li></ul></li><li><a href="/en/latest/developer-guide/">Developer Guide</a><ul><li><a href="/en/latest/developer-guide/contributing.html">Contributing</a></li><li><a href="/en/latest/developer-guide/testing.html">Testing</a></li><li><a href="/en/latest/developer-guide/restful-api-guide.html">RESTful API Guide</a></li><li><a href="/en/latest/developer-guide/localizations.html">Localizations</a></li></ul></li><li><a href="/en/latest/integration/">Integration</a><ul><li><a href="/en/latest/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/latest/integration/magento.html">Magento</a></li><li><a href="/en/latest/integration/wordpress.html">WordPress</a></li><li><a href="/en/latest/integration/prestashop.html">PrestaShop</a></li><li><a href="/en/latest/integration/oro.html">OroCRM</a></li></ul></li><li><a href="/en/latest/faq/">FAQ</a></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Customers</h1>
+  </header>
+
+  <article class="post-content">
+    <p>Every customer who creates a ticket at the DiamanteDesk <a href="channels/portal.html">portal</a> or sends an email to the <a href="channels/email-processing.html">support address</a> is automatically added to the help desk customer database. This helps keeping track of all the tickets created by a specific user and monitor general customer activity.</p>
+
+<p>To see the list of existing DiamanteDesk customers, open the <strong>Customers</strong> top menu.</p>
+
+<p><img src="img/customers.png" alt="Customers"></p>
+
+<h2 id="create-a-new-customer">Create a New Customer</h2>
+
+<p>To create a new customer:</p>
+
+<ol>
+<li>Navigate to the <strong>Customers</strong> top menu. The <strong>Customers</strong> screen opens. </li>
+<li>Click <strong>Create User</strong> at the top right corner of the screen. <strong>Create Customer</strong> screen opens.
+<img src="img/new_customer.png" alt="Customers"></li>
+<li>Provide the same information that would be required to register at the portal or that would have been automatically populated from the email during the email processing: user <strong>Email</strong>, <strong>First Name</strong> and <strong>Last Name</strong>.</li>
+<li>After all the necessary information has been provided, click <strong>Save</strong> or <strong>Save and Close</strong> to add new user to the system.</li>
+</ol>
+
+<p>After the user account has been created through the admin panel or via the portal, email owner receives the following email:</p>
+
+<p><img src="img/customer_email.png" alt="Customers"></p>
+
+<h2 id="customer-account">Customer Account</h2>
+
+<p>The customer (user) account screen contains general information about the customer, such as name, email and his activity in DiamanteDesk.</p>
+
+<p><img src="img/customer_account.png" alt="Customers"></p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Email, First Name, Last name</td>
+<td>These fields display  general information about the account owner. This information is obtained either from an email during email processing, from the provided credentials when the user registers in a portal or if admin user creates customer account in a system.</td>
+</tr>
+<tr>
+<td><a name="is-active"></a>Is Active</td>
+<td>When this field is marked as active, he can successfully log into DiamanteDesk and may create new tickets or resolve any existing ones. If the user is inactive, he should confirm or change his password to be able to log into the system.</td>
+</tr>
+</tbody></table>
+
+<p>The <strong>User Activity</strong> section of the customer account screen displays the general information about all the tickets created by the user in a system.</p>
+
+<h2 id="mass-actions">Mass Actions</h2>
+
+<p>Mass action allows performing mass operations on the selected rows of the grid. DiamanteDesk offers the following mass actions that can be applied to the customer profiles selected from the grid:</p>
+
+<ol>
+<li>Choose the profiles to which mass actions should be applied.
+<img src="img/customers_mass_action.png" alt="Customers"></li>
+<li>The following mass actions are available for customer profiles:</li>
+</ol>
+
+<ul>
+<li><strong>Delete Selected Users.</strong> Use this action to delete several customer profiles at a time. Keep in mind that in DiamanteDesk, if the customer profile is deleted, the user information is not entirely removed from the system. It is usually marked as deleted and the profile of a deleted customer is removed from the list of existing customers, although the system displays strikethrough customer first and last name at the tickets where he was assigned as a reporter or if he authored any comments as shown on the example below.</li>
+</ul>
+
+<p><img src="img/customer_deleted.png" alt="Customers"></p>
+
+<ul>
+<li><strong>Force Reset Passwords For Selected Users.</strong> This option allows administrators to force certain/all users to change their passwords due to security measures or any other specific reasons. All the selected users receive emails notifying them that they should reset their passwords, providing a link to the page where the password can be changed.</li>
+</ul>
+
+<p><img src="img/customer_password_reset.png" alt="Customers"></p>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

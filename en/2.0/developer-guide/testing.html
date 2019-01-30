@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Testing</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/2.0/developer-guide/testing.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/2.0/developer-guide/testing.html">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/developer-guide/testing.html">1.0</a></li>
+              
+                <li><a href="/en/latest/developer-guide/testing.html">latest</a></li>
+              
+                <li><a href="/en/2.0/developer-guide/testing.html">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/2.0/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/2.0/developer-guide/testing.html">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/developer-guide/testing.html">1.0</a></li>
+                        
+                        <li><a href="/en/latest/developer-guide/testing.html">latest</a></li>
+                        
+                        <li><a href="/en/2.0/developer-guide/testing.html">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/2.0/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/2.0/">Welcome to DiamanteDesk</a></li><li><a href="/en/2.0/installation-guide/">Installation Guide</a></li><li><a href="/en/2.0/upgrade-guide/">Upgrade Guide</a></li><li><a href="/en/2.0/user-guide/">User Guide</a><ul><li><a href="/en/2.0/user-guide/dashboards.html">Dashboards</a></li><li><a href="/en/2.0/user-guide/branches.html">Branches</a></li><li><a href="/en/2.0/user-guide/tickets.html">Tickets</a></li><li><a href="/en/2.0/user-guide/reports.html">Reports</a></li><li><a href="/en/2.0/user-guide/customers.html">Customers</a></li><li><a href="/en/2.0/user-guide/users.html">Users / Roles / Groups</a></li><li><a href="/en/2.0/user-guide/tagging.html">Tagging</a></li><li><a href="/en/2.0/user-guide/data-audit.html">Data Audit</a></li><li><a href="/en/2.0/user-guide/filters.html">Filters</a></li><li><a href="/en/2.0/user-guide/rules.html">Rules</a></li><li><a href="/en/2.0/user-guide/channels/">Channels</a><ul><li><a href="/en/2.0/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/2.0/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/2.0/user-guide/channels/embedded-form.html">Embedded Form</a></li></ul></li></ul></li><li><a href="/en/2.0/developer-guide/">Developer Guide</a><ul><li><a href="/en/2.0/developer-guide/contributing.html">Contributing</a></li><li><a href="/en/2.0/developer-guide/testing.html">Testing</a><ul>
+<li>
+<a href="#unit-testing">Unit Testing</a>
+</li>
+<li>
+<a href="#functional-testing">Functional Testing</a>
+</li>
+</ul>
+</li><li><a href="/en/2.0/developer-guide/restful-api-guide.html">RESTful API Guide</a></li></ul></li><li><a href="/en/2.0/integration/">Integration</a><ul><li><a href="/en/2.0/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/2.0/integration/magento.html">Magento</a></li><li><a href="/en/2.0/integration/wordpress.html">WordPress</a></li><li><a href="/en/2.0/integration/prestashop.html">PrestaShop</a></li><li><a href="/en/2.0/integration/oro.html">OroCRM</a></li></ul></li><li><a href="/en/2.0/faq/">FAQ</a></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Testing</h1>
+  </header>
+
+  <article class="post-content">
+    <p>Software testing is an essential part of the development process. Deliberate and thorough testing ensures that software will work properly and our Clients will not face unforeseen consequences when using it. </p>
+
+<p>DiamanteDesk team pays proper attention to testing, both <strong>unit</strong> and <strong>functional</strong>, and we rely heavily on PHPUnit, a software suite designed for testing, which is commonly accepted as an industrial standard for quality assurance. </p>
+
+<p>DiamanteDesk application offers all the required tests bundled with the most reliable version of PHPUnit. </p>
+
+<h2 id="unit-testing">Unit Testing</h2>
+
+<p>Unit testing is intended to test individual software components in strict isolation from the <em>live</em> system resources, thus, ensuring application integrity. Unit testing utilizes the &ldquo;mock&rdquo; object approach to test the behavior of each component in different cases without affecting any other part of the system. </p>
+
+<p>DiamanteDesk Unit Test Suite is available in each bundle and can be run from the command line. 
+The way of calling the PHPUnit binary may vary on your setup. The following examples are be based on the assumption  that your PHPUnit is installed globally, the DiamanteDesk application is installed via the Composer, and the source code resides in the <em>vendor/diamante</em> folder of your server&rsquo;s document root.</p>
+
+<p>To run the test suite, issue the following command:</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">bash phpunit -c vendor/diamante/<span class="o">{</span>BundleName<span class="o">}</span>/phpunit.xml.dist vendor/diamante/<span class="o">{</span>BundleName<span class="o">}</span>/Tests</code></pre></div>
+
+<p><em><strong>Note:</strong> {BundleName} is a placeholder for a name of the bundle you want to test, e.g. DeskBundle, ApiBundle, FrontBundle, etc.</em></p>
+
+<p>The output consists of the test results, including the general number of tests run, assertions made and the number of failed and skipped tests or tests containing errors.</p>
+
+<h2 id="functional-testing">Functional Testing</h2>
+
+<p>Functional testing is aimed at testing the application integrity within the current setup. Depending on the incoming request parameters it may include the database interaction, file system operation and result processing testing, which is a reason why functional testing is commonly referred to as Integration testing.</p>
+
+<p>The best practice for functional testing is using the test database filled with randomly generated test data (also known as fixtures). The testing engine mimics the &ldquo;real&rdquo; request via different internal tools and analyzes the systems response. Moreover, the built-in tools allow building complex testing scenarios with different parameters which is a great way to test system behavior and analyze system response on our interaction with different UI elements; for example, when clicking buttons and filling out the forms on the web pages.</p>
+
+<p>DiamanteDesk Unit Testing Suite is available by issuing the following command:</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">bash phpunit -c vendor/diamante/<span class="o">{</span>BundleName<span class="o">}</span>/Tests/Functional/phpunit/xml.dist vendor/diamante/<span class="o">{</span>BundleName<span class="o">}</span>/Tests/Functional</code></pre></div>
+
+<p>The output of the command execution is similar to the unit testing output. </p>
+
+<p><em><strong>Note:</strong> We highly recommend setting up a separate database for the proper software testing.</em></p>
+
+<h3 id="how-to-setup-testing-environment">How to Setup Testing Environment</h3>
+
+<ul>
+<li>Set up your test environment parameters by creating the following file:</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">app/config/parameters_test.yml</code></pre></div>
+
+<p>The  structure of this file is similar to your <em>prod</em> environment one.</p>
+
+<ul>
+<li>Reinstall DiamanteDesk, using <strong>&ndash;env=test</strong> flag if required (depends on your setup). Please refer to the <a href="../installation-guide/index.html">Installation Manual</a> for more details. </li>
+</ul>
+
+<h3 id="running-the-suite-of-functional-tests">Running the Suite of Functional Tests</h3>
+
+<p>When the command described above is issued, the following happens:</p>
+
+<ol>
+<li>There is an option in the configuration file, specifying the default <strong>bootstrap.php</strong> file, required to inform the application on its environment. The script in that file runs every time you run the test suite. Utilizing this file makes it possible to provide the test database with the test data (fixtures) that shall be processed.</li>
+<li>When fixtures are being loaded, the existing tables shall be truncated in order to get rid of the data from the previous test. This shall be done every time we run the test suite to ensure getting consistent results.</li>
+<li>Next, the new set of automatically generated data shall be loaded.</li>
+<li>Eventually, the test suite launches the first test and continues the process as specified in the <strong>phpunit.xml.dist</strong> file.</li>
+</ol>
+
+<h3 id="adding-new-tests-and-test-data">Adding New Tests and Test Data</h3>
+
+<p>DiamanteDesk application is open for contributing, so if you want to add a new functionality to the system, we strongly recommend writing unit/functional tests for your bundle and testing it against the existing code to ensure the app integrity.  All the newly added functionality that cannot make it through the test suite can&rsquo;t get checked into DiamanteDesk.</p>
+
+<p>Here are a few rules we follow when testing DiamanteDesk application:</p>
+
+<ol>
+<li>Unit tests are placed in the <strong>Tests</strong> folder of your bundle. </li>
+<li>Functional tests are placed in the <strong>Tests/Functional</strong> folder.</li>
+<li>Each set of tests has it&rsquo;s own config. </li>
+<li>Functional test suite is required to have a <strong>bootstrap</strong> script for correct autoloading.</li>
+<li>Fixtures are added via placing your data generator class into the <strong>DataFixtures/Test</strong> folder.</li>
+<li>Each file name, which contains tests, has to end with <strong>Test.php</strong>.</li>
+</ol>
+
+<p>These simple recommendations enable seamless integration of new tests into the existing test suites.</p>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

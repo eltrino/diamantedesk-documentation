@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RESTful API Guide</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/2.0/developer-guide/restful-api-guide.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/2.0/developer-guide/restful-api-guide.html">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/developer-guide/restful-api-guide.html">1.0</a></li>
+              
+                <li><a href="/en/latest/developer-guide/restful-api-guide.html">latest</a></li>
+              
+                <li><a href="/en/2.0/developer-guide/restful-api-guide.html">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/2.0/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/2.0/developer-guide/restful-api-guide.html">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/developer-guide/restful-api-guide.html">1.0</a></li>
+                        
+                        <li><a href="/en/latest/developer-guide/restful-api-guide.html">latest</a></li>
+                        
+                        <li><a href="/en/2.0/developer-guide/restful-api-guide.html">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/2.0/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/2.0/">Welcome to DiamanteDesk</a></li><li><a href="/en/2.0/installation-guide/">Installation Guide</a></li><li><a href="/en/2.0/upgrade-guide/">Upgrade Guide</a></li><li><a href="/en/2.0/user-guide/">User Guide</a><ul><li><a href="/en/2.0/user-guide/dashboards.html">Dashboards</a></li><li><a href="/en/2.0/user-guide/branches.html">Branches</a></li><li><a href="/en/2.0/user-guide/tickets.html">Tickets</a></li><li><a href="/en/2.0/user-guide/reports.html">Reports</a></li><li><a href="/en/2.0/user-guide/customers.html">Customers</a></li><li><a href="/en/2.0/user-guide/users.html">Users / Roles / Groups</a></li><li><a href="/en/2.0/user-guide/tagging.html">Tagging</a></li><li><a href="/en/2.0/user-guide/data-audit.html">Data Audit</a></li><li><a href="/en/2.0/user-guide/filters.html">Filters</a></li><li><a href="/en/2.0/user-guide/rules.html">Rules</a></li><li><a href="/en/2.0/user-guide/channels/">Channels</a><ul><li><a href="/en/2.0/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/2.0/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/2.0/user-guide/channels/embedded-form.html">Embedded Form</a></li></ul></li></ul></li><li><a href="/en/2.0/developer-guide/">Developer Guide</a><ul><li><a href="/en/2.0/developer-guide/contributing.html">Contributing</a></li><li><a href="/en/2.0/developer-guide/testing.html">Testing</a></li><li><a href="/en/2.0/developer-guide/restful-api-guide.html">RESTful API Guide</a><ul>
+<li>
+<a href="#api-endpoints">API Endpoints</a>
+</li>
+<li>
+<a href="#authentication">Authentication</a>
+</li>
+<li>
+<a href="#format">Format</a>
+</li>
+<li>
+<a href="#pagination-sorting-filtering">Pagination, Sorting, Filtering</a>
+</li>
+<li>
+<a href="#error-handling">Error Handling</a>
+</li>
+<li>
+<a href="#resources">Resources</a>
+</li>
+</ul>
+</li></ul></li><li><a href="/en/2.0/integration/">Integration</a><ul><li><a href="/en/2.0/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/2.0/integration/magento.html">Magento</a></li><li><a href="/en/2.0/integration/wordpress.html">WordPress</a></li><li><a href="/en/2.0/integration/prestashop.html">PrestaShop</a></li><li><a href="/en/2.0/integration/oro.html">OroCRM</a></li></ul></li><li><a href="/en/2.0/faq/">FAQ</a></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">RESTful API Guide</h1>
+  </header>
+
+  <article class="post-content">
+    <p>DiamanteDesk REST APIs enable interaction between the application and other software products, such as websites, CRMs, content management systems and other applications. Using the DiamanteDesk REST APIs you can read, modify, add and delete the data directly in the helpdesk.</p>
+
+<p>To ensure secure access it is recommended to use HTTPS protocol for API requests.</p>
+
+<h2 id="api-endpoints">API Endpoints</h2>
+
+<p>API endpoints define the connection point to your service, giving the external application access to DiamanteDesk data. API endpoints are prefixed with your domain name:</p>
+
+<div class="highlight"><pre><code class="language-http" data-lang="http"><span class="err">http(s)://domainname/rest/api/{version}/desk/</span></code></pre></div>
+
+<h2 id="authentication">Authentication</h2>
+
+<p>DiamanteDesk uses <a href="https://en.wikipedia.org/wiki/WS-Security">WSSE authentication</a> to ensure secure access to the third party applications via REST APIs. WSSE authentication in DiamanteDesk application, which is based on Symfony, is implemented by using this <a href="https://github.com/escapestudios/EscapeWSSEAuthenticationBundle">bundle</a>.</p>
+
+<p>WSSE authentication is based on:</p>
+
+<ul>
+<li>a username;</li>
+<li>a nonce (created to avoid replay attacks);</li>
+<li>a timestamp;</li>
+<li>the password digest (In DiamanteDesk the password digest is represented as API Key. To learn how to generate API key, please check the <strong>API Credentials</strong> article in the <strong>Integration</strong> section of DiamanteDesk documentation).</li>
+</ul>
+
+<h2 id="format">Format</h2>
+
+<p>All the data in DiamanteDesk APIs is transmitted either in JSON or XML format with JSON being a default format.
+The format can be specified either:</p>
+
+<ul>
+<li>in the request header (Content-Type, Accept). <em><strong>Note:</strong> The MIME type shall be specified in header (application/json, application/xml).</em></li>
+<li>or specified in the URL.</li>
+</ul>
+
+<h2 id="pagination-sorting-filtering">Pagination, Sorting, Filtering</h2>
+
+<h3 id="pagination">Pagination</h3>
+
+<p>When a user performs a request to get a collection of entities or a certain entity, the data requested is returned in the response body. Depending on the requested items, objects or products, the list of results can contain thousands of results that should be paged through. The number of items per each page can be specified using page parameters. Paginated queries start at page 1 by default.</p>
+
+<p>For example, if you set the page limit to 10 items and you need to retrieve items from 21 to 30 your request should contain such parameters: limit=10 and page=3.</p>
+
+<p>When a user requests a list of certain entities, the server returns the results along with additional metadata, such as:</p>
+
+<ul>
+<li>the general amount of entities, shown at the X-Total HTTP header;</li>
+<li>the links to the connected pages in the Link HTTP header. There are 4 types of such links:</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>next</td>
+<td>The URL to the following results page.</td>
+</tr>
+<tr>
+<td>last</td>
+<td>The URL to the last results page.</td>
+</tr>
+<tr>
+<td>first</td>
+<td>The URL to the first results page.</td>
+</tr>
+<tr>
+<td>prev</td>
+<td>The URL to the previous results page.</td>
+</tr>
+</tbody></table>
+
+<p>Take a look at the example, containing such headers:</p>
+
+<div class="highlight"><pre><code class="language-http" data-lang="http"><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+
+Link: &lt;http://hostname/api/rest/latest/desk/branches?limit=25&amp;page=2&gt;; rel="next", &lt;http://hostname/api/rest/latest/desk/branches?limit=25&amp;page=5&gt;; rel="last"
+X-Total: 110</code></pre></div>
+
+<h3 id="sorting">Sorting</h3>
+
+<p>The results can be sorted according to the <strong>sort</strong> and <strong>order</strong> GET parameters, included in the URL. The <strong>sort</strong> parameter performs the sorting according to the property name of an entity, <strong>order</strong> parameter may be set either to <strong>asc</strong> (ascending) or <strong>desc</strong> (descending).</p>
+
+<h3 id="filtering">Filtering</h3>
+
+<p>Filtering can be performed according to any parameter of the corresponding entity. For example, to filter the branch by its key, add &ldquo;key=PO&rdquo; parameter to the URL.</p>
+
+<p>If the value is specified for string property, the search is performed for any occurrence, meaning the result will return PO, DPO, DPOD, etc. If the value is specified for numeric property the search is performed for equal value.</p>
+
+<p>To filter the results by the time when a certain entity or entities were created or updated, the following parameters should be used:</p>
+
+<ul>
+<li>createdBefore</li>
+<li>createdAfter</li>
+<li>updatedBefore</li>
+<li>updatedAfter</li>
+</ul>
+
+<h2 id="error-handling">Error Handling</h2>
+
+<p>When the fault occurs within the application or on a server side, the server returns the corresponding status code followed by the message, indicating the root cause in the response body.</p>
+
+<p>Here are the status codes of the errors that may occur when working with DiamanteDesk application.</p>
+
+<table><thead>
+<tr>
+<th>Status Code</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>400</strong></td>
+<td style="text-align: left">Validation failed and the request provided by the client was incorrect or distorted and the server could not understand it.</td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td style="text-align: left">Such error occurs when a user attempts to access a page or resource that requires authentication. To resolve this issue, correct log in details shall be provided.</td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td style="text-align: left">Authorization issue, meaning that a user has not been granted permission to access specific page or method.</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td style="text-align: left">This error means that the server could not process client request with the reason for that described in the error message.</td>
+</tr>
+<tr>
+<td><strong>500</strong></td>
+<td style="text-align: left">Internal server error. This status code indicates that this is not a client-side issue, meaning that the problem occurred on the server side rather than in DiamanteDesk application.</td>
+</tr>
+</tbody></table>
+
+<p>Take a look at the example of a 404 error below:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">POST /diamantedesk-1.0/web/api/rest/latest/desk/branches HTTP/1.1</span>
+
+<span class="pi">{</span>
+    <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Branch"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
+        <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Tag"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">TB1"</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCHTEST"</span>
+<span class="pi">}</span>
+
+<span class="s">HTTP/1.1 404 Not Found</span>
+
+<span class="pi">{</span>
+    <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Branch</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">already</span><span class="nv"> </span><span class="s">exists.</span><span class="nv"> </span><span class="s">Please,</span><span class="nv"> </span><span class="s">provide</span><span class="nv"> </span><span class="s">another</span><span class="nv"> </span><span class="s">one."</span>
+<span class="pi">}</span></code></pre></div>
+
+<h2 id="resources">Resources</h2>
+
+<p>REST APIs are necessary when DiamanteDesk is integrated into another application and when interactions with the DiamanteDesk server shall be scripted.</p>
+
+<p><em><strong>Note:</strong> Here are the values of the variables API methods:</em></p>
+
+<table><thead>
+<tr>
+<th style="text-align: left"><em>Variable</em></th>
+<th style="text-align: left"><em>Requirements</em></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><em>{version}</em></td>
+<td style="text-align: left"><em>latest, v1</em></td>
+</tr>
+<tr>
+<td style="text-align: left"><em>{_format}</em></td>
+<td style="text-align: left"><em>xml, json</em></td>
+</tr>
+</tbody></table>
+
+<h3 id="branches">Branches</h3>
+
+<h6 id="get-retrieve-the-list-of-all-branches">GET: Retrieve the list of all branches</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches</code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+    <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:21+0000"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">branchDescription1"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCHB"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">branchName1"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:21+0000"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:21+0000"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">branchDescription2"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">2</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCHC"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">branchName2"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:21+0000"</span>
+    <span class="pi">}</span>
+<span class="pi">]</span></code></pre></div>
+
+<h6 id="get-retrieve-a-branch-by-id">GET: Retrieve a branch by ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:36+0000"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">11</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCHTEST"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Branch"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:36+0000"</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Status Code:</strong> 404 (Not Found)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Branch</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed.</span><span class="nv"> </span><span class="s">Branch</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found."</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="post-create-a-new-branch">POST: Create a new branch</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches</code></pre></div>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Note</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> Specify the name of a new branch.</td>
+<td style="text-align: left">Minimum length is 2 letters.</td>
+</tr>
+<tr>
+<td style="text-align: left">description</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left">Enter the description of a new branch, if necessary.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">tags</td>
+<td style="text-align: left"><em>arrey of strings</em></td>
+<td style="text-align: left"><strong>Optional</strong> Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the <strong>Tagging</strong> section in the <strong>User Guide</strong> section.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">key</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left">Enter the key of a new branch. This key should be unique accross the whole system.</td>
+<td style="text-align: left">The branch key must contain only letters. Minimum length is 2 letters.</td>
+</tr>
+</tbody></table>
+
+<p><em>Request example:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Branch"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
+        <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Tag"</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCHTEST"</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 201 (Created)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:36+0000"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">11</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCHTEST"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Branch"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
+        <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Tag"</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:36+0000"</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="put-patch-update-properties-of-a-certain-branch-by-its-id">PUT, PATCH: Update properties of a certain branch by its ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">PUT|PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+
+<p><em>Request example:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Branch</span><span class="nv"> </span><span class="s">PUT"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
+        <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Tag"</span>
+    <span class="pi">]</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:36+0000"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">11</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCHTEST"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Branch</span><span class="nv"> </span><span class="s">PUT"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
+        <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Tag"</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:36+0000"</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="delete-delete-a-branch-by-id">DELETE: Delete a branch by ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 204 (No Content)</p>
+
+<p><em>Response body:</em> null</p>
+
+<h3 id="tickets">Tickets</h3>
+
+<h6 id="get-retrieve-list-of-all-tickets">GET: Retrieve list of all tickets</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets</code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">branch"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-08-20T17:05:07+0000"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">13</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCH-13"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">priority"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">low"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">reporter"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">source"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">web"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">new"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">subject"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test</span><span class="nv"> </span><span class="s">subject"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test-tag"</span>
+      <span class="pi">},</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">2</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test-tag2"</span>
+      <span class="pi">}</span>
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">unique_id"</span><span class="pi">:</span> <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">52429dbc757cbe09a73f8e841b7d5af5"</span>
+    <span class="pi">},</span>
+    <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-08-20T19:42:04+0000"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">watcher_list"</span><span class="pi">:</span> <span class="pi">[</span>
+      <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">4</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">user_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span>
+      <span class="pi">}</span>
+    <span class="pi">]</span>
+  <span class="pi">}</span></code></pre></div>
+
+<h6 id="get-retrieve-the-ticket-by-the-given-ticket-id">GET: Retrieve the ticket by the given ticket ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[],</span>
+  <span class="s2">"</span><span class="s">branch"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">comments"</span><span class="pi">:</span> <span class="pi">[],</span>
+  <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-08-20T17:05:07+0000"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&lt;p&gt;description&lt;/p&gt;"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">13</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCH-13"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">priority"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">low"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">reporter"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">source"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">web"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">new"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">subject"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test</span><span class="nv"> </span><span class="s">subject"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test-tag"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">2</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test-tag2"</span>
+    <span class="pi">}</span>
+  <span class="pi">],</span>
+  <span class="s2">"</span><span class="s">unique_id"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">52429dbc757cbe09a73f8e841b7d5af5"</span>
+  <span class="pi">},</span>
+  <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-08-20T19:42:04+0000"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">watcher_list"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">4</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">user_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span>
+    <span class="pi">}</span>
+  <span class="pi">]</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Status Code:</strong> 404 (OK)</p>
+
+<p><em>Response body:</em>   </p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Ticket</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed,</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found."</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="post-create-a-new-ticket">POST: Create a new ticket</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets</code></pre></div>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Note</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">branch</td>
+<td style="text-align: left"><em>integer</em></td>
+<td style="text-align: left"><strong>Required.</strong> Specify a branch name where the ticket should be created.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">subject</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> Enter a short description of a new ticket.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">description</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> Enter the detailed description of a new ticket.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">status</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> The available statuses are: <strong>New</strong>, <strong>Open</strong>, <strong>Pending</strong>, <strong>In progress</strong>, <strong>Closed</strong> and <strong>On Hold</strong>.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">priority</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> Specify the priority of a new ticket. The available options are <strong>Low</strong>, <strong>Medium</strong> or <strong>High</strong>.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">source</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> Every service user has 4 available options to contact the Help Desk team: by creating a request through a <strong>Web</strong> form or through the embedded form on a website (optional), as an <strong>Email</strong> notification, via a <strong>Phone</strong> call. Specify the corresponding source of a ticket.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">reporter</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> The reporter is an administrator who can create a ticket for any customer.</td>
+<td style="text-align: left">The name of a reporter must contain only letters.</td>
+</tr>
+<tr>
+<td style="text-align: left">assignee</td>
+<td style="text-align: left"><em>integer</em></td>
+<td style="text-align: left"><strong>Optional.</strong> Select a person responsible for ticket handling.</td>
+<td style="text-align: left">Only OroCRM user can be selected.</td>
+</tr>
+<tr>
+<td style="text-align: left">tags</td>
+<td style="text-align: left"><em>array of strings</em></td>
+<td style="text-align: left"><strong>Optional.</strong> Specify the tags appropriate for the new branch. To learn more about tagging in DiamanteDesk, please check the <strong>Tagging</strong> section in the <strong>User Guide</strong> section.</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody></table>
+
+<p><em>Request example:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">branch"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">subject"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Ticket</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">open"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">priority"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">medium"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">source"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">phone"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">reporter"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">assignee"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">tags"</span> <span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">test1"</span><span class="pi">,</span><span class="s2">"</span><span class="s">test2"</span><span class="pi">,</span><span class="s2">"</span><span class="s">test3"</span><span class="pi">,</span><span class="s2">"</span><span class="s">test4"</span><span class="pi">]</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 201 (Created)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[],</span>
+  <span class="s2">"</span><span class="s">branch"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">comments"</span><span class="pi">:</span> <span class="pi">[],</span>
+  <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-31T11:26:51+0000"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">95</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCHB-10"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">priority"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">medium"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">reporter"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">asignee"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">source"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">phone"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">open"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">subject"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Ticket</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">API"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="s2">"</span><span class="s">test1"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">test2"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">test3"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">test4"</span>
+  <span class="pi">],</span>
+  <span class="s2">"</span><span class="s">unique_id"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">acee0fb73b9c1188472787b20a2760ae"</span>
+  <span class="pi">},</span>
+  <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-31T11:26:51+0000"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">watcher_list"</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="put-patch-update-certain-properties-of-the-ticket-by-id">PUT, PATCH: Update certain properties of the ticket by ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">PUT, PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+
+<p><em>Request example:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+   <span class="s2">"</span><span class="s">subject"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">New</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">subject"</span><span class="pi">,</span>
+   <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">new</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">tag1"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">new</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">tag2"</span><span class="pi">]</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[],</span>
+  <span class="s2">"</span><span class="s">branch"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">comments"</span><span class="pi">:</span> <span class="pi">[],</span>
+  <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-31T11:26:51+0000"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">95</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCHB-10"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">priority"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">medium"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">reporter"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">source"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">phone"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">open"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">subject"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">New</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">subject"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="s2">"</span><span class="s">new</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">tag1"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">new</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">tag2"</span>
+  <span class="pi">],</span>
+  <span class="s2">"</span><span class="s">unique_id"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">acee0fb73b9c1188472787b20a2760ae"</span>
+  <span class="pi">},</span>
+  <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-31T11:26:51+0000"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">watcher_list"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">23</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">user_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span>
+    <span class="pi">}</span>
+  <span class="pi">]</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="delete-delete-the-ticket-by-id">DELETE: Delete the ticket by ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 204 (No Content)</p>
+
+<p><em>Response body:</em> null</p>
+
+<h6 id="get-retrieve-a-ticket-by-the-given-ticket-key">GET: Retrieve a ticket by the given ticket key</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>key<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[],</span>
+  <span class="s2">"</span><span class="s">branch"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">comments"</span><span class="pi">:</span> <span class="pi">[],</span>
+  <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-08-20T17:05:07+0000"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&lt;p&gt;test</span><span class="nv"> </span><span class="s">description&lt;/p&gt;"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">13</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCH-13"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">priority"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">low"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">reporter"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">source"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">web"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">new"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">subject"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test</span><span class="nv"> </span><span class="s">subject"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test-tag1"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">2</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test-tag2"</span>
+    <span class="pi">}</span>
+  <span class="pi">],</span>
+  <span class="s2">"</span><span class="s">unique_id"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">52429dbc757cbe09a73f8e841b7d5af5"</span>
+  <span class="pi">},</span>
+  <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-08-20T19:42:04+0000"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">watcher_list"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">4</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">user_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span>
+    <span class="pi">}</span>
+  <span class="pi">]</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Status Code:</strong> 404 (Not Found)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="err">}</span>
+    <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Ticket</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed,</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found."</span>
+<span class="err">}</span></code></pre></div>
+
+<h6 id="put-patch-update-certain-properties-of-a-ticket-by-the-ticket-key">PUT, PATCH: Update certain properties of a ticket by the ticket key</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">PUT, PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>key<span class="o">}</span></code></pre></div>
+
+<p><em>Request example:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+   <span class="s2">"</span><span class="s">subject"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">New</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">subject"</span><span class="pi">,</span>
+   <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">new</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">tag5"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">new</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">tag6"</span><span class="pi">]</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[],</span>
+  <span class="s2">"</span><span class="s">branch"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">comments"</span><span class="pi">:</span> <span class="pi">[],</span>
+  <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-31T11:26:51+0000"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">95</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCHB-10"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">priority"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">medium"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">reporter"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">source"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">phone"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">status"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">open"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">subject"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">New</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">subject"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="s2">"</span><span class="s">new</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">tag5"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">new</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">tag6"</span>
+  <span class="pi">],</span>
+  <span class="s2">"</span><span class="s">unique_id"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">acee0fb73b9c1188472787b20a2760ae"</span>
+  <span class="pi">},</span>
+  <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-31T11:26:51+0000"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">watcher_list"</span><span class="pi">:</span> <span class="pi">[</span>
+    <span class="pi">{</span>
+      <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">23</span><span class="pi">,</span>
+      <span class="s2">"</span><span class="s">user_type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span>
+    <span class="pi">}</span>
+  <span class="pi">]</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="delete-delete-the-ticket-by-the-ticket-key">DELETE: Delete the ticket by the ticket key</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>key<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 204 (No Content)</p>
+
+<p><em>Response body:</em> null</p>
+
+<h6 id="get-retrieve-the-list-of-ticket-attachments-by-ticket-id">GET: Retrieve the list of ticket attachments by ticket ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>id<span class="o">}</span>/attachments</code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+    <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">15</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:53+0000"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:53+0000"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">file"</span><span class="pi">:</span> <span class="pi">{</span>
+            <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/file</span><span class="err">\</span><span class="s">/450385ca08c7cfe5b507ad85f3a17428"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test.jpg"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">thumbnails"</span><span class="pi">:</span> <span class="pi">{</span>
+            <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/thumbnail</span><span class="err">\</span><span class="s">/450385ca08c7cfe5b507ad85f3a17428"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">450385ca08c7cfe5b507ad85f3a17428.png"</span>
+        <span class="pi">}</span>
+    <span class="pi">}</span>
+<span class="pi">]</span></code></pre></div>
+
+<h6 id="get-retrieve-ticket-attachments-by-attachment-id">GET: Retrieve ticket attachments by attachment ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>ticketId<span class="o">}</span>/attachments/<span class="o">{</span>attachmentId<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">15</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:53+0000"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:53+0000"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">file"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/file</span><span class="err">\</span><span class="s">/450385ca08c7cfe5b507ad85f3a17428"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test.jpg"</span>
+    <span class="pi">},</span>
+    <span class="s2">"</span><span class="s">thumbnails"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/thumbnail</span><span class="err">\</span><span class="s">/450385ca08c7cfe5b507ad85f3a17428"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">450385ca08c7cfe5b507ad85f3a17428.png"</span>
+    <span class="pi">}</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Status Code:</strong> 404 (Not Found)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Attachment</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed.</span><span class="nv"> </span><span class="s">Ticket</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">no</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">attachment."</span>
+<span class="pi">}</span></code></pre></div>
+   
+
+<h6 id="post-add-attachment-to-the-ticket">POST: Add attachment to the ticket</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>ticketId<span class="o">}</span>/attachments</code></pre></div>
+
+<p><em>Request example:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">attachmentsInput"</span><span class="pi">:</span> <span class="pi">[</span>
+        <span class="pi">{</span>
+            <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test.jpg"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="</span>
+        <span class="pi">}</span>
+    <span class="pi">]</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 201 (Created)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+    <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">15</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:53+0000"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:53+0000"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">file"</span><span class="pi">:</span> <span class="pi">{</span>
+            <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/file</span><span class="err">\</span><span class="s">/450385ca08c7cfe5b507ad85f3a17428"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test.jpg"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">thumbnails"</span><span class="pi">:</span> <span class="pi">{</span>
+            <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/thumbnail</span><span class="err">\</span><span class="s">/450385ca08c7cfe5b507ad85f3a17428"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">450385ca08c7cfe5b507ad85f3a17428.png"</span>
+        <span class="pi">}</span>
+    <span class="pi">}</span>
+<span class="pi">]</span></code></pre></div>
+
+<h6 id="delete-remove-attachment-from-the-ticket">DELETE: Remove Attachment from the ticket</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>ticketId<span class="o">}</span>/attachments/<span class="o">{</span>attachmentId<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 204 (No Content)</p>
+
+<p><em>Response body:</em> null</p>
+
+<h6 id="get-retrieve-personal-data-based-on-the-provided-ticket-id">GET: Retrieve personal data based on the provided ticket ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/ticket/<span class="o">{</span>id<span class="o">}</span>/assignee</code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pol.vova@gmail.com"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">asdasd</span><span class="nv"> </span><span class="s">dasdasd"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span>
+<span class="pi">}</span></code></pre></div>
+
+<h3 id="comments">Comments</h3>
+
+<h6 id="get-retrieve-the-list-of-all-comments">GET: Retrieve the list of all comments</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments</code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+    <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
+
+        <span class="pi">],</span>
+        <span class="s2">"</span><span class="s">author"</span><span class="pi">:</span> <span class="pi">{</span>
+            <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">emailaddress@server.com"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Author</span><span class="nv"> </span><span class="s">Name"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">diamante_1"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">commentContent1-1"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:22+0000"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">private"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">ticket"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:22+0000"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
+
+        <span class="pi">],</span>
+        <span class="s2">"</span><span class="s">author"</span><span class="pi">:</span> <span class="pi">{</span>
+            <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">emailaddress@server.com"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Author</span><span class="nv"> </span><span class="s">Name"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">diamante_1"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">commentContent1-2"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:22+0000"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">2</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">private"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">ticket"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:22+0000"</span>
+    <span class="pi">}</span>
+<span class="pi">]</span></code></pre></div>
+
+<h6 id="get-retrieve-the-comment-by-the-given-comment-id">GET: Retrieve the comment by the given comment ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
+
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">author"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">emailaddress@server.com"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Author</span><span class="nv"> </span><span class="s">Name"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">diamante_1"</span>
+    <span class="pi">},</span>
+    <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Comment"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:22+0000"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">101</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">private"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">ticket"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:22+0000"</span>
+<span class="pi">}</span></code></pre></div>
+    
+
+<p><strong>Status Code:</strong> 404 (OK)</p>
+
+<p><em>Response body:</em>   </p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Comment</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed,</span><span class="nv"> </span><span class="s">comment</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found."</span>
+<span class="pi">}</span></code></pre></div>
+   
+
+<h6 id="post-add-a-new-comment-to-the-ticket">POST: Add a new comment to the ticket.</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments</code></pre></div>
+
+<p><strong>Parameters</strong>   </p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Note</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">content</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> Add your comment into this section.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">ticket</td>
+<td style="text-align: left"><em>integer</em></td>
+<td style="text-align: left"><strong>Required.</strong> Provide the ID of a ticket where the comment is added.</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">author</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> Specify the name of a user who adds the comment to the ticket.</td>
+<td style="text-align: left">The name of an author must contain only letters.</td>
+</tr>
+<tr>
+<td style="text-align: left">ticketStatus</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> Specify the status of a ticket after the new comment is added to it. The available statuses are: <strong>New</strong>, <strong>Open</strong>, <strong>Pending</strong>, <strong>In progress</strong>, <strong>Closed</strong> and <strong>On Hold</strong>.</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody></table>
+
+<p><em>Request example:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Comment"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">ticket"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">author"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">ticketStatus"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">new"</span>
+<span class="pi">}</span></code></pre></div>
+  
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 201 (Created)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
+
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">author"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">emailaddress@server.com"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Author</span><span class="nv"> </span><span class="s">Name"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span>
+    <span class="pi">},</span>
+    <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Comment"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:42+0000"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">104</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">private"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">ticket"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:42+0000"</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="put-patch-update-certain-properties-of-the-comment-be-the-comment-id">PUT, PATCH: Update certain properties of the comment be the comment ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">PUT|PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Request example:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Comment</span><span class="nv"> </span><span class="s">Updated</span><span class="nv"> </span><span class="s">PUT"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">ticketStatus"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">closed"</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
+
+    <span class="pi">],</span>
+    <span class="s2">"</span><span class="s">author"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">emailaddress@server.com"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Author</span><span class="nv"> </span><span class="s">Name"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">diamante_1"</span>
+    <span class="pi">},</span>
+    <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Comment</span><span class="nv"> </span><span class="s">Updated</span><span class="nv"> </span><span class="s">PUT"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:22+0000"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">101</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">private"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">ticket"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:22+0000"</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="delete-delete-a-ticket-comment-by-the-comment-id">DELETE: Delete a ticket comment by the comment ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 204 (No Content)</p>
+
+<p><em>Response body:</em> null</p>
+
+<h6 id="get-retrieve-the-information-about-the-comment-author-based-on-the-provided-comment-id">GET: Retrieve the information about the comment author based on the provided comment ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comment/<span class="o">{</span>id<span class="o">}</span>/author</code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+  <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pol.vova@gmail.com"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">asdasd</span><span class="nv"> </span><span class="s">dasdasd"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="get-retrieve-all-comment-attachments">GET: Retrieve all comment attachments</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>id<span class="o">}</span>/attachments</code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+    <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">12</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:27+0000"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:27+0000"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">file"</span><span class="pi">:</span> <span class="pi">{</span>
+            <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/file</span><span class="err">\</span><span class="s">/61fcb86ab5a53db412b2f3823f8a20ac"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test.jpg"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">thumbnails"</span><span class="pi">:</span> <span class="pi">{</span>
+            <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/thumbnail</span><span class="err">\</span><span class="s">/61fcb86ab5a53db412b2f3823f8a20ac"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">61fcb86ab5a53db412b2f3823f8a20ac.png"</span>
+        <span class="pi">}</span>
+    <span class="pi">}</span>
+<span class="pi">]</span></code></pre></div>
+
+<h6 id="retrieve-comment-attachments-by-the-attachment-id">Retrieve comment attachments by the attachment ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>commentId<span class="o">}</span>/attachments/<span class="o">{</span>attachmentId<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">12</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:27+0000"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:27+0000"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">file"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/file</span><span class="err">\</span><span class="s">/61fcb86ab5a53db412b2f3823f8a20ac"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test.jpg"</span>
+    <span class="pi">},</span>
+    <span class="s2">"</span><span class="s">thumbnails"</span><span class="pi">:</span> <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/thumbnail</span><span class="err">\</span><span class="s">/61fcb86ab5a53db412b2f3823f8a20ac"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">61fcb86ab5a53db412b2f3823f8a20ac.png"</span>
+    <span class="pi">}</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Status Code:</strong> 404 (OK)</p>
+
+<p><em>Response body:</em>   </p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Attachment</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed.</span><span class="nv"> </span><span class="s">Comment</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">no</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">attachment."</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="post-add-attachment-to-the-comment">POST: Add attachment to the comment</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>commentId<span class="o">}</span>/attachments</code></pre></div>
+
+<p><em>Request example:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">attachmentsInput"</span><span class="pi">:</span> <span class="pi">[</span>
+        <span class="pi">{</span>
+            <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test.jpg"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="</span>
+        <span class="pi">}</span>
+    <span class="pi">]</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 201 (Created)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+    <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">13</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:34+0000"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:34+0000"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">file"</span><span class="pi">:</span> <span class="pi">{</span>
+            <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/file</span><span class="err">\</span><span class="s">/338477dbcd9c4faae7584cda781be854"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test.jpg"</span>
+        <span class="pi">},</span>
+        <span class="s2">"</span><span class="s">thumbnails"</span><span class="pi">:</span> <span class="pi">{</span>
+            <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/thumbnail</span><span class="err">\</span><span class="s">/338477dbcd9c4faae7584cda781be854"</span><span class="pi">,</span>
+            <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">338477dbcd9c4faae7584cda781be854.png"</span>
+        <span class="pi">}</span>
+    <span class="pi">}</span>
+<span class="pi">]</span></code></pre></div>
+
+<h6 id="delete-remove-the-attachment-from-the-comment-by-the-attachment-id">DELETE: Remove the attachment from the comment by the attachment ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>commentId<span class="o">}</span>/attachments/<span class="o">{</span>attachmentId<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 204 (No Content)</p>
+
+<p><em>Response body:</em> null</p>
+
+<h3 id="users">Users</h3>
+
+<h6 id="get-retrieve-the-list-of-all-users">GET: Retrieve the list of all users</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/users</code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+    <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">sdasdasd@asfasf.com"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">first_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">das"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">last_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">dasda"</span>
+    <span class="pi">},</span>
+    <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">2</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">vladimir.polischuk@eltrino.com"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">first_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="se">\u0444\u0456\u0432\u0444\u0456\u0432</span><span class="s">"</span><span class="pi">,</span>
+        <span class="s2">"</span><span class="s">last_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="se">\u0432\u0444\u0456\u0432</span><span class="s">"</span>
+    <span class="pi">}</span></code></pre></div>
+
+<h6 id="post-create-a-new-user">POST: Create a new user</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/users</code></pre></div>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Type</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">firstName</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> Provide the first name of a new user.</td>
+</tr>
+<tr>
+<td style="text-align: left">lastName</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> Provide the last name of a new user.</td>
+</tr>
+<tr>
+<td style="text-align: left">email</td>
+<td style="text-align: left"><em>string</em></td>
+<td style="text-align: left"><strong>Required.</strong> Add an email of a new user. This email is going to be used for email notifications and password recovery.</td>
+</tr>
+</tbody></table>
+
+<p><em>Request example:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1437135532dummy-test-email-address@test-server.local"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">firstName"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">John"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">lastName"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Dou"</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 201 (Created)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">11</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1437135532dummy-test-email-address@test-server.local"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">first_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">John"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">last_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Dou"</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="get-retrieve-user-data">GET: Retrieve user data</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/users/<span class="o">{</span>email<span class="o">}</span>/</code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">11</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1437135532dummy-test-email-address@test-server.local"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">first_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">John"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">last_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Dou"</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Status Code:</strong> 404 (Not Found)
+<em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">User</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found."</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="put-patch-update-properties-of-a-certain-user-by-its-id">PUT, PATCH: Update properties of a certain user by its ID</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">PUT|PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/users/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+
+<p><em>Request example:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1437135532dummy-test-email-address@test-server.local"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">first_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">John"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">last_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Second"</span>
+<span class="pi">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 200 (OK)</p>
+
+<p><em>Response body:</em></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+    <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">11</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1437135532dummy-test-email-address@test-server.local"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">first_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">John"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">last_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Second"</span>
+<span class="pi">}</span></code></pre></div>
+
+<h6 id="delete-delete-the-user-by-id">DELETE: Delete the user by id</h6>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/users/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+
+<p><strong>Response</strong></p>
+
+<p><strong>Status Code:</strong> 204 (No Content)</p>
+
+<p><em>Response body:</em> null</p>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

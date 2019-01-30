@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tickets</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/2.0/user-guide/tickets.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/2.0/user-guide/tickets.html">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/user-guide/tickets.html">1.0</a></li>
+              
+                <li><a href="/en/latest/user-guide/tickets.html">latest</a></li>
+              
+                <li><a href="/en/2.0/user-guide/tickets.html">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/2.0/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/2.0/user-guide/tickets.html">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/user-guide/tickets.html">1.0</a></li>
+                        
+                        <li><a href="/en/latest/user-guide/tickets.html">latest</a></li>
+                        
+                        <li><a href="/en/2.0/user-guide/tickets.html">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/2.0/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/2.0/">Welcome to DiamanteDesk</a></li><li><a href="/en/2.0/installation-guide/">Installation Guide</a></li><li><a href="/en/2.0/upgrade-guide/">Upgrade Guide</a></li><li><a href="/en/2.0/user-guide/">User Guide</a><ul><li><a href="/en/2.0/user-guide/dashboards.html">Dashboards</a></li><li><a href="/en/2.0/user-guide/branches.html">Branches</a></li><li><a href="/en/2.0/user-guide/tickets.html">Tickets</a><ul>
+<li>
+<a href="#ticket-filters">Ticket Filters</a>
+</li>
+<li>
+<a href="#create-a-new-ticket">Create a New Ticket</a>
+</li>
+<li>
+<a href="#ticket-comments">Ticket Comments</a>
+</li>
+<li>
+<a href="#notifications">Notifications</a>
+</li>
+<li>
+<a href="#watchers">Watchers</a>
+</li>
+</ul>
+</li><li><a href="/en/2.0/user-guide/reports.html">Reports</a></li><li><a href="/en/2.0/user-guide/customers.html">Customers</a></li><li><a href="/en/2.0/user-guide/users.html">Users / Roles / Groups</a></li><li><a href="/en/2.0/user-guide/tagging.html">Tagging</a></li><li><a href="/en/2.0/user-guide/data-audit.html">Data Audit</a></li><li><a href="/en/2.0/user-guide/filters.html">Filters</a></li><li><a href="/en/2.0/user-guide/rules.html">Rules</a></li><li><a href="/en/2.0/user-guide/channels/">Channels</a><ul><li><a href="/en/2.0/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/2.0/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/2.0/user-guide/channels/embedded-form.html">Embedded Form</a></li></ul></li></ul></li><li><a href="/en/2.0/developer-guide/">Developer Guide</a><ul><li><a href="/en/2.0/developer-guide/contributing.html">Contributing</a></li><li><a href="/en/2.0/developer-guide/testing.html">Testing</a></li><li><a href="/en/2.0/developer-guide/restful-api-guide.html">RESTful API Guide</a></li></ul></li><li><a href="/en/2.0/integration/">Integration</a><ul><li><a href="/en/2.0/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/2.0/integration/magento.html">Magento</a></li><li><a href="/en/2.0/integration/wordpress.html">WordPress</a></li><li><a href="/en/2.0/integration/prestashop.html">PrestaShop</a></li><li><a href="/en/2.0/integration/oro.html">OroCRM</a></li></ul></li><li><a href="/en/2.0/faq/">FAQ</a></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Tickets</h1>
+  </header>
+
+  <article class="post-content">
+    <p>DiamanteDesk offers a great way to improve customer experience by easily receiving, reassigning and taking care of any Client requests presented as <strong>tickets</strong>.</p>
+
+<p>Tickets in DiamanteDesk can be created through one of the following channels:</p>
+
+<ul>
+<li>through the <a href="channels/portal.html"><strong>web portal</strong></a>;</li>
+<li>via <a href="channels/embedded-form.html"><strong>embedded forms</strong></a> on websites, online stores, blogs, etc.;</li>
+<li>via <a href="channels/email-processing.html"><strong>processing email requests</strong></a> sent to the support email address;</li>
+<li>by the admin users via the admin panel.</li>
+</ul>
+
+<p>Tickets in the Admin panel can be viewed and created from:</p>
+
+<ul>
+<li>the <strong>Branches</strong> page (see <a href="branches.html"><strong>Branches</strong></a> section);</li>
+<li>the <strong>Tickets</strong> page.</li>
+</ul>
+
+<p><img src="img/All_tickets.png" alt="Tickets"></p>
+
+<h2 id="ticket-filters">Ticket Filters</h2>
+
+<p>All tickets in the system can be filtered according to each of the parameters described in the table below. To learn more about filtering in DiamanteDesk, follow this <a href="filters.html">link</a>.</p>
+
+<table><thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Key</td>
+<td>Enter the required branch key and click <strong>Update</strong>. Ticket Key consists of the branch key and ticket sequence number and has next format {<em>branchKey</em>}-{<em>ticketSequenceNumber</em>}.</td>
+</tr>
+<tr>
+<td>Subject</td>
+<td>Provide the summary of a ticket in this field.</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>Select the required branch from the drop-down list and click <strong>Update</strong>.</td>
+</tr>
+<tr>
+<td>Assignee</td>
+<td>To filter the tickets assigned to a specific person, enter the name of that person into the <strong>Assignee</strong> field.</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>Set the filter to <strong>Low</strong>, <strong>Medium</strong> or <strong>High</strong> priority to seed out the tickets of the unnecessary priority.</td>
+</tr>
+<tr>
+<td><a name="status"></a>Status</td>
+<td>To filter the tickets according to their priorities, click the down arrow and select one or several statuses. The available statuses are: <strong>New</strong>, <strong>Open</strong>, <strong>Pending</strong>, <strong>In progress</strong>, <strong>Closed</strong> and <strong>On Hold</strong>.</td>
+</tr>
+<tr>
+<td>Created</td>
+<td>Select the date range when the tickets could be updated either from a drop-down calendar or by selecting one of the available variables (<strong>Now, Today, Start of the week, Start of the month, Start of the quarter, Start of the year</strong>).</td>
+</tr>
+<tr>
+<td>Updated</td>
+<td>Select the date range when the tickets could be updated either from a drop-down calendar or by selecting one of the available variables (<strong>Now, Today, Start of the week, Start of the month, Start of the quarter, Start of the year</strong>).</td>
+</tr>
+</tbody></table>
+
+<p><a name="create-a-new-ticket"></a></p>
+
+<h2 id="create-a-new-ticket">Create a New Ticket</h2>
+
+<p>To create a new ticket, complete the following steps:</p>
+
+<p>Click <strong>Create Ticket</strong> at the top right corner of the screen. The <strong>Create Ticket</strong> screen opens.</p>
+
+<p><img src="img/create_ticket.png" alt="Create ticket"></p>
+
+<p>Provide all the relevant information necessary to create a new ticket:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Branch</td>
+<td>Click the down arrow to choose a branch where this ticket should be created.</td>
+</tr>
+<tr>
+<td>Subject</td>
+<td>Provide the topic of an issue in this field.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Select the status of a ticket. The available statuses are <strong>New</strong>, <strong>Open</strong>, <strong>Pending</strong>, <strong>In Progress</strong>, <strong>Closed</strong> and <strong>On Hold</strong>. When the ticket is just created, its status is normally set to <strong>New</strong> or <strong>Open</strong>.</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>Set the priority of the ticket according to the urgency of the issue occurred. The available priority options are <strong>Low</strong>, <strong>Medium</strong> or <strong>High</strong>.</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Specify the channel used to submit this ticket. The available options are: through <strong>Web</strong>, <strong>Phone</strong> or <strong>Email</strong>. To learn more about channels of ticket submitting, follow this <a href="channels/index.html">link</a>.</td>
+</tr>
+<tr>
+<td>Reporter</td>
+<td>Reporter is a user who created a ticket or who is in charge if it. This user receives notifications whenever the ticket status or priority changes. By default, the reporter is an owner of the account. To change the reporter, click the <strong>List</strong> button and select the corresponding user.</td>
+</tr>
+<tr>
+<td>Assignee</td>
+<td>Assignee is a person responsible for the ticket workflow. To change the assignee, click the <strong>List</strong> button and select the corresponding user.</td>
+</tr>
+<tr>
+<td>File</td>
+<td>In case there is a file that shall be attached to the ticket (screenshot or document), click <strong>Choose file</strong> and select the required file from your local machine.</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>Add tags for the further quick ticket search and classification. Follow the link to learn more about <a href="tagging.html">tagging</a> in DiamanteDesk.</td>
+</tr>
+</tbody></table>
+
+<p>Provide the detailed description of a ticket in the <strong>Description</strong> field. If relevant, describe the steps to reproduce the bug/error.</p>
+
+<p><img src="img/description_field.png" alt="Create ticket"></p>
+
+<p>Click <strong>Save</strong> or <strong>Save and Close</strong> at the right top corner of the screen for a corresponding action.</p>
+
+<h2 id="ticket-comments">Ticket Comments</h2>
+
+<p>Once the ticket is created and successfully saved in the system, customers can comment them from the portal and Admin users can reply from the Admin panel either publically or privately.</p>
+
+<p><strong>Comments on the Portal</strong></p>
+
+<p>Whenever DiamanteDesk customer needs to add more information about the issue or make a request about the previously created ticket, the comment to this ticket can be added on the portal. </p>
+
+<p><img src="img/comments_portal.png" alt="Comments"></p>
+
+<p>This comment automatically becomes available at the admin panel, updating admin users with new information/requests/issues occurred. Admins can comment tickets directly from the Portal as described below.</p>
+
+<p><strong>Private Comments on the Admin Panel</strong></p>
+
+<p>To add a comment to some ticket from the Admin panel, open the required ticked, scroll down to the very bottom of the page and click <strong>Comment</strong>. The <strong>Add Comment</strong> screen opens.</p>
+
+<p><img src="img/comments_backend.png" alt="Comments"></p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Content</td>
+<td>This field contains the comment body.</td>
+</tr>
+<tr>
+<td>Ticket Status</td>
+<td>Specify whether the ticket status should be changed.</td>
+</tr>
+<tr>
+<td>Attachments</td>
+<td>Attach screenshots clarifying or confirming information provided in the content field.</td>
+</tr>
+<tr>
+<td>Private</td>
+<td>If this checkbox is selected, this comment is going to be available only on the Admin panel. If the checkbox is cleared, it is going to be available at the Admin panel as well as on the Portal.</td>
+</tr>
+</tbody></table>
+
+<h2 id="notifications">Notifications</h2>
+
+<p><strong>Email Notifications</strong> is a DiamantDesk feature that sends automatic emails to the ticket creator and Assignee when the ticket is created or its <a href="#status">status</a> changes. This way, a customer is notified whether his request is being processed.</p>
+
+<p>When the ticket is created, a Reporter and Assignee get the following emails, informing them on ticket details (such as Branch, Subject, Priority, Status and Source):</p>
+
+<p><img src="img/status_email.png" alt="Notifications"></p>
+
+<p>When the status of a ticket changes, the reporter and assignee get the respective email as well.</p>
+
+<h3 id="configuring-notifications">Configuring Notifications</h3>
+
+<p>This functionality can be configured according to the customer needs at <em>System &gt; Configuration</em>:</p>
+
+<p><img src="img/sys_config.png" alt="System configuration"></p>
+
+<ol>
+<li><p>On the <strong>System Configuration</strong> pane click <strong>DiamanteDesk</strong> to expose the available options and choose <strong>Notifications</strong>.
+<img src="img/notifications.png" alt="Notifications"></p></li>
+<li><p>To use the default settings, select the <strong>Use Default</strong> check box in the <strong>Email Notifications</strong> field. 
+To edit configurations, clear the the <strong>Use Default</strong> check box and set the <strong>Enable Email Notifications</strong> field to <strong>Yes</strong> or <strong>No</strong> option.</p></li>
+</ol>
+
+<p>To save the changes made, click <strong>Save Settings</strong> at the top right corner of the screen.</p>
+
+<h3 id="server-setup">Server Setup</h3>
+
+<p>The mailer settings for emails and notifications are usually configured during DiamanteDesk installation. To learn more about the process of installation, navigate to the Installation Guide section of the documentation.</p>
+
+<p><img src="img/web_config.png" alt="Notifications"></p>
+
+<p>To make sure that server parameters are configured correctly or you need to change them, define required configuration details in the <strong>app/config/parameters.yml</strong> file. If you need more information on how to perform configurations in the <strong>app/config/parameters.yml</strong> file, follow this <a href="https://symfony.com/doc/current/best_practices/configuration.html">link</a>.</p>
+
+<h2 id="watchers">Watchers</h2>
+
+<p>Each of the tickets can be assigned to a specific user to make sure that a given issue is solved quickly and efficiently. But in order to have more control over certain high priority issues, a new <strong>Watchers</strong> feature has been added.</p>
+
+<p>A <strong>Watcher</strong> is a person who gets an email notification every time a status, priority or other ticket information changes. When the ticket is created, a <strong>Reporter</strong> (the person who created a ticket) and an <strong>Assignee</strong> (the person to whom the ticket is assigned) automatically become <strong>Watchers</strong>. If the ticket is created by the admin user, he automatically becomes a ticket watcher as well.</p>
+
+<h3 id="adding-watchers-to-the-ticket">Adding Watchers to the Ticket</h3>
+
+<p>Watchers can be added to the ticket in one of the following ways:</p>
+
+<ul>
+<li><strong>By Customers via Email</strong></li>
+</ul>
+
+<p>In case the ticket is created from the email through <a href="email-processing.html">email processing</a>, the email sender and all the users from CC (if any) become watchers and receive email notifications each time the ticket content, status or priority is changed.</p>
+
+<ul>
+<li><strong>By Customers via Portal</strong></li>
+</ul>
+
+<p>To add watchers to the ticket via the portal, complete the following steps:</p>
+
+<ol>
+<li>Log into the Portal.</li>
+<li>Create a new ticket. To get the detailed instructions on how to create ticket via the portal, please refer to <a href="#create-a-new-ticket">this section</a>.</li>
+<li>Once the ticket is submitted, the screen with ticket description and editing options is opened. At the right side of this screen in the <strong>Watchers</strong> section click <strong>Add Watcher</strong> to add a person or several people who will be able to control the ticket workflow.
+<img src="img/ticket_submitted.png" alt="Create ticket"></li>
+<li>The <strong>Add Watcher</strong> pop-up opens. Specify the email of a person you would like to make a watcher for this ticket and click <strong>Add</strong>. If this email has been previously registered in DiamanteDesk, the system will recognize this user and add person&rsquo;s first an last name to the list of watchers. If no matching account has been found, a new <a href="customers.html">customer</a> is created.
+<img src="img/add_watcher_portal.png" alt="Create ticket"></li>
+<li>An email confirmation is sent to a person whose email was provided at the <strong>Add Watcher</strong> screen, notifying him on the new role granted.</li>
+</ol>
+
+<ul>
+<li><strong>By Admins via Admin Panel</strong></li>
+</ul>
+
+<p>Admin user can add or remove certain users from the list of ticket watchers if he has respective edit permissions. To follow the changes made in a certain ticket or add other customers/administrators to the list of Watchers, Admin should perform the following steps:</p>
+
+<ol>
+<li>Log into the DiamanteDesk Admin panel.</li>
+<li>Open the required ticket.</li>
+<li>To to be aware of the changes made to the ticket, click <strong>Watch</strong> on the option panel at the top of the screen. 
+<img src="img/add_watcher_admin.png" alt="Create ticket"></li>
+<li>To add another person to the <strong>Watchers</strong> list, click <strong>Add Watcher</strong> on the option panel. The <strong>Add Watcher</strong> screen opens. Enter the name of a required user or click a list button and select a user from the list of available users.</li>
+</ol>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

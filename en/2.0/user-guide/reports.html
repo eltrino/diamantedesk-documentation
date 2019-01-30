@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Reports</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/2.0/user-guide/reports.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/2.0/user-guide/reports.html">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/user-guide/reports.html">1.0</a></li>
+              
+                <li><a href="/en/latest/user-guide/reports.html">latest</a></li>
+              
+                <li><a href="/en/2.0/user-guide/reports.html">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/2.0/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/2.0/user-guide/reports.html">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/user-guide/reports.html">1.0</a></li>
+                        
+                        <li><a href="/en/latest/user-guide/reports.html">latest</a></li>
+                        
+                        <li><a href="/en/2.0/user-guide/reports.html">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/2.0/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/2.0/">Welcome to DiamanteDesk</a></li><li><a href="/en/2.0/installation-guide/">Installation Guide</a></li><li><a href="/en/2.0/upgrade-guide/">Upgrade Guide</a></li><li><a href="/en/2.0/user-guide/">User Guide</a><ul><li><a href="/en/2.0/user-guide/dashboards.html">Dashboards</a></li><li><a href="/en/2.0/user-guide/branches.html">Branches</a></li><li><a href="/en/2.0/user-guide/tickets.html">Tickets</a></li><li><a href="/en/2.0/user-guide/reports.html">Reports</a><ul>
+<li>
+<a href="#types-of-reports">Types of Reports</a>
+</li>
+</ul>
+</li><li><a href="/en/2.0/user-guide/customers.html">Customers</a></li><li><a href="/en/2.0/user-guide/users.html">Users / Roles / Groups</a></li><li><a href="/en/2.0/user-guide/tagging.html">Tagging</a></li><li><a href="/en/2.0/user-guide/data-audit.html">Data Audit</a></li><li><a href="/en/2.0/user-guide/filters.html">Filters</a></li><li><a href="/en/2.0/user-guide/rules.html">Rules</a></li><li><a href="/en/2.0/user-guide/channels/">Channels</a><ul><li><a href="/en/2.0/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/2.0/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/2.0/user-guide/channels/embedded-form.html">Embedded Form</a></li></ul></li></ul></li><li><a href="/en/2.0/developer-guide/">Developer Guide</a><ul><li><a href="/en/2.0/developer-guide/contributing.html">Contributing</a></li><li><a href="/en/2.0/developer-guide/testing.html">Testing</a></li><li><a href="/en/2.0/developer-guide/restful-api-guide.html">RESTful API Guide</a></li></ul></li><li><a href="/en/2.0/integration/">Integration</a><ul><li><a href="/en/2.0/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/2.0/integration/magento.html">Magento</a></li><li><a href="/en/2.0/integration/wordpress.html">WordPress</a></li><li><a href="/en/2.0/integration/prestashop.html">PrestaShop</a></li><li><a href="/en/2.0/integration/oro.html">OroCRM</a></li></ul></li><li><a href="/en/2.0/faq/">FAQ</a></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Reports</h1>
+  </header>
+
+  <article class="post-content">
+    <p>DiamanteDesk provides its customers with the extensive set of reports allowing managers to monitor daily ticket activity, measure performance of the support department according to the average resolution time and detect emerging or existing issues in the system. Successful leaders know that revealing emerging trends far on advance is beneficial for overall customer satisfaction. </p>
+
+<p>Each report serves a specific purpose and allows analyzing your support team efficiency according to different criteria and company goals. To see the list of reports available in DiamanteDesk, log into the system and select the <strong>Reports</strong> top menu. Currently, DiamanteDesk offers 5 reports providing the essential data necessary to analyze the performance of a support team:</p>
+
+<ul>
+<li><a href="#t-by-priority">Tickets by Priority</a></li>
+<li><a href="#t-of-responce">Time of Responce</a></li>
+<li><a href="#t-by-channels">Tickets by Channels</a></li>
+<li><a href="#t-by-branches">Tickets by Branches</a></li>
+<li><a href="#ticket-timeline">Tickets Timeline</a></li>
+</ul>
+
+<h2 id="types-of-reports">Types of Reports</h2>
+
+<p><a name="t-by-priority"></a> <strong>Tickets by Priority</strong>                                                                                                                                                                                                    </p>
+
+<p><img src="img/reports.png" alt="Reports"></p>
+
+<p>This report provides the full picture of requests according to their priorities and allows focus on the critical ones. It also allows estimating the state of your system by analyzing the amount of urgent and high priority issues and focus on the general improvements, if necessary. </p>
+
+<p>This report also helps analyzing how customers estimate the issues they are dealing with while working with DiamanteDesk.</p>
+
+<p><img src="img/tickets_by_priority.png" alt="Reports"></p>
+
+<p>The report shows the amount of submitted tickets with <strong>High</strong>, <strong>Low</strong> and <strong>Medium</strong> priority. To know the exact number of tickets per each priority submitted for a particular day, you may limit the chart display using the Range Selector below the chart and point to the day you are inetersted in. The number of tickets submitted per each priority is going to be shown at the opened pop-up.</p>
+
+<p><a name="t-of-responce"></a> <strong>Time of Response</strong></p>
+
+<p>Measure your efficiency by analyzing the average speed of responce to the newly created tickets. We believe that quick reaction is a key factor to achieve high customer satisfaction. Whether the issue is complex and urgent or small and insignificant, your customers want to see that their request is taken care of.</p>
+
+<p><img src="img/time_of_response.png" alt="Reports"></p>
+
+<p>The report shows the amount of tickets support agents responded to within one of the available time frames: 0-1 hours, 1-4 hours, 0-24 hours or more than 24 hours.</p>
+
+<p>To know the exact number of tickets responded within each time frame dufring a particular day, you may limit the chart display using the Range Selector below the chart and point to the day you are inetersted in. The data you are looking for is going to be diaplayed in the pop-up.</p>
+
+<p><a name="t-by-channels"></a> <strong>Tickets by Channels</strong></p>
+
+<p>Find out which of the ticket submission methods are most actively used in your system (emails, web portal, embedded form or via a phone call) and use this report to figure out the support agents workload and make decisions on staff increase or reduction.</p>
+
+<p><img src="img/tickets_by_channels.png" alt="Reports"></p>
+
+<p>The report is presented as a line chart with each line displaying a set of data related to a certain channel of ticket submission. To see the exact number of tickets created on a certain day, point the line marker to preview a specific day on a chart. </p>
+
+<p>You may limit the chart display using the Range Selector below the chart.</p>
+
+<p><a name="t-by-branches"></a> <strong>Tickets by Branches</strong></p>
+
+<p>See how many tickets are created in each of the branches for the certain period or daily and use this data to analyze which branches are most actively used for ticket creation.</p>
+
+<p><img src="img/tickets_by_branches.png" alt="Reports"></p>
+
+<p>The report is presented as a line chart with each line displaying a set of data related to a certain branch. To see the exact number of tickets created on a certain day, point the line marker to a specific day on a chart. </p>
+
+<p>You may limit the chart display using the Range Selector below the chart.</p>
+
+<p><a name="ticket-timeline"></a> <strong>Tickets Timeline</strong></p>
+
+<p>Check how many tickets were opened and closed per day for a given time period to measure the efficiency of the support team.</p>
+
+<p><img src="img/tickets_timeline.png" alt="Reports"></p>
+
+<p>The report is presented as a line chart with each line displaying a set of data on the progress on <strong>new tickets</strong>, <strong>closed tickets</strong> and <strong>reopen tickets</strong>. To see the exact number of tickets created, closed or reopened at a certain day, point the line marker to a specific day on a chart.</p>
+
+<p>You may limit the chart display using the Range Selector below the chart.</p>
+
+<p><em>Note: All the reports available in the DiamanteDesk can be added to the dashboard as widgets. To learn more about widgets in DiamanteDesk, refer to <a href="dashboards.html">this</a> section.</em></p>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

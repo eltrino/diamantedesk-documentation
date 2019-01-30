@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Magento</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/1.0/integration/magento.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/integration/magento.html">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">1.0 version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/integration/magento.html">1.0</a></li>
+              
+                <li><a href="/en/latest/integration/magento.html">latest</a></li>
+              
+                <li><a href="/en/2.0/integration/magento.html">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/1.0/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/integration/magento.html">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">1.0 version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/integration/magento.html">1.0</a></li>
+                        
+                        <li><a href="/en/latest/integration/magento.html">latest</a></li>
+                        
+                        <li><a href="/en/2.0/integration/magento.html">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/1.0/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/1.0/">Welcome to DiamanteDesk</a></li><li><a href="/en/1.0/installation-guide/">Installation Guide</a></li><li><a href="/en/1.0/user-guide/">User Guide</a><ul><li><a href="/en/1.0/user-guide/branches.html">Branches</a></li><li><a href="/en/1.0/user-guide/tickets.html">Tickets</a></li><li><a href="/en/1.0/user-guide/user-management.html">User Management</a></li><li><a href="/en/1.0/user-guide/tagging.html">Tagging</a></li><li><a href="/en/1.0/user-guide/channels/">Channels</a><ul><li><a href="/en/1.0/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/1.0/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/1.0/user-guide/channels/embedded-form.html">Embedded Form</a></li></ul></li></ul></li><li><a href="/en/1.0/developer-guide/">Developer Guide</a><ul><li><a href="/en/1.0/developer-guide/contributing.html">Contributing</a></li><li><a href="/en/1.0/developer-guide/testing.html">Testing</a></li><li><a href="/en/1.0/developer-guide/restful-api-guide.html">RESTful API Guide</a></li></ul></li><li><a href="/en/1.0/integration/">Integration</a><ul><li><a href="/en/1.0/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/1.0/integration/magento.html">Magento</a><ul>
+<li>
+<a href="#installing-diamentedesk-extension">Installing DiamenteDesk Extension</a>
+</li>
+<li>
+<a href="#connecting-diamantedesk-to-magento">Connecting DiamanteDesk to Magento</a>
+</li>
+</ul>
+</li><li><a href="/en/1.0/integration/wordpress.html">WordPress</a></li><li><a href="/en/1.0/integration/prestashop.html">PrestaShop</a></li></ul></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Magento</h1>
+  </header>
+
+  <article class="post-content">
+    <p>Magento is a popular content management system that allows creating powerful e-commerce solutions. As a matter of fact, every e-commerce website should have a reliable support system that helps to quickly solve any issue, build strong customer relationships and improve overall user experience. Integrating DiamanteDesk with a website built with Magento may be the easiest solution for that.</p>
+
+<p>DiamanteDesk Magento module allows both administrator and any customer to create, edit and view tickets directly on a Magento e-commerce website. </p>
+
+<h2 id="installing-diamentedesk-extension">Installing DiamenteDesk Extension</h2>
+
+<p>After installing DiamanteDesk integration module, it shall be configured at the Magento admin panel.</p>
+
+<ol>
+<li>Log in the <strong>Magento Admin Panel</strong>.</li>
+<li>In the navigation panel select <em>Systems &gt; Magento Connect &gt; Magento Connect Manager</em>.
+<img src="img/magento_connect_manager.png" alt="Magento Admin Panel"></li>
+<li>Re-enter your Magento Administration credentials to verify your permissions.</li>
+</ol>
+
+<p>Select automatic or manual installation and complete the following steps:</p>
+
+<h6 id="automatic-installation">Automatic Installation</h6>
+
+<ol>
+<li>On the <strong>Magento Connect Manager</strong> screen follow the <a href="https://www.magentocommerce.com/magento-connect/">Magento Connect</a> link in the <strong>Install New Extensions</strong> section.
+<img src="img/magento_automatic.png" alt="Automatic installation">
+The extension marketplace opens.</li>
+<li>Enter <strong>DiamanteDesk</strong> in the <strong>Search for Extensions</strong> field and press Enter.
+<img src="img/magento_connect.png" alt="Magento_marketplace"></li>
+<li>Select the corresponding extension module from the search results.</li>
+<li>Click <strong>Get Extension</strong>.</li>
+</ol>
+
+<h6 id="manual-installation">Manual Installation</h6>
+
+<p><strong>Option 1 - Installation via FTP:</strong></p>
+
+<ol>
+<li>Upload the addthis folder to the root Magento directory.</li>
+<li>Head over to the Magento admin area and connect DiamanteDesk and Magento (see the <strong>Connecting DiamanteDesk to Magento</strong> section).</li>
+</ol>
+
+<p><strong>Option 2 - Installation via archive:</strong></p>
+
+<ol>
+<li>Download DiamanteDesk Module archive from Github.</li>
+<li>On the <strong>Magento Connect Manager</strong> screen, <strong>Extensions</strong> tab head over to the <strong>Direct package file upload</strong> section.
+<img src="img/magento_manual.png" alt="Manual installation"></li>
+<li>Select the downloaded DiamanteDesk .zip file from the local machine.</li>
+<li>Click <strong>Upload</strong>.</li>
+<li>Provide your Magento Administration Credentials in the <strong>Manage Existing Extensions</strong> section below.</li>
+<li>After all the packages have been uploaded, move to <strong>Settings</strong> tab, and click <strong>Save Settings</strong>.</li>
+</ol>
+
+<p><strong>Option 3 - Installation via Composer:</strong></p>
+
+<ol>
+<li>Add <a href="http://packages.firegento.com/">Firegento</a> repository to your <code>composer.json</code>.</li>
+<li><p>Add as dependency to your project using composer:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">composer require eltrino/diamantedesk
+</code></pre></div></li>
+</ol>
+
+<hr>
+
+<blockquote>
+<p><em>Note:</em> </p>
+
+<ul>
+<li><p>Make sure that you clear the Magento caches to complete the installation of an extension. To learn more about cache management, follow this <a href="http://www.magentocommerce.com/knowledge-base/entry/cache-storage-management/%09200">link</a>.</p></li>
+<li><p>If the module has been successfully installed, a <strong>DiamanteDesk</strong> tab will appear next to the <strong>System</strong> tab in the Magento navigation pane (see the picture below).</p></li>
+</ul>
+</blockquote>
+
+<p><img src="img/diamantedesk_magento.png" alt="DiamanteDesk tab"></p>
+
+<h2 id="connecting-diamantedesk-to-magento">Connecting DiamanteDesk to Magento</h2>
+
+<p>After DiamantDesk module has been installed, we need to connect the actual help desk to Magento. </p>
+
+<p>In order to do that, complete the following steps:</p>
+
+<ol>
+<li>Acquire <a href="api-credentials.md">API credentials</a> from your CRM.</li>
+<li>Get back to Magento Admin Panel.</li>
+<li>Go to <em>System &gt; Configuration &gt; DiamanteDesk</em>. <strong>DiamanteDesk</strong> configuration screen opens.</li>
+<li>Enter the <strong>User Name</strong> and <strong>Api Key</strong> from your CRM.
+<img src="img/DiamanteDesk_config.png" alt="DiamanteDesk configuration"></li>
+<li>Provide the link to the server in the <strong>Server Address</strong> field.</li>
+<li>Click <strong>Check Connection</strong> to make sure that the connection with a server has been successfully made.</li>
+<li>If the <strong>Api Credentials</strong> are correct, a new <strong>Branch Configuration</strong> field will be added to the DiamanteDesk configuration. Select a default branch from the <strong>Branch</strong> drop-down list. To learn more about branches in DiamanteDesk, see the <strong>Branches</strong> section in User Guide.
+<img src="img/magento_branches.png" alt=""></li>
+<li>Point out whether the footer link to customer support shall be displayed. Select <strong>Yes</strong> or <strong>No</strong> option in the <strong>Display footer link</strong> field.</li>
+<li>If the footer link shall be displayed, spcify the footer link URL in the field below.</li>
+<li>Click <strong>Save Config</strong> on the right top corner of the screen.</li>
+</ol>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

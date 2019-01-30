@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Branches</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/latest/user-guide/branches.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/latest/user-guide/branches.html">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">latest version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/user-guide/branches.html">1.0</a></li>
+              
+                <li><a href="/en/latest/user-guide/branches.html">latest</a></li>
+              
+                <li><a href="/en/2.0/user-guide/branches.html">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/latest/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/latest/user-guide/branches.html">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">latest version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/user-guide/branches.html">1.0</a></li>
+                        
+                        <li><a href="/en/latest/user-guide/branches.html">latest</a></li>
+                        
+                        <li><a href="/en/2.0/user-guide/branches.html">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/latest/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/latest/">Welcome to DiamanteDesk</a></li><li><a href="/en/latest/installation-guide/">Installation Guide</a></li><li><a href="/en/latest/upgrade-guide/">Upgrade Guide</a></li><li><a href="/en/latest/user-guide/">User Guide</a><ul><li><a href="/en/latest/user-guide/dashboards.html">Dashboards</a></li><li><a href="/en/latest/user-guide/branches.html">Branches</a><ul>
+<li>
+<a href="#branch-filters">Branch Filters</a>
+</li>
+<li>
+<a href="#create-a-new-branch"><a name="create-branch"></a> Create a New Branch</a>
+</li>
+<li>
+<a href="#edit-a-branch"><a name="edit-branch"></a> Edit a Branch</a>
+</li>
+<li>
+<a href="#delete-a-branch"><a name="delete-branch"></a> Delete a Branch</a>
+</li>
+</ul>
+</li><li><a href="/en/latest/user-guide/tickets.html">Tickets</a></li><li><a href="/en/latest/user-guide/reports.html">Reports</a></li><li><a href="/en/latest/user-guide/customers.html">Customers</a></li><li><a href="/en/latest/user-guide/users.html">Users / Roles / Groups</a></li><li><a href="/en/latest/user-guide/tagging.html">Tagging</a></li><li><a href="/en/latest/user-guide/data-audit.html">Data Audit</a></li><li><a href="/en/latest/user-guide/filters.html">Filters</a></li><li><a href="/en/latest/user-guide/rules.html">Rules</a></li><li><a href="/en/latest/user-guide/channels/">Channels</a><ul><li><a href="/en/latest/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/latest/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/latest/user-guide/channels/embedded-form.html">Embedded Form</a></li></ul></li></ul></li><li><a href="/en/latest/developer-guide/">Developer Guide</a><ul><li><a href="/en/latest/developer-guide/contributing.html">Contributing</a></li><li><a href="/en/latest/developer-guide/testing.html">Testing</a></li><li><a href="/en/latest/developer-guide/restful-api-guide.html">RESTful API Guide</a></li><li><a href="/en/latest/developer-guide/localizations.html">Localizations</a></li></ul></li><li><a href="/en/latest/integration/">Integration</a><ul><li><a href="/en/latest/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/latest/integration/magento.html">Magento</a></li><li><a href="/en/latest/integration/wordpress.html">WordPress</a></li><li><a href="/en/latest/integration/prestashop.html">PrestaShop</a></li><li><a href="/en/latest/integration/oro.html">OroCRM</a></li></ul></li><li><a href="/en/latest/faq/">FAQ</a></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Branches</h1>
+  </header>
+
+  <article class="post-content">
+    <p>When a customer of any web service supported by DiamanteDesk needs to report an issue or submit a request to the help desk team, a <em>ticket</em> is created. Each ticket is assigned with a unique ID and is sorted according to the <em>branch</em> where it is created or is added to.</p>
+
+<p>Creating separate branches in DiamanteDesk allows grouping tickets according to the requests of specific users, locations, issues or according to the <a href="channels/index.html">Channel</a> of the ticket. Branch logic helps organizing tickets according to a certain category and helps finding them quickly. Reliable customer service implies quick problem solving, so we provide our Clients with a user-friendly tool making it run like clockwork.</p>
+
+<p>This article answers the following questions:</p>
+
+<ul>
+<li><a href="#create-branch">How to create a Branch</a></li>
+<li><a href="#edit-branch">How to edit a Branch</a></li>
+<li><a href="#delete-branch">How to delete a Branch</a></li>
+</ul>
+
+<p><em><strong>Note:</strong> When the ticket is automatically created from the email received at the the support email address, it is created at the branch which is configured as a default one. To learn more about it, please see the <a href="channels/email-processing.html">Email Processing</a> section.</em></p>
+
+<p>To see the list of all available branches, select the <strong>Branches</strong> tab at the navigation panel. </p>
+
+<p><img src="img/branches.png" alt="Branches"></p>
+
+<h2 id="branch-filters">Branch Filters</h2>
+
+<p>All branches can be filtered according to the <strong>Branch Name</strong> or <strong>Branch Key</strong>. </p>
+
+<p><strong>Branch name</strong> and <strong>Branch Key</strong> filters are set to <strong>All</strong> values by default. To filter the branches according to a certain branch name or key, click the down arrow in the corresponding field and enter the required name or key. To refresh the results, click <strong>Refresh</strong>. To clear all filters, click <strong>Reset</strong>.</p>
+
+<p>To learn more about filtering in DiamanteDesk, <a href="filters.html">follow this link</a>.</p>
+
+<h2 id="create-a-new-branch"><a name="create-branch"></a> Create a New Branch</h2>
+
+<p>Click <strong>Create Branch</strong> at the right top corner of the <strong>Branches</strong> screen. 
+<img src="img/create_branch1.png" alt="Create branch"></p>
+
+<p>The <strong>Create Branches</strong> screen opens.
+<img src="img/create_branches_details.png" alt="Create branch"></p>
+
+<p>Provide the necessary information in each field. Not all fields are required, but the more data you provide, the easier it is to distribute tickets into the corresponding branches and find them when they are needed:</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">Name</td>
+<td><em>Required.</em> Provide a descriptive name of a new branch.</td>
+</tr>
+<tr>
+<td style="text-align: left">Key</td>
+<td>Leave a <strong>Key</strong> field empty as it is automatically filled by the system. Branch key is generated from the branch name and it should be unique across the system. Branch key must contain only letters. Minimum length is 2 letters. If Branch name consists of more than one word, the system takes the first character of every word and converts them to upper case (for example, Green Daisy - GD, Diamante Desk - DD, etc.). If branch name consists of a single word, branch key is generated from the first 2-4 characters in the upper case (for example, Eltrino - ELTR, bbq - BBQ, etc.).</td>
+</tr>
+<tr>
+<td style="text-align: left">Default Assignee</td>
+<td>To select the <strong>Assignee</strong>, click <strong>Unassigned</strong>. A Search Panel opens. Next, the following two options are available: you can either start entering the name of the person to be assigned and the system will provide hints with matching results or you can click a list image to open a list of all available assignees. <em><strong>Note:</strong> If you have selected a wrong assignee, click the X button next to the name of the selected assignee.</em></td>
+</tr>
+<tr>
+<td style="text-align: left">Image</td>
+<td>Add an image that will serve as a branch logo. Click <strong>Choose file</strong> and select a required image from your local machine.</td>
+</tr>
+<tr>
+<td style="text-align: left">Tags</td>
+<td>You can tag your branch. Follow this link to learn more about <a href="tagging.html">branch tagging</a>.</td>
+</tr>
+</tbody></table>
+
+<p>Provide the description of the branch in the <strong>Description</strong> field.</p>
+
+<p><img src="img/create_branches_description.png" alt="Create branch"></p>
+
+<h2 id="edit-a-branch"><a name="edit-branch"></a> Edit a Branch</h2>
+
+<ol>
+<li>Navigate to the <strong>Branches</strong> screen.</li>
+<li>Select the branch that shall be edited from the list of available branches. The selected <strong>Branch</strong> screen opens.</li>
+<li>Click <strong>Edit</strong> at the right top corner of the screen:
+<img src="img/branches_edit.png" alt="Branch Edit Delete"></li>
+<li>Perform the necassary changes/updates.</li>
+<li>Click <strong>Save</strong> or <strong>Save and Close</strong> for the corresponding action.</li>
+</ol>
+
+<h2 id="delete-a-branch"><a name="delete-branch"></a> Delete a Branch</h2>
+
+<p>Three options of branch deleting are available in DiamanteDesk:</p>
+
+<ul>
+<li><a href="#single-delete">deleting a single branch</a></li>
+<li><a href="#mass-delete">mass deleting</a></li>
+<li><a href="#API-delete">deleting branches via API</a></li>
+</ul>
+
+<h3 id="deleting-a-single-branch"><a name="single-delete"></a> Deleting a Single Branch</h3>
+
+<p>When attempting to delete a single branch in DiamanteDesk, keep in mind that ALL its tickets are going to be deleted as well.</p>
+
+<ol>
+<li>Navigate to the <strong>Branches</strong> screen.</li>
+<li>Select the branch that shall be deleted from the list. The selected <strong>Branch</strong> screen opens.</li>
+<li>Click <strong>Delete</strong> at the right top corner of the screen:
+<img src="img/branches_delete1.png" alt="Branch Delete">
+<em><strong>Note:</strong> When attempting to delete a single branch in DiamanteDesk, keep in mind that ALL its tickets are going to be deleted as well.</em></li>
+<li>The following confirmation message appears:
+SCREEN</li>
+<li>To delete a branch but keep all the tickets in the system, select a corresponding checkbox in the warning message and choose a new branch where all the tickets shall be moved.</li>
+</ol>
+
+<p><em><strong>Note:</strong> If a branch is configured as default for <a href="channels/email-processing.html">Email Processing</a>, it cannot be deleted and the following message is displayed at the top of the <strong>Branch</strong> screen:</em>
+<img src="img/branches_default.png" alt="Default Branch"></p>
+
+<h3 id="branch-deleting-mass-action"><a name="mass-delete"></a> Branch Deleting Mass Action</h3>
+
+<p>Multiple branches can be deleted via mass action functionality in DiamanteDesk. Perform the folllowing steps in order to delete several branches at once:</p>
+
+<ol>
+<li>Navigate to the <strong>Branches</strong> screen.</li>
+<li>Select several branches that shall be deleted from the list of available branches. </li>
+<li>Click the <strong>Mass Actions</strong> button and select the <strong>Delete Branches</strong> option as shown on the picture below.
+<img src="img/branches_mass_action.png" alt="Branches"></li>
+<li>The <strong>Delete Confirmation</strong> message opens.
+<img src="img/delete_confirmation.png" alt="Branches"></li>
+<li>Click <strong>Delete</strong> to proceed or <strong>Cancel</strong> to return to the <strong>Branches</strong> screen. <em>Branch cannot be deleted via mass action if it has any tickets. Only the branches without any tickets can be deleted during branch deleting mass action.</em></li>
+</ol>
+
+<h3 id="deleting-branches-through-api"><a name="API-delete"></a> Deleting Branches through API</h3>
+
+<p>Branches can also be deleted via the API call. The DiamanteDesk <a href="../developer-guide/restful-api-guide.html">RESTful API guide is available here</a>.</p>
+
+<p><em>Please note that a branch cannot be deleted via API request if it has any tickets. Only the branches without any tickets can be deleted via API request.</em></p>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

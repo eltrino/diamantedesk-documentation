@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contributing</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/1.0/developer-guide/contributing.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/developer-guide/contributing.html">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">1.0 version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/developer-guide/contributing.html">1.0</a></li>
+              
+                <li><a href="/en/latest/developer-guide/contributing.html">latest</a></li>
+              
+                <li><a href="/en/2.0/developer-guide/contributing.html">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/1.0/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/developer-guide/contributing.html">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">1.0 version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/developer-guide/contributing.html">1.0</a></li>
+                        
+                        <li><a href="/en/latest/developer-guide/contributing.html">latest</a></li>
+                        
+                        <li><a href="/en/2.0/developer-guide/contributing.html">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/1.0/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/1.0/">Welcome to DiamanteDesk</a></li><li><a href="/en/1.0/installation-guide/">Installation Guide</a></li><li><a href="/en/1.0/user-guide/">User Guide</a><ul><li><a href="/en/1.0/user-guide/branches.html">Branches</a></li><li><a href="/en/1.0/user-guide/tickets.html">Tickets</a></li><li><a href="/en/1.0/user-guide/user-management.html">User Management</a></li><li><a href="/en/1.0/user-guide/tagging.html">Tagging</a></li><li><a href="/en/1.0/user-guide/channels/">Channels</a><ul><li><a href="/en/1.0/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/1.0/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/1.0/user-guide/channels/embedded-form.html">Embedded Form</a></li></ul></li></ul></li><li><a href="/en/1.0/developer-guide/">Developer Guide</a><ul><li><a href="/en/1.0/developer-guide/contributing.html">Contributing</a><ul>
+<li>
+<a href="#contributing-code">Contributing Code</a>
+</li>
+<li>
+<a href="#contributing-documentation">Contributing Documentation</a>
+</li>
+</ul>
+</li><li><a href="/en/1.0/developer-guide/testing.html">Testing</a></li><li><a href="/en/1.0/developer-guide/restful-api-guide.html">RESTful API Guide</a></li></ul></li><li><a href="/en/1.0/integration/">Integration</a><ul><li><a href="/en/1.0/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/1.0/integration/magento.html">Magento</a></li><li><a href="/en/1.0/integration/wordpress.html">WordPress</a></li><li><a href="/en/1.0/integration/prestashop.html">PrestaShop</a></li></ul></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Contributing</h1>
+  </header>
+
+  <article class="post-content">
+    <p>The DiamanteDesk development team accepts contributions to code and documentation from the community. If you have found a bug, don&rsquo;t hesitate to let us know about it! We do our best to make DiamanteDesk as easy-to-use and as helpful as possible, so we are thankful for any effort to enhance application&rsquo;s functionality.</p>
+
+<h2 id="contributing-code">Contributing Code</h2>
+
+<p>When creating DiamanteDesk application and for other projects we work on, we prefer to stick to certain PHP coding standards, described in <a href="http://www.php-fig.org/psr/psr-0/">PSR-0</a>, <a href="http://www.php-fig.org/psr/psr-1/">PSR-1</a>, <a href="http://www.php-fig.org/psr/psr-2/">PSR-2</a> and <a href="http://www.php-fig.org/psr/psr-4/">PSR-4</a> documentation. This strategy ensures structure quality and easier software maintenance. Therefore, when contributing to DiamanteDesk, please make sure to follow these coding standards.</p>
+
+<p>Any contribution can be made as an <strong>Issue</strong> or <strong>Pull Request</strong> in the corresponding section of the <a href="https://github.com/eltrino">repository on GitHub</a>.</p>
+
+<p>DiamanteDesk functionality is separated into the <strong>bundles</strong>, such as ApiBindle, FrontBundle, EmbeddedFormBundle, EmailProcessingBundle, etc. When contributing to code or reporting an issue, please select the bundle responsible for specific functionality.</p>
+
+<h3 id="report-a-bug">Report a Bug</h3>
+
+<h6 id="if-you-found-a-bug">If you found a bug:</h6>
+
+<ul>
+<li>Look through the corresponding section of DiamanteDesk documentation to make sure that a certain feature works incorrectly.</li>
+<li>Find the relevant bundle on <a href="https://github.com/eltrino">GitHub</a> and check whether the same issue has not been already opened.</li>
+</ul>
+
+<h6 id="to-report-a-bug">To report a bug:</h6>
+
+<ul>
+<li>Create a new issue. Follow this <a href="https://help.github.com/articles/creating-an-issue/">link</a> for detailed instructions on how to create issues on GitHub.</li>
+<li>Provide a short precise description of the issue in the title.</li>
+<li>In case there are UI issues, provide screenshots.</li>
+<li>Describe the steps to reproduce this bug using a recent version of the software.</li>
+<li>Include the information about your environment.</li>
+</ul>
+
+<h3 id="code-changes">Code Changes</h3>
+
+<p>To change application code or submit a patch, fork the project on GitHub, perform the required changes, and log a pull request to get the changes pulled back into DiamanteDesk repository. To learn more about pull requests on GitHub, follow this <a href="https://help.github.com/articles/using-pull-requests/">link</a>.</p>
+
+<blockquote>
+<p><em>Note:</em> When committing changes in the code, add detailed messages on what exactly has been changed.</p>
+</blockquote>
+
+<h2 id="contributing-documentation">Contributing Documentation</h2>
+
+<p>DiamanteDesk documentation uses <a href="https://guides.github.com/features/mastering-markdown/">Markdown</a> syntax and <a href="http://jekyllrb.com/">Jekyll</a> for generating the documentation in the HTML format.</p>
+
+<p>The application documentation, as well as its code, is hosted on <a href="https://github.com/eltrino/diamantedesk-documentation">Github</a>. You need a GitHub user account to contribute to the documentation.</p>
+
+<p>When editing or contributing to documentation, you can either create an <strong>Issue</strong> on GitHub, describe it and let us know what exactly shall be changed, or you can make changes independently in the same way, described in the <strong>Code Changes</strong> section.</p>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

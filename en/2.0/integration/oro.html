@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>OroCRM</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/2.0/integration/oro.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/2.0/integration/oro.html">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/integration/oro.html">1.0</a></li>
+              
+                <li><a href="/en/latest/integration/oro.html">latest</a></li>
+              
+                <li><a href="/en/2.0/integration/oro.html">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/2.0/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/2.0/integration/oro.html">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/integration/oro.html">1.0</a></li>
+                        
+                        <li><a href="/en/latest/integration/oro.html">latest</a></li>
+                        
+                        <li><a href="/en/2.0/integration/oro.html">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/2.0/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/2.0/">Welcome to DiamanteDesk</a></li><li><a href="/en/2.0/installation-guide/">Installation Guide</a></li><li><a href="/en/2.0/upgrade-guide/">Upgrade Guide</a></li><li><a href="/en/2.0/user-guide/">User Guide</a><ul><li><a href="/en/2.0/user-guide/dashboards.html">Dashboards</a></li><li><a href="/en/2.0/user-guide/branches.html">Branches</a></li><li><a href="/en/2.0/user-guide/tickets.html">Tickets</a></li><li><a href="/en/2.0/user-guide/reports.html">Reports</a></li><li><a href="/en/2.0/user-guide/customers.html">Customers</a></li><li><a href="/en/2.0/user-guide/users.html">Users / Roles / Groups</a></li><li><a href="/en/2.0/user-guide/tagging.html">Tagging</a></li><li><a href="/en/2.0/user-guide/data-audit.html">Data Audit</a></li><li><a href="/en/2.0/user-guide/filters.html">Filters</a></li><li><a href="/en/2.0/user-guide/rules.html">Rules</a></li><li><a href="/en/2.0/user-guide/channels/">Channels</a><ul><li><a href="/en/2.0/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/2.0/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/2.0/user-guide/channels/embedded-form.html">Embedded Form</a></li></ul></li></ul></li><li><a href="/en/2.0/developer-guide/">Developer Guide</a><ul><li><a href="/en/2.0/developer-guide/contributing.html">Contributing</a></li><li><a href="/en/2.0/developer-guide/testing.html">Testing</a></li><li><a href="/en/2.0/developer-guide/restful-api-guide.html">RESTful API Guide</a></li></ul></li><li><a href="/en/2.0/integration/">Integration</a><ul><li><a href="/en/2.0/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/2.0/integration/magento.html">Magento</a></li><li><a href="/en/2.0/integration/wordpress.html">WordPress</a></li><li><a href="/en/2.0/integration/prestashop.html">PrestaShop</a></li><li><a href="/en/2.0/integration/oro.html">OroCRM</a><ul>
+<li>
+<a href="#installation">Installation</a>
+</li>
+<li>
+<a href="#diamanetedesk-contacts-in-orocrm">DiamaneteDesk Contacts in OroCRM</a>
+</li>
+<li>
+<a href="#tickets-in-orocrm">Tickets in OroCRM</a>
+</li>
+<li>
+<a href="#configuration">Configuration</a>
+</li>
+</ul>
+</li></ul></li><li><a href="/en/2.0/faq/">FAQ</a></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">OroCRM</h1>
+  </header>
+
+  <article class="post-content">
+    <p>DiamanteDesk offers seamless integration with the open-source OroCRM, providing efficient and simple ticket management tool.  Therefore, DiamanteDesk can be installed as a help desk extension to OroCRM. The following guide describes various options of DiamanteDesk installation as an extension to OroCRM and all the functionality related to this integration.</p>
+
+<p>When installed on the basis of the OroCRM, DiamanteDesk functionality is available at the <strong>Desk</strong> top menu.</p>
+
+<p><img src="img/Oro.png" alt="Oro"></p>
+
+<p>This menu provides fast and easy access to the general functionality and data of the DiamanteDesk application, specifically to:</p>
+
+<ul>
+<li><a href="../user-guide/branches.html">Branches</a></li>
+<li><a href="../user-guide/tickets.html">Tickets</a></li>
+<li><a href="../user-guide/reports.html">Reports</a></li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<p>Prior to installing DiamanteDesk as an extension to OroCRM make sure that you have properly installed OroCRM.</p>
+
+<h3 id="installation-via-oro-marketplace">Installation via Oro Marketplace</h3>
+
+<p>Navigate to <code>System &gt; Package Manager</code> to install it from the OroCRM Marketplace. For the detailed instruction on how to add an extension to your OroCRM instance, follow this <a href="http://www.orocrm.com/documentation/index/current/user-guide/package-manager">link</a>.</p>
+
+<h3 id="installation-via-composer">Installation via Composer</h3>
+
+<p>As of 2.0.0 release we do not support composer installation. OroCRM integration package should only be installed via Oro Marketplace. </p>
+
+<h2 id="diamanetedesk-contacts-in-orocrm">DiamaneteDesk Contacts in OroCRM</h2>
+
+<p>In the Oro platform all the contacts related to any business activities are saved at <em>Customers &gt; Contacts</em>. Please refer to the Oro <a href="http://www.orocrm.com/documentation/index/current/user-guide/contacts">documentation</a> to learn more about contacts in OroCRM. Due to the DiamanteDesk integration with Oro, when a customer registers on the support <a href="http://yourserver/portal/#login">portal</a> to make a request or report an issue regarding the supported entity (online store, blog, etc.), the provided credentials are  added both to the DaiamnteDesk and to the OroCRM contacts. To learn how to configure this option, refer to the <a href="#configuration"><strong>Configuration</strong></a> section of this article.</p>
+
+<p>When a user registeres on the portal, the system automatically scans the contact database by the existing emails. If none of the emails match the provided credentials, a new contact is created based on the data provided by the user. If an account with the same email has  been previously registered in the system, the following warning message is displayed:</p>
+
+<p><img src="img/message.png" alt="Message"></p>
+
+<p>The identical procedure occurs when OroCRM administartor creates a new DiamanteDesk user from the admin panel at <em>Customers &gt; Contacts &gt; Create Customer</em>.</p>
+
+<p>This feature can be disabled at <em>System &gt; Configuration &gt; DiamanteDesk</em>.</p>
+
+<h2 id="tickets-in-orocrm">Tickets in OroCRM</h2>
+
+<p>When DiamanteDesk is installed on the basis of the OroCRM, administrators can view the tickets submitted to the system in the following sections:</p>
+
+<ul>
+<li><em>Desk &gt; Branches</em>. Tickets in the DiamanteDesk are grouped into the <strong>Branches</strong>. Creating separate branches enables our Clients to group tickets according to the requests of specific users, locations, issues or according to the <a href="../user-guide/channels/index.html">Channel</a> the ticket came from. Open the required branch to see all the tickets that belong to it.</li>
+</ul>
+
+<p><img src="img/desk_branches.png" alt="Tickets in Oro"></p>
+
+<ul>
+<li><em>Desk &gt; All Tickets</em>. Tickets can be accessed directly at the <strong>Tickets</strong> section. They are not grouped according to any category on this screen an can be filtered according to the ticket <strong>Key</strong>, <strong>Subject</strong>, <strong>Branch</strong>, <strong>Assignee</strong>, <strong>Priority</strong>, <strong>Status</strong>, or time period when it was <strong>Created</strong> or <strong>Updated</strong>.</li>
+</ul>
+
+<p><img src="img/all_tickets.png" alt="Tickets in Oro"></p>
+
+<ul>
+<li><p><em>Customers &gt; Accounts</em>. Account records referred to as <strong>Accounts</strong> in OroCRM are created to collect and analyze the information on customer activity of a person or group of people belonging to a certain company or organization. Administrators can view all the tickets created or updated by the users belonging to this account at the read-only <strong>Support Tickets</strong> grid in the <strong>Additional Information</strong> section. It displays general ticket information, such as ticket <strong>Key</strong>, <strong>Subject</strong>, <strong>Status</strong>, <strong>Reporter</strong> and date and time when it was updated.</p></li>
+<li><p><em>Customers &gt; Contacts</em>. The <strong>Customers</strong> screen contains information about all the customers who created tickets at the <a href="../user-guide/channels/portal.html">DiamanteDesk portal</a>. Administrators can view all the tickets created or updated by the certain customer at the read-only <strong>Support Tickets</strong> grid in the <strong>Additional Information</strong> section. It displays general ticket information, such as ticket <strong>Key</strong>, <strong>Subject</strong>, <strong>Status</strong> and date and time when it was created.</p></li>
+</ul>
+
+<p><img src="img/Customers_contacts.png" alt="Tickets in Oro"></p>
+
+<p><a name="configuration"></a> </p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>As previously mentioned, when DiamanteDesk is installed on the basis of OroCRM, all the contacts created through the DiamanteDesk support portal are automatically added to the OroCRM contact database. To learn more about contacts in DiamanteDesk, refer to the corresponding section of the <a href="../user-guide/customers.html">User Guide</a>. </p>
+
+<p>To configure this option, navigate to <strong>System &gt; Configuration</strong>. The <strong>Configuration</strong> screen opens. From the <strong>System Configuration</strong> panel on the left select <strong>DiamanteDesk &gt; Channels</strong>. The <strong>Channels</strong> screen opens. Head over to the <strong>Web</strong> section.</p>
+
+<p><img src="img/web_configuration.png" alt="Web Config"></p>
+
+<p>To automatically create an Oro contact from the DiamanteDesk contact, select <strong>Yes</strong> option in the <strong>Create Contact Based On Diamante User</strong> and provide a user who is going to be responsible for this action in the <strong>Default Owner</strong> field.</p>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>

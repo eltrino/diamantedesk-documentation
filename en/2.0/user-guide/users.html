@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Users / Roles / Groups</title>
+  <meta name="description" content="">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="canonical" href="http://docs.diamantedesk.com/en/2.0/user-guide/users.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53130831-2', 'docs.diamantedesk.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+  <header class="site-header">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand">DiamanteDesk Documentation</span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/2.0/user-guide/users.html">English</a></li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                <li><a href="/en/1.0/user-guide/users.html">1.0</a></li>
+              
+                <li><a href="/en/latest/user-guide/users.html">latest</a></li>
+              
+                <li><a href="/en/2.0/user-guide/users.html">2.0</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form action="/en/2.0/search.html" method="get" class="navbar-form">
+            <div class="form-group">
+              <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+            </div>
+          </form>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+</header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+    <nav id="navbar" class="hidden-print navbar-collapse collapse">
+        <div class="visible-xs-block">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/2.0/user-guide/users.html">English</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="/en/1.0/user-guide/users.html">1.0</a></li>
+                        
+                        <li><a href="/en/latest/user-guide/users.html">latest</a></li>
+                        
+                        <li><a href="/en/2.0/user-guide/users.html">2.0</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav">
+                <form action="/en/2.0/search.html" method="get" class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="Search" class="form-control search-query" autocomplete="off" />
+                    </div>
+                </form>
+            </ul>
+        </div>
+        <ul data-spy="affix" data-offset-top="60" class="nav bs-docs-sidenav">
+            <li><a href="/en/2.0/">Welcome to DiamanteDesk</a></li><li><a href="/en/2.0/installation-guide/">Installation Guide</a></li><li><a href="/en/2.0/upgrade-guide/">Upgrade Guide</a></li><li><a href="/en/2.0/user-guide/">User Guide</a><ul><li><a href="/en/2.0/user-guide/dashboards.html">Dashboards</a></li><li><a href="/en/2.0/user-guide/branches.html">Branches</a></li><li><a href="/en/2.0/user-guide/tickets.html">Tickets</a></li><li><a href="/en/2.0/user-guide/reports.html">Reports</a></li><li><a href="/en/2.0/user-guide/customers.html">Customers</a></li><li><a href="/en/2.0/user-guide/users.html">Users / Roles / Groups</a><ul>
+<li>
+<a href="#create-a-new-user">Create a New User</a>
+</li>
+<li>
+<a href="#my-account">My Account</a>
+</li>
+<li>
+<a href="#user-roles"><a name="user_roles"></a> User Roles</a>
+</li>
+<li>
+<a href="#user-groups"><a name="user_groups"></a> User Groups</a>
+</li>
+</ul>
+</li><li><a href="/en/2.0/user-guide/tagging.html">Tagging</a></li><li><a href="/en/2.0/user-guide/data-audit.html">Data Audit</a></li><li><a href="/en/2.0/user-guide/filters.html">Filters</a></li><li><a href="/en/2.0/user-guide/rules.html">Rules</a></li><li><a href="/en/2.0/user-guide/channels/">Channels</a><ul><li><a href="/en/2.0/user-guide/channels/email-processing.html">Email Processing</a></li><li><a href="/en/2.0/user-guide/channels/portal.html">Portal</a></li><li><a href="/en/2.0/user-guide/channels/embedded-form.html">Embedded Form</a></li></ul></li></ul></li><li><a href="/en/2.0/developer-guide/">Developer Guide</a><ul><li><a href="/en/2.0/developer-guide/contributing.html">Contributing</a></li><li><a href="/en/2.0/developer-guide/testing.html">Testing</a></li><li><a href="/en/2.0/developer-guide/restful-api-guide.html">RESTful API Guide</a></li></ul></li><li><a href="/en/2.0/integration/">Integration</a><ul><li><a href="/en/2.0/integration/api-credentials.html">Acquiring API Credentials</a></li><li><a href="/en/2.0/integration/magento.html">Magento</a></li><li><a href="/en/2.0/integration/wordpress.html">WordPress</a></li><li><a href="/en/2.0/integration/prestashop.html">PrestaShop</a></li><li><a href="/en/2.0/integration/oro.html">OroCRM</a></li></ul></li><li><a href="/en/2.0/faq/">FAQ</a></li>
+        </ul>
+    </nav>
+</div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Users / Roles / Groups</h1>
+  </header>
+
+  <article class="post-content">
+    <p><strong>User Management</strong> serves to create new admin users in DiamanteDesk or to review/edit information about the existing ones. Each user has a certain role, access settings and belongs to one of the existing groups, defining his default permissions in the system.</p>
+
+<p>To review the list of all users in the system head over to <em>System &gt; User Management &gt; Users</em>:</p>
+
+<p><img src="img/user_management.png" alt="User Management"></p>
+
+<h2 id="create-a-new-user">Create a New User</h2>
+
+<p>To create a new user profile in the DiamanteDesk system, head over to <em>System &gt; User Management &gt; Users</em> and click the <strong>Create User</strong> button at the right top corner of the screen or go directly to <em>System &gt; User Management &gt; Create User</em>.
+<img src="img/all_users.png" alt="User Management"></p>
+
+<p>After you get to the <strong>Create User</strong> screen, provide the general user information.</p>
+
+<p><img src="img/user_new_general.png" alt="Create User"></p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Define a business unit a User belong to.</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>Account can be either <strong>Active</strong> or <strong>Inactive</strong>.</td>
+</tr>
+<tr>
+<td><strong>Username</strong>, <strong>Password</strong></td>
+<td>Create a <strong>Username</strong> and <strong>Password</strong> that will be used by a newly created user to log in. <strong>Re-Enter</strong> the password in the following filed to make sure you typed it in correctly.</td>
+</tr>
+<tr>
+<td><strong>Name Prefix</strong></td>
+<td><em>Optional.</em> Mr, Ms, etc.</td>
+</tr>
+<tr>
+<td><strong>Name Suffix</strong></td>
+<td><em>Optional.</em> Jr., Sr., PMP, etc.</td>
+</tr>
+<tr>
+<td><strong>Birthday</strong></td>
+<td>Select the <strong>Birthday</strong> from the drop-down calendar in the corresponding field</td>
+</tr>
+<tr>
+<td><strong>Avatar</strong></td>
+<td>Add a profile picture from your local machine.</td>
+</tr>
+<tr>
+<td><strong>Send an Email Invitation</strong></td>
+<td>Choose whether you want a user to receive an welcoming email after you save his/her profile.</td>
+</tr>
+</tbody></table>
+
+<p><img src="img/user_new_general1.png" alt="Create User"></p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Primary Email</strong></td>
+<td>Enter the user&rsquo;s email here. This email is going to be used for email notifications and password recovery. Click <strong>Add Another Email</strong> in the <strong>Emails</strong> field to add additional email in case the primary one is not available for any reason.</td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td>Tagging functionality is identical throughout the system. To learn more about tagging, follow this <a href="tagging.html">link</a></td>
+</tr>
+</tbody></table>
+
+<p><img src="img/user_new_title.png" alt="Create User"></p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Title</strong></td>
+<td>Provide the Position of a newly created user in the section for <strong>Additional</strong> information.</td>
+</tr>
+<tr>
+<td><a href="#user_groups"><strong>Groups</strong></a> and <a href="#user_roles"><strong>Roles</strong></a></td>
+<td>Select the <strong>Groups</strong> and <strong>Roles</strong> the newly created user will belong to. This selection will define user access rights and permissions. You can create/edit/delete Roles and Groups at <em>System &gt; User Management &gt; Roles / Groups</em> respectively. More than one group or role may be selected for one user.</td>
+</tr>
+</tbody></table>
+
+<p><img src="img/user_synch.png" alt="Create User"></p>
+
+<h3 id="edit-user-account">Edit User Account</h3>
+
+<p>To edit user account in the DiamanteDesk:</p>
+
+<ol>
+<li>Go to the list of all users in the system at <em>System &gt; User Management &gt; Users</em>.</li>
+<li>Select the user account that shall be changed and open it.</li>
+<li>At the top right corner of the screen click <strong>Edit</strong>. Perform the required changes.
+<img src="img/user_edit.png" alt="Users"></li>
+<li>Click <strong>Save and Close</strong> or <strong>Save</strong> at the right top corner of the screen.</li>
+</ol>
+
+<h2 id="my-account">My Account</h2>
+
+<p>To review your account information, click <em>your username &gt; My User</em> at the right top corner of the screen. </p>
+
+<p><img src="img/my_user.png" alt="My User"></p>
+
+<p>My account details screen opens.</p>
+
+<p><img src="img/my_account.png" alt="My User"></p>
+
+<p>To edit your account information, click <strong>Edit</strong> at the right top corner of the screen, perform the necessary changes and click <strong>Save</strong>.</p>
+
+<h2 id="user-roles"><a name="user_roles"></a> User Roles</h2>
+
+<p>When a new user is created within DiamanteDesk, he is assigned with a certain <em>role</em> that determines a set of his permissions and access rights, defining actions a user is allowed to perform. Each user may have one or several roles.</p>
+
+<p>To look through the list of available user roles head over to <em>System &gt; User Management &gt; Roles</em>. You can also create new roles from this screen. Open some role to see permissions assigned to it.</p>
+
+<p><img src="img/all_roles.png" alt="Role"></p>
+
+<h3 id="permissions">Permissions</h3>
+
+<p>Each role defines the list of actions that may be performed to a certain entity.</p>
+
+<p><img src="img/role_actions.png" alt="Role"></p>
+
+<table><thead>
+<tr>
+<th>Action</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>View</td>
+<td style="text-align: left">Allows viewing the content of the entity records, grid items.</td>
+</tr>
+<tr>
+<td>Create</td>
+<td style="text-align: left">Allows creating new records for defined entities.</td>
+</tr>
+<tr>
+<td>Edit</td>
+<td style="text-align: left">Allows editing entity records, grid items.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td style="text-align: left">Allows deleting entity records, grid items.</td>
+</tr>
+<tr>
+<td>Assign</td>
+<td style="text-align: left">Allows assigning the entity records to a different owner.</td>
+</tr>
+</tbody></table>
+
+<p>Permissions may be defined by selecting one of the following options for each entity and the actions that may be performed there.</p>
+
+<p><img src="img/role_permission_entities.png" alt="Role"></p>
+
+<table><thead>
+<tr>
+<th>Option</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>None</td>
+<td style="text-align: left">None of the users with this role are able to perform the action.</td>
+</tr>
+<tr>
+<td>User</td>
+<td style="text-align: left">Allows the owner-user to perform the corresponding action.</td>
+</tr>
+<tr>
+<td>Business Unit</td>
+<td style="text-align: left">Allows all the users within a business unit to perform the action.</td>
+</tr>
+<tr>
+<td>Division</td>
+<td style="text-align: left">Allows all the users within a division of a business unit to perform the action..</td>
+</tr>
+<tr>
+<td>System</td>
+<td style="text-align: left">Allows all the users with the same role to perform the corresponding action.</td>
+</tr>
+</tbody></table>
+
+<h3 id="create-a-new-user-role">Create a New User Role</h3>
+
+<ol>
+<li>Navigate to <em>System &gt; User Management &gt; Roles</em>.</li>
+<li>Click <strong>Create Role</strong> at the top right corner of the screen. The <strong>Create Role</strong> screen opens. </li>
+<li><p>Provide the role name, preferably defining the group of users, who will be granted certain permissions (for example, Administrators, Users, etc.) in the <strong>General</strong> tab.
+<img src="img/role_name.png" alt="Role"></p></li>
+<li><p>Grant certain permissions by selecting the corresponding options for each action in all entities.</p></li>
+<li><p>The <strong>Capabilities</strong> tab consists of all sorts of functions that may be available for the users. Define what functionalities are available for a user with this role. Users with different roles will see system functionality differently and can perform different actions, accordingly.
+<img src="img/role_capabilities.png" alt="Role"></p></li>
+<li><p>Choose the existing users that will be granted this role by selecting the check boxes in the corresponding rows.</p></li>
+<li><p>Click <strong>Save</strong> or <strong>Save and Close</strong> to proceed.</p></li>
+</ol>
+
+<h2 id="user-groups"><a name="user_groups"></a> User Groups</h2>
+
+<p>A user group is a collection of user accounts having the same core responsibilities (for example, Administrators, Marketing, Sales). Each user may belong to one or several groups.</p>
+
+<p>To look through the list of available User Groups head over to <em>System &gt; User Management &gt; Groups</em>.
+<img src="img/all_groups.png" alt="Groups"></p>
+
+<h3 id="create-a-new-user-group">Create a New User Group</h3>
+
+<ol>
+<li>Go to <em>System &gt; User Management &gt; Groups</em>.</li>
+<li>Click <strong>Create Group</strong> at the right top corner of the screen. The <strong>Create Group</strong> screen opens.
+<img src="img/create_group.png" alt="Create Group"></li>
+<li>The <strong>Owner</strong> field is automatically filled with <strong>Main</strong> value by default.</li>
+<li>Provide the general name of the group in the <strong>Name</strong> field.</li>
+<li>Choose the members belonging to this group by selecting the check boxes in the corresponding rows.</li>
+<li>Click <strong>Save</strong> or <strong>Save and Close</strong> to proceed.</li>
+</ol>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+
+</footer>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/vendor/mustache.js/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/date-steroids/dist/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/URIjs/src/URI.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/lunr.js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vendor/jquery-highlight/jquery.highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    if (location.hash && location.hash.indexOf('highlight=') > -1) {
+        $('.post-content').highlight(location.hash.split('=')[1]);
+    }
+
+    var screenshot = $('img:not(img[src$="logo.png"])');
+
+    screenshot.click(function() {
+
+        $(this).toggleClass('zoom-image');
+
+    });
+</script>
+
+  </body>
+</html>
