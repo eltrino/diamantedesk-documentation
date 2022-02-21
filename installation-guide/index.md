@@ -13,7 +13,7 @@ DiamanteDesk application was built using **Symfony** 2.3 framework and **Oro Pla
 **DiamanteDesk Requirements:**
 
 * **app/attachments** folder needs to be writable;
-* DiamanteDesk uses **Composer** to manage package dependencies. To learn more about the composer and download it from the official website, follow this [link](https://getcomposer.org/);
+* DiamanteDesk uses **Composer** version 1.x to manage package dependencies. To learn more about the composer and download it from the official website, follow this [link](https://getcomposer.org/);
 * MySQL database server with an empty database.
 
 Optionally, providing that your portal should be customized, your system shall comply with additional requirements:
