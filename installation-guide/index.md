@@ -52,7 +52,7 @@ Three options to get the latest stable version are available:
 **Option 1:** Using Git
 
 {% highlight sh %}
-git clone -b 1.0 https://github.com/eltrino/diamantedesk-application
+git clone -b 2.0 https://github.com/eltrino/diamantedesk-application
 {% endhighlight %}
      
 **Option 2:** With the composer package manager
