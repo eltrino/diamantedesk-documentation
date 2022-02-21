@@ -56,11 +56,11 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">latest version<span class="caret"></span></a>
             <ul class="dropdown-menu">
               
-                <li><a href="/en/1.0/developer-guide/testing.html">1.0</a></li>
-              
                 <li><a href="/en/latest/developer-guide/testing.html">latest</a></li>
               
                 <li><a href="/en/2.0/developer-guide/testing.html">2.0</a></li>
+              
+                <li><a href="/en/1.0/developer-guide/testing.html">1.0</a></li>
               
             </ul>
           </li>
@@ -96,11 +96,11 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">latest version<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         
-                        <li><a href="/en/1.0/developer-guide/testing.html">1.0</a></li>
-                        
                         <li><a href="/en/latest/developer-guide/testing.html">latest</a></li>
                         
                         <li><a href="/en/2.0/developer-guide/testing.html">2.0</a></li>
+                        
+                        <li><a href="/en/1.0/developer-guide/testing.html">1.0</a></li>
                         
                     </ul>
                 </li>
@@ -149,7 +149,7 @@ The way of calling the PHPUnit binary may vary on your setup. The following exam
 
 <p>To run the test suite, issue the following command:</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">bash phpunit -c vendor/diamante/<span class="o">{</span>BundleName<span class="o">}</span>/phpunit.xml.dist vendor/diamante/<span class="o">{</span>BundleName<span class="o">}</span>/Tests</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">bash phpunit <span class="nt">-c</span> vendor/diamante/<span class="o">{</span>BundleName<span class="o">}</span>/phpunit.xml.dist vendor/diamante/<span class="o">{</span>BundleName<span class="o">}</span>/Tests</code></pre></figure>
 
 <p><em><strong>Note:</strong> {BundleName} is a placeholder for a name of the bundle you want to test, e.g. DeskBundle, ApiBundle, FrontBundle, etc.</em></p>
 
@@ -163,7 +163,7 @@ The way of calling the PHPUnit binary may vary on your setup. The following exam
 
 <p>DiamanteDesk Unit Testing Suite is available by issuing the following command:</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">bash phpunit -c vendor/diamante/<span class="o">{</span>BundleName<span class="o">}</span>/Tests/Functional/phpunit/xml.dist vendor/diamante/<span class="o">{</span>BundleName<span class="o">}</span>/Tests/Functional</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">bash phpunit <span class="nt">-c</span> vendor/diamante/<span class="o">{</span>BundleName<span class="o">}</span>/Tests/Functional/phpunit/xml.dist vendor/diamante/<span class="o">{</span>BundleName<span class="o">}</span>/Tests/Functional</code></pre></figure>
 
 <p>The output of the command execution is similar to the unit testing output. </p>
 
@@ -175,7 +175,7 @@ The way of calling the PHPUnit binary may vary on your setup. The following exam
 <li>Set up your test environment parameters by creating the following file:</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">app/config/parameters_test.yml</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">app/config/parameters_test.yml</code></pre></figure>
 
 <p>The  structure of this file is similar to your <em>prod</em> environment one.</p>
 

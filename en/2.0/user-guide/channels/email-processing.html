@@ -56,11 +56,11 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
             <ul class="dropdown-menu">
               
-                <li><a href="/en/1.0/user-guide/channels/email-processing.html">1.0</a></li>
-              
                 <li><a href="/en/latest/user-guide/channels/email-processing.html">latest</a></li>
               
                 <li><a href="/en/2.0/user-guide/channels/email-processing.html">2.0</a></li>
+              
+                <li><a href="/en/1.0/user-guide/channels/email-processing.html">1.0</a></li>
               
             </ul>
           </li>
@@ -96,11 +96,11 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         
-                        <li><a href="/en/1.0/user-guide/channels/email-processing.html">1.0</a></li>
-                        
                         <li><a href="/en/latest/user-guide/channels/email-processing.html">latest</a></li>
                         
                         <li><a href="/en/2.0/user-guide/channels/email-processing.html">2.0</a></li>
+                        
+                        <li><a href="/en/1.0/user-guide/channels/email-processing.html">1.0</a></li>
                         
                     </ul>
                 </li>
@@ -215,7 +215,7 @@ To set one of the existing default branches as default one, make sure that the <
 <li>using IMAP protocol for email retrieval from a remote email server.</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-php" data-lang="php">php app/console oro:cron:diamante:emailprocessing:general</code></pre></div>
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="n">php</span> <span class="n">app</span><span class="o">/</span><span class="n">console</span> <span class="n">oro</span><span class="o">:</span><span class="n">cron</span><span class="o">:</span><span class="n">diamante</span><span class="o">:</span><span class="n">emailprocessing</span><span class="o">:</span><span class="n">general</span></code></pre></figure>
 
 <p>This command may be configured through a crontab, allowing to send polls periodically on a given schedule it&rsquo;s perfect for retrieving emails from the remote server.</p>
 
@@ -223,7 +223,7 @@ To set one of the existing default branches as default one, make sure that the <
 <li>or using the email piping method:</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-php" data-lang="php">php app/console diamante:emailprocessing:pipe <span class="err">&lt;</span>  /path/to/emails/stream</code></pre></div>
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="n">php</span> <span class="n">app</span><span class="o">/</span><span class="n">console</span> <span class="n">diamante</span><span class="o">:</span><span class="n">emailprocessing</span><span class="o">:</span><span class="n">pipe</span> <span class="o">&lt;</span>  <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">emails</span><span class="o">/</span><span class="n">stream</span></code></pre></figure>
 
 <p>This command is only applicable when DiamanteDesk and email server are installed on the same server machine. It includes piping method which has a remarkable advantage over a IMAP, as,  when using piping, all the emails get to the system and are converted into tickets or comments <strong>immediately</strong>, unlike when using IMAP which sends polls to the remote server within scheduled time (at least 1 minute). This advantage allows to quicky react on customer requests or solve any issues on a real-time basis.</p>
 

@@ -56,11 +56,11 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
             <ul class="dropdown-menu">
               
-                <li><a href="/en/1.0/installation-guide/">1.0</a></li>
-              
                 <li><a href="/en/latest/installation-guide/">latest</a></li>
               
                 <li><a href="/en/2.0/installation-guide/">2.0</a></li>
+              
+                <li><a href="/en/1.0/installation-guide/">1.0</a></li>
               
             </ul>
           </li>
@@ -96,11 +96,11 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2.0 version<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         
-                        <li><a href="/en/1.0/installation-guide/">1.0</a></li>
-                        
                         <li><a href="/en/latest/installation-guide/">latest</a></li>
                         
                         <li><a href="/en/2.0/installation-guide/">2.0</a></li>
+                        
+                        <li><a href="/en/1.0/installation-guide/">1.0</a></li>
                         
                     </ul>
                 </li>
@@ -175,7 +175,7 @@
 
 <p>You can also check whether your system meets all the requirements from the command line. In order to do that, you should start with getting the <a href="#get-code">application code</a> from Github and install required <a href="#libraries">libraries</a>. Next, run the following command:</p>
 
-<div class="highlight"><pre><code class="language-php" data-lang="php">php app/check.php</code></pre></div>
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="n">php</span> <span class="n">app</span><span class="o">/</span><span class="n">check</span><span class="mf">.</span><span class="n">php</span></code></pre></figure>
 
 <h3 id="web-server-configuration">Web Server configuration</h3>
 
@@ -202,19 +202,19 @@
 
 <p><strong>Option 1:</strong> Using Git</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">git clone -b 1.0 https://github.com/eltrino/diamantedesk-application</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">git clone <span class="nt">-b</span> 1.0 https://github.com/eltrino/diamantedesk-application</code></pre></figure>
 
 <p><strong>Option 2:</strong> With the composer package manager</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar create-project diamante/desk-application</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar create-project diamante/desk-application</code></pre></figure>
 
 <p><strong>Option 3:</strong> Via a release archive</p>
 
 <p>The release archive is built for every stable release and it comes with the so-called &ldquo;batteries included&rdquo; as all the requirements are already installed and all the resources are built. Simply download the package, unzip it to the web-accessible directory on your server and follow the installation steps described in the <a href="#installation">following section</a>.</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">curl -O https://github.com/eltrino/diamantedesk-application/releases/download/2.0.0/diamantedesk-application-full-2.0.0.zip</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">curl <span class="nt">-O</span> https://github.com/eltrino/diamantedesk-application/releases/download/2.0.0/diamantedesk-application-full-2.0.0.zip</code></pre></figure>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">unzip diamantedesk-application.zip</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">unzip diamantedesk-application.zip </code></pre></figure>
 
 <p><em><strong>Note:</strong> Generally, we do not recommend using the last option and consider it to be a fallback option in case you have only FTP access to your server.</em></p>
 
@@ -224,13 +224,13 @@
 
 <p>Install the dependencies with the composer:</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar install</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar <span class="nb">install</span></code></pre></figure>
 
 <h3 id="step-3-create-a-database">Step 3: Create a Database</h3>
 
 <p>To install DiamanteDesk you also need to setup MySQL database server with an empty database that will be used later on. Use the following command:</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">php app/console doctrine:database:create</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">php app/console doctrine:database:create</code></pre></figure>
 
 <h3 id="step-4-install-the-application">Step 4: <a name="installation"></a> Install the Application</h3>
 
@@ -240,7 +240,7 @@
 
 <p>To run the installation of DiamanteDesk in a console mode, use the following command:</p>
 
-<div class="highlight"><pre><code class="language-php" data-lang="php">php app/console diamante:install</code></pre></div>
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="n">php</span> <span class="n">app</span><span class="o">/</span><span class="n">console</span> <span class="n">diamante</span><span class="o">:</span><span class="n">install</span></code></pre></figure>
 
 <p>Additional commands may be required. The system will guide you through the process with questions and command options.</p>
 
@@ -250,7 +250,7 @@
 
 <p>To install the application through a web wizard, follow the link below:</p>
 
-<div class="highlight"><pre><code class="language-http" data-lang="http"><span class="err">http://localhost/install.php</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-http" data-lang="http"><span class="err">http://localhost/install.php</span></code></pre></figure>
 
 <p>After the DiamanteDesk installation screen opens, click <strong>Begin Installation</strong>. </p>
 
@@ -284,7 +284,7 @@
 
 <p>DiamanteDesk requires that certain task should be executed in background. For this you will need to add several commands to your system job scheduler.  </p>
 
-<div class="highlight"><pre><code class="language-php" data-lang="php">*/1 * * * * php app/console diamante:cron &gt; dev/null</code></pre></div>
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="o">*/</span><span class="mi">1</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="n">php</span> <span class="n">app</span><span class="o">/</span><span class="n">console</span> <span class="n">diamante</span><span class="o">:</span><span class="n">cron</span> <span class="o">&gt;</span> <span class="n">dev</span><span class="o">/</span><span class="kc">null</span></code></pre></figure>
 
 <p>This will execute required command every minute. If you need you can change execution period to 5 minutes. This will decrease system reaction time to certain events (for example processing rules).</p>
 
@@ -314,21 +314,21 @@
 
 <p><strong>Option 1</strong>: Clone the <a href="https://github.com/eltrino/diamantedesk-application#usage">GitHub repository</a> to get the source code</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">git clone https://github.com/eltrino/diamantedesk-application</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">git clone https://github.com/eltrino/diamantedesk-application</code></pre></figure>
 
 <p><strong>Option 2</strong>: Download using the composer</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar create-project diamante/desk-application:dev-master</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar create-project diamante/desk-application:dev-master</code></pre></figure>
 
 <hr>
 
 <p>Regradless of the option you&rsquo;ve chosen, next you need to install the required libraries to proceed with installation process:</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar install</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar <span class="nb">install</span></code></pre></figure>
 
 <p>To get the latest version of the dependencies, execute the following command:</p>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar update</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">php composer.phar update</code></pre></figure>
 
   </article>
 

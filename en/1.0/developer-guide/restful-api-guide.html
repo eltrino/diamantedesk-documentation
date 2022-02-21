@@ -56,11 +56,11 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">1.0 version<span class="caret"></span></a>
             <ul class="dropdown-menu">
               
-                <li><a href="/en/1.0/developer-guide/restful-api-guide.html">1.0</a></li>
-              
                 <li><a href="/en/latest/developer-guide/restful-api-guide.html">latest</a></li>
               
                 <li><a href="/en/2.0/developer-guide/restful-api-guide.html">2.0</a></li>
+              
+                <li><a href="/en/1.0/developer-guide/restful-api-guide.html">1.0</a></li>
               
             </ul>
           </li>
@@ -96,11 +96,11 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">1.0 version<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         
-                        <li><a href="/en/1.0/developer-guide/restful-api-guide.html">1.0</a></li>
-                        
                         <li><a href="/en/latest/developer-guide/restful-api-guide.html">latest</a></li>
                         
                         <li><a href="/en/2.0/developer-guide/restful-api-guide.html">2.0</a></li>
+                        
+                        <li><a href="/en/1.0/developer-guide/restful-api-guide.html">1.0</a></li>
                         
                     </ul>
                 </li>
@@ -154,7 +154,7 @@
 
 <p>API endpoints define the connection point to your service, giving the external application access to DiamanteDesk data. API endpoints are prefixed with your domain name:</p>
 
-<div class="highlight"><pre><code class="language-http" data-lang="http"><span class="err">http(s)://domainname/rest/api/{version}/desk/</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-http" data-lang="http"><span class="err">http(s)://domainname/rest/api/{version}/desk/</span></code></pre></figure>
 
 <h2 id="authentication">Authentication</h2>
 
@@ -220,10 +220,10 @@ The format can be specified either:</p>
 
 <p>Take a look at the example, containing such headers:</p>
 
-<div class="highlight"><pre><code class="language-http" data-lang="http"><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<figure class="highlight"><pre><code class="language-http" data-lang="http"><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 
 Link: &lt;http://hostname/api/rest/latest/desk/branches?limit=25&amp;page=2&gt;; rel="next", &lt;http://hostname/api/rest/latest/desk/branches?limit=25&amp;page=5&gt;; rel="last"
-X-Total: 110</code></pre></div>
+X-Total: 110 </code></pre></figure>
 
 <h3 id="sorting">Sorting</h3>
 
@@ -280,7 +280,7 @@ X-Total: 110</code></pre></div>
 
 <p>Take a look at the example of a 404 error below:</p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">POST /diamantedesk-1.0/web/api/rest/latest/desk/branches HTTP/1.1</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">POST /diamantedesk-1.0/web/api/rest/latest/desk/branches HTTP/1.1</span>
 
 <span class="pi">{</span>
     <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Branch"</span><span class="pi">,</span>
@@ -296,7 +296,7 @@ X-Total: 110</code></pre></div>
 
 <span class="pi">{</span>
     <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Branch</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">already</span><span class="nv"> </span><span class="s">exists.</span><span class="nv"> </span><span class="s">Please,</span><span class="nv"> </span><span class="s">provide</span><span class="nv"> </span><span class="s">another</span><span class="nv"> </span><span class="s">one."</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h2 id="resources">Resources</h2>
 
@@ -326,7 +326,7 @@ X-Total: 110</code></pre></div>
 
 <h6 id="get-retrieve-the-list-of-all-branches">GET: Retrieve the list of all branches</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches</code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -334,7 +334,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
     <span class="pi">{</span>
         <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:21+0000"</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">branchDescription1"</span><span class="pi">,</span>
@@ -351,11 +351,11 @@ X-Total: 110</code></pre></div>
         <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">branchName2"</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:21+0000"</span>
     <span class="pi">}</span>
-<span class="pi">]</span></code></pre></div>
+<span class="pi">]</span></code></pre></figure>
 
 <h6 id="get-retrieve-a-branch-by-id">GET: Retrieve a branch by ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches/<span class="o">{</span><span class="nb">id</span><span class="o">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -363,26 +363,26 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:36+0000"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">11</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCHTEST"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Branch"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:36+0000"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Status Code:</strong> 404 (Not Found)</p>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Branch</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed.</span><span class="nv"> </span><span class="s">Branch</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found."</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h6 id="post-create-a-new-branch">POST: Create a new branch</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches</code></pre></figure>
 
 <p><strong>Parameters</strong></p>
 
@@ -422,14 +422,14 @@ X-Total: 110</code></pre></div>
 
 <p><em>Request example:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Branch"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
         <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Tag"</span>
     <span class="pi">],</span>
     <span class="s2">"</span><span class="s">key"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">BRANCHTEST"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -437,7 +437,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:36+0000"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">11</span><span class="pi">,</span>
@@ -447,21 +447,21 @@ X-Total: 110</code></pre></div>
         <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Tag"</span>
     <span class="pi">],</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:36+0000"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h6 id="put-patch-update-properties-of-a-certain-branch-by-its-id">PUT, PATCH: Update properties of a certain branch by its ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">PUT|PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">PUT|PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches/<span class="o">{</span><span class="nb">id</span><span class="o">}</span></code></pre></figure>
 
 <p><em>Request example:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Branch</span><span class="nv"> </span><span class="s">PUT"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">tags"</span><span class="pi">:</span> <span class="pi">[</span>
         <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Tag"</span>
     <span class="pi">]</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -469,7 +469,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:36+0000"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">11</span><span class="pi">,</span>
@@ -479,11 +479,11 @@ X-Total: 110</code></pre></div>
         <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Tag"</span>
     <span class="pi">],</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:36+0000"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h6 id="delete-delete-a-branch-by-id">DELETE: Delete a branch by ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/branches/<span class="o">{</span><span class="nb">id</span><span class="o">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -495,7 +495,7 @@ X-Total: 110</code></pre></div>
 
 <h6 id="get-retrieve-list-of-all-tickets">GET: Retrieve list of all tickets</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets</code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -503,7 +503,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
     <span class="pi">{</span>
         <span class="s2">"</span><span class="s">assignee"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">branch"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
@@ -536,11 +536,11 @@ X-Total: 110</code></pre></div>
         <span class="pi">},</span>
         <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:21+0000"</span>
     <span class="pi">}</span>
-<span class="pi">]</span></code></pre></div>
+<span class="pi">]</span></code></pre></figure>
 
 <h6 id="get-retrieve-the-ticket-by-the-given-ticket-id">GET: Retrieve the ticket by the given ticket ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span><span class="nb">id</span><span class="o">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -548,7 +548,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
 
     <span class="pi">],</span>
@@ -569,19 +569,19 @@ X-Total: 110</code></pre></div>
         <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">4b1573586e00d7760babf2aa0bdb9cdc"</span>
     <span class="pi">},</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:47+0000"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Status Code:</strong> 404 (OK)</p>
 
 <p><em>Response body:</em>   </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Ticket</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed,</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found."</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span>  </code></pre></figure>
 
 <h6 id="post-create-a-new-ticket">POST: Create a new ticket</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets</code></pre></figure>
 
 <p><strong>Parameters</strong></p>
 
@@ -639,7 +639,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Request example:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">branch"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">subject"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Ticket"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">description"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Description"</span><span class="pi">,</span>
@@ -647,7 +647,7 @@ X-Total: 110</code></pre></div>
     <span class="s2">"</span><span class="s">priority"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">medium"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">source"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">phone"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">reporter"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -655,7 +655,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
 
     <span class="pi">],</span>
@@ -676,17 +676,17 @@ X-Total: 110</code></pre></div>
         <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">4b1573586e00d7760babf2aa0bdb9cdc"</span>
     <span class="pi">},</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:47+0000"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h6 id="put-patch-update-certain-properties-of-the-ticket-by-id">PUT, PATCH: Update certain properties of the ticket by ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">PUT, PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">PUT, PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span><span class="nb">id</span><span class="o">}</span></code></pre></figure>
 
 <p><em>Request example:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">subject"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Ticket</span><span class="nv"> </span><span class="s">Updated</span><span class="nv"> </span><span class="s">PUT"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -694,7 +694,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
 
     <span class="pi">],</span>
@@ -715,11 +715,11 @@ X-Total: 110</code></pre></div>
         <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">4b1573586e00d7760babf2aa0bdb9cdc"</span>
     <span class="pi">},</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:47+0000"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h6 id="delete-delete-the-ticket-by-id">DELETE: Delete the ticket by ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span><span class="nb">id</span><span class="o">}</span>  </code></pre></figure>
  
 
 <p><strong>Response</strong></p>
@@ -730,7 +730,7 @@ X-Total: 110</code></pre></div>
 
 <h6 id="get-retrieve-a-ticket-by-the-given-ticket-key">GET: Retrieve a ticket by the given ticket key</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>key<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>key<span class="o">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -738,7 +738,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
 
     <span class="pi">],</span>
@@ -759,25 +759,25 @@ X-Total: 110</code></pre></div>
         <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">4b1573586e00d7760babf2aa0bdb9cdc"</span>
     <span class="pi">},</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:47+0000"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Status Code:</strong> 404 (Not Found)</p>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="err">}</span>
-    <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Ticket</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed,</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found."</span>
-<span class="err">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="err">}</span>
+    <span class="s2">"</span><span class="s">error"</span><span class="err">:</span> <span class="s2">"</span><span class="s">Ticket</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed,</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found."</span>
+<span class="err">}</span></code></pre></figure>
 
 <h6 id="put-patch-update-certain-properties-of-a-ticket-by-the-ticket-key">PUT, PATCH: Update certain properties of a ticket by the ticket key</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">PUT, PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>key<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">PUT, PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>key<span class="o">}</span></code></pre></figure>
 
 <p><em>Request example:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">subject"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Ticket</span><span class="nv"> </span><span class="s">Updated</span><span class="nv"> </span><span class="s">PUT</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">key"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -785,7 +785,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
 
     <span class="pi">],</span>
@@ -806,11 +806,11 @@ X-Total: 110</code></pre></div>
         <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">4b1573586e00d7760babf2aa0bdb9cdc"</span>
     <span class="pi">},</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:47+0000"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h6 id="delete-delete-the-ticket-by-the-ticket-key">DELETE: Delete the ticket by the ticket key</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>key<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>key<span class="o">}</span> </code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -820,7 +820,7 @@ X-Total: 110</code></pre></div>
 
 <h6 id="get-retrieve-the-list-of-ticket-attachments-by-ticket-id">GET: Retrieve the list of ticket attachments by ticket ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>id<span class="o">}</span>/attachments</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span><span class="nb">id</span><span class="o">}</span>/attachments</code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -828,7 +828,8 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">  
+<span class="pi">[</span>
     <span class="pi">{</span>
         <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">15</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:53+0000"</span><span class="pi">,</span>
@@ -842,11 +843,11 @@ X-Total: 110</code></pre></div>
             <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">450385ca08c7cfe5b507ad85f3a17428.png"</span>
         <span class="pi">}</span>
     <span class="pi">}</span>
-<span class="pi">]</span></code></pre></div>
+<span class="pi">]</span></code></pre></figure>
 
 <h6 id="get-retrieve-ticket-attachments-by-attachment-id">GET: Retrieve ticket attachments by attachment ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>ticketId<span class="o">}</span>/attachments/<span class="o">{</span>attachmentId<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>ticketId<span class="o">}</span>/attachments/<span class="o">{</span>attachmentId<span class="o">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -854,7 +855,8 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"> 
+<span class="pi">{</span>
     <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">15</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:53+0000"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:53+0000"</span><span class="pi">,</span>
@@ -866,31 +868,33 @@ X-Total: 110</code></pre></div>
         <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/thumbnail</span><span class="err">\</span><span class="s">/450385ca08c7cfe5b507ad85f3a17428"</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">450385ca08c7cfe5b507ad85f3a17428.png"</span>
     <span class="pi">}</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Status Code:</strong> 404 (Not Found)</p>
 
 <p><em>Response body:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"> 
+<span class="pi">{</span>
     <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Attachment</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed.</span><span class="nv"> </span><span class="s">Ticket</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">no</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">attachment."</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
    
 
 <h6 id="post-add-attachment-to-the-ticket">POST: Add attachment to the ticket</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>ticketId<span class="o">}</span>/attachments</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>ticketId<span class="o">}</span>/attachments</code></pre></figure>
 
 <p><em>Request example:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"> 
+<span class="pi">{</span>
     <span class="s2">"</span><span class="s">attachmentsInput"</span><span class="pi">:</span> <span class="pi">[</span>
         <span class="pi">{</span>
             <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test.jpg"</span><span class="pi">,</span>
             <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="</span>
         <span class="pi">}</span>
     <span class="pi">]</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -898,7 +902,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
     <span class="pi">{</span>
         <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">15</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:53+0000"</span><span class="pi">,</span>
@@ -912,11 +916,11 @@ X-Total: 110</code></pre></div>
             <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">450385ca08c7cfe5b507ad85f3a17428.png"</span>
         <span class="pi">}</span>
     <span class="pi">}</span>
-<span class="pi">]</span></code></pre></div>
+<span class="pi">]</span></code></pre></figure>
 
 <h6 id="delete-remove-attachment-from-the-ticket">DELETE: Remove Attachment from the ticket</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>ticketId<span class="o">}</span>/attachments/<span class="o">{</span>attachmentId<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/tickets/<span class="o">{</span>ticketId<span class="o">}</span>/attachments/<span class="o">{</span>attachmentId<span class="o">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -926,7 +930,7 @@ X-Total: 110</code></pre></div>
 
 <h6 id="get-retrieve-personal-data-based-on-the-provided-ticket-id">GET: Retrieve personal data based on the provided ticket ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/ticket/<span class="o">{</span>id<span class="o">}</span>/assignee</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/ticket/<span class="o">{</span><span class="nb">id</span><span class="o">}</span>/assignee</code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -934,17 +938,17 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
   <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pol.vova@gmail.com"</span><span class="pi">,</span>
   <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">asdasd</span><span class="nv"> </span><span class="s">dasdasd"</span><span class="pi">,</span>
   <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h3 id="comments">Comments</h3>
 
 <h6 id="get-retrieve-the-list-of-all-comments">GET: Retrieve the list of all comments</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments</code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -952,7 +956,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
     <span class="pi">{</span>
         <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
 
@@ -979,11 +983,11 @@ X-Total: 110</code></pre></div>
         <span class="s2">"</span><span class="s">ticket"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:22+0000"</span>
     <span class="pi">}</span>
-<span class="pi">]</span></code></pre></div>
+<span class="pi">]</span></code></pre></figure>
 
 <h6 id="get-retrieve-the-comment-by-the-given-comment-id">GET: Retrieve the comment by the given comment ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span><span class="nb">id</span><span class="o">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -991,7 +995,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
 
     <span class="pi">],</span>
@@ -1003,21 +1007,21 @@ X-Total: 110</code></pre></div>
     <span class="s2">"</span><span class="s">private"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">ticket"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:22+0000"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
     
 
 <p><strong>Status Code:</strong> 404 (OK)</p>
 
 <p><em>Response body:</em>   </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Comment</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed,</span><span class="nv"> </span><span class="s">comment</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found."</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span> </code></pre></figure>
    
 
 <h6 id="post-add-a-new-comment-to-the-ticket">POST: Add a new comment to the ticket.</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments</code></pre></figure>
 
 <p><strong>Parameters</strong>   </p>
 
@@ -1057,12 +1061,12 @@ X-Total: 110</code></pre></div>
 
 <p><em>Request example:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Comment"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">ticket"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">author"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">ticketStatus"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">new"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span>  </code></pre></figure>
   
 
 <p><strong>Response</strong></p>
@@ -1071,7 +1075,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
 
     <span class="pi">],</span>
@@ -1083,11 +1087,11 @@ X-Total: 110</code></pre></div>
     <span class="s2">"</span><span class="s">private"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">ticket"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:42+0000"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h6 id="put-patch-update-certain-properties-of-the-comment-be-the-comment-id">PUT, PATCH: Update certain properties of the comment be the comment ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">PUT|PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">PUT|PATCH /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span><span class="nb">id</span><span class="o">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -1095,14 +1099,14 @@ X-Total: 110</code></pre></div>
 
 <p><em>Request example:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Test</span><span class="nv"> </span><span class="s">Comment</span><span class="nv"> </span><span class="s">Updated</span><span class="nv"> </span><span class="s">PUT"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">ticketStatus"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">closed"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><em>Response body:</em> </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">attachments"</span><span class="pi">:</span> <span class="pi">[</span>
 
     <span class="pi">],</span>
@@ -1114,11 +1118,11 @@ X-Total: 110</code></pre></div>
     <span class="s2">"</span><span class="s">private"</span><span class="pi">:</span> <span class="nv">false</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">ticket"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:22+0000"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h6 id="delete-delete-a-ticket-comment-by-the-comment-id">DELETE: Delete a ticket comment by the comment ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>id<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span><span class="nb">id</span><span class="o">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -1128,7 +1132,7 @@ X-Total: 110</code></pre></div>
 
 <h6 id="get-retrieve-the-information-about-the-comment-author-based-on-the-provided-comment-id">GET: Retrieve the information about the comment author based on the provided comment ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comment/<span class="o">{</span>id<span class="o">}</span>/author</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comment/<span class="o">{</span><span class="nb">id</span><span class="o">}</span>/author</code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -1136,15 +1140,15 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
   <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pol.vova@gmail.com"</span><span class="pi">,</span>
   <span class="s2">"</span><span class="s">name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">asdasd</span><span class="nv"> </span><span class="s">dasdasd"</span><span class="pi">,</span>
   <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">oro_1"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h6 id="get-retrieve-all-comment-attachments">GET: Retrieve all comment attachments</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>id<span class="o">}</span>/attachments</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span><span class="nb">id</span><span class="o">}</span>/attachments</code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -1152,7 +1156,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
     <span class="pi">{</span>
         <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">12</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:27+0000"</span><span class="pi">,</span>
@@ -1166,11 +1170,11 @@ X-Total: 110</code></pre></div>
             <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">61fcb86ab5a53db412b2f3823f8a20ac.png"</span>
         <span class="pi">}</span>
     <span class="pi">}</span>
-<span class="pi">]</span></code></pre></div>
+<span class="pi">]</span></code></pre></figure>
 
 <h6 id="retrieve-comment-attachments-by-the-attachment-id">Retrieve comment attachments by the attachment ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>commentId<span class="o">}</span>/attachments/<span class="o">{</span>attachmentId<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>commentId<span class="o">}</span>/attachments/<span class="o">{</span>attachmentId<span class="o">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -1178,7 +1182,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">12</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:27+0000"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">updated_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:27+0000"</span><span class="pi">,</span>
@@ -1190,30 +1194,31 @@ X-Total: 110</code></pre></div>
         <span class="s2">"</span><span class="s">url"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http:</span><span class="err">\</span><span class="s">/</span><span class="err">\</span><span class="s">/localhost</span><span class="err">\</span><span class="s">/desk</span><span class="err">\</span><span class="s">/attachments</span><span class="err">\</span><span class="s">/download</span><span class="err">\</span><span class="s">/thumbnail</span><span class="err">\</span><span class="s">/61fcb86ab5a53db412b2f3823f8a20ac"</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">61fcb86ab5a53db412b2f3823f8a20ac.png"</span>
     <span class="pi">}</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Status Code:</strong> 404 (OK)</p>
 
 <p><em>Response body:</em>   </p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Attachment</span><span class="nv"> </span><span class="s">loading</span><span class="nv"> </span><span class="s">failed.</span><span class="nv"> </span><span class="s">Comment</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">no</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">attachment."</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h6 id="post-add-attachment-to-the-comment">POST: Add attachment to the comment</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>commentId<span class="o">}</span>/attachments</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>commentId<span class="o">}</span>/attachments</code></pre></figure>
 
 <p><em>Request example:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"> 
+<span class="pi">{</span>
     <span class="s2">"</span><span class="s">attachmentsInput"</span><span class="pi">:</span> <span class="pi">[</span>
         <span class="pi">{</span>
             <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">test.jpg"</span><span class="pi">,</span>
             <span class="s2">"</span><span class="s">content"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="</span>
         <span class="pi">}</span>
     <span class="pi">]</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -1221,7 +1226,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
     <span class="pi">{</span>
         <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">13</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">created_at"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2015-07-17T11:25:34+0000"</span><span class="pi">,</span>
@@ -1235,11 +1240,11 @@ X-Total: 110</code></pre></div>
             <span class="s2">"</span><span class="s">filename"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">338477dbcd9c4faae7584cda781be854.png"</span>
         <span class="pi">}</span>
     <span class="pi">}</span>
-<span class="pi">]</span></code></pre></div>
+<span class="pi">]</span></code></pre></figure>
 
 <h6 id="delete-remove-the-attachment-from-the-comment-by-the-attachment-id">DELETE: Remove the attachment from the comment by the attachment ID</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>commentId<span class="o">}</span>/attachments/<span class="o">{</span>attachmentId<span class="o">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">DELETE /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/comments/<span class="o">{</span>commentId<span class="o">}</span>/attachments/<span class="o">{</span>attachmentId<span class="o">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -1251,7 +1256,7 @@ X-Total: 110</code></pre></div>
 
 <h6 id="get-retrieve-the-list-of-all-users">GET: Retrieve the list of all users</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/users</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/users</code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -1259,7 +1264,7 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">[</span>
     <span class="pi">{</span>
         <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">sdasdasd@asfasf.com"</span><span class="pi">,</span>
@@ -1271,11 +1276,11 @@ X-Total: 110</code></pre></div>
         <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">vladimir.polischuk@eltrino.com"</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">first_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="se">\u0444\u0456\u0432\u0444\u0456\u0432</span><span class="s">"</span><span class="pi">,</span>
         <span class="s2">"</span><span class="s">last_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="se">\u0432\u0444\u0456\u0432</span><span class="s">"</span>
-    <span class="pi">}</span></code></pre></div>
+    <span class="pi">}</span></code></pre></figure>
 
 <h6 id="post-create-a-new-user">POST: Create a new user</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/users</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">POST /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/users</code></pre></figure>
 
 <p><strong>Parameters</strong></p>
 
@@ -1305,11 +1310,11 @@ X-Total: 110</code></pre></div>
 
 <p><em>Request example:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1437135532dummy-test-email-address@test-server.local"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">firstName"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">John"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">lastName"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Dou"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -1317,16 +1322,16 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">11</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1437135532dummy-test-email-address@test-server.local"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">first_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">John"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">last_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Dou"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <h6 id="get-retrieve-user-data">GET: Retrieve user data</h6>
 
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/users/<span class="o">{</span>email<span class="o">}</span>/</code></pre></div>
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">GET /api/rest/<span class="o">{</span>version<span class="o">}</span>/desk/users/<span class="o">{</span>email<span class="o">}</span>/</code></pre></figure>
 
 <p><strong>Response</strong></p>
 
@@ -1334,19 +1339,19 @@ X-Total: 110</code></pre></div>
 
 <p><em>Response body:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">id"</span><span class="pi">:</span> <span class="nv">11</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">email"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1437135532dummy-test-email-address@test-server.local"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">first_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">John"</span><span class="pi">,</span>
     <span class="s2">"</span><span class="s">last_name"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Dou"</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
 <p><strong>Status Code:</strong> 404 (Not Found)
 <em>Response body:</em></p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="pi">{</span>
     <span class="s2">"</span><span class="s">error"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">User</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found."</span>
-<span class="pi">}</span></code></pre></div>
+<span class="pi">}</span></code></pre></figure>
 
   </article>
 
